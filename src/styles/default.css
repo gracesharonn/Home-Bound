@@ -29,7 +29,7 @@
     z-index: 10;
     font-size: 32px;
     font-weight: 700;
-    background-color: transparent;
+    background-color: transparent !important;
 }
   
 .NavigationBar ul {
@@ -45,9 +45,13 @@
   
 .NavigationBar ul li {
     list-style: none;
+    background-color: #F5F6FA;
+    border-radius: 30px;
+    padding: 5px 18px;
 }
-  
+
 .NavigationBar ul li a {
+    background-color: transparent;
     font-family: BenchNine;
     font-size: 1em;
     font-style: normal;
@@ -101,15 +105,6 @@ nav {
 }
 
 /* Website Title */
-/* .TitlePage {
-    width: 100%;
-    font-size: 95px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding-top: 269px;
-} */
-
 .TitlePage {
     display: flex;
     justify-content: space-between;
@@ -299,9 +294,6 @@ input[type="radio"]:checked {
 }
 
 /* Volunteers Page */
-/* #houses {
-    position: relative;
-} */
 
 .LoginRegisterBG {
     position: relative;
@@ -313,14 +305,72 @@ input[type="radio"]:checked {
     position: absolute;
     top: 0;
     left: 0;
+    margin-top: 169px;
+}
+
+@keyframes moveBike {
+    0% {
+        left: -120%;
+    }
+    100% {
+        left: 130%;
+    }
+}
+
+#bike {
+    position: absolute;
+    width: 96px;
+    height: 55px;
+    background-color: transparent;
+    margin: 499px 1440px 470px;
+    z-index: 1;
+    left: 120%;
+    animation: moveBike 20s linear infinite;
+    animation-delay: 0.1s;
 }
 
 #houses {
-    z-index: 1; /* Set a higher z-index to make it appear on top of the LoginRegisterBG SVG */
+    position: absolute;
+    z-index: 1;
     background-color: transparent;
     width: 506px;
-height: 326px;
-flex-shrink: 0;
-margin: 259px 877px 439px 57px;
+    height: 326px;
+    flex-shrink: 0;
+    margin: 259px 877px 439px 57px;
+    z-index: 2;
 }
+
+.LoginContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 113px 167px 293px 783px;
+}
+
+#LoginBox {
+    width: 490px;
+    height: 618px;
+    padding: 20px;
+    background-color: #FFE475;
+    font-size: 35px;
+    padding-top: 200px;
+}
+
+#LoginBox h2 {
+    color: #006;
+    font-size: 24px;
+}
+
+#LoginBox label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+#LoginBox input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
 
