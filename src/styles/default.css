@@ -1,0 +1,300 @@
+@font-face {
+    font-family: Gochi Hand;
+    src: url("https://fonts.googleapis.com/css?family=Gochi+Hand:regular");
+}
+  
+@font-face{
+    font-family: BenchNine;
+    src: url("https://fonts.googleapis.com/css?family=BenchNine:300,regular,700");
+}
+  
+* {
+    background: #F5F6FA;
+    color: #006;
+    margin: 0;
+    padding: 0;
+    font-family: Gochi Hand;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+/* Navigation Bar */
+
+.NavigationBar {
+    text-align: left;
+    padding: 25px;
+    display: fixed;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: transparent;
+}
+  
+.NavigationBar ul {
+    display: inline-flex;
+    align-items: flex-start;
+    /* width: Hug (368px);
+    height: Hug (32px);
+    top: 20px;
+    left: 26px; */
+    gap: 49px;
+    background-color: transparent;
+}
+  
+.NavigationBar ul li {
+    list-style: none;
+}
+  
+.NavigationBar ul li a {
+    font-family: BenchNine;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    cursor: pointer; /* new */
+}
+
+/* Service Menu Bar */
+
+nav {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    width: 250px;
+}
+
+#x-button {
+    position: absolute;
+    top: 20px;
+    left: 240px;
+    cursor: pointer;
+    font-size: 48px;
+    background-color: transparent;
+}
+
+.ServiceMenu {
+    position: fixed;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: #FFE475;
+    transition: 1s ease-in-out;
+    z-index: 11;
+}
+
+.ServiceMenu ul li {
+    text-align: left;
+    list-style-type: none;
+    font-size: 35px;
+    padding: 20px 30px;
+    background-color: #FFE475;
+}
+
+.ServiceMenu ul li a {
+    background-color: #FFE475;
+}
+
+.ServiceMenu.active {
+    left: 0;
+}
+
+/* Website Title */
+/* .TitlePage {
+    width: 100%;
+    font-size: 95px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 269px;
+} */
+
+.TitlePage {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 100px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 269px;
+}
+
+#house-icon {
+    position: absolute;
+    top: 280px;
+    left: 400px; 
+    background: none;
+}
+
+@keyframes flash {
+    0% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0;
+    }
+    0% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes bounce {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+  
+.BeginHere {
+    position: relative;
+    font-size: 36px;
+    font-weight: 400;
+    box-sizing: border-box;
+    animation: flash 3s infinite, bounce 3s infinite;
+    text-align: center;
+    padding-top: 180px;
+    padding-bottom: 500px;
+    /* top: 80%;
+    left: 40%; */
+}
+
+/* .Shelter-Container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#service, #submit{
+    font-size: 22px;
+} */
+
+#ServiceForm {
+    text-align: center;
+    margin-top: 20px;
+    padding: 200px;
+}
+
+.Form-Box {
+    width: 759px;
+    background-color: #FFE475;
+    font-size: 35px;
+    padding-top: 200px;
+    box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
+    border-radius: 20px;
+    padding: 20px; /* Padding inside the box */
+    border-radius: 50px; /* Rounded corners for the box */
+    display: inline-block;
+    /* text-align: center;
+    margin-top: 20px; */
+    line-height: 1.9;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+label {
+    background-color: transparent;
+}
+
+select {
+    text-align: center;
+}
+
+input[type="radio"] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    width: 20px;
+    height: 20px; 
+    border-radius: 50%; 
+    outline: none; 
+    margin-right: 5px; 
+}
+
+input[type="radio"]:checked {
+    background-color: #006; /* Change the background color when checked */
+    border: 3px solid #F5F6FA ;
+}
+
+#service {
+    font-family: BenchNine;
+    font-size: 32px;
+    border-radius: 32px;
+    border-color: transparent;
+    color: rgba(0, 0, 0, 0.50);
+    width: 309px;
+    
+}
+
+#shelterQuestions, #daycareQuestions, #employmentQuestions, #foodServiceQuestions, #medicalServiceQuestions {
+    background-color: transparent;
+    font-size: 25px;
+    text-align: justify;
+}
+
+.scroll-up{
+    padding: 11px;
+}
+
+#submit {
+    font-size: 32px;
+    color: #F5F6FA;
+    background-color: #006;
+    border-color: transparent;
+    border-radius: 32px;
+    width: 165px;
+    height: 58px;
+}
+
+/* About Us Page */
+
+.AboutUs-FirstSection {
+    width: 100%;
+    height: 100vh;
+}
+
+.AboutUs-FirstSection img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust the width as needed */
+    z-index: 1; /* Set a lower z-index so that it appears below the navigation bar */
+}
+
+.AboutUs-SecondSection {
+    width: 100%;
+    height: 100vh;
+    background-color: #006;
+    z-index: 1;
+}
+
+.AboutUs-ThirdSection {
+    width: 100%;
+    height: 100vh;
+}
+
+.AboutUs-ThirdSection img {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100%; /* Adjust the width as needed */
+    z-index: 1; /* Set a lower z-index so that it appears below the navigation bar */
+}
+
