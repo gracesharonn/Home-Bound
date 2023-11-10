@@ -1,4 +1,4 @@
-<!-- volunteers page -->
+<!-- volunteers/ login page -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -43,12 +43,12 @@
     <div class="LoginContainer">
         <form id="LoginBox" method="POST">
             <h1>Login</h1>
-            <!-- <input type="text" value="Email" required/> -->
-            <input type="text" id="emailpw" placeholder="       Email" required/>
+            <input type="email" id="emailpw" placeholder="       Email" required/>
             <input type="password" id="emailpw" placeholder="       Password" required/>
-            <input type="submit" id="submit" value="Continue"/>
-        </form>
-        <p id="CreateAcc"><a href="/src/pages/SignUp.html">New User? Create an account</a></p>
+            <input type="submit" id="submitLogin" value="Continue"/>
+            <p id="AskUser">New User?</p>
+            <p id="CreateAcc"><a href="./SignUp.html">Create an Account</a></p>
+    </form>
     </div>
 
     <script src="../styles/script.js"></script>
