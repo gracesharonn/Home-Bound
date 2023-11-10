@@ -298,3 +298,29 @@ input[type="radio"]:checked {
     z-index: 1; /* Set a lower z-index so that it appears below the navigation bar */
 }
 
+/* Volunteers Page */
+/* #houses {
+    position: relative;
+} */
+
+.LoginRegisterBG {
+    position: relative;
+}
+
+.LoginRegisterBG img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#houses {
+    z-index: 1; /* Set a higher z-index to make it appear on top of the LoginRegisterBG SVG */
+    background-color: transparent;
+    width: 506px;
+height: 326px;
+flex-shrink: 0;
+margin: 259px 877px 439px 57px;
+}
+
