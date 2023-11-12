@@ -6,7 +6,9 @@
         "location": {
           "city": "Exampleville",
           "state": "CA",
-          "country": "USA"
+          "country": "USA",
+          "latitude": "38.55653744654297",
+          "longitude": "-121.41009726049207"
         },
         "foundingYear": 2000,
         "employees": 100,
@@ -29,7 +31,9 @@
         "location": {
           "city": "Consultville",
           "state": "NY",
-          "country": "USA"
+          "country": "USA",
+          "latitude": "38.56085810486683",
+          "longitude": "-121.43862523348555"
         },
         "description": "",
         "contacts": {
