@@ -1,0 +1,46 @@
+{
+    "businesses": [
+      {
+        "businessName": "ABC Corp",
+        "industry": "Technology",
+        "location": {
+          "city": "Exampleville",
+          "state": "CA",
+          "country": "USA"
+        },
+        "foundingYear": 2000,
+        "employees": 100,
+        "revenue": 5000000,
+        "products": ["Product A", "Product B", "Product C"],
+        "contacts": {
+          "email": "info@abccorp.com",
+          "phone": "+1 (555) 123-4567"
+        },
+        "website": "http://www.abccorp.com",
+        "partners": ["Partner X", "Partner Y"],
+        "socialMedia": {
+          "twitter": "@abccorp",
+          "linkedin": "abc-corp"
+        }
+      },
+      {
+        "businessName": "XYZ Solutions",
+        "industry": "Consulting",
+        "location": {
+          "city": "Consultville",
+          "state": "NY",
+          "country": "USA"
+        },
+        "description": "",
+        "contacts": {
+          "email": "info@xyzsolutions.com",
+          "phone": "+1 (555) 987-6543"
+        },
+        "website": "http://www.xyzsolutions.com",
+        "socialMedia": {
+          "twitter": "@xyzsolutions",
+          "linkedin": "xyz-solutions"
+        }
+      }
+    ]
+  }
