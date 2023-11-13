@@ -1,0 +1,16 @@
+{
+  "Volunteers": [
+    {
+      "user": {
+        "first_name": "Edrick",
+        "last_name": "Sok",
+        "age": "20",
+        "sex": "Male",
+        "login": {
+          "email_address": "edricksok101@gmail.com",
+          "password": "password"
+        }
+      }
+    }
+  ]
+}
