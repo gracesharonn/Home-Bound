@@ -91,3 +91,42 @@ function typeOfCrisis() {
       reason.style.display = 'none';
     }
   }
+
+  //Shelter JSON Displayed
+  function fetchAndDisplayShelters() {
+    // Assuming the JSON file is one level up from the current directory
+    const jsonFilePath = '../JSON/services.json';
+  
+    fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+            // Handle the JSON data and display businesses
+            displayShelters(data.shelters);
+            //jToString(data.businesses);
+            
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+  }
+  
+  function displayShelters(shelters) {
+    const sheltersContainer = document.getElementById('sheltersContainer');
+    sheltersContainer.innerHTML = ''; // Clear previous content
+  
+    shelters.forEach((shelter, index) => {
+        const shelterDiv = document.createElement('div');
+        shelterDiv.innerHTML = `
+            <br>
+            <h4>${shelter.businessName}</h4>
+            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+            <p>Phone: ${shelter.contacts.phone}</p>
+            <p>Email: ${shelter.contacts.email}</p>
+            <p>${shelter.website}</p>
+            <p>${shelter.description}</p>
+  
+            <!-- Add more fields as needed -->
+            <br>
+            <hr>
+        `;
+        sheltersContainer.appendChild(shelterDiv);
+    });
+  }
