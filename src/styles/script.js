@@ -75,8 +75,8 @@ if (serviceSelect.value === "Shelter") {
             <h4>${shelter.businessName}</h4>
             <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
             <p>Phone: ${shelter.contacts.phone}</p>
-            <p>Email: ${shelter.contacts.email}</p>
-            <p>${shelter.website}</p>
+            <a href="mailto:${shelter.contacts.email}">Email: ${shelter.contacts.email}</a>
+            <a href="${shelter.website}">${shelter.website}</a>
             <p>${shelter.description}</p>
   
             <!-- Add more fields as needed -->
