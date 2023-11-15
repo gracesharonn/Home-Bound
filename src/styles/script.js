@@ -90,6 +90,7 @@ if (serviceSelect.value === "Shelter") {
             <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
             <p>${shelter.contacts.phone}</p>
             <a href="mailto:${shelter.contacts.email}" class="emailParagraph">${shelter.contacts.email}</a>
+            <br>
             <a href="${shelter.website}" class="websiteParagraph">${shelter.website}</a>
             <p>"${shelter.description}"</p>
             <br>
