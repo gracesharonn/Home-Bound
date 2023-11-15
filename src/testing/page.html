@@ -20,6 +20,8 @@
         }
         h2{
             font-size: 44px;
+            animation: fade-in-up 0.5s;
+            animation-fill-mode: both;
         }
         hr {
             height: 0.5px;
@@ -27,14 +29,38 @@
             border-style: solid; /* Solid line */
             border-width: 1px; /* 3 pixels thickness */
             width: 100%; /* 50% width of the container */
+            animation-delay: 0.2s;
+            animation: fade-in-up 0.5s;
+            animation-fill-mode: both;
             
         }
-        p{
+
+        #box{
             font-size: 22px;
+            animation-delay: 0.2s;
+            animation: fade-in-up 0.5s;
+            animation-fill-mode: both;
+            margin: 0;
         }
         .main{
             margin-top: 0.25in;
         }
+
+                /*
+        * A simpler keyframe rule, where 'from' is the same as 0%, and 'to' is the same
+        * as 100%
+        */
+        @keyframes fade-in-up {
+        from {
+            transform: translateY(8pt);
+            opacity: 0;
+        }
+        to {
+            transform: none;
+            opacity: 1;
+        }
+    }
+        
     </style>
     <title>Fetch Businesses</title>
 </head>
@@ -48,13 +74,19 @@
         function fetchAndDisplayBusinesses() {
             // Assuming the JSON file is one level up from the current directory
             const jsonFilePath = 'businesses.json';
+            const selectedService = 'shelters';
 
             fetch(jsonFilePath)
                 .then(response => response.json())
                 .then(data => {
+                // Check if the selected service exists in the data
+                if (data[selectedService]) {
                     // Handle the JSON data and display businesses
-                    displayBusinesses(data.businesses);
-                })
+                    displayBusinesses(data[selectedService]);
+                } else {
+                    console.error(`Service '${selectedService}' not found in the JSON data.`);
+                }
+            })
                 .catch(error => console.error('Error fetching JSON:', error));
         }
 
@@ -65,22 +97,26 @@
             businesses.forEach((business, index) => {
                 const businessDiv = document.createElement('div');
                 businessDiv.innerHTML = `
-                <div style="display: flex;">
+                <div id = "box" style="display: flex;">
                 <div style="flex: 1;">
                     <p><strong>Business ${index + 1}:</strong></p>
                     <p>Business Name: ${business.businessName}</p>
-                    <p>Industry: ${business.industry}</p>
-                    <p>Location: ${business.location.city}, ${business.location.state}, ${business.location.country}</p>
+                    <p>Location: ${business.location.city}, ${business.location.state}</p>
                     <p>Website: ${business.website}</p>
                 </div>
                 <div id="map${index}" style="height: 250px; width: 400px; margin-right: 50%; margin-top: 20px"></div>
             </div>
             <hr>
         `;
-        businessesContainer.appendChild(businessDiv);
 
-                // Create a map for each business
-                createMap(`map${index}`, `${business.location.latitude}`, `${business.location.longitude}`, `${business.businessName}`);
+        //Timer so each div generated fades in
+        setTimeout(() => {
+            businessesContainer.appendChild(businessDiv);
+
+            //create a map for each business
+            createMap(`map${index}`, `${business.location.latitude}`, `${business.location.longitude}`, `${business.businessName}`);
+        }, index * 200); // Adjust the delay value as needed
+                
             });
         }
 

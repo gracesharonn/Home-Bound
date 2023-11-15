@@ -1,50 +1,38 @@
 {
-    "businesses": [
-      {
-        "businessName": "ABC Corp",
-        "industry": "Technology",
-        "location": {
-          "city": "Exampleville",
-          "state": "CA",
-          "country": "USA",
-          "latitude": "38.55653744654297",
-          "longitude": "-121.41009726049207"
-        },
-        "foundingYear": 2000,
-        "employees": 100,
-        "revenue": 5000000,
-        "products": ["Product A", "Product B", "Product C"],
-        "contacts": {
-          "email": "info@abccorp.com",
-          "phone": "+1 (555) 123-4567"
-        },
-        "website": "http://www.abccorp.com",
-        "partners": ["Partner X", "Partner Y"],
-        "socialMedia": {
-          "twitter": "@abccorp",
-          "linkedin": "abc-corp"
-        }
+  "shelters": [
+    {
+      "businessName": "ARK OF REFUGE INC",
+      "location": {
+        "street": "500 W Capitol Mall suite 2350",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95814",
+        "latitude": "38.578629156190516",
+        "longitude": "-121.5015784626208"
       },
-      {
-        "businessName": "XYZ Solutions",
-        "industry": "Consulting",
-        "location": {
-          "city": "Consultville",
-          "state": "NY",
-          "country": "USA",
-          "latitude": "38.56085810486683",
-          "longitude": "-121.43862523348555"
-        },
-        "description": "",
-        "contacts": {
-          "email": "info@xyzsolutions.com",
-          "phone": "+1 (555) 987-6543"
-        },
-        "website": "http://www.xyzsolutions.com",
-        "socialMedia": {
-          "twitter": "@xyzsolutions",
-          "linkedin": "xyz-solutions"
-        }
-      }
-    ]
-  }
+      "description": "Non Profit that has been catering to transient populations since 1992. Our mission is to provide perpetual sustenance programs to both adults and transitional age youth within the State of California",
+      "contacts": {
+        "email": "Support@thearkofrefuge.org",
+        "phone": "+1-866-676-0070"
+      },
+      "website": "https://www.thearkofrefuge.org/"
+    },
+    {
+      "businessName": "FAMILY PROMISE OF SACRAMENTO - EMERGENCY SHELTER",
+      "location": {
+        "street": "1321 N C St",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95811",
+        "latitude": "38.59143174163012",
+        "longitude": "-121.48286960774512"
+      },
+      "description": "Providing a safe and comfortable living space where families can stay together is an essential part of the Family Promise mission.",
+      "contacts": {
+        "email": "marsha@sacfamilypromise.org",
+        "phone": "916-443-3107"
+      },
+      "website": "https://sacfamilypromise.org/"
+    }
+  ]
+}
