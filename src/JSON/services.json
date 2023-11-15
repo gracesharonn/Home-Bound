@@ -7,7 +7,8 @@
         "city": "Sacramento",
         "state": "CA",
         "zipcode": "95814",
-        "lat": "798362479032849032"
+        "latitude": "38.578629156190516",
+        "longitude": "-121.5015784626208"
       },
       "description": "Non Profit that has been catering to transient populations since 1992. Our mission is to provide perpetual sustenance programs to both adults and transitional age youth within the State of California",
       "contacts": {
