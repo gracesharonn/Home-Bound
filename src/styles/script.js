@@ -48,50 +48,6 @@ if (serviceSelect.value === "Shelter") {
 }
 }
 
-function typeGovAssist() {
-    var gov = document.querySelector('input[name="government_assistance"]:checked').value;
-    var assist = document.getElementById('government_assistance_type');
-    
-    if (gov === 'Yes') {
-    assist.style.display = 'block';
-} else {
-    assist.style.display = 'none';
-}
-}
-
-function familyMembersInput() {
-    var fam = document.querySelector('input[name="family"]:checked').value;
-    var famMem = document.getElementById('family_members_input')
-
-    if (fam === 'Yes') {
-      famMem.style.display = 'block';
-    } else {
-      famMem.style.display = 'none';
-    }
-  }
-
-function showPetNumInput() {
-    var hasPet = document.querySelector('input[name="pets"]:checked').value;
-    var petNumberInput = document.getElementById('pet_number_input');
-
-    if (hasPet === 'Yes') {
-      petNumberInput.style.display = 'block';
-    } else {
-      petNumberInput.style.display = 'none';
-    }
-  }
-
-function typeOfCrisis() {
-    var crisis = document.querySelector('input[name="crisis_situation"]:checked').value;
-    var reason = document.getElementById('type_of_crisis');
-
-    if (crisis === 'Yes') {
-      reason.style.display = 'block';
-    } else {
-      reason.style.display = 'none';
-    }
-  }
-
   //Shelter JSON Displayed
   function fetchAndDisplayShelters() {
     // Assuming the JSON file is one level up from the current directory
