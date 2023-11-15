@@ -19,7 +19,6 @@
 }
 
 /* Navigation Bar */
-
 .NavigationBar {
     text-align: left;
     padding: 25px;
@@ -30,6 +29,7 @@
     font-size: 32px;
     font-weight: 700;
     background-color: transparent !important;
+    transition: top 1s ease-out;
 }
   
 .NavigationBar ul {
@@ -61,7 +61,6 @@
 }
 
 /* Service Menu Bar */
-
 nav {
     position: absolute;
     top: 100px;
@@ -115,13 +114,6 @@ nav {
     padding-top: 269px;
 }
 
-#house-icon {
-    position: absolute;
-    top: 280px;
-    left: 400px; 
-    background: none;
-}
-
 @keyframes flash {
     0% {
       opacity: 0;
@@ -156,27 +148,11 @@ nav {
     box-sizing: border-box;
     animation: flash 3s infinite, bounce 3s infinite;
     text-align: center;
-    padding-top: 180px;
+    padding-top: 100px;
     padding-bottom: 500px;
     /* top: 80%;
     left: 40%; */
 }
-
-/* .Shelter-Container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin: 10px auto;
-    display: flex;
-    font-size: 35px;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-#service, #submit{
-    font-size: 22px;
-} */
 
 #ServiceForm {
     text-align: center;
@@ -185,17 +161,16 @@ nav {
 }
 
 .Form-Box {
-    width: 759px;
+    width: auto;
+    max-width: 930px;
     background-color: #FFE475;
     font-size: 35px;
     padding-top: 200px;
     box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
     border-radius: 20px;
-    padding: 20px; /* Padding inside the box */
-    border-radius: 50px; /* Rounded corners for the box */
+    padding: 50px;
+    border-radius: 50px;
     display: inline-block;
-    /* text-align: center;
-    margin-top: 20px; */
     line-height: 1.9;
 }
 
@@ -228,7 +203,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-    background-color: #006; /* Change the background color when checked */
+    background-color: #006;
     border: 3px solid #F5F6FA ;
 }
 
@@ -571,7 +546,7 @@ input[type="radio"]:checked {
     width: 252px !important;
 }
 
-/* test1 Page */
+/* Services Page (Shelters id & class applies to every other services)*/
 h2 {
     font-size: 118px;
     font-style: normal;
@@ -581,7 +556,24 @@ h2 {
 }
 
 #sheltersContainer {
-    padding: 0 100px 100px 100px;
+    padding: 0 100px 0 100px;
+}
+
+.sheltersContainer {
+    padding: 5px 40px 5px 40px;
+    background-color: #FFE475;
+    border-radius: 35px;
+    box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
+    display: block;
+}
+
+.sheltersContainer h4 {
+    background-color: transparent !important;
+    text-indent: 0;
+}
+
+.sheltersContainer p {
+    background-color: transparent !important;
 }
 
 .shelters-info {
@@ -590,40 +582,44 @@ h2 {
     line-height: 50px;
     font-size: 50px;
     width: 850px;
+    text-indent: 40px;
 }
 
 .shelters-info > div {
-    margin-bottom: 33px;
+    margin-bottom: 65px;
 }
 
 .shelters-info hr {
     display: none;
 }
 
-.shelters-info p:nth-child(3) {
+.shelters-info p:nth-child(3) { /* address */
+    font-family: BenchNine; 
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.shelters-info p:nth-child(4) { /* phone number */
+    font-family: BenchNine; 
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.shelters-info p:nth-child(5) { /* email */
     font-family: BenchNine; 
     font-size: 24px;
 }
 
-.shelters-info p:nth-child(4) {
+.shelters-info p:nth-child(6) { /* website */
     font-family: BenchNine; 
     font-size: 24px;
 }
 
-.shelters-info p:nth-child(5) {
-    font-family: BenchNine; 
-    font-size: 24px;
-}
-
-.shelters-info p:nth-child(6) {
-    font-family: BenchNine; 
-    font-size: 24px;
-}
-
-.shelters-info p:nth-child(7) {
+.shelters-info p:nth-child(7) { /* description */
     font-family: BenchNine; 
     font-size: 28px;
     font-style: italic;
+    text-indent: 0;
 }
 
 .tab1 { 
