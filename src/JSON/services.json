@@ -27,7 +27,7 @@
       "description": "Providing a safe and comfortable living space where families can stay together is an essential part of the Family Promise mission.",
       "contacts": {
         "email": "marsha@sacfamilypromise.org",
-        "phone": "916-443-3107"
+        "phone": "(916) 443 3107"
       },
       "website": "https://sacfamilypromise.org/"
     },
@@ -42,7 +42,7 @@
       "description": "Class of Housing: Emergency Shelter Program: lodging and meals for homeless single men and women for 30 to 120 days",
       "contacts": {
         "email": "",
-        "phone": "(916) 442-0331"
+        "phone": "(916) 442 0331"
       },
       "website": "https://sacramento.salvationarmy.org/sacramento_metro/"
     },
@@ -57,7 +57,7 @@
       "description": "We are not a shelter, we do have a motel voucher program for homeless families.",
       "contacts": {
         "email": "mccsinglesreferrals@nextmovesacramento.org",
-        "phone": "(916) 443-2646"
+        "phone": "(916) 443 2646"
       },
       "website": "http://www.francishousecenter.org/"
     },
@@ -72,7 +72,7 @@
       "description": "The development is comprised of 60 one bedroom cottages. The residential facility primarily serves single men or women, or a couple or parent with a child at these cottages",
       "contacts": {
         "email": "INFO@COTTAGEHOUSING.ORG",
-        "phone": "916-492-9065"
+        "phone": "(916) 492 9065"
       },
       "website": "https://www.cottagehousing.org/"
     },
@@ -87,7 +87,7 @@
       "description": "We provide more than shelter and food. We provide the ability to rise above devastating, negative elements and achieve job-readiness and self-sustainability.",
       "contacts": {
         "email": "",
-        "phone": "(916)453-1482"
+        "phone": "(916) 453 1482"
       },
       "website": "https://saintjohnsprogram.org/"
     },
@@ -102,7 +102,7 @@
       "description": "Provides a seven 7-night stay for single men. Be there at the black metal gate by 5:30 p.m. for a first come/first serve basis.",
       "contacts": {
         "email": "",
-        "phone": "916-447-3268"
+        "phone": "(916) 447 3268"
       },
       "website": "https://ugmsac.com/"
     },
@@ -117,7 +117,7 @@
       "description": "As many as 90 consecutive days of food, shelter and referral services are provided to homeless men at Volunteers of America's Men's Shelter.",
       "contacts": {
         "email": "",
-        "phone": "(916) 448-5507"
+        "phone": "(916) 448 5507"
       },
       "website": "https://www.voa-ncnn.org/"
     }
@@ -240,9 +240,9 @@
         "state": "CA",
         "zipcode": "95823"
       },
-      "description": "",
+      "description": "Offers primary care health services to adults and children that do not have medical insurance. Medical services include immunizations, STD's HIV diagnoses and family planning.",
       "contacts": {
-        "email": "Offers primary care health services to adults and children that do not have medical insurance. Medical services include immunizations, STD's HIV diagnoses and family planning.",
+        "email": "",
         "phone": "(916) 875-0802"
       },
       "website": ""
@@ -398,34 +398,34 @@
       "website": ""
     },
     {
-      "businessName": "",
+      "businessName": "El Hogar Guest House",
       "location": {
-        "street": "",
+        "street": "600 Bercut Drive",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": ""
+        "zipcode": "95811"
       },
-      "description": "",
+      "description": "Adults. New clients Tue and Wed 8:30 am, Thu 1 pm",
       "contacts": {
         "email": "",
-        "phone": ""
+        "phone": "(916) 440-1500"
       },
       "website": ""
     },
     {
-      "businessName": "",
+      "businessName": "One Community Health",
       "location": {
-        "street": "",
+        "street": "1500 21st St and 1442 Ethan Way, Suite 100",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": ""
+        "zipcode": "95825"
       },
-      "description": "",
+      "description": "Health centers open to anyone regardless of age, gender, ethnicity, orientation, or ability to pay.",
       "contacts": {
         "email": "",
-        "phone": ""
+        "phone": "916-443-3299"
       },
-      "website": ""
+      "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/"
     }
   ]
 }
