@@ -11,8 +11,8 @@
       },
       "description": "Non Profit that has been catering to transient populations since 1992. Our mission is to provide perpetual sustenance programs to both adults and transitional age youth within the State of California",
       "contacts": {
-        "email": "support@thearkofrefuge.org",
-        "phone": "+1-866-676-0070"
+        "email": "Support@thearkofrefuge.org",
+        "phone": "866-676-0070"
       },
       "website": "https://www.thearkofrefuge.org/"
     },
@@ -41,8 +41,8 @@
       },
       "description": "Class of Housing: Emergency Shelter Program: lodging and meals for homeless single men and women for 30 to 120 days",
       "contacts": {
-        "email": "",
-        "phone": "(916) 442-0331"
+        "email": " ",
+        "phone": "916-442-0331"
       },
       "website": "https://sacramento.salvationarmy.org/sacramento_metro/"
     },
@@ -57,7 +57,7 @@
       "description": "We are not a shelter, we do have a motel voucher program for homeless families.",
       "contacts": {
         "email": "mccsinglesreferrals@nextmovesacramento.org",
-        "phone": "(916) 443-2646"
+        "phone": "916-443-2646"
       },
       "website": "http://www.francishousecenter.org/"
     },
@@ -86,8 +86,8 @@
       },
       "description": "We provide more than shelter and food. We provide the ability to rise above devastating, negative elements and achieve job-readiness and self-sustainability.",
       "contacts": {
-        "email": "",
-        "phone": "(916)453-1482"
+        "email": " ",
+        "phone": "916-453-1482"
       },
       "website": "https://saintjohnsprogram.org/"
     },
@@ -101,7 +101,7 @@
       },
       "description": "Provides a seven 7-night stay for single men. Be there at the black metal gate by 5:30 p.m. for a first come/first serve basis.",
       "contacts": {
-        "email": "",
+        "email": " ",
         "phone": "916-447-3268"
       },
       "website": "https://ugmsac.com/"
@@ -116,16 +116,151 @@
       },
       "description": "As many as 90 consecutive days of food, shelter and referral services are provided to homeless men at Volunteers of America's Men's Shelter.",
       "contacts": {
-        "email": "",
-        "phone": "(916) 448-5507"
+        "email": " ",
+        "phone": "916-448-5507"
       },
       "website": "https://www.voa-ncnn.org/"
+    },
+    {
+      "businessName": "NEXT MOVE'S FAMILY SHELTER CAMPUS",
+      "location": {
+        "street": "4516 Parker Avenue",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820"
+      },
+      "description": "Our 55-bed Family Shelter provides short-term emergency housing and supportive services to 13 homeless families for up to 30 days.",
+      "contacts": {
+        "email": "mccsinglesreferrals@nextmovesacramento.org",
+        "phone": "916-455-2160"
+      },
+      "website": "https://www.nextmovesacramento.org/emergency_family_shelter/"
+    },
+    {
+      "businessName": "LEARNING TO LIVE SOBER LIVING",
+      "location": {
+        "street": "2330 Irma Way",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95825"
+      },
+      "description": " Learning To Live provides a safe and sober environment for men wishing to pursue a higher quality of life. LTL does not provide residential treatment services. We provide sober living in a comfortable and safe environment.",
+      "contacts": {
+        "email": " ",
+        "phone": "916-662-2784"
+      },
+      "website": "https://www.shelterlistings.org/details/37861/"
+    },
+    {
+      "businessName": "CENTRO GUADALUPE Â€“ CATHOLIC SOCIAL SERVICES",
+      "location": {
+        "street": "730 S Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95814"
+      },
+      "description": "A multi-service center in the southside area of Sacramento has been providing services in English and Spanish since 1979. Services include emergency rental and utility assistance, information and referral, low-cost immigration assistance, tax preparation assistance for low-income families, and distribution of  toys and food to low-income families at Christmas.",
+      "contacts": {
+        "email": "office@shrinegpe.org ",
+        "phone": "916-443-5367"
+      },
+      "website": "https://guadalupe-sacramento.org/"
+    },
+    {
+      "businessName": "TUBMAN HOUSE TRANSITIONAL HOUSING",
+      "location": {
+        "street": "PO Box 160085",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95816"
+      },
+      "description": "Waking the Village operates Tubman House, an 18 month transitional living program serving Sacramento’s homeless, parenting youth and their children.",
+      "contacts": {
+        "email": "admin@wakingthevillage.org",
+        "phone": "916-372-6272"
+      },
+      "website": "https://www.wakingthevillage.org/"
+    },
+    {
+      "businessName": "SACRAMENTO COTTAGE HOUSING SACRAMENTO",
+      "location": {
+        "street": "1726 Professional Drive",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95825"
+      },
+      "description": "This is a Non Profit Organization that provides Transitional Housing. Bishop Francis Quinn Cottages offers transitional housing services for up to 24 months.",
+      "contacts": {
+        "email": "dhusid@cottagehousing.org",
+        "phone": "916-971-1566"
+      },
+      "website": "https://www.cottagehousing.org/"
+    },
+    {
+      "businessName": "SACRAMENTO MUTUAL HOUSING ASSOCIATION SACRAMENTO",
+      "location": {
+        "street": "8001 Fruitridge Rd., Suite A",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820"
+      },
+      "description": "Smha's Mission Is To Develop And Operate Permanently Affordable Housing That Builds Strong And Stable Communities Through Resident Participation And Leadership Development. Smha Houses Over 2,650 LowIncome Residents Who Participate In Community Building Activities In Their Mutual Housing Communities And Surrounding Neighborhoods.",
+      "contacts": {
+        "email": " ",
+        "phone": "916-453-8400"
+      },
+      "website": "https://www.mutualhousing.com/"
+    },
+    {
+      "businessName": "EPISCOPAL COMMUNITY SERVICES OF THE DIOCESE OF NORTHERN CALIFORNIA SACRAMENTO",
+      "location": {
+        "street": "1318 27th St",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95816"
+      },
+      "description": "Provide Training, Technical Assistance, To Congregations, Interfaith Collaboratives And Small Community Based Non-Profits To Build Their Capacity To Provide Services To The Poor And The Elderly",
+      "contacts": {
+        "email": " ",
+        "phone": "916-442-6918"
+      },
+      "website": "https://norcalecs.org/"
+    },
+    {
+      "businessName": "SACRAMENTO AREA EMERGENCY HOUSING CENTER SACRAMENTO",
+      "location": {
+        "street": "2411 Alhambra Blvd Ste 110",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95817"
+      },
+      "description": "To Provide Assistance To Families With Children And Individuals Toward Self-Reliance.",
+      "contacts": {
+        "email": " ",
+        "phone": "916-454-2120"
+      },
+      "website": "https://www.shra.org/ehv/"
+    },
+    {
+      "businessName": "LA COOPERATIVA CAMPESINA DE CALIFORNIA SACRAMENTO",
+      "location": {
+        "street": "7801 Folsom Blvd Suite 365",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95826"
+      },
+      "description": "Implementing A Wide Variety Of Programs From Job Training To Family Health, Education And Other Supportive Services That Promote The Well Being Of Migrant And Seasonal Farm Workers, Their Families, And Their Communities",
+      "contacts": {
+        "email": "info@lacooperativa.org",
+        "phone": "916-388-2220"
+      },
+      "website": "https://lacooperativa.org/"
     }
   ],
 
   "food": [
     {
-      "businessName": "TEest food",
+      "businessName": "",
       "location": {
         "street": "",
         "city": "",
