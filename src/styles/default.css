@@ -618,10 +618,14 @@ h2 {
 .shelters-info p:nth-child(6) {
     font-family: BenchNine; 
     font-size: 24px;
-    text-decoration: underline;
 }
 
 .shelters-info p:nth-child(7) {
     font-family: BenchNine; 
-    font-size: 24px;
+    font-size: 28px;
+    font-style: italic;
+}
+
+.tab1 { 
+    tab-size: 4; 
 }
