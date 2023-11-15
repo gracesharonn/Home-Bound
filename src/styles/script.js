@@ -130,20 +130,5 @@ function typeOfCrisis() {
             <hr>
         `;
         sheltersContainer.appendChild(shelterDiv);
-        createMap(`map${index}`, `${shelter.location.latitude}`, `${shelter.location.longitude}`, `${shelter.businessName}`);
-  
     });
-  }
-
-  
-    //Function to generate leaflet map
-    function createMap(mapId, latitude, longitude, name) {
-      var map = L.map(mapId).setView([latitude, longitude], 15);
-
-      L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-          maxZoom: 19,
-          attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-      }).addTo(map);
-      var marker = L.marker([latitude, longitude]).addTo(map);
-      marker.bindPopup(name).openPopup();
   }
