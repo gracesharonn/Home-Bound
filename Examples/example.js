@@ -9,7 +9,7 @@ function createHtml() {
 
     var htmlDiv = `<div id="businessesContainer" class="business-info">
       <h2>Business Name</h2>
-      <p><strong>Address:</strong> 123 Main Street, City, State ZIP</p>
+      <p class="address"><strong>Address:</strong> 123 Main Street, City, State ZIP</p>
       <p><strong>Hours of Operation:</strong> Monday - Friday: 9:00 AM - 5:00 PM</p>
       <p><strong>Email:</strong> <a href="mailto:info@business.com">info@business.com</a></p>
       <p><strong>Phone:</strong> (123) 456-7890</p>
@@ -45,14 +45,14 @@ function fetchAndDisplayBusinesses() {
 
 function displayBusinesses(shelters) {
   const businessesContainer = document.getElementById('businessesContainer');
-  businessesContainer.innerHTML = ''; // Clear previous content
+  businessesContainer.innerHTML = ''; //Clear previous content
 
   shelters.forEach((business, index) => {
       const businessDiv = document.createElement('div');
       businessDiv.innerHTML = `
           <p><strong>Business ${index + 1}:</strong></p>
           <p>${business.businessName}</p>
-          <p>${business.location.street}, </p>
+          <p>${business.location.street} </p>
 
           <!-- Add more fields as needed -->
           <hr>
