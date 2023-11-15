@@ -91,7 +91,7 @@ function typeOfCrisis() {
       reason.style.display = 'none';
     }
   }
-
+  
   //Shelter JSON Displayed
   function fetchAndDisplayShelters() {
     // Assuming the JSON file is one level up from the current directory
@@ -111,22 +111,43 @@ function typeOfCrisis() {
   function displayShelters(shelters) {
     const sheltersContainer = document.getElementById('sheltersContainer');
     sheltersContainer.innerHTML = ''; // Clear previous content
-  
+
     shelters.forEach((shelter, index) => {
         const shelterDiv = document.createElement('div');
         shelterDiv.innerHTML = `
-            <br>
-            <h4>${shelter.businessName}</h4>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.contacts.phone}</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.contacts.email}</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.website}</p>
-            <p>${shelter.description}</p>
-  
-            <!-- Add more fields as needed -->
-            <br>
-            <hr>
-        `;
-        sheltersContainer.appendChild(shelterDiv);
+        <div id = "box" style="display: flex;">
+        <div style="flex: 1;">
+            <p>${shelter.businessName}</p>
+            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p></p>
+            <p>${shelter.contacts.phone}</p>
+            <p>${shelter.contacts.email}</p>
+            <p>${shelter.website}</p>
+        </div>
+        <div id="map${index}" class="map-container"></div>
+    </div>
+    <hr>
+`;
+
+//Timer so each div generated fades inn
+setTimeout(() => {
+  sheltersContainer.appendChild(shelterDiv);
+
+    //create a map for each business
+    createMap(`map${index}`, `${shelter.location.latitude}`, `${shelter.location.longitude}`, `${shelter.businessName}`);
+}, index * 200); // Adjust the delay value as needed
+        
     });
-  }
+}
+
+//Function to generate leaflet map
+function createMap(mapId, latitude, longitude, name) {
+    var map = L.map(mapId).setView([latitude, longitude], 15);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+    var marker = L.marker([latitude, longitude]).addTo(map);
+    marker.bindPopup(name).openPopup();
+}
+

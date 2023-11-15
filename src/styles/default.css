@@ -581,10 +581,33 @@ h2 {
 }
 
 #sheltersContainer {
+    background: none;
+    width: 1500px; /* Set your desired width */
+    height: 600px;
     padding: 0 100px 100px 100px;
+    animation-delay: 0.2s;
+    animation: fade-in-up 0.5s;
+    animation-fill-mode: both;
 }
 
+.map-container {
+    background: none;
+    height: 300px;
+    width: 400px;
+}
+
+
+/* Apply custom font to Leaflet popup */
+.leaflet-popup-content {
+    background: none;
+    background-color: transparent;
+}
+
+
 .shelters-info {
+    animation-delay: 0.2s;
+    animation: fade-in-up 0.5s;
+    animation-fill-mode: both;
     padding-left: 120px;
     margin: 10px;
     line-height: 50px;
@@ -629,3 +652,17 @@ h2 {
 .tab1 { 
     tab-size: 4; 
 }
+        /*
+        * A simpler keyframe rule, where 'from' is the same as 0%, and 'to' is the same
+        * as 100%
+        */
+        @keyframes fade-in-up {
+            from {
+                transform: translateY(8pt);
+                opacity: 0;
+            }
+            to {
+                transform: none;
+                opacity: 1;
+            }
+        }

@@ -7,11 +7,12 @@
         "city": "Sacramento",
         "state": "CA",
         "zipcode": "95814",
-        "lat": "798362479032849032"
+        "latitude": "38.578629156190516",
+        "longitude": "-121.5015784626208"
       },
       "description": "Non Profit that has been catering to transient populations since 1992. Our mission is to provide perpetual sustenance programs to both adults and transitional age youth within the State of California",
       "contacts": {
-        "email": "support@thearkofrefuge.org",
+        "email": "Support@thearkofrefuge.org",
         "phone": "+1-866-676-0070"
       },
       "website": "https://www.thearkofrefuge.org/"
@@ -22,7 +23,9 @@
         "street": "1321 N C St",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95811"
+        "zipcode": "95811",
+        "latitude": "38.59143174163012",
+        "longitude": "-121.48286960774512"
       },
       "description": "Providing a safe and comfortable living space where families can stay together is an essential part of the Family Promise mission.",
       "contacts": {
