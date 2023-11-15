@@ -76,30 +76,6 @@ if (serviceSelect.value === "Shelter") {
         .catch(error => console.error('Error fetching JSON:', error));
   }
   
-/*   function displayShelters(shelters) {
-    const sheltersContainer = document.getElementById('sheltersContainer');
-    sheltersContainer.innerHTML = ''; // Clear previous content
-  
-    shelters.forEach((shelter, index) => {
-        const shelterDiv = document.createElement('div');
-        shelterDiv.classList.add('sheltersContainer');
-        shelterDiv.innerHTML = `
-            <br>
-            <h4>${shelter.businessName}</h4>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.contacts.phone}</p>
-            <a href="mailto:${shelter.contacts.email}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.contacts.email}</a>
-            <a href="${shelter.website}">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.website}</a>
-            <p>"${shelter.description}"</p>
-  
-            <!-- Add more fields as needed -->
-            <br>
-            <hr>
-        `;
-        sheltersContainer.appendChild(shelterDiv);
-    });
-  } */
-
   function displayShelters(shelters) {
     const sheltersContainer = document.getElementById('sheltersContainer');
     sheltersContainer.innerHTML = ''; // Clear previous content
@@ -113,8 +89,8 @@ if (serviceSelect.value === "Shelter") {
             <h4>${shelter.businessName}</h4>
             <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
             <p>${shelter.contacts.phone}</p>
-            <p class="emailParagraph">${shelter.contacts.email}</p>
-            <p class="websiteParagraph">${shelter.website}</p>
+            <a href="mailto:${shelter.contacts.email}" class="emailParagraph">${shelter.contacts.email}</a>
+            <a href="${shelter.website}" class="websiteParagraph">${shelter.website}</a>
             <p>"${shelter.description}"</p>
             <br>
             <hr>
