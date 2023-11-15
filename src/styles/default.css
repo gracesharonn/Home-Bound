@@ -647,7 +647,6 @@ h2 {
 .shelters-info p:nth-child(7) { /* description */
     font-family: BenchNine; 
     font-size: 28px;
-    font-style: italic;
     text-indent: 0;
 }
 

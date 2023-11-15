@@ -308,7 +308,97 @@
       "website": ""
     },
     {
-      "businessName": "Test food",
+      "businessName": "Mercy Clinic",
+      "location": {
+        "street": "Friendship Park, 1321 North C Street at 12th Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95811"
+      },
+      "description": "Monday - Friday 7.30-4pm. Offers medical services for the homeless and others who may not have medical insurance. Includes TB testing for shelter placement",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 446-3345"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Chest Clinic",
+      "location": {
+        "street": "4600 Broadway",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820"
+      },
+      "description": "Provides free and low cost chest x-rays and TB testing to Medi-cal insured or to people with no medical insurance",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 874-9823"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Refugee Health Clinic",
+      "location": {
+        "street": "4600 Broadway, Suite 2100",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820"
+      },
+      "description": "Provides initial health assessment to newly arriving refugees and will assist with locating additional medical services through Medi-cal insurance.",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 874-9750"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "The Effort Medical Health Services",
+      "location": {
+        "street": "1820 J Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820"
+      },
+      "description": "Monday - Friday 5pm - 8.30pm. General health care services for adults and children. Will accept Medi-cal, Medicare, Blue cross and sliding scale of 30.00 minimum fee.",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 325-5556"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Sutter General Hospital",
+      "location": {
+        "street": "2801 L Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95816"
+      },
+      "description": "Provides emergency medical treatment including long term care services and accepts Medical/Medicare and private health insurance",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 454-2222 or (916) 454-6695"
+      },
+      "website": "https://www.sutterhealth.org/smcs"
+    },
+    {
+      "businessName": "Sacramento Community Clinic Consortium",
+      "location": {
+        "street": "4826 J Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95819"
+      },
+      "description": "Provides a consortium of Sacramento community clinics. Offers valuable information and assistance in locating medical services according to the type of health insurance that you have.",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 649-0653 or (916) 447-7222"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "",
       "location": {
         "street": "",
         "city": "Sacramento",
@@ -323,22 +413,7 @@
       "website": ""
     },
     {
-      "businessName": "Test food",
-      "location": {
-        "street": "",
-        "city": "Sacramento",
-        "state": "CA",
-        "zipcode": ""
-      },
-      "description": "",
-      "contacts": {
-        "email": "",
-        "phone": ""
-      },
-      "website": ""
-    },
-    {
-      "businessName": "Test food",
+      "businessName": "",
       "location": {
         "street": "",
         "city": "Sacramento",
