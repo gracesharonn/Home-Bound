@@ -58,7 +58,6 @@ if (serviceSelect.value === "Shelter") {
         .then(data => {
             // Handle the JSON data and display businesses
             displayShelters(data.shelters);
-            //jToString(data.businesses);
             
         })
         .catch(error => console.error('Error fetching JSON:', error));
@@ -77,6 +76,7 @@ if (serviceSelect.value === "Shelter") {
             <p>Phone: ${shelter.contacts.phone}</p>
             <a href="mailto:${shelter.contacts.email}">Email: ${shelter.contacts.email}</a>
             <a href="${shelter.website}">${shelter.website}</a>
+            <br><br>
             <p>${shelter.description}</p>
   
             <!-- Add more fields as needed -->
