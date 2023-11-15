@@ -117,10 +117,10 @@ function typeOfCrisis() {
         shelterDiv.innerHTML = `
             <br>
             <h4>${shelter.businessName}</h4>
-            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-            <p>Phone: ${shelter.contacts.phone}</p>
-            <p>Email: ${shelter.contacts.email}</p>
-            <p>${shelter.website}</p>
+            <p>Address:${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+            <p>Phone Number   :${shelter.contacts.phone}</p>
+            <p>${shelter.contacts.email}</p>
+            <p><a href="${shelter.website}" target="_blank">${shelter.website}</a></p>
             <p>${shelter.description}</p>
   
             <!-- Add more fields as needed -->

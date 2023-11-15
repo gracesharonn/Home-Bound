@@ -199,6 +199,10 @@ nav {
     line-height: 1.9;
 }
 
+.Form-Box hr {
+    display: none;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -573,34 +577,51 @@ h2 {
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 50px;
+    padding: 100px 0 0 80px;
 }
 
-.business-info {
-    padding: 50px;
+#sheltersContainer {
+    padding: 0 100px 100px 100px;
+}
+
+.shelters-info {
+    padding-left: 120px;
     margin: 10px;
     line-height: 50px;
-    font-size: 32px;
-    font-family: BenchNine;
+    font-size: 50px;
+    width: 850px;
 }
 
-.business-info > div {
+.shelters-info > div {
     margin-bottom: 33px;
 }
 
-.business-info hr {
+.shelters-info hr {
     display: none;
 }
 
-/* .business-info p strong {
-    font-family: 'YourDesiredFont', sans-serif;
-} */
+.shelters-info p:nth-child(3) {
+    font-family: BenchNine; 
+    font-size: 24px;
+}
 
-/* .business-info p.address{
-    font-family: BenchNine;
-} */
+.shelters-info p:nth-child(4) {
+    font-family: BenchNine; 
+    font-size: 24px;
+}
 
-.business-info p:nth-child(3) {
+.shelters-info p:nth-child(5) {
+    font-family: BenchNine; 
+    font-size: 24px;
+}
+
+.shelters-info p:nth-child(6) {
+    font-family: BenchNine; 
+    font-size: 24px;
+    text-decoration: underline;
+}
+
+.shelters-info p:nth-child(7) {
     font-family: BenchNine; 
     font-size: 24px;
 }
