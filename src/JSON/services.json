@@ -125,11 +125,224 @@
 
   "food": [
     {
-      "businessName": "TEest food",
+      "businessName": "Test food",
       "location": {
         "street": "",
         "city": "",
         "state": "",
+        "zipcode": ""
+      },
+      "description": "",
+      "contacts": {
+        "email": "",
+        "phone": ""
+      },
+      "website": ""
+    }
+  ],
+
+  "medical": [
+    {
+      "businessName": "Downtown Clinic",
+      "location": {
+        "street": "923 V Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95818"
+      },
+      "description": "Offers medical services to indigent individuals and families",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 448-6553"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Meadowview Clinic",
+      "location": {
+        "street": "2118 Meadowview Road",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95832"
+      },
+      "description": "Offers medical services to indigent individuals and families",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 427-0368"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Las Palmas Clinic",
+      "location": {
+        "street": "577 Las Palmas Avenue",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95815"
+      },
+      "description": "Offers medical services to indigent individuals and families",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 924-6703"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "White Rock Family Clinic",
+      "location": {
+        "street": "10487 White Rock Road, Rancho Cordova",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95670"
+      },
+      "description": "Free medical clinic center for people who do not have medical insurance. Not a walk in clinic so you must apply and provide proof of income, residency and ID. Two weeks waiting until seen. Please call for more information. Includes medical treatment of acute illnesses and minor injuries. Provides care of chronic illnesses such as diabetes, high blood pressure and asthma",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 364-0724"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Natomas Crossroads FREE Clinic",
+      "location": {
+        "street": "1101-A National Drive",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95838"
+      },
+      "description": "Clinic is open on the 1st Saturday of each month from 1:00-6:00pm. No Fee-No co-pay",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 514-6163"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Del Paso Health Clinic",
+      "location": {
+        "street": "3950 Research Drive",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95838"
+      },
+      "description": "Offers clinic services to age group 21 and over. You must be receiving. CMISP. Provides primary care medical services to individuals and families who do not have medical insurance.",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 648-0970"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "South City Health Clinic",
+      "location": {
+        "street": "7171 Bowling Drive Ste. 300",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95823"
+      },
+      "description": "",
+      "contacts": {
+        "email": "Offers primary care health services to adults and children that do not have medical insurance. Medical services include immunizations, STD's HIV diagnoses and family planning.",
+        "phone": "(916) 875-0802"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Oak Park Multi-Service",
+      "location": {
+        "street": "3415 Martin Luther King Blvd",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": ""
+      },
+      "description": "Monday - Friday 8-5pm. Public health clinic services, well child exams, childrens checkups and pediatric immunizations. Offers family planning, pregnancy testing and STD diagnoses and treatment along with immunizations. Medical insurance accepted or fees vary according to eligibility for children with no health insurance within zip codes 95816, 95817, 95818, 95820, or Sacramento county.",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 233-4910"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "County of Sacramento Primary Care Clinic",
+      "location": {
+        "street": "4600 Broadway",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820"
+      },
+      "description": "Monday - Friday 8-5pm. The Primary care clinic provides walk in non-emergency medical services to people with Medi-cal or no insurance",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 874-9670"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Health Care for the Homeless",
+      "location": {
+        "street": "4600 Broadway, Suite 2133",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820"
+      },
+      "description": "Provides primary and public health care medical service to homeless individuals and families who have no insurance.",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 874-1455"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "County of Sacramento Medically Indigent Services Program - CMISP",
+      "location": {
+        "street": "9616 Micron Ave., Suite 850B",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95827"
+      },
+      "description": "Monday - Friday 8-5pm. Call for medical answering service assistance. Helpful for locating a CMISP clinic nearest you. Provides resources and referrals to Sacramento county residents with no insurance.",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 874-9238"
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Test food",
+      "location": {
+        "street": "",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": ""
+      },
+      "description": "",
+      "contacts": {
+        "email": "",
+        "phone": ""
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Test food",
+      "location": {
+        "street": "",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": ""
+      },
+      "description": "",
+      "contacts": {
+        "email": "",
+        "phone": ""
+      },
+      "website": ""
+    },
+    {
+      "businessName": "Test food",
+      "location": {
+        "street": "",
+        "city": "Sacramento",
+        "state": "CA",
         "zipcode": ""
       },
       "description": "",
