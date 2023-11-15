@@ -95,7 +95,7 @@ function typeOfCrisis() {
   //Shelter JSON Displayed
   function fetchAndDisplayShelters() {
     // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../JSON/services.json';
+    const jsonFilePath = '../../JSON/services.json';
   
     fetch(jsonFilePath)
         .then(response => response.json())
