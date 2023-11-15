@@ -260,6 +260,173 @@
 
   "food": [
     {
+      "businessName": "Pilgrimage, Midtown Meals & Services",
+      "location": {
+        "street": "2100 J Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95816"
+      },
+      "description": "Daily meals and services are offered to anyone in need in the Sacramento Midtown area",
+      "contacts": {
+        "email": "myra@firstumcsac.org",
+        "phone": "916-446-5025"
+      },
+      "website": "https://www.firstumcsac.org/pilgrimage"
+    },
+    {
+      "businessName": "Sacramento Loves & Fishes",
+      "location": {
+        "street": "1351 North C. St.",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95811"
+      },
+      "description": "Our services embody the corporal works of Mercy: to feed the hungry, give drink to the thirsty, shelter the homeless, clothe the naked, visit the sick, visit the imprisoned, bury the dead.",
+      "contacts": {
+        "email": "info@sacloaves.org",
+        "phone": "916-446-0874"
+      },
+      "website": "https://sacloaves.org/programs-services/"
+    },
+    {
+      "businessName": "Feed Sacramento Homeless",
+      "location": {
+        "street": "4625 44th st. Suite #32",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820"
+      },
+      "description": "Here at Feed Sacramento Homeless, we’re committed to investing our expertise and resources in order to further achieve our cause.",
+      "contacts": {
+        "email": " ",
+        "phone": "916-470-7349"
+      },
+      "website": "https://www.feedsachomeless.org/"
+    },
+    {
+      "businessName": "Neighbor Program",
+      "location": {
+        "street": "2732 33rd St.",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95817"
+      },
+      "description": "Neighbor Program is a Pan-Afrikan Socialist organization committed to SERVING the PEOPLE and RADICALLY LOVING our NEIGHBOR; through this radical love, we look to carry on the People's revolutionary struggle towards liberation.",
+      "contacts": {
+        "email": "SacNeighbor916@gmail.com",
+        "phone": "916-642-9933"
+      },
+      "website": "https://www.neighborprogram.org/"
+    },
+    {
+      "businessName": "Salvation Army - Alhambra",
+      "location": {
+        "street": "2550 Alhambra Blvd",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95817"
+      },
+      "description": "lodging and meals for homeless single men and women for 30 to 120 days",
+      "contacts": {
+        "email": " ",
+        "phone": "916-452-9388"
+      },
+      "website": "https://sacramento.salvationarmy.org/sacramento_metro/"
+    },
+    {
+      "businessName": "Shiloh Baptist Church",
+      "location": {
+        "street": "3565 9th Avenue",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95817"
+      },
+      "description": "Shiloh Baptist Church is a historic and diverse congregation in Sacramento, CA, led by Pastor Anthony R. Sadler. The church offers Sunday services, prayer line, radio broadcast, and online giving options.",
+      "contacts": {
+        "email": " ",
+        "phone": "916-664-3850"
+      },
+      "website": "https://www.shilohbaptistchurch-sacramento.org/"
+    },
+    {
+      "businessName": "YXPLOSION, L.L.C",
+      "location": {
+        "street": "3415 Martin Luther King Jr Blvd",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95817"
+      },
+      "description": "YXP is a community engaged non-profit, which has made a difference in the civic life of Sacramento communities for over 10 years.",
+      "contacts": {
+        "email": " ",
+        "phone": "916-806-2770"
+      },
+      "website": "https://www.yxpunite.com/"
+    },
+    {
+      "businessName": "New St. Bethel Baptist Church",
+      "location": {
+        "street": "4201 8th Avenue",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95817"
+      },
+      "description": "New St. Bethel is a lively and active church that seeks to serve the local community and lead people to Christ. Learn about their beliefs, mission, vision, and Sunday services.",
+      "contacts": {
+        "email": "admin@newstbethel.org",
+        "phone": "916-456-3077"
+      },
+      "website": "http://newstbethel.org/"
+    },
+    {
+      "businessName": "River City Food Bank - Midtown",
+      "location": {
+        "street": "1800 28th Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95816"
+      },
+      "description": "In Sacramento County, 15% of residents experience food insecurity, meaning that they lack reliable access to an adequate supply of affordable, nutritious food.",
+      "contacts": {
+        "email": "email@rivercityfoodbank.org",
+        "phone": "916-446-2627"
+      },
+      "website": "https://rivercityfoodbank.org/"
+    },
+    {
+      "businessName": "South Sacramento Interfaith Partnership (SSIP)",
+      "location": {
+        "street": "5625 24th Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95822"
+      },
+      "description": "The primary mission of the SSIP Food Closet is to maintain and operate an emergency food distribution program to help alleviate food insecurity for Sacramento area residents. ",
+      "contacts": {
+        "email": "info@ssipfoodcloset.org",
+        "phone": "916-428-5290"
+      },
+      "website": "https://www.ssipfoodcloset.org/"
+    },
+    {
+      "businessName": "Daughters of Zion Enterpryz",
+      "location": {
+        "street": "6489 47th St.",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95823"
+      },
+      "description": "The Daughters of Zion (DOZ) Enterpryz hunger relief efforts are comprised of our Food and Clothes closet",
+      "contacts": {
+        "email": "",
+        "phone": "916-422-3875"
+      },
+      "website": "https://www.dozenterpryz.org/foodandclothescloset"
+    }
+  ],
+  "medical": [
+    {
       "businessName": "",
       "location": {
         "street": "",
