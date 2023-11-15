@@ -19,7 +19,6 @@
 }
 
 /* Navigation Bar */
-
 .NavigationBar {
     text-align: left;
     padding: 25px;
@@ -29,7 +28,8 @@
     z-index: 10;
     font-size: 32px;
     font-weight: 700;
-    background-color: transparent;
+    background-color: transparent !important;
+    transition: top 1s ease-out;
 }
   
 .NavigationBar ul {
@@ -45,9 +45,13 @@
   
 .NavigationBar ul li {
     list-style: none;
+    background-color: #F5F6FA;
+    border-radius: 30px;
+    padding: 5px 18px;
 }
-  
+
 .NavigationBar ul li a {
+    background-color: transparent;
     font-family: BenchNine;
     font-size: 1em;
     font-style: normal;
@@ -57,7 +61,6 @@
 }
 
 /* Service Menu Bar */
-
 nav {
     position: absolute;
     top: 100px;
@@ -101,15 +104,6 @@ nav {
 }
 
 /* Website Title */
-/* .TitlePage {
-    width: 100%;
-    font-size: 95px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding-top: 269px;
-} */
-
 .TitlePage {
     display: flex;
     justify-content: space-between;
@@ -118,13 +112,6 @@ nav {
     text-align: center;
     justify-content: center;
     padding-top: 269px;
-}
-
-#house-icon {
-    position: absolute;
-    top: 280px;
-    left: 400px; 
-    background: none;
 }
 
 @keyframes flash {
@@ -161,27 +148,11 @@ nav {
     box-sizing: border-box;
     animation: flash 3s infinite, bounce 3s infinite;
     text-align: center;
-    padding-top: 180px;
+    padding-top: 100px;
     padding-bottom: 500px;
     /* top: 80%;
     left: 40%; */
 }
-
-/* .Shelter-Container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin: 10px auto;
-    display: flex;
-    font-size: 35px;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-#service, #submit{
-    font-size: 22px;
-} */
 
 #ServiceForm {
     text-align: center;
@@ -190,18 +161,21 @@ nav {
 }
 
 .Form-Box {
-    width: 759px;
+    width: auto;
+    max-width: 930px;
     background-color: #FFE475;
     font-size: 35px;
     padding-top: 200px;
     box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
     border-radius: 20px;
-    padding: 20px; /* Padding inside the box */
-    border-radius: 50px; /* Rounded corners for the box */
+    padding: 50px;
+    border-radius: 50px;
     display: inline-block;
-    /* text-align: center;
-    margin-top: 20px; */
     line-height: 1.9;
+}
+
+.Form-Box hr {
+    display: none;
 }
 
 html {
@@ -229,7 +203,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-    background-color: #006; /* Change the background color when checked */
+    background-color: #006;
     border: 3px solid #F5F6FA ;
 }
 
@@ -265,73 +239,389 @@ input[type="radio"]:checked {
 
 /* About Us Page */
 
-.AboutUs-FirstSection {
+.sections {
+    position: relative;
     width: 100%;
-    height: 100vh;
 }
 
-.AboutUs-FirstSection img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Adjust the width as needed */
-    z-index: 1; /* Set a lower z-index so that it appears below the navigation bar */
-}
-
-.AboutUs-SecondSection {
+#section1 {
     width: 100%;
     height: 100vh;
-    background-color: #006;
     z-index: 1;
 }
 
-.AboutUs-ThirdSection {
-    width: 100%;
-    height: 100vh;
+.text-container-1 {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.AboutUs-ThirdSection img {
+#section2 {
+    height: 100vh;
+    background-color: #006;
+    z-index: 2;
+}
+
+.text-container-2 {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    color: #F5F6FA;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#section3 {
+    height: 90vh;
+    z-index: 2;
+}
+
+.text-container-3 {
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    color: #F5F6FA;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.VolunteerButton {
+    position: absolute;
+    top: 77%;
+    left: 7%;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.VolunteerButton button {
+    font-family: BenchNine;
+    font-size: 40px;
+    width: 360px;
+    height: 81px;
+    flex-shrink: 0;
+    border-color: transparent;
+    border-radius: 50px;
+    background-color: #FFE475;
+    cursor: pointer;
+}
+
+.ContactTitle {
+    position: absolute;
+    top: 82%;
+    right: 23%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ContactInfo {
+    position: absolute;
+    top: 90%;
+    right: 19%;
+    transform: translate(0%, -50%);
+    font-size: 50px;
+}
+
+/* Login (Volunteers) & Sign Up Page */
+
+.LoginRegisterBG {
     position: relative;
+}
+
+.LoginRegisterBG img {
+    width: 100%;
+    height: auto;
+    position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Adjust the width as needed */
-    z-index: 1; /* Set a lower z-index so that it appears below the navigation bar */
+    margin-top: 169px;
 }
 
-/* test1 Page */
+@keyframes moveBike {
+    0% {
+        left: -120%;
+    }
+    100% {
+        left: 130%;
+    }
+}
+
+#bike {
+    position: absolute;
+    width: 96px;
+    height: 55px;
+    background-color: transparent;
+    margin: 499px 1440px 470px;
+    z-index: 1;
+    left: 120%;
+    animation: moveBike 20s linear infinite;
+    animation-delay: 0.1s;
+}
+
+#houses {
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    width: 506px;
+    height: 326px;
+    flex-shrink: 0;
+    margin: 259px 877px 439px 57px;
+    z-index: 2;
+}
+
+.LoginContainer, .SignUpContainer {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 113px 167px 293px 783px;
+    border-radius: 40px;
+    z-index: 2;
+}
+
+#LoginBox, #SignUpBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #F5F6FA;
+    width: 490px;
+    height: 618px;
+    padding: 20px;
+    background-color: #FFE475;
+    font-size: 35px;
+    padding-top: 200px;
+    border-radius: 40px;
+}
+
+#LoginBox label {
+    display: block;
+    margin-bottom: 10px;
+    width: 490px;
+}
+
+#LoginBox input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.LoginContainer h1 {
+    margin-top: -140px;
+    font-size: 64px;
+    background-color: transparent;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#emailpw {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: BenchNine;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 33px;
+    border-color: transparent;
+    margin-bottom: 5px;
+    margin-top: 70px;
+    width: 380px !important;
+}
+
+#submitLogin {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+    margin-bottom: 35px;
+    background-color: #006;
+    color: #F5F6FA;
+    border-color: transparent;
+    border-radius: 33px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    width: 175px !important;
+}
+
+#AskUser {
+    position: absolute;
+    font-family: BenchNine;
+    left: 145px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    background-color: transparent;
+    margin-bottom: -340px;
+}
+
+#CreateAcc a {
+    position: absolute;
+    font-family: BenchNine;
+    right: 135px;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: underline;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    margin-top: -27px;
+}
+
+#SignUpBox label {
+    display: block;
+    margin-bottom: 10px;
+    width: 490px;
+}
+
+#SignUpBox input {
+    width: 100%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.SignUpContainer h1 {
+    margin-top: -160px;
+    margin-bottom: 20px;
+    font-size: 64px;
+    background-color: transparent;
+    text-align: center;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#firstname, #lastname, #age, #email, #pw, #confirmpw {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: BenchNine;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 33px;
+    border-color: transparent;
+    margin-bottom: 15px;
+    width: 380px !important;
+}
+
+#submitCreateAcc {
+    position: relative;
+    margin-top: 10px;
+    margin-bottom: 15px;
+    background-color: #006;
+    color: #F5F6FA;
+    border-color: transparent;
+    border-radius: 33px;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    width: 252px !important;
+}
+
+/* Services Page (Shelters id & class applies to every other services)*/
 h2 {
     font-size: 118px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
-    padding: 50px;
+    padding: 100px 0 0 80px;
 }
 
-.business-info {
-    padding: 50px;
+#sheltersContainer {
+    padding: 0 100px 0 100px;
+}
+
+.sheltersContainer {
+    padding: 5px 40px 5px 40px;
+    background-color: #FFE475;
+    border-radius: 35px;
+    box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
+    display: block;
+}
+
+.sheltersContainer h4 {
+    background-color: transparent !important;
+    text-indent: 0;
+}
+
+.sheltersContainer p {
+    background-color: transparent !important;
+}
+
+.shelters-info {
+    padding-left: 120px;
     margin: 10px;
     line-height: 50px;
-    font-size: 32px;
-    font-family: BenchNine;
+    font-size: 50px;
+    width: 850px;
+    text-indent: 40px;
 }
 
-.business-info > div {
-    margin-bottom: 33px;
+.shelters-info > div {
+    margin-bottom: 65px;
 }
 
-.business-info hr {
+.shelters-info hr {
     display: none;
 }
 
-/* .business-info p strong {
-    font-family: 'YourDesiredFont', sans-serif;
-} */
+.shelters-info p:nth-child(3) { /* address */
+    font-family: BenchNine; 
+    font-size: 30px;
+    font-weight: 700;
+}
 
-/* .business-info p.address{
-    font-family: BenchNine;
-} */
-
-.business-info p:nth-child(3) {
+.shelters-info p:nth-child(4) { /* phone number */
     font-family: BenchNine; 
     font-size: 24px;
+    font-weight: 700;
+}
+
+.shelters-info p:nth-child(5) { /* email */
+    font-family: BenchNine; 
+    font-size: 24px;
+}
+
+.shelters-info p:nth-child(6) { /* website */
+    font-family: BenchNine; 
+    font-size: 24px;
+}
+
+.shelters-info p:nth-child(7) { /* description */
+    font-family: BenchNine; 
+    font-size: 28px;
+    font-style: italic;
+    text-indent: 0;
+}
+
+.tab1 { 
+    tab-size: 4; 
 }
