@@ -30,6 +30,7 @@
     font-size: 32px;
     font-weight: 700;
     background-color: transparent;
+    transition: top 1s ease-in-out;
 }
   
 .NavigationBar ul {
