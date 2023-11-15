@@ -46,6 +46,7 @@
   
 .NavigationBar ul li {
     list-style: none;
+    background-color: transparent;
 }
   
 .NavigationBar ul li a {
@@ -55,6 +56,7 @@
     font-weight: 700;
     line-height: normal;
     cursor: pointer; /* new */
+    background-color: transparent !important;
 }
 
 /* Service Menu Bar */
@@ -266,37 +268,104 @@ input[type="radio"]:checked {
 
 /* About Us Page */
 
-.AboutUs-FirstSection {
+.sections {
+    position: relative;
     width: 100%;
-    height: 100vh;
 }
 
-.AboutUs-FirstSection img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%; /* Adjust the width as needed */
-    z-index: 1; /* Set a lower z-index so that it appears below the navigation bar */
-}
-
-.AboutUs-SecondSection {
+#section1 {
     width: 100%;
     height: 100vh;
-    background-color: #006;
     z-index: 1;
 }
 
-.AboutUs-ThirdSection {
-    width: 100%;
-    height: 100vh;
+.text-container-1 {
+    position: absolute;
+    top: 15%;
+    left: 15%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
 }
 
-.AboutUs-ThirdSection img {
-    position: relative;
-    top: 0;
-    left: 0;
-    width: 100%; /* Adjust the width as needed */
-    z-index: 1; /* Set a lower z-index so that it appears below the navigation bar */
+#section2 {
+    height: 100vh;
+    background-color: #006;
+    z-index: 2;
+}
+
+.text-container-2 {
+    position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    color: #F5F6FA;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#section3 {
+    height: 90vh;
+    z-index: 2;
+}
+
+.text-container-3 {
+    position: absolute;
+    top: 75%;
+    left: 5%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    color: #F5F6FA;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.VolunteerButton {
+    position: absolute;
+    top: 77%;
+    left: 7%;
+    z-index: 2;
+    background-color: transparent;
+}
+
+.VolunteerButton button {
+    font-family: BenchNine;
+    font-size: 40px;
+    width: 360px;
+    height: 81px;
+    flex-shrink: 0;
+    border-color: transparent;
+    border-radius: 50px;
+    background-color: #FFE475;
+    cursor: pointer;
+}
+
+.ContactTitle {
+    position: absolute;
+    top: 82%;
+    right: 23%;
+    transform: translate(0%, -50%);
+    text-align: center;
+    font-size: 64px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.ContactInfo {
+    position: absolute;
+    top: 90%;
+    right: 19%;
+    transform: translate(0%, -50%);
+    font-size: 50px;
 }
 
 /* test1 Page */
