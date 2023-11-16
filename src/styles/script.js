@@ -75,6 +75,22 @@ if (serviceSelect.value === "Shelter") {
         })
         .catch(error => console.error('Error fetching JSON:', error));
   }
+
+  //Medical JSON Displayed
+  function fetchAndDisplayMedical() {
+    // Assuming the JSON file is one level up from the current directory
+    const jsonFilePath = '../../JSON/services.json';
+  
+    fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+            // Handle the JSON data and display businesses
+            displayShelters(data.medical);
+            //jToString(data.businesses);
+            
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+  }
   
   function displayShelters(shelters) {
     const sheltersContainer = document.getElementById('sheltersContainer');
@@ -111,3 +127,5 @@ if (serviceSelect.value === "Shelter") {
         sheltersContainer.appendChild(shelterDiv);
     });
 }
+
+

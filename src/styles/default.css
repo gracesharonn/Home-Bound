@@ -19,6 +19,7 @@
 }
 
 /* Navigation Bar */
+
 .NavigationBar {
     text-align: left;
     padding: 25px;
@@ -28,8 +29,8 @@
     z-index: 10;
     font-size: 32px;
     font-weight: 700;
-    background-color: transparent !important;
-    transition: top 1s ease-out;
+    background-color: transparent;
+    transition: top 1s ease-in-out;
 }
   
 .NavigationBar ul {
@@ -45,22 +46,21 @@
   
 .NavigationBar ul li {
     list-style: none;
-    background-color: #F5F6FA;
-    border-radius: 30px;
-    padding: 5px 18px;
-}
-
-.NavigationBar ul li a {
     background-color: transparent;
+}
+  
+.NavigationBar ul li a {
     font-family: BenchNine;
     font-size: 1em;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
     cursor: pointer; /* new */
+    background-color: transparent !important;
 }
 
 /* Service Menu Bar */
+
 nav {
     position: absolute;
     top: 100px;
@@ -104,6 +104,15 @@ nav {
 }
 
 /* Website Title */
+/* .TitlePage {
+    width: 100%;
+    font-size: 95px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-top: 269px;
+} */
+
 .TitlePage {
     display: flex;
     justify-content: space-between;
@@ -112,6 +121,13 @@ nav {
     text-align: center;
     justify-content: center;
     padding-top: 269px;
+}
+
+#house-icon {
+    position: absolute;
+    top: 280px;
+    left: 400px; 
+    background: none;
 }
 
 @keyframes flash {
@@ -148,11 +164,27 @@ nav {
     box-sizing: border-box;
     animation: flash 3s infinite, bounce 3s infinite;
     text-align: center;
-    padding-top: 100px;
+    padding-top: 180px;
     padding-bottom: 500px;
     /* top: 80%;
     left: 40%; */
 }
+
+/* .Shelter-Container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+    display: flex;
+    font-size: 35px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+}
+
+#service, #submit{
+    font-size: 22px;
+} */
 
 #ServiceForm {
     text-align: center;
@@ -161,21 +193,18 @@ nav {
 }
 
 .Form-Box {
-    width: auto;
-    max-width: 930px;
+    width: 759px;
     background-color: #FFE475;
     font-size: 35px;
     padding-top: 200px;
     box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
     border-radius: 20px;
-    padding: 50px;
-    border-radius: 50px;
+    padding: 20px; /* Padding inside the box */
+    border-radius: 50px; /* Rounded corners for the box */
     display: inline-block;
+    /* text-align: center;
+    margin-top: 20px; */
     line-height: 1.9;
-}
-
-.Form-Box hr {
-    display: none;
 }
 
 html {
@@ -203,7 +232,7 @@ input[type="radio"] {
 }
 
 input[type="radio"]:checked {
-    background-color: #006;
+    background-color: #006; /* Change the background color when checked */
     border: 3px solid #F5F6FA ;
 }
 
@@ -546,7 +575,7 @@ input[type="radio"]:checked {
     width: 252px !important;
 }
 
-/* Services Page (Shelters id & class applies to every other services)*/
+/* test1 Page */
 h2 {
     font-size: 118px;
     font-style: normal;
@@ -565,6 +594,8 @@ h2 {
     border-radius: 35px;
     box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
     display: block;
+    width: 750px;
+    max-width: 850px;
 }
 
 .sheltersContainer h4 {
@@ -617,8 +648,7 @@ h2 {
 
 .shelters-info p:nth-child(7) { /* description */
     font-family: BenchNine; 
-    font-size: 28px;
-    font-style: italic;
+    font-size: 24px;
     text-indent: 0;
 }
 
