@@ -425,23 +425,6 @@
       "website": "https://www.dozenterpryz.org/foodandclothescloset"
     }
   ],
-  "template": [
-    {
-      "businessName": "",
-      "location": {
-        "street": "",
-        "city": "",
-        "state": "",
-        "zipcode": ""
-      },
-      "description": "",
-      "contacts": {
-        "email": "",
-        "phone": ""
-      },
-      "website": ""
-    }
-  ],
   "medical": [
     {
       "businessName": "Downtown Clinic",
@@ -727,6 +710,23 @@
         "phone": "916-443-3299"
       },
       "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/"
+    }
+  ],
+  "template": [
+    {
+      "businessName": "",
+      "location": {
+        "street": "",
+        "city": "",
+        "state": "",
+        "zipcode": ""
+      },
+      "description": "",
+      "contacts": {
+        "email": "",
+        "phone": ""
+      },
+      "website": ""
     }
   ]
 }
