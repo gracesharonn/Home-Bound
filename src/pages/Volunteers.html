@@ -38,7 +38,7 @@
         var enterPass = document.getElementById("password").value;
         
         //grab email and password from json file
-        fetch('./login.json')
+        fetch('../JSON/login.json')
             .then(response => response.json())
             .then(data =>{
                 var JSONemail = findUserbyEmail(enterEmail);
