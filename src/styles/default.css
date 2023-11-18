@@ -164,7 +164,7 @@ nav {
     box-sizing: border-box;
     animation: flash 3s infinite, bounce 3s infinite;
     text-align: center;
-    padding-top: 180px;
+    padding-top: 130px;
     padding-bottom: 500px;
     /* top: 80%;
     left: 40%; */
@@ -194,6 +194,7 @@ nav {
 
 .Form-Box {
     width: 759px;
+    max-width: 800px;
     background-color: #FFE475;
     font-size: 35px;
     padding-top: 200px;
@@ -462,7 +463,7 @@ input[type="radio"]:checked {
     line-height: normal;
 }
 
-#emailpw {
+#email_address {
     color: rgba(0, 0, 0, 0.50);
     font-family: BenchNine;
     font-size: 24px;
@@ -476,7 +477,21 @@ input[type="radio"]:checked {
     width: 380px !important;
 }
 
-#submitLogin {
+#password {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: BenchNine;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 33px;
+    border-color: transparent;
+    margin-bottom: 5px;
+    margin-top: 70px;
+    width: 380px !important;
+}
+
+#Login {
     position: relative;
     display: flex;
     flex-direction: column;
@@ -575,13 +590,27 @@ input[type="radio"]:checked {
     width: 252px !important;
 }
 
-/* test1 Page */
+/* Services Page */
 h2 {
     font-size: 118px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     padding: 100px 0 0 80px;
+}
+
+.OtherServices {
+    position: fixed;
+    font-size: 45px;
+    line-height: 115px;
+    right: 0;
+    padding: 50px;
+    text-align: right;
+    list-style: none;
+}
+
+.OtherServices ul {
+    list-style: none;
 }
 
 #sheltersContainer {
@@ -653,6 +682,21 @@ h2 {
     font-family: BenchNine; 
     font-size: 24px;
     text-indent: 0;
+}
+
+.emailParagraph, .websiteParagraph {
+    font-family: BenchNine; 
+    font-size: 24px;
+    font-weight: 700;
+    background-color: transparent;
+    margin-left: 40px;
+}
+
+.descriptionParagraph {
+    font-family: BenchNine; 
+    font-size: 30px;
+    font-weight: 700;
+    background-color: transparent;
 }
 
 .tab1 { 

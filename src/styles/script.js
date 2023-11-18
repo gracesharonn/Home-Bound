@@ -119,10 +119,10 @@ if (serviceSelect.value === "Shelter") {
             <h4>${shelter.businessName}</h4>
             <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
             <p>${shelter.contacts.phone}</p>
-            <a href="mailto:${shelter.contacts.email}" class="emailParagraph">${shelter.contacts.email}</a>
+            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
             <br>
-            <a href="${shelter.website}" class="websiteParagraph">${shelter.website}</a>
-            <p>"${shelter.description}"</p>
+            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+            <p class="descriptionParagraph">"${shelter.description}"</p>
             <br>
             <hr>
         `;
@@ -140,6 +140,12 @@ if (serviceSelect.value === "Shelter") {
         shelterDiv.innerHTML = content;
         sheltersContainer.appendChild(shelterDiv);
     });
+}
+
+//Open new tab for website
+function openInNewTab(url) {
+    event.preventDefault();
+    window.open(url, '_blank');
 }
 
 
