@@ -19,16 +19,15 @@ function saveJSON(filename = '', json = '"'){
 function writeJSONfile(){
     const input = loadJSON('./login.json')
     var login = {'email_address' : "edricksok101@gmail.com",
-    'password' : "password"
-    }
-    var user = {'first_name': "Edrick",
+    'password' : "password",
+    'first_name': "Edrick",
     'last_name' : "Sok",
     'age' : "20",
-    'sex' : "Male",
-    login}
+    'sex' : "Male"
+    }
     
     ;[
-        {user}
+        {login}
         
 ].forEach(string => input.Volunteers.push(string))
     
