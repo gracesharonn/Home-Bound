@@ -608,6 +608,9 @@ h2 {
 }
 
 .shelters-info {
+    animation-delay: 0.2s;
+    animation: fade-in-up 0.5s;
+    animation-fill-mode: both;
     padding-left: 120px;
     margin: 10px;
     line-height: 50px;
@@ -655,3 +658,17 @@ h2 {
 .tab1 { 
     tab-size: 4; 
 }
+        /*
+        * A simpler keyframe rule, where 'from' is the same as 0%, and 'to' is the same
+        * as 100%
+        */
+        @keyframes fade-in-up {
+            from {
+                transform: translateY(8pt);
+                opacity: 0;
+            }
+            to {
+                transform: none;
+                opacity: 1;
+            }
+        }
