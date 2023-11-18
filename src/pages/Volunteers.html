@@ -9,31 +9,9 @@
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
     <script>
-        var loginData;
-        function fetchData(){
-            fetch('../JSON/login.json')
-                .then(response => {
-                    if(!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Data fetched:', data);
-                    loginData = data;
-                    enterData();
-                })
-        }
-        function enterData(){
-            if(loginData.Volunteers && loginData.Volunteers.length > 0){
-                for(var i = 0;i < loginData.Volunteers.length;i++)
-                console.log(i+":", loginData.Volunteers[i]);
-            } else {
-                console.log('No volunteers found.');
-            }
-        }
-        fetchData();
        function checkPassword(){
+        var loginData;
+        fetchData();
         var enterEmail = document.getElementById("email_address").value;
         var enterPass = document.getElementById("password").value;
         
@@ -75,6 +53,28 @@
             var filePassword = loginData.Volunteers[index].password;
             return filePassword;
        }
+       function enterData(){
+            if(loginData.Volunteers && loginData.Volunteers.length > 0){
+                for(var i = 0;i < loginData.Volunteers.length;i++)
+                console.log(i+":", loginData.Volunteers[i]);
+            } else {
+                console.log('No volunteers found.');
+            }
+        }
+       function fetchData(){
+            fetch('../JSON/login.json')
+                .then(response => {
+                    if(!response.ok) {
+                        throw new Error('Network response was not ok');
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    console.log('Data fetched:', data);
+                    loginData = data;
+                    enterData();
+                })
+        }
     </script>
 </head>
 <body>
