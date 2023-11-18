@@ -164,7 +164,7 @@ nav {
     box-sizing: border-box;
     animation: flash 3s infinite, bounce 3s infinite;
     text-align: center;
-    padding-top: 180px;
+    padding-top: 130px;
     padding-bottom: 500px;
     /* top: 80%;
     left: 40%; */
@@ -194,6 +194,7 @@ nav {
 
 .Form-Box {
     width: 759px;
+    max-width: 800px;
     background-color: #FFE475;
     font-size: 35px;
     padding-top: 200px;
@@ -667,6 +668,21 @@ h2 {
     font-family: BenchNine; 
     font-size: 24px;
     text-indent: 0;
+}
+
+.emailParagraph, .websiteParagraph {
+    font-family: BenchNine; 
+    font-size: 24px;
+    font-weight: 700;
+    background-color: transparent;
+    margin-left: 40px;
+}
+
+.descriptionParagraph {
+    font-family: BenchNine; 
+    font-size: 30px;
+    font-weight: 700;
+    background-color: transparent;
 }
 
 .tab1 { 
