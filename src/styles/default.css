@@ -575,13 +575,27 @@ input[type="radio"]:checked {
     width: 252px !important;
 }
 
-/* test1 Page */
+/* Services Page */
 h2 {
     font-size: 118px;
     font-style: normal;
     font-weight: 400;
     line-height: normal;
     padding: 100px 0 0 80px;
+}
+
+.OtherServices {
+    position: fixed;
+    font-size: 45px;
+    line-height: 115px;
+    right: 0;
+    padding: 50px;
+    text-align: right;
+    list-style: none;
+}
+
+.OtherServices ul {
+    list-style: none;
 }
 
 #sheltersContainer {
