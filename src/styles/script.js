@@ -1,3 +1,16 @@
+/* Navbar effects */
+var prevScrollpos = window.pageYOffset;
+        window.onscroll = function() {
+            var currentScrollPos = window.pageYOffset;
+            if (currentScrollPos === 0) {
+                document.querySelector(".NavigationBar").style.top = "0";
+            } else if (prevScrollpos > currentScrollPos) {
+                document.querySelector(".NavigationBar").style.top = "-100px";
+            } else {
+                document.querySelector(".NavigationBar").style.top = "-100px"; // Adjust this value based on your header height
+            }
+            prevScrollpos = currentScrollPos;
+        }
 /* Services Menu Bar */
 document.addEventListener('DOMContentLoaded', function() {
     const servicesButton = document.getElementById('ServicesButton');
@@ -48,46 +61,91 @@ if (serviceSelect.value === "Shelter") {
 }
 }
 
-function typeGovAssist() {
-    var gov = document.querySelector('input[name="government_assistance"]:checked').value;
-    var assist = document.getElementById('government_assistance_type');
-    
-    if (gov === 'Yes') {
-    assist.style.display = 'block';
-} else {
-    assist.style.display = 'none';
+  //Shelter JSON Displayed
+  function fetchAndDisplayShelters() {
+    // Assuming the JSON file is one level up from the current directory
+    const jsonFilePath = '../../JSON/services.json';
+  
+    fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+            // Handle the JSON data and display businesses
+            displayShelters(data.shelters);
+            
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+  }
+
+  //Medical JSON Displayed
+  function fetchAndDisplayMedical() {
+    // Assuming the JSON file is one level up from the current directory
+    const jsonFilePath = '../../JSON/services.json';
+  
+    fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+            // Handle the JSON data and display businesses
+            displayShelters(data.medical);
+            
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+  }
+
+  //Food JSON Displayed
+  function fetchAndDisplayFood() {
+    // Assuming the JSON file is one level up from the current directory
+    const jsonFilePath = '../../JSON/services.json';
+  
+    fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+            // Handle the JSON data and display businesses
+            displayShelters(data.food);
+            
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+  }
+  
+  function displayShelters(shelters) {
+    const sheltersContainer = document.getElementById('sheltersContainer');
+    sheltersContainer.innerHTML = ''; // Clear previous content
+
+    shelters.forEach((shelter, index) => {
+        const shelterDiv = document.createElement('div');
+        shelterDiv.classList.add('sheltersContainer');
+
+        let content = `
+            <br>
+            <h4>${shelter.businessName}</h4>
+            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+            <p>${shelter.contacts.phone}</p>
+            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
+            <br>
+            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+            <p class="descriptionParagraph">"${shelter.description}"</p>
+            <br>
+            <hr>
+        `;
+
+        // Check if email exists before adding it
+        if (!shelter.contacts.email) {
+            content = content.replace('<p class="emailParagraph">', '').replace('</p>', '');
+        }
+
+        // Check if website exists before adding it
+        if (!shelter.website) {
+            content = content.replace('<p class="websiteParagraph">', '').replace('</p>', '');
+        }
+
+        shelterDiv.innerHTML = content;
+        sheltersContainer.appendChild(shelterDiv);
+    });
 }
+
+//Open new tab for website
+function openInNewTab(url) {
+    event.preventDefault();
+    window.open(url, '_blank');
 }
 
-function familyMembersInput() {
-    var fam = document.querySelector('input[name="family"]:checked').value;
-    var famMem = document.getElementById('family_members_input')
 
-    if (fam === 'Yes') {
-      famMem.style.display = 'block';
-    } else {
-      famMem.style.display = 'none';
-    }
-  }
-
-function showPetNumInput() {
-    var hasPet = document.querySelector('input[name="pets"]:checked').value;
-    var petNumberInput = document.getElementById('pet_number_input');
-
-    if (hasPet === 'Yes') {
-      petNumberInput.style.display = 'block';
-    } else {
-      petNumberInput.style.display = 'none';
-    }
-  }
-
-function typeOfCrisis() {
-    var crisis = document.querySelector('input[name="crisis_situation"]:checked').value;
-    var reason = document.getElementById('type_of_crisis');
-
-    if (crisis === 'Yes') {
-      reason.style.display = 'block';
-    } else {
-      reason.style.display = 'none';
-    }
-  }

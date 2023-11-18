@@ -23,9 +23,9 @@
         <div id="x-button" class="x-button">X</div>
         <nav>
             <ul>
-                <li><a>Food</a></li>
-                <li><a>Shelter</a></li>
-                <li><a>Medical</a></li>
+                <li><a href="./services/Food.html">Food</a></li>
+                <li><a href="./services/Shelters.html">Shelter</a></li>
+                <li><a href="./services/Medical.html">Medical</a></li>
                 <li><a>Daycare</a></li>
                 <li><a>Bikehub</a></li>
                 <li><a>Employment</a></li>
@@ -35,19 +35,11 @@
     </div>
 
     <div class="TitlePage">
-        <!-- <h1>H<span id="house-icon"> 
-            <svg xmlns="http://www.w3.org/2000/svg" width="84" height="88" viewBox="0 0 84 88" fill="none">
-            <path d="M43.6286 7.03499C44.9836 5.81412 47.1055 6.07479 48.1247 7.58733L74.0941 46.1275C75.5384 48.2709 73.7771 51.1157 71.2147 50.7783L11.235 42.8818C8.69685 42.5477 7.71655 39.3924 9.61848 37.6787L43.6286 7.03499Z" fill="#000066"/>
-            <rect x="15.0786" y="38.8677" width="54.0755" height="41.1486" rx="7" transform="rotate(7.5 15.0786 38.8677)" fill="#000066"/>
-            <rect x="28.8765" y="48.6709" width="24.6928" height="18.8008" rx="3" transform="rotate(7.5 28.8765 48.6709)" fill="#F5F6F8"/>
-            </svg>
-        </span>&nbsp;&nbsp;me Bound</h1> -->
-        <img id="title-page" src="../images/H me Bound.svg">
-        <img id="house-icon" src="../images/Group 1.svg">
+        <img id="title-page" src="../images/Website Title.svg">
     </div>
 
     <div class="BeginHere">
-        <p><a href="#form">Custom Search Click Here??</a></p>
+        <p><a href="#form">PersonaliZed Search Click Here</a></p>
     </div>
     
 <!--     <section class="Service-Container"> -->
@@ -85,152 +77,11 @@
               <input type="radio" name="veteran" value="No">No
               <br>
               <hr>
-    
-              <!-- Shelter - At risk of becoming homeless -->
-              <label for="at_risk" required>Are you at risk of becoming homeless?</label>
-              <input type="radio" name="at_risk" value="Yes">Yes
-              <input type="radio" name="at_risk" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Shelter - Employment status -->
-              <label for="employed" required>Are you currently employed?</label>
-              <input type="radio" name="employed" value="Yes">Yes
-              <input type="radio" name="employed" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Shelter - Receiving government assistance or benefits -->
-              <label for="government_assistance">Are you receiving any government assistance or benefits (e.g.,
-                SNAP, TANF, SSI)?</label>
-              <input type="radio" name="government_assistance" value="Yes" required onclick="typeGovAssist()">Yes
-              <input type="radio" name="government_assistance" value="No" required onclick="typeGovAssist()">No
-              <br>
-    
-              <div id="government_assistance_type" style="display: none;">
-                <label for="assistance-programs">Select an Assistance Program:</label>
-                <select id="assistance-programs">
-                  <option value="SNAP">SNAP (Supplemental Nutrition Assistance Program)</option>
-                  <option value="TANF">TANF (Temporary Assistance for Needy Families)</option>
-                  <option value="SSI">SSI (Supplemental Security Income)</option>
-                  <option value="Medicaid">Medicaid</option>
-                  <option value="WIC">WIC (Women, Infants, and Children)</option>
-                  <option value="LIHEAP">LIHEAP (Low Income Home Energy Assistance Program)</option>
-                  <option value="Section8">Section 8 Housing Choice Voucher Program</option>
-                  <option value="HeadStart">Head Start</option>
-                  <option value="ChildCareSubsidies">Child Care Subsidies</option>
-                  <option value="PellGrants">Pell Grants</option>
-                  <option value="EITC">EITC (Earned Income Tax Credit)</option>
-                  <option value="TEFAP">TEFAP (The Emergency Food Assistance Program)</option>
-                  <option value="NSLP">NSLP (National School Lunch Program)</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <br>
-              <hr>
-    
-              <!-- Shelter - Family-->
-              <label for="family" required>Do you have any dependents (e.g., children, elderly family members) who are
-                homeless or at risk of becoming homeless?</label>
-              <input type="radio" name="family" value="Yes" onclick="familyMembersInput()">Yes
-              <input type="radio" name="family" value="No" onclick="familyMembersInput()">No
-              <br>
-    
-              <div id="family_members_input" style="display: none;">
-                <label>Number of dependents?</label><br>
-                <input type="number" id="family_members" name="family_members" placeholder="1" min="1" max="10">
-              </div>
-              <hr>
-    
-              <!-- Shelter - Pets-->
-              <label for="pets" required>Do you have any pets?</label>
-              <input type="radio" id="yes" name="pets" value="Yes" onclick="showPetNumInput()">Yes
-              <input type="radio" id="no" name="pets" value="No" onclick="showPetNumInput()">No
-              <br>
-    
-              <div id="pet_number_input" style="display: none;">
-                <label>Number of pets?</label><br>
-                <input type="number" id="num_pets" name="num_pets" placeholder="1" min="1" max="10">
-              </div>
-              <hr>
-    
-              <!-- Shelter - Crisis situation -->
-              <label for="crisis_situation" required>Are you experiencing a crisis situation that has led to your
-                homelessness (e.g., eviction, domestic violence, natural disaster)?</label>
-              <input type="radio" name="crisis_situation" value="Yes" onclick="typeOfCrisis()">Yes
-              <input type="radio" name="crisis_situation" value="No" onclick="typeOfCrisis()">No
-              <br>
-    
-              <div id="type_of_crisis" style="display: none;">
-                <label for="crisis">Select your current situation</label>
-                <select id="crisis">
-                  <option value="Eviction">Eviction</option>
-                  <option value="Domestic Violence">Domestic Violence</option>
-                  <option value="Natural Disaster">Natural Disaster</option>
-                  <option value="Foreclosure">Foreclosure</option>
-                  <option value="Asylum Seekers">Asylum Seekers</option>
-                  <option value="Other">Other</option>
-                </select>
-              </div>
-              <hr>
-    
-              <!-- Shelter - Physical or mental health conditions -->
-              <label for="health_conditions" required>Do you have any physical or mental health conditions that require
-                medical attention or support?</label>
-              <input type="radio" name="health_conditions" value="Yes">Yes
-              <input type="radio" name="health_conditions" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Shelter - Substance abuse or addiction -->
-              <label for="substance_abuse" required>Do you have a history of substance abuse or addiction?</label>
-              <input type="radio" name="substance_abuse" value="Yes">Yes
-              <input type="radio" name="substance_abuse" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Shelter - Legal issues affecting housing -->
-              <label for="legal_issues" required>Are you in need of legal assistance or have pending legal issues that
-                contribute to your homelessness?</label>
-              <input type="radio" name="legal_issues" value="Yes">Yes
-              <input type="radio" name="legal_issues" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Shelter - Previous shelter or homeless services -->
-              <label for="previous_services" required>Have you ever been in a shelter or received homeless services
-                before?</label>
-              <input type="radio" name="previous_services" value="Yes">Yes
-              <input type="radio" name="previous_services" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Shelter - Willingness to participate in case management -->
-              <label for="case_management" required>Are you willing to participate in case management or supportive
-                services to help you secure stable housing?</label>
-              <input type="radio" name="case_management" value="Yes">Yes
-              <input type="radio" name="case_management" value="No">No
-              <br>
-              <hr>
+              
             </div>
     
             <!-- Day care questions -->
             <div id="daycareQuestions" style="display: none;">
-    
-              <!-- Day care Question 1 -->
-              <label for="previous_services" required>Have you ever been in a shelter or received homeless services
-                before?</label>
-              <input type="radio" name="previous_services" value="Yes">&nbsp;Yes
-              <input type="radio" name="previous_services" value="No">&nbsp;No
-              <br>
-              <hr>
-    
-              <!-- Day care Question 2 -->
-              <label for="current_daycare">Is your child currently attending any other daycare or preschool program?</label>
-              <input type="radio" name="current_daycare" value="Yes">Yes
-              <input type="radio" name="current_daycare" value="No">No
-              <br>
-              <hr>
     
               <!-- Day care Question 3 -->
               <label for="child_age">Is your child's age between 0-3 years?</label>
@@ -246,13 +97,6 @@
               <br>
               <hr>
     
-              <!-- Day care Question 5 -->
-              <label for="vaccination_status">Is your child up-to-date with their vaccinations?</label>
-              <input type="radio" name="vaccination_status" value="Yes">Yes
-              <input type="radio" name="vaccination_status" value="No">No
-              <br>
-              <hr>
-    
               <!-- Day care Question 6 -->
               <label for="need_transportation">Are you in need of transportation services to and from the daycare?</label>
               <input type="radio" name="need_transportation" value="Yes">Yes
@@ -260,81 +104,6 @@
               <br>
               <hr>
     
-              <!-- Day care Question 7 -->
-              <label for="financial_assistance">Do you require financial assistance or subsidy for daycare costs?</label>
-              <input type="radio" name="financial_assistance" value="Yes">Yes
-              <input type="radio" name="financial_assistance" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Day care Question 8 -->
-              <label for="special_needs">Is your child developmentally delayed or in need of special services?</label>
-              <input type="radio" name="special_needs" value="Yes">Yes
-              <input type="radio" name="special_needs" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Day care Question 9 -->
-              <label for="meals_provided">Are you comfortable with the daycare facility providing meals for your
-                child?</label>
-              <input type="radio" name="meals_provided" value="Yes">Yes
-              <input type="radio" name="meals_provided" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Day care Question 10 -->
-              <label for="flexible_hours">Is it important for the daycare to have flexible hours for drop-off and
-                pick-up?</label>
-              <input type="radio" name="flexible_hours" value="Yes">Yes
-              <input type="radio" name="flexible_hours" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Day care Question 11 -->
-              <label for="medical_conditions">Does your child have any medical conditions that require special attention or
-                medication?</label>
-              <input type="radio" name="medical_conditions" value="Yes">Yes
-              <input type="radio" name="medical_conditions" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Day care Question 12 -->
-              <label for="religious_cultural_focus">Are you looking for a daycare with a specific religious or cultural
-                focus?</label>
-              <input type="radio" name="religious_cultural_focus" value="Yes">Yes
-              <input type="radio" name="religious_cultural_focus" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Day care Question 13 -->
-              <label for="location_preference">Do you prefer a daycare close to your home or workplace?</label>
-              <input type="radio" name="location_preference" value="Yes">Yes
-              <input type="radio" name="location_preference" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Day care Question 14 -->
-              <label for="potty_training">Is your child potty-trained?</label>
-              <input type="radio" name="potty_training" value="Yes">Yes
-              <input type="radio" name="potty_training" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Day care Question 15 -->
-              <label for="educational_activities">Are you open to your child participating in educational and
-                extracurricular activities at the daycare?</label>
-              <input type="radio" name="educational_activities" value="Yes">Yes
-              <input type="radio" name="educational_activities" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Day care Question 16 -->
-              <label for="caregiver_preference">Do you have any preferences for a male or female caregiver for your
-                child?</label>
-              <input type="radio" name="caregiver_preference" value="Yes">Yes
-              <input type="radio" name="caregiver_preference" value="No">No
-              <br>
-              <hr>
             </div>
     
             <!-- Employment Service Questions -->
@@ -345,126 +114,7 @@
               <br>
               <hr>
     
-              <!-- Employment Question 1 -->
-              <label for="received_assistance">Have you previously received employment assistance or job training
-                services?</label>
-              <input type="radio" name="received_assistance" value="Yes">Yes
-              <input type="radio" name="received_assistance" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 2 -->
-              <label for="actively_looking">Are you actively looking for a job?</label>
-              <input type="radio" name="actively_looking" value="Yes">Yes
-              <input type="radio" name="actively_looking" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 3 -->
-              <label for="open_to_assistance">Are you open to receiving job placement assistance?</label>
-              <input type="radio" name="open_to_assistance" value="Yes">Yes
-              <input type="radio" name="open_to_assistance" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 4 -->
-              <label for="specific_job_preference">Do you have a specific job or industry in mind that you'd like to work
-                in?</label>
-              <input type="radio" name="specific_job_preference" value="Yes">Yes
-              <input type="radio" name="specific_job_preference" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 5 -->
-              <label for="job_readiness_workshops">Are you willing to participate in job readiness workshops or training
-                programs?</label>
-              <input type="radio" name="job_readiness_workshops" value="Yes">Yes
-              <input type="radio" name="job_readiness_workshops" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 6 -->
-              <label for="resume_updated">Have you updated your resume in the last six months?</label>
-              <input type="radio" name="resume_updated" value="Yes">Yes
-              <input type="radio" name="resume_updated" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 7 -->
-              <label for="interview_preparation">Are you comfortable with interview preparation and practice
-                sessions?</label>
-              <input type="radio" name="interview_preparation" value="Yes">Yes
-              <input type="radio" name="interview_preparation" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 8 -->
-              <label for="skill_development">Are you interested in exploring opportunities for further education or skill
-                development?</label>
-              <input type="radio" name="skill_development" value="Yes">Yes
-              <input type="radio" name="skill_development" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 9 -->
-              <label for="willing_to_relocate">Are you willing to relocate for job opportunities if necessary?</label>
-              <input type="radio" name="willing_to_relocate" value="Yes">Yes
-              <input type="radio" name="willing_to_relocate" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 10 -->
-              <label for="felony_conviction">Have you ever been convicted of a felony?</label>
-              <input type="radio" name="felony_conviction" value="Yes">Yes
-              <input type="radio" name="felony_conviction" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 11 -->
-              <label for="reliable_transportation">Do you have reliable transportation to and from work?</label>
-              <input type="radio" name="reliable_transportation" value="Yes">Yes
-              <input type="radio" name="reliable_transportation" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 12 -->
-              <label for="government_assistance">Are you eligible for or receiving any government assistance, such as
-                unemployment benefits or disability benefits?</label>
-              <input type="radio" name="government_assistance" value="Yes">Yes
-              <input type="radio" name="government_assistance" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 13 -->
-              <label for="disability_disclosure">Are you comfortable with disclosing any disabilities or special
-                accommodations needed for your job search or employment?</label>
-              <input type="radio" name="disability_disclosure" value="Yes">Yes
-              <input type="radio" name="disability_disclosure" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 14 -->
-              <label for="financial_literacy">Are you interested in learning about financial literacy and budgeting
-                resources?</label>
-              <input type="radio" name="financial_literacy" value="Yes">Yes
-              <input type="radio" name="financial_literacy" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 15 -->
-              <label for="workplace_discrimination">Have you ever experienced discrimination or harassment in a
-                workplace?</label>
-              <input type="radio" name="workplace_discrimination" value="Yes">Yes
-              <input type="radio" name="workplace_discrimination" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Employment Question 16 -->
-              <label for="veteran_support">Are you a veteran seeking employment assistance or support?</label>
-              <input type="radio" name="veteran_support" value="Yes">Yes
-              <input type="radio" name="veteran_support" value="No">No
-              <br>
-              <hr>
+              
             </div>
     
             <!-- Food Service Questions -->
@@ -477,73 +127,7 @@
               <br>
               <hr>
     
-              <!-- Food Question 2 -->
-              <label for="currently_homeless">Are you currently experiencing homelessness?</label>
-              <input type="radio" name="currently_homeless" value="Yes">Yes
-              <input type="radio" name="currently_homeless" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Food Question 3 -->
-              <label for="eaten_today">Have you eaten a meal today?</label>
-              <input type="radio" name="eaten_today" value="Yes">Yes
-              <input type="radio" name="eaten_today" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Food Question 4 -->
-              <label for="dietary_restrictions">Do you have any dietary restrictions or food allergies?</label>
-              <input type="radio" name="dietary_restrictions" value="Yes">Yes
-              <input type="radio" name="dietary_restrictions" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Food Question 5 -->
-              <label for="government_assistance">Are you currently receiving any government assistance for food (e.g., SNAP
-                or WIC)?</label>
-              <input type="radio" name="government_assistance" value="Yes">Yes
-              <input type="radio" name="government_assistance" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Food Question 6 -->
-              <label for="food_for_dependents">Are you in need of food for yourself or for dependents (e.g., children,
-                family members)?</label>
-              <input type="radio" name="food_for_dependents" value="Myself">Myself
-              <input type="radio" name="food_for_dependents" value="Dependents">Dependents
-              <br>
-              <hr>
-    
-              <!-- Food Question 7 -->
-              <label for="cooking_storage_access">Do you have access to a stable place to cook or store food?</label>
-              <input type="radio" name="cooking_storage_access" value="Yes">Yes
-              <input type="radio" name="cooking_storage_access" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Food Question 8 -->
-              <label for="participate_services">Are you willing to participate in food-related programs or services to
-                improve your access to nutritious meals?</label>
-              <input type="radio" name="participate_services" value="Yes">Yes
-              <input type="radio" name="participate_services" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Food Question 9 -->
-              <label for="health_issues">Are you experiencing any medical conditions or health issues that require specific
-                dietary considerations?</label>
-              <input type="radio" name="health_issues" value="Yes">Yes
-              <input type="radio" name="health_issues" value="No">No
-              <br>
-              <hr>
-    
-              <!-- Food Question 10 -->
-              <label for="additional_support">Are you interested in information about additional support services beyond
-                food, such as housing, healthcare, or employment assistance?</label>
-              <input type="radio" name="additional_support" value="Yes">Yes
-              <input type="radio" name="additional_support" value="No">No
-              <br>
-              <hr>
+             
             </div>
     
             <!-- Medical Service Questions -->
@@ -554,89 +138,7 @@
               <br>
               <hr>
     
-              <label for="duration_homelessness">Have you been homeless for more than six months in the past year?</label>
-              <input type="radio" name="duration_homelessness" value="Yes">Yes
-              <input type="radio" name="duration_homelessness" value="No">No
-              <br>
-              <hr>
-    
-              <label for="past_medical_care">Have you ever received medical care or treatment for your homelessness-related
-                health issues in the past?</label>
-              <input type="radio" name="past_medical_care" value="Yes">Yes
-              <input type="radio" name="past_medical_care" value="No">No
-              <br>
-              <hr>
-    
-              <label for="chronic_conditions">Do you have any chronic medical conditions that require ongoing care?</label>
-              <input type="radio" name="chronic_conditions" value="Yes">Yes
-              <input type="radio" name="chronic_conditions" value="No">No
-              <br>
-              <hr>
-    
-              <label for="medications">Are you currently taking prescribed medications for any health conditions?</label>
-              <input type="radio" name="medications" value="Yes">Yes
-              <input type="radio" name="medications" value="No">No
-              <br>
-              <hr>
-    
-              <label for="mental_health">Have you ever been diagnosed with a mental health condition?</label>
-              <input type="radio" name="mental_health" value="Yes">Yes
-              <input type="radio" name="mental_health" value="No">No
-              <br>
-              <hr>
-    
-              <label for="substance_use">Are you currently using any substances, such as drugs or alcohol?</label>
-              <input type="radio" name="substance_use" value="Yes">Yes
-              <input type="radio" name="substance_use" value="No">No
-              <br>
-              <hr>
-    
-              <label for="injuries">Have you had any recent injuries or accidents that need medical attention?</label>
-              <input type="radio" name="injuries" value="Yes">Yes
-              <input type="radio" name="injuries" value="No">No
-              <br>
-              <hr>
-    
-              <label for="domestic_abuse">Have you ever been a victim of domestic violence or abuse?</label>
-              <input type="radio" name="domestic_abuse" value="Yes">Yes
-              <input type="radio" name="domestic_abuse" value="No">No
-              <br>
-              <hr>
-    
-              <label for="allergies_dietary_restrictions">Do you have any allergies or specific dietary
-                restrictions?</label>
-              <input type="radio" name="allergies_dietary_restrictions" value="Yes">Yes
-              <input type="radio" name="allergies_dietary_restrictions" value="No">No
-              <br>
-              <hr>
-    
-              <label for="healthcare_contact">Have you ever been in contact with any medical or healthcare providers in the
-                past year?</label>
-              <input type="radio" name="healthcare_contact" value="Yes">Yes
-              <input type="radio" name="healthcare_contact" value="No">No
-              <br>
-              <hr>
-    
-              <label for="local_services">Are you aware of any available local shelters or services for homeless
-                individuals?</label>
-              <input type="radio" name="local_services" value="Yes">Yes
-              <input type="radio" name="local_services" value="No">No
-              <br>
-              <hr>
-    
-              <label for="receive_assistance">Are you interested in receiving assistance with finding shelter and medical
-                services?</label>
-              <input type="radio" name="receive_assistance" value="Yes">Yes
-              <input type="radio" name="receive_assistance" value="No">No
-              <br>
-              <hr>
-    
-              <label for="mental_health_support">Would you be willing to engage in counseling or mental health support
-                services if they were available?</label>
-              <input type="radio" name="mental_health_support" value="Yes">Yes
-              <input type="radio" name="mental_health_support" value="No">No
-              <br>
-              <hr>
+             
             </div>
             <button id="submit" type="button" onclick="generateForm()">Submit</button>
           </form>
