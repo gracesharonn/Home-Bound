@@ -61,50 +61,6 @@ if (serviceSelect.value === "Shelter") {
 }
 }
 
-function typeGovAssist() {
-    var gov = document.querySelector('input[name="government_assistance"]:checked').value;
-    var assist = document.getElementById('government_assistance_type');
-    
-    if (gov === 'Yes') {
-    assist.style.display = 'block';
-} else {
-    assist.style.display = 'none';
-}
-}
-
-function familyMembersInput() {
-    var fam = document.querySelector('input[name="family"]:checked').value;
-    var famMem = document.getElementById('family_members_input')
-
-    if (fam === 'Yes') {
-      famMem.style.display = 'block';
-    } else {
-      famMem.style.display = 'none';
-    }
-  }
-
-function showPetNumInput() {
-    var hasPet = document.querySelector('input[name="pets"]:checked').value;
-    var petNumberInput = document.getElementById('pet_number_input');
-
-    if (hasPet === 'Yes') {
-      petNumberInput.style.display = 'block';
-    } else {
-      petNumberInput.style.display = 'none';
-    }
-  }
-
-function typeOfCrisis() {
-    var crisis = document.querySelector('input[name="crisis_situation"]:checked').value;
-    var reason = document.getElementById('type_of_crisis');
-
-    if (crisis === 'Yes') {
-      reason.style.display = 'block';
-    } else {
-      reason.style.display = 'none';
-    }
-  }
-
   //Shelter JSON Displayed
   function fetchAndDisplayShelters() {
     // Assuming the JSON file is one level up from the current directory
@@ -115,7 +71,6 @@ function typeOfCrisis() {
         .then(data => {
             // Handle the JSON data and display businesses
             displayShelters(data.shelters);
-            //jToString(data.businesses);
             
         })
         .catch(error => console.error('Error fetching JSON:', error));
@@ -131,36 +86,26 @@ function typeOfCrisis() {
         .then(data => {
             // Handle the JSON data and display businesses
             displayShelters(data.medical);
-            //jToString(data.businesses);
+            
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+  }
+
+  //Food JSON Displayed
+  function fetchAndDisplayFood() {
+    // Assuming the JSON file is one level up from the current directory
+    const jsonFilePath = '../../JSON/services.json';
+  
+    fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+            // Handle the JSON data and display businesses
+            displayShelters(data.food);
             
         })
         .catch(error => console.error('Error fetching JSON:', error));
   }
   
-/*   function displayShelters(shelters) {
-    const sheltersContainer = document.getElementById('sheltersContainer');
-    sheltersContainer.innerHTML = ''; // Clear previous content
-  
-    shelters.forEach((shelter, index) => {
-        const shelterDiv = document.createElement('div');
-        shelterDiv.classList.add('sheltersContainer');
-        shelterDiv.innerHTML = `
-            <br>
-            <h4>${shelter.businessName}</h4>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.contacts.phone}</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.contacts.email}</p>
-            <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;${shelter.website}</p>
-            <p>"${shelter.description}"</p>
-  
-            <!-- Add more fields as needed -->
-            <br>
-            <hr>
-        `;
-        sheltersContainer.appendChild(shelterDiv);
-    });
-  } */
-
   function displayShelters(shelters) {
     const sheltersContainer = document.getElementById('sheltersContainer');
     sheltersContainer.innerHTML = ''; // Clear previous content
@@ -174,8 +119,9 @@ function typeOfCrisis() {
             <h4>${shelter.businessName}</h4>
             <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
             <p>${shelter.contacts.phone}</p>
-            <p class="emailParagraph">${shelter.contacts.email}</p>
-            <p class="websiteParagraph">${shelter.website}</p>
+            <a href="mailto:${shelter.contacts.email}" class="emailParagraph">${shelter.contacts.email}</a>
+            <br>
+            <a href="${shelter.website}" class="websiteParagraph">${shelter.website}</a>
             <p>"${shelter.description}"</p>
             <br>
             <hr>
