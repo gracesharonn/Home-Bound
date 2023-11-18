@@ -463,7 +463,7 @@ input[type="radio"]:checked {
     line-height: normal;
 }
 
-#emailpw {
+#email_address {
     color: rgba(0, 0, 0, 0.50);
     font-family: BenchNine;
     font-size: 24px;
@@ -477,7 +477,21 @@ input[type="radio"]:checked {
     width: 380px !important;
 }
 
-#submitLogin {
+#password {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: BenchNine;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 33px;
+    border-color: transparent;
+    margin-bottom: 5px;
+    margin-top: 70px;
+    width: 380px !important;
+}
+
+#Login {
     position: relative;
     display: flex;
     flex-direction: column;
