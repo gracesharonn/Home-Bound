@@ -561,7 +561,7 @@ input[type="radio"]:checked {
     line-height: normal;
 }
 
-#firstname, #lastname, #age, #email, #pw, #confirmpw {
+#first_name, #last_name, #age, #contact_info, #password {
     color: rgba(0, 0, 0, 0.50);
     font-family: BenchNine;
     font-size: 20px;
