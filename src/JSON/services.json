@@ -15,7 +15,11 @@
         "email": "Support@thearkofrefuge.org",
         "phone": "866-676-0070"
       },
-      "website": "https://www.thearkofrefuge.org/"
+      "website": "https://www.thearkofrefuge.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "FAMILY PROMISE OF SACRAMENTO - EMERGENCY SHELTER",
@@ -26,13 +30,18 @@
         "zipcode": "95811",
         "latitude": "38.59143174163012",
         "longitude": "-121.48286960774512"
+        
       },
       "description": "Providing a safe and comfortable living space where families can stay together is an essential part of the Family Promise mission.",
       "contacts": {
         "email": "marsha@sacfamilypromise.org",
         "phone": "(916) 443 3107"
       },
-      "website": "https://sacfamilypromise.org/"
+      "website": "https://sacfamilypromise.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "SALVATION ARMY: FAMILY SERVICES CENTER",
@@ -47,7 +56,11 @@
         "email": " ",
         "phone": "916-442-0331"
       },
-      "website": "https://sacramento.salvationarmy.org/sacramento_metro/"
+      "website": "https://sacramento.salvationarmy.org/sacramento_metro/",
+      "attributes": {
+        "veteran" :"Yes",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "FRANCIS HOUSE CENTER",
@@ -62,7 +75,11 @@
         "email": "mccsinglesreferrals@nextmovesacramento.org",
         "phone": "916-443-2646"
       },
-      "website": "http://www.francishousecenter.org/"
+      "website": "http://www.francishousecenter.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "COTTAGE HOUSING - QUINN COTTAGES",
@@ -77,7 +94,11 @@
         "email": "INFO@COTTAGEHOUSING.ORG",
         "phone": "(916) 492 9065"
       },
-      "website": "https://www.cottagehousing.org/"
+      "website": "https://www.cottagehousing.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "ST JOHNS SHELTER FOR WOMEN AND CHILDREN SACRAMENTO",
@@ -92,7 +113,11 @@
         "email": " ",
         "phone": "916-453-1482"
       },
-      "website": "https://saintjohnsprogram.org/"
+      "website": "https://saintjohnsprogram.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "Female"
+      }
     },
     {
       "businessName": "UNION GOSPEL MISSION FOR MEN",
@@ -107,7 +132,11 @@
         "email": " ",
         "phone": "916-447-3268"
       },
-      "website": "https://ugmsac.com/"
+      "website": "https://ugmsac.com/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "Male"
+      }
     },
     {
       "businessName": "VOLUNTEERS OF AMERICA GREATER SACRAMENTO AND NORTHERN NEVADA - A STREET SHELTER (FOR MEN)",
@@ -122,7 +151,11 @@
         "email": " ",
         "phone": "916-448-5507"
       },
-      "website": "https://www.voa-ncnn.org/"
+      "website": "https://www.voa-ncnn.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "Male"
+      }
     },
     {
       "businessName": "NEXT MOVE'S FAMILY SHELTER CAMPUS",
@@ -137,7 +170,11 @@
         "email": "mccsinglesreferrals@nextmovesacramento.org",
         "phone": "916-455-2160"
       },
-      "website": "https://www.nextmovesacramento.org/emergency_family_shelter/"
+      "website": "https://www.nextmovesacramento.org/emergency_family_shelter/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "LEARNING TO LIVE SOBER LIVING",
@@ -152,7 +189,11 @@
         "email": " ",
         "phone": "916-662-2784"
       },
-      "website": "https://www.shelterlistings.org/details/37861/"
+      "website": "https://www.shelterlistings.org/details/37861/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "CENTRO GUADALUPE Â€“ CATHOLIC SOCIAL SERVICES",
@@ -167,7 +208,11 @@
         "email": "office@shrinegpe.org ",
         "phone": "916-443-5367"
       },
-      "website": "https://guadalupe-sacramento.org/"
+      "website": "https://guadalupe-sacramento.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "TUBMAN HOUSE TRANSITIONAL HOUSING",
@@ -182,7 +227,11 @@
         "email": "admin@wakingthevillage.org",
         "phone": "916-372-6272"
       },
-      "website": "https://www.wakingthevillage.org/"
+      "website": "https://www.wakingthevillage.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "SACRAMENTO COTTAGE HOUSING SACRAMENTO",
@@ -197,7 +246,11 @@
         "email": "dhusid@cottagehousing.org",
         "phone": "916-971-1566"
       },
-      "website": "https://www.cottagehousing.org/"
+      "website": "https://www.cottagehousing.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "SACRAMENTO MUTUAL HOUSING ASSOCIATION SACRAMENTO",
@@ -212,7 +265,11 @@
         "email": " ",
         "phone": "916-453-8400"
       },
-      "website": "https://www.mutualhousing.com/"
+      "website": "https://www.mutualhousing.com/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "EPISCOPAL COMMUNITY SERVICES OF THE DIOCESE OF NORTHERN CALIFORNIA SACRAMENTO",
@@ -227,7 +284,11 @@
         "email": " ",
         "phone": "916-442-6918"
       },
-      "website": "https://norcalecs.org/"
+      "website": "https://norcalecs.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "SACRAMENTO AREA EMERGENCY HOUSING CENTER SACRAMENTO",
@@ -242,7 +303,11 @@
         "email": " ",
         "phone": "916-454-2120"
       },
-      "website": "https://www.shra.org/ehv/"
+      "website": "https://www.shra.org/ehv/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "LA COOPERATIVA CAMPESINA DE CALIFORNIA SACRAMENTO",
@@ -257,7 +322,11 @@
         "email": "info@lacooperativa.org",
         "phone": "916-388-2220"
       },
-      "website": "https://lacooperativa.org/"
+      "website": "https://lacooperativa.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     }
   ],
 
@@ -275,7 +344,11 @@
         "email": "myra@firstumcsac.org",
         "phone": "916-446-5025"
       },
-      "website": "https://www.firstumcsac.org/pilgrimage"
+      "website": "https://www.firstumcsac.org/pilgrimage",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Sacramento Loves & Fishes",
@@ -290,7 +363,11 @@
         "email": "info@sacloaves.org",
         "phone": "916-446-0874"
       },
-      "website": "https://sacloaves.org/programs-services/"
+      "website": "https://sacloaves.org/programs-services/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Feed Sacramento Homeless",
@@ -305,7 +382,11 @@
         "email": " ",
         "phone": "916-470-7349"
       },
-      "website": "https://www.feedsachomeless.org/"
+      "website": "https://www.feedsachomeless.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Neighbor Program",
@@ -320,7 +401,11 @@
         "email": "SacNeighbor916@gmail.com",
         "phone": "916-642-9933"
       },
-      "website": "https://www.neighborprogram.org/"
+      "website": "https://www.neighborprogram.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Salvation Army - Alhambra",
@@ -335,7 +420,11 @@
         "email": " ",
         "phone": "916-452-9388"
       },
-      "website": "https://sacramento.salvationarmy.org/sacramento_metro/"
+      "website": "https://sacramento.salvationarmy.org/sacramento_metro/",
+      "attributes": {
+        "veteran" :"Yes",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Shiloh Baptist Church",
@@ -350,7 +439,11 @@
         "email": " ",
         "phone": "916-664-3850"
       },
-      "website": "https://www.shilohbaptistchurch-sacramento.org/"
+      "website": "https://www.shilohbaptistchurch-sacramento.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "YXPLOSION, L.L.C",
@@ -365,7 +458,11 @@
         "email": " ",
         "phone": "916-806-2770"
       },
-      "website": "https://www.yxpunite.com/"
+      "website": "https://www.yxpunite.com/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "New St. Bethel Baptist Church",
@@ -380,7 +477,11 @@
         "email": "admin@newstbethel.org",
         "phone": "916-456-3077"
       },
-      "website": "http://newstbethel.org/"
+      "website": "http://newstbethel.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "River City Food Bank - Midtown",
@@ -395,7 +496,11 @@
         "email": "email@rivercityfoodbank.org",
         "phone": "916-446-2627"
       },
-      "website": "https://rivercityfoodbank.org/"
+      "website": "https://rivercityfoodbank.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "South Sacramento Interfaith Partnership (SSIP)",
@@ -410,7 +515,11 @@
         "email": "info@ssipfoodcloset.org",
         "phone": "916-428-5290"
       },
-      "website": "https://www.ssipfoodcloset.org/"
+      "website": "https://www.ssipfoodcloset.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Daughters of Zion Enterpryz",
@@ -425,7 +534,11 @@
         "email": "",
         "phone": "916-422-3875"
       },
-      "website": "https://www.dozenterpryz.org/foodandclothescloset"
+      "website": "https://www.dozenterpryz.org/foodandclothescloset",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     }
   ],
   "medical": [
@@ -442,7 +555,11 @@
         "email": "",
         "phone": "(916) 448-6553"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Meadowview Clinic",
@@ -457,7 +574,11 @@
         "email": "",
         "phone": "(916) 427-0368"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Las Palmas Clinic",
@@ -472,7 +593,11 @@
         "email": "",
         "phone": "(916) 924-6703"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "White Rock Family Clinic",
@@ -487,7 +612,11 @@
         "email": "",
         "phone": "(916) 364-0724"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Natomas Crossroads FREE Clinic",
@@ -502,7 +631,11 @@
         "email": "",
         "phone": "(916) 514-6163"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Del Paso Health Clinic",
@@ -517,7 +650,11 @@
         "email": "",
         "phone": "(916) 648-0970"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "South City Health Clinic",
@@ -532,7 +669,11 @@
         "email": "",
         "phone": "(916) 875-0802"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Oak Park Multi-Service",
@@ -547,7 +688,11 @@
         "email": "",
         "phone": "(916) 233-4910"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "County of Sacramento Primary Care Clinic",
@@ -562,7 +707,11 @@
         "email": "",
         "phone": "(916) 874-9670"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Health Care for the Homeless",
@@ -577,7 +726,11 @@
         "email": "",
         "phone": "(916) 874-1455"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "County of Sacramento Medically Indigent Services Program - CMISP",
@@ -592,7 +745,11 @@
         "email": "",
         "phone": "(916) 874-9238"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Mercy Clinic",
@@ -607,7 +764,11 @@
         "email": "",
         "phone": "(916) 446-3345"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Chest Clinic",
@@ -622,7 +783,11 @@
         "email": "",
         "phone": "(916) 874-9823"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Refugee Health Clinic",
@@ -637,7 +802,11 @@
         "email": "",
         "phone": "(916) 874-9750"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "The Effort Medical Health Services",
@@ -652,7 +821,11 @@
         "email": "",
         "phone": "(916) 325-5556"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Sutter General Hospital",
@@ -667,7 +840,11 @@
         "email": "",
         "phone": "(916) 454-2222 or (916) 454-6695"
       },
-      "website": "https://www.sutterhealth.org/smcs"
+      "website": "https://www.sutterhealth.org/smcs",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Sacramento Community Clinic Consortium",
@@ -682,7 +859,11 @@
         "email": "",
         "phone": "(916) 649-0653 or (916) 447-7222"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "El Hogar Guest House",
@@ -697,7 +878,11 @@
         "email": "",
         "phone": "916-440-1500"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "One Community Health",
@@ -712,7 +897,11 @@
         "email": "",
         "phone": "916-443-3299"
       },
-      "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/"
+      "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     }
   ],
   "template": [
@@ -729,7 +918,11 @@
         "email": "",
         "phone": ""
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": " "
+      }
     }
   ]
 }

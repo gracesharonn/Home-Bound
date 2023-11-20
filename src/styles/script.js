@@ -52,7 +52,7 @@ function showAdditionalQuestions() {
 if (serviceSelect.value === "Shelter") {
     shelterQuestions.style.display = "block";
     daycareQuestions.style.display = "none";
-} else if (serviceSelect.value === "DayCare") {
+} else if (serviceSelect.value === "Daycare") {
     daycareQuestions.style.display = "block";
     shelterQuestions.style.display = "none";
 } else {
@@ -148,4 +148,177 @@ function openInNewTab(url) {
     window.open(url, '_blank');
 }
 
+//onSubmit of form
 
+function submitForm() {
+
+    var service = document.getElementById("service").value;
+
+    //check if service
+    if(service === "Food"){
+
+    }else if(service === "Shelter"){
+        
+        openShelterSearch(service);
+
+    }else if(service === "Medical"){
+
+
+    }else if(service === "Daycare"){
+
+
+    }else if(service === "Bikehub"){
+
+    }else if(service === "Employment"){
+
+    
+    }else {
+
+    }
+    //gets value from a radio button veteran
+    //var isVet = document.querySelector('input[name="veteran"]:checked').value;
+
+
+    //window.location.href = `./services/Search.html?service=` + encodeURIComponent(isVet);
+
+
+    return true;
+}
+
+function openShelterSearch(service){
+    
+    var sex = document.querySelector('input[name="sex"]:checked').value;
+    var isVet = document.querySelector('input[name="veteran"]:checked').value;
+
+    window.location.href = `./services/Search.html?service=` + encodeURIComponent(service) + `&sex=` + encodeURIComponent(sex) +`&veteran=` + encodeURIComponent(isVet);
+}
+
+function searchResults(){
+
+    // Assuming the JSON file is one level up from the current directory
+    const jsonFilePath = '../../JSON/services.json';
+
+    const urlParse = new URLSearchParams(window.location.search);
+    
+    var service = urlParse.get("service");
+        
+        //check if service
+        if(service === "Food"){
+
+        }else if(service === "Shelter"){
+            var vet = urlParse.get("veteran");
+            var sex = urlParse.get("sex");
+            if(vet === "Yes"){
+                fetch(jsonFilePath)
+                .then(response => response.json())
+                .then(data => {
+                    // Handle the JSON data and display businesses
+                    
+                    displayVeteranFirst(data.shelters);
+                    return;
+                    
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+                fetch(jsonFilePath)
+            }else if(sex === "Female"){
+                fetch(jsonFilePath)
+                .then(response => response.json())
+                .then(data => {
+                // Handle the JSON data and display businesses
+    
+                displaySexFirst(data.shelters);
+                return;
+            
+                })
+                .catch(error => console.error('Error fetching JSON:', error));
+            }
+
+    
+        }else if(service === "Medical"){
+    
+    
+        }else if(service === "Daycare"){
+    
+    
+        }else if(service === "Bikehub"){
+    
+        }else if(service === "Employment"){
+    
+        
+        }else {
+    
+        }
+}
+
+function displayVeteranFirst(businesses){
+
+    // Filter veteran and non-veteran shelters
+    var veteranShelters = businesses.filter(business => business.attributes.veteran === "Yes");
+    var nonVeteranShelters = businesses.filter(business => business.attributes.veteran !== "Yes");
+
+    // Combine veteran and non-veteran shelters
+    var allShelters = veteranShelters.concat(nonVeteranShelters);
+
+    // Get the sheltersContainer div
+    var vetContainer = document.getElementById("sheltersContainer");
+
+    // Clear previous content in sheltersContainer
+    vetContainer.innerHTML = "";
+
+    // Display shelter information in sheltersContainer
+    allShelters.forEach(shelter => {
+        vetContainer.innerHTML += `
+            <div class="sheltersContainer">
+            <br>
+            <h4>${shelter.businessName}</h4>
+            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+            <p>${shelter.contacts.phone}</p>
+            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
+            <br>
+            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+            <p class="descriptionParagraph">"${shelter.description}"</p>
+            <br>
+            <hr>
+        `;
+    });
+}
+//Still working on
+function displaySexFirst(businesses){
+
+    // Filter veteran and non-veteran shelters
+    const urlParse = new URLSearchParams(window.location.search);
+    var sex = urlParse.get("sex");
+    var shelters;
+    var nonShelters;
+
+    //var data = urlParse.get("sex");
+    var output = document.getElementById("sheltersContainer");
+    output.innerHTML = sex;
+    
+/*
+    // Combine veteran and non-veteran shelters
+    var allShelters = shelters.concat(nonShelters);
+
+    // Get the sheltersContainer div
+    var container = document.getElementById("sheltersContainer");
+
+    // Clear previous content in sheltersContainer
+    container.innerHTML = "";
+
+    // Display shelter information in sheltersContainer
+    allShelters.forEach(shelter => {
+        container.innerHTML += `
+            <div class="sheltersContainer">
+            <br>
+            <h4>${shelter.businessName}</h4>
+            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+            <p>${shelter.contacts.phone}</p>
+            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
+            <br>
+            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+            <p class="descriptionParagraph">"${shelter.description}"</p>
+            <br>
+            <hr>
+        `;
+    });*/
+}
