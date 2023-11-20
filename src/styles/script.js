@@ -103,6 +103,20 @@ function fetchAndDisplayFood () {
     .catch(error => console.error('Error fetching JSON:', error))
 }
 
+//Daycare JSON Displayed
+function fetchAndDisplayDaycare () {
+    // Assuming the JSON file is one level up from the current directory
+    const jsonFilePath = '../../JSON/services.json'
+  
+    fetch(jsonFilePath)
+      .then(response => response.json())
+      .then(data => {
+        // Handle the JSON data and display businesses
+        displayShelters(data.daycare)
+      })
+      .catch(error => console.error('Error fetching JSON:', error))
+  }
+
 function displayShelters (shelters) {
   const sheltersContainer = document.getElementById('sheltersContainer')
   sheltersContainer.innerHTML = '' // Clear previous content
