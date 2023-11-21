@@ -218,8 +218,7 @@ function searchResults () {
         .then(data => {
           // Handle the JSON data and display businesses
 
-          displayVeteranFirst(data.shelters)
-          return
+          displayVeteranFirst(data.shelters);
         })
         .catch(error => console.error('Error fetching JSON:', error))
       fetch(jsonFilePath)
