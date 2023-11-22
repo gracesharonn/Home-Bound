@@ -724,7 +724,7 @@
         "state": "CA",
         "zipcode": "95815"
       },
-      "description": "Community Health Worker - primary goal is to assist persons experiencing homelessness by connecting them to multiple supportive services",
+      "description": "primary goal is to assist persons experiencing homelessness by connecting them to multiple supportive services",
       "contacts": {
         "email": "",
         "phone": ""
@@ -745,6 +745,21 @@
         "phone":"(916)441-0123"
       },
       "website":"https://hopecoop.org/employment/"
+    },
+    {
+      "businessName": "Sacramento Loaves & Fishes",
+      "location":{
+        "street":"1351 North C. St.",
+        "city":"Sacramento",
+        "state":"CA",
+        "zipcode":"95811"
+      },
+      "description":"",
+      "contacts":{
+        "email":"info@sacloaves.org",
+        "phone":"916-446-0874"
+      },
+      "website":""
     },
     {
       "businessName": "",

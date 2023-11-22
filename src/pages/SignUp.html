@@ -11,21 +11,6 @@
     <script>
         const fs = require('fs')
         // JavaScript function to handle form submission
-        function login() {
-            // Get the input values
-            var first_name = document.getElementById('first_name').value;
-            var last_name = document.getElementById('last_name').value;
-            //var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            var age = document.getElementById('age').value;
-            var contact_info = document.getElementById('email_address').value;
-            var sex = document.getElementById('sex').value;
-            // Basic client-side validation
-            if (contact_info == ''|| password === ''/*||first_name == '' ||last_name == ''||age == ''||sex == ''*/) {
-                alert('Please fill in all fields.');
-                return;
-            }
-        }
         function saveDynamicDataToFile(){
             var email_address = document.getElementById('email_address').value;
             var password = document.getElementById('password').value;

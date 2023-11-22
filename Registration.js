@@ -18,6 +18,7 @@ function saveJSON(filename = '', json = '"'){
 }
 function writeJSONfile(){
     const input = loadJSON('./login.json')
+    fetch('./Registration.html')
     var login = {'email_address' : "edricksok101@gmail.com",
     'password' : "password",
     'first_name': "Edrick",
@@ -33,9 +34,6 @@ function writeJSONfile(){
     
     //input.Users.push(user)
     saveJSON('./login.json',input)
-}
-function searchJSON(){
-    
 }
 /*function writeJsonfile(){
     console.log("Running.");

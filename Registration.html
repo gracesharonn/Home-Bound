@@ -3,7 +3,7 @@
 <head>
     <title>Registration Page</title>
     <script>
-        const fs = require('fs')
+        const fs = require('fs');
         // JavaScript function to handle form submission
         function login() {
             // Get the input values
@@ -46,17 +46,15 @@
         
         function readWritejsonfile(){
             var login = {"emailAddress" : document.getElementById("contact_info").value,
-            "password" : document.getElementById("password").value}
-            var user = { 
+            "password" : document.getElementById("password").value, 
             "first_name" : document.getElementById("first_name").value,
             "last_name" : document.getElementById("last_name").value,
-            "age" : document.getElementById("age").value,
-            "sex" : document.getElementById("sex").value,
-            login
-            };
+            "age" : document.getElementById("age").value
+            //"sex" : document.getElementById("sex").value
+        }
             const input = loadJSON('./login.json')
-            ;[].forEach(string => input.Volunteers.push(user))
-            saveJSON('./login.json',input)
+            ;[{login}].forEach(string => input.Volunteers.push(user))
+            saveJSON('./Login/login.json',input)
         }
 
             // You'll need to make an AJAX request to your C++ server here to check credentials and interact with the database.
