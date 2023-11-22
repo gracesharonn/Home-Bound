@@ -147,5 +147,3 @@ function openInNewTab(url) {
     event.preventDefault();
     window.open(url, '_blank');
 }
-
-

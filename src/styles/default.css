@@ -36,10 +36,6 @@
 .NavigationBar ul {
     display: inline-flex;
     align-items: flex-start;
-    /* width: Hug (368px);
-    height: Hug (32px);
-    top: 20px;
-    left: 26px; */
     gap: 49px;
     background-color: transparent;
 }
@@ -104,15 +100,6 @@ nav {
 }
 
 /* Website Title */
-/* .TitlePage {
-    width: 100%;
-    font-size: 95px;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding-top: 269px;
-} */
-
 .TitlePage {
     display: flex;
     justify-content: space-between;
@@ -169,22 +156,6 @@ nav {
     /* top: 80%;
     left: 40%; */
 }
-
-/* .Shelter-Container {
-    position: relative;
-    width: 100%;
-    height: auto;
-    margin: 10px auto;
-    display: flex;
-    font-size: 35px;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 10px;
-}
-
-#service, #submit{
-    font-size: 22px;
-} */
 
 #ServiceForm {
     text-align: center;
@@ -268,7 +239,6 @@ input[type="radio"]:checked {
 }
 
 /* About Us Page */
-
 .sections {
     position: relative;
     width: 100%;
@@ -389,7 +359,6 @@ input[type="radio"]:checked {
 }
 
 /* Login (Volunteers) & Sign Up Page */
-
 .LoginRegisterBG {
     position: relative;
 }
@@ -744,3 +713,108 @@ h2 {
                 opacity: 1;
             }
         }
+
+/* Volunteer Events Page */
+.EventsBG {
+    background-color: #006;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+}
+
+.NavigationBarEventsPage {
+    text-align: left;
+    padding: 25px;
+    display: fixed;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    font-size: 32px;
+    font-weight: 700;
+    background-color: transparent;
+    transition: top 1s ease-in-out;
+    margin-top: -710px;
+}
+  
+.NavigationBarEventsPage ul {
+    display: inline-flex;
+    align-items: flex-start;
+    gap: 49px;
+    background-color: transparent;
+}
+  
+.NavigationBarEventsPage ul li {
+    list-style: none;
+    background-color: transparent;
+}
+  
+.NavigationBarEventsPage ul li a {
+    font-family: BenchNine;
+    font-size: 1em;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    cursor: pointer;
+    background-color: transparent !important;
+    color: #F5F6FA;
+}
+
+.EventsContainer {
+    position: absolute;
+    width: 48%;
+    height: 100vh;
+    text-align: center;
+    padding: 45px;
+}
+
+.EventsContainer h1 {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.575px;
+}
+
+.EventBox {
+    background-color: #FFE475;
+    width: 100%;
+    padding: 30px 30px 10px 35px;
+    border-radius: 48px;
+    margin-top: 50px;
+    height: 170px;
+    text-align: left;
+    line-height: 2.5;
+}
+
+.EventBox p {
+    font-family: BenchNine;
+    font-size: 24px;
+    background-color: transparent;
+}
+
+h5 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    background-color: transparent;
+}
+
+h4 {
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    margin: 25px;
+    padding: 25px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.575px;
+    color: #F5F6FA;
+    background-color: transparent;
+}
