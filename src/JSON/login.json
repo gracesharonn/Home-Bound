@@ -15,6 +15,14 @@
       "last_name": "Doe",
       "age": "35",
       "sex": "Male"
+      },
+      {
+      "email_address": "teslalover69420@gmail.com",
+      "password": "dontbuytwitter",
+      "first_name": "Elon",
+      "last_name": "Musk",
+      "age": "52",
+      "sex": "Male"
       }
 
     ]
