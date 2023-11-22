@@ -1,0 +1,25 @@
+{
+    "template": [
+        {
+          "businessName": "",
+          "location": {
+            "street": "",
+            "city": "",
+            "state": "",
+            "zipcode": "",
+            "latitude": "",
+            "longitude": ""
+          },
+          "description": "",
+          "contacts": {
+            "email": "",
+            "phone": ""
+          },
+          "website": "",
+          "attributes": {
+            "veteran" :"No",
+            "sex": " "
+          }
+        }
+      ]
+}
