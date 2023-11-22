@@ -745,6 +745,48 @@
         "phone": ""
       },
       "website": "https://www.ziprecruiter.com/c/Community-HealthWorks/Job/Community-Health-Worker-Homeless-Street-Outreach/-in-Sacramento,CA?jid=1803975d5914387f&lvk=MVcdOYj1Ol_aioXGN5hBiw.--N9XwMY0pk"
+    },
+    {
+      "businessName": "Hope Cooperative",
+      "location":{
+        "street":"650 Howe Ave. Bldg 400-A",
+        "city":"Sacramento",
+        "state":"CA",
+        "zipcode":"95825"
+      },
+      "contacts":{
+        "email":"info@hopecoop.org",
+        "phone":"(916)441-0123"
+      },
+      "website":"https://hopecoop.org/employment/"
+    },
+    {
+      "businessName": "",
+      "location":{
+        "street":"",
+        "city":"",
+        "state":"",
+        "zipcode":""
+      },
+      "contacts":{
+        "email":"",
+        "phone":""
+      },
+      "website":""
+    },
+    {
+      "businessName": "",
+      "location":{
+        "street":"",
+        "city":"",
+        "state":"",
+        "zipcode":""
+      },
+      "contacts":{
+        "email":"",
+        "phone":""
+      },
+      "website":""
     }
     ]
   }
