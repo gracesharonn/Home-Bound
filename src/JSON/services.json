@@ -1335,6 +1335,27 @@
         "veteran" :"No",
         "sex": "n/a"
       }
+    },
+    {
+      "businessName": "River City Food Bank - Midtown",
+      "location": {
+        "street": "1800 28th Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95816",
+        "latitude": "38.56508641634771",
+        "longitude": "-121.47337918756915"
+      },
+      "description": "In Sacramento County, 15% of residents experience food insecurity, meaning that they lack reliable access to an adequate supply of affordable, nutritious food.",
+      "contacts": {
+        "email": "email@rivercityfoodbank.org",
+        "phone": "916-446-2627"
+      },
+      "website": "https://rivercityfoodbank.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     }
     ]
   }
