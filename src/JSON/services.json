@@ -1114,7 +1114,7 @@
         "latitude": "",
         "longitude": ""
       },
-      "description": "Assist persons experiencing homelessness by connecting them to multiple supportive services",
+      "description": "Advancing community, social and economic health one person at a time",
       "contacts": {
         "email": "",
         "phone": ""
@@ -1136,7 +1136,7 @@
         "latitude": "",
         "longitude": ""
       },
-      "description": "",
+      "description": "Non Profit that moves people from a life of instability by providing permanent supportive housing, mental health services, substance-use rehabilitation and social skills.",
       "contacts":{
         "email":"info@hopecoop.org",
         "phone":"(916)441-0123"
@@ -1166,6 +1166,27 @@
       "attributes": {
         "veteran" :"No",
         "sex": " "
+      }
+    },
+    {
+      "businessName": "Sacramento Steps Forward",
+      "location":{
+        "street":"2150 River Plaza Drive, Suite 385",
+        "city":"Sacramento",
+        "state":"CA",
+        "zipcode":"95833",
+        "latitude": "",
+        "longitude": ""
+      },
+      "description":"We work to end homelessness through leadership, convening partners, data-driven best practices, and improving system performance",
+      "contacts":{
+        "email":"",
+        "phone":""
+      },
+      "website":"https://sacramentostepsforward.org/",
+      "attributes": {
+        "veteran" :"Yes",
+        "sex": "n/a"
       }
     }
     ]
