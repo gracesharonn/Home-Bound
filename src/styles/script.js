@@ -106,6 +106,7 @@ if (serviceSelect.value === "Shelter") {
         .catch(error => console.error('Error fetching JSON:', error));
   }
   
+  //Services Information Displayed
   function displayShelters(shelters) {
     const sheltersContainer = document.getElementById('sheltersContainer');
     sheltersContainer.innerHTML = ''; // Clear previous content
@@ -147,5 +148,3 @@ function openInNewTab(url) {
     event.preventDefault();
     window.open(url, '_blank');
 }
-
-
