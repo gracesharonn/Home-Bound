@@ -7,14 +7,19 @@
         "city": "Sacramento",
         "state": "CA",
         "zipcode": "95814",
-        "lat": "798362479032849032"
+        "latitude": "38.578629156190516",
+        "longitude": "-121.5015784626208"
       },
       "description": "Non Profit that has been catering to transient populations since 1992. Our mission is to provide perpetual sustenance programs to both adults and transitional age youth within the State of California",
       "contacts": {
         "email": "Support@thearkofrefuge.org",
         "phone": "866-676-0070"
       },
-      "website": "https://www.thearkofrefuge.org/"
+      "website": "https://www.thearkofrefuge.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "FAMILY PROMISE OF SACRAMENTO - EMERGENCY SHELTER",
@@ -22,14 +27,21 @@
         "street": "1321 N C St",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95811"
+        "zipcode": "95811",
+        "latitude": "38.59143174163012",
+        "longitude": "-121.48286960774512"
+        
       },
       "description": "Providing a safe and comfortable living space where families can stay together is an essential part of the Family Promise mission.",
       "contacts": {
         "email": "marsha@sacfamilypromise.org",
-        "phone": "(916) 443 3107"
+        "phone": "916-443-3107"
       },
-      "website": "https://sacfamilypromise.org/"
+      "website": "https://sacfamilypromise.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "SALVATION ARMY: FAMILY SERVICES CENTER",
@@ -37,14 +49,20 @@
         "street": "1225 North B Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95814"
+        "zipcode": "95814",
+        "latitude": "38.646675351443676",
+        "longitude": "-121.38931852720637"
       },
       "description": "Class of Housing: Emergency Shelter Program: lodging and meals for homeless single men and women for 30 to 120 days",
       "contacts": {
         "email": " ",
         "phone": "916-442-0331"
       },
-      "website": "https://sacramento.salvationarmy.org/sacramento_metro/"
+      "website": "https://sacramento.salvationarmy.org/sacramento_metro/",
+      "attributes": {
+        "veteran" :"Yes",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "FRANCIS HOUSE CENTER",
@@ -52,14 +70,20 @@
         "street": "1422 C Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95814"
+        "zipcode": "95814",
+        "latitude": "38.58620230828268",
+        "longitude": "-121.48371435530385"
       },
       "description": "We are not a shelter, we do have a motel voucher program for homeless families.",
       "contacts": {
         "email": "mccsinglesreferrals@nextmovesacramento.org",
         "phone": "916-443-2646"
       },
-      "website": "http://www.francishousecenter.org/"
+      "website": "http://www.francishousecenter.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "COTTAGE HOUSING - QUINN COTTAGES",
@@ -67,14 +91,20 @@
         "street": "1500 North A Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95811"
+        "zipcode": "95811",
+        "latitude": "38.58797915823928",
+        "longitude": "-121.4827176550466"
       },
       "description": "The development is comprised of 60 one bedroom cottages. The residential facility primarily serves single men or women, or a couple or parent with a child at these cottages",
       "contacts": {
         "email": "INFO@COTTAGEHOUSING.ORG",
-        "phone": "(916) 492 9065"
+        "phone": "916-492-9065"
       },
-      "website": "https://www.cottagehousing.org/"
+      "website": "https://www.cottagehousing.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "ST JOHNS SHELTER FOR WOMEN AND CHILDREN SACRAMENTO",
@@ -82,14 +112,20 @@
         "street": "4410 Power Inn Rd",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95826"
+        "zipcode": "95826",
+        "latitude": "38.53519725140097",
+        "longitude": "-121.41000582883636"
       },
       "description": "We provide more than shelter and food. We provide the ability to rise above devastating, negative elements and achieve job-readiness and self-sustainability.",
       "contacts": {
         "email": " ",
         "phone": "916-453-1482"
       },
-      "website": "https://saintjohnsprogram.org/"
+      "website": "https://saintjohnsprogram.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "Female"
+      }
     },
     {
       "businessName": "UNION GOSPEL MISSION FOR MEN",
@@ -97,14 +133,20 @@
         "street": "400 Bannon St",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95814"
+        "zipcode": "95814",
+        "latitude": "38.597335067297294",
+        "longitude": "-121.49871326793273"
       },
       "description": "Provides a seven 7-night stay for single men. Be there at the black metal gate by 5:30 p.m. for a first come/first serve basis.",
       "contacts": {
         "email": " ",
         "phone": "916-447-3268"
       },
-      "website": "https://ugmsac.com/"
+      "website": "https://ugmsac.com/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "Male"
+      }
     },
     {
       "businessName": "VOLUNTEERS OF AMERICA GREATER SACRAMENTO AND NORTHERN NEVADA - A STREET SHELTER (FOR MEN)",
@@ -112,14 +154,20 @@
         "street": "1400 North A Street, Building B",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95814"
+        "zipcode": "95814",
+        "latitude": "38.58852887843849",
+        "longitude": "-121.48345042890622"
       },
       "description": "As many as 90 consecutive days of food, shelter and referral services are provided to homeless men at Volunteers of America's Men's Shelter.",
       "contacts": {
         "email": " ",
         "phone": "916-448-5507"
       },
-      "website": "https://www.voa-ncnn.org/"
+      "website": "https://www.voa-ncnn.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "Male"
+      }
     },
     {
       "businessName": "NEXT MOVE'S FAMILY SHELTER CAMPUS",
@@ -127,14 +175,20 @@
         "street": "4516 Parker Avenue",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95820"
+        "zipcode": "95820",
+        "latitude": "38.53507348048744",
+        "longitude": "-121.45357361647265"
       },
       "description": "Our 55-bed Family Shelter provides short-term emergency housing and supportive services to 13 homeless families for up to 30 days.",
       "contacts": {
         "email": "mccsinglesreferrals@nextmovesacramento.org",
         "phone": "916-455-2160"
       },
-      "website": "https://www.nextmovesacramento.org/emergency_family_shelter/"
+      "website": "https://www.nextmovesacramento.org/emergency_family_shelter/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "LEARNING TO LIVE SOBER LIVING",
@@ -142,14 +196,20 @@
         "street": "2330 Irma Way",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95825"
+        "zipcode": "95825",
+        "latitude": "38.58552620189776",
+        "longitude": "-121.4086308741414"
       },
       "description": " Learning To Live provides a safe and sober environment for men wishing to pursue a higher quality of life. LTL does not provide residential treatment services. We provide sober living in a comfortable and safe environment.",
       "contacts": {
         "email": " ",
         "phone": "916-662-2784"
       },
-      "website": "https://www.shelterlistings.org/details/37861/"
+      "website": "https://www.shelterlistings.org/details/37861/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "CENTRO GUADALUPE Â€“ CATHOLIC SOCIAL SERVICES",
@@ -157,14 +217,20 @@
         "street": "730 S Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95814"
+        "zipcode": "95814",
+        "latitude": "38.57114150008329",
+        "longitude": "-121.50078178948354"
       },
       "description": "A multi-service center in the southside area of Sacramento has been providing services in English and Spanish since 1979. Services include emergency rental and utility assistance, information and referral, low-cost immigration assistance, tax preparation assistance for low-income families, and distribution of  toys and food to low-income families at Christmas.",
       "contacts": {
         "email": "office@shrinegpe.org ",
         "phone": "916-443-5367"
       },
-      "website": "https://guadalupe-sacramento.org/"
+      "website": "https://guadalupe-sacramento.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "TUBMAN HOUSE TRANSITIONAL HOUSING",
@@ -172,14 +238,20 @@
         "street": "PO Box 160085",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95816"
+        "zipcode": "95816",
+        "latitude": "38.56512854953524",
+        "longitude": "-121.51202180112988"
       },
       "description": "Waking the Village operates Tubman House, an 18 month transitional living program serving Sacramento’s homeless, parenting youth and their children.",
       "contacts": {
         "email": "admin@wakingthevillage.org",
         "phone": "916-372-6272"
       },
-      "website": "https://www.wakingthevillage.org/"
+      "website": "https://www.wakingthevillage.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "SACRAMENTO COTTAGE HOUSING SACRAMENTO",
@@ -187,14 +259,20 @@
         "street": "1726 Professional Drive",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95825"
+        "zipcode": "95825",
+        "latitude": "38.59639770601084",
+        "longitude": "-121.38707416064713"
       },
       "description": "This is a Non Profit Organization that provides Transitional Housing. Bishop Francis Quinn Cottages offers transitional housing services for up to 24 months.",
       "contacts": {
         "email": "dhusid@cottagehousing.org",
         "phone": "916-971-1566"
       },
-      "website": "https://www.cottagehousing.org/"
+      "website": "https://www.cottagehousing.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "SACRAMENTO MUTUAL HOUSING ASSOCIATION SACRAMENTO",
@@ -202,14 +280,20 @@
         "street": "8001 Fruitridge Rd., Suite A",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95820"
+        "zipcode": "95820",
+        "latitude": "38.5256272287413",
+        "longitude": "-121.41063981832053"
       },
       "description": "Smha's Mission Is To Develop And Operate Permanently Affordable Housing That Builds Strong And Stable Communities Through Resident Participation And Leadership Development. Smha Houses Over 2,650 LowIncome Residents Who Participate In Community Building Activities In Their Mutual Housing Communities And Surrounding Neighborhoods.",
       "contacts": {
         "email": " ",
         "phone": "916-453-8400"
       },
-      "website": "https://www.mutualhousing.com/"
+      "website": "https://www.mutualhousing.com/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "EPISCOPAL COMMUNITY SERVICES OF THE DIOCESE OF NORTHERN CALIFORNIA SACRAMENTO",
@@ -217,14 +301,20 @@
         "street": "1318 27th St",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95816"
+        "zipcode": "95816",
+        "latitude": "38.570464166736734",
+        "longitude": "-121.47253661831878"
       },
       "description": "Provide Training, Technical Assistance, To Congregations, Interfaith Collaboratives And Small Community Based Non-Profits To Build Their Capacity To Provide Services To The Poor And The Elderly",
       "contacts": {
         "email": " ",
         "phone": "916-442-6918"
       },
-      "website": "https://norcalecs.org/"
+      "website": "https://norcalecs.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "SACRAMENTO AREA EMERGENCY HOUSING CENTER SACRAMENTO",
@@ -232,14 +322,20 @@
         "street": "2411 Alhambra Blvd Ste 110",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95817"
+        "zipcode": "95817",
+        "latitude": "38.55698665839157",
+        "longitude": "-121.47184570297783"
       },
       "description": "To Provide Assistance To Families With Children And Individuals Toward Self-Reliance.",
       "contacts": {
         "email": " ",
         "phone": "916-454-2120"
       },
-      "website": "https://www.shra.org/ehv/"
+      "website": "https://www.shra.org/ehv/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "LA COOPERATIVA CAMPESINA DE CALIFORNIA SACRAMENTO",
@@ -247,14 +343,20 @@
         "street": "7801 Folsom Blvd Suite 365",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95826"
+        "zipcode": "95826",
+        "latitude": "38.55149933844625",
+        "longitude": "-121.41292835880125"
       },
       "description": "Implementing A Wide Variety Of Programs From Job Training To Family Health, Education And Other Supportive Services That Promote The Well Being Of Migrant And Seasonal Farm Workers, Their Families, And Their Communities",
       "contacts": {
         "email": "info@lacooperativa.org",
         "phone": "916-388-2220"
       },
-      "website": "https://lacooperativa.org/"
+      "website": "https://lacooperativa.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     }
   ],
 
@@ -265,14 +367,20 @@
         "street": "2100 J Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95816"
+        "zipcode": "95816",
+        "latitude": "38.57581993692568",
+        "longitude": "-121.47804507407785"
       },
       "description": "Daily meals and services are offered to anyone in need in the Sacramento Midtown area",
       "contacts": {
         "email": "myra@firstumcsac.org",
         "phone": "916-446-5025"
       },
-      "website": "https://www.firstumcsac.org/pilgrimage"
+      "website": "https://www.firstumcsac.org/pilgrimage",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Sacramento Loves & Fishes",
@@ -280,14 +388,20 @@
         "street": "1351 North C. St.",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95811"
+        "zipcode": "95811",
+        "latitude": "38.591243246093484",
+        "longitude": "-121.48235646244126"
       },
       "description": "Our services embody the corporal works of Mercy: to feed the hungry, give drink to the thirsty, shelter the homeless, clothe the naked, visit the sick, visit the imprisoned, bury the dead.",
       "contacts": {
         "email": "info@sacloaves.org",
         "phone": "916-446-0874"
       },
-      "website": "https://sacloaves.org/programs-services/"
+      "website": "https://sacloaves.org/programs-services/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Feed Sacramento Homeless",
@@ -295,14 +409,20 @@
         "street": "4625 44th st. Suite #32",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95820"
+        "zipcode": "95820",
+        "latitude": "38.53257284744497",
+        "longitude": "-121.45438250291602"
       },
       "description": "Here at Feed Sacramento Homeless, we’re committed to investing our expertise and resources in order to further achieve our cause.",
       "contacts": {
         "email": " ",
         "phone": "916-470-7349"
       },
-      "website": "https://www.feedsachomeless.org/"
+      "website": "https://www.feedsachomeless.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Neighbor Program",
@@ -310,14 +430,20 @@
         "street": "2732 33rd St.",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95817"
+        "zipcode": "95817",
+        "latitude": "38.553004768156384",
+        "longitude": "-121.47111497407884"
       },
       "description": "Neighbor Program is a Pan-Afrikan Socialist organization committed to SERVING the PEOPLE and RADICALLY LOVING our NEIGHBOR; through this radical love, we look to carry on the People's revolutionary struggle towards liberation.",
       "contacts": {
         "email": "SacNeighbor916@gmail.com",
         "phone": "916-642-9933"
       },
-      "website": "https://www.neighborprogram.org/"
+      "website": "https://www.neighborprogram.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Salvation Army - Alhambra",
@@ -325,14 +451,20 @@
         "street": "2550 Alhambra Blvd",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95817"
+        "zipcode": "95817",
+        "latitude": "38.555820021200695",
+        "longitude": "-121.4731259452423"
       },
       "description": "lodging and meals for homeless single men and women for 30 to 120 days",
       "contacts": {
         "email": " ",
         "phone": "916-452-9388"
       },
-      "website": "https://sacramento.salvationarmy.org/sacramento_metro/"
+      "website": "https://sacramento.salvationarmy.org/sacramento_metro/",
+      "attributes": {
+        "veteran" :"Yes",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Shiloh Baptist Church",
@@ -340,14 +472,20 @@
         "street": "3565 9th Avenue",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95817"
+        "zipcode": "95817",
+        "latitude": "38.544520171557956",
+        "longitude": "-121.46840246058825"
       },
       "description": "Shiloh Baptist Church is a historic and diverse congregation in Sacramento, CA, led by Pastor Anthony R. Sadler. The church offers Sunday services, prayer line, radio broadcast, and online giving options.",
       "contacts": {
         "email": " ",
         "phone": "916-664-3850"
       },
-      "website": "https://www.shilohbaptistchurch-sacramento.org/"
+      "website": "https://www.shilohbaptistchurch-sacramento.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "YXPLOSION, L.L.C",
@@ -355,14 +493,20 @@
         "street": "3415 Martin Luther King Jr Blvd",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95817"
+        "zipcode": "95817",
+        "latitude": "38.54363773409578",
+        "longitude": "-121.46413825873357"
       },
       "description": "YXP is a community engaged non-profit, which has made a difference in the civic life of Sacramento communities for over 10 years.",
       "contacts": {
         "email": " ",
         "phone": "916-806-2770"
       },
-      "website": "https://www.yxpunite.com/"
+      "website": "https://www.yxpunite.com/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "New St. Bethel Baptist Church",
@@ -370,14 +514,20 @@
         "street": "4201 8th Avenue",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95817"
+        "zipcode": "95817",
+        "latitude": "38.54497428783745",
+        "longitude": "-121.45758741826096"
       },
       "description": "New St. Bethel is a lively and active church that seeks to serve the local community and lead people to Christ. Learn about their beliefs, mission, vision, and Sunday services.",
       "contacts": {
         "email": "admin@newstbethel.org",
         "phone": "916-456-3077"
       },
-      "website": "http://newstbethel.org/"
+      "website": "http://newstbethel.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "River City Food Bank - Midtown",
@@ -385,14 +535,20 @@
         "street": "1800 28th Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95816"
+        "zipcode": "95816",
+        "latitude": "38.56508641634771",
+        "longitude": "-121.47337918756915"
       },
       "description": "In Sacramento County, 15% of residents experience food insecurity, meaning that they lack reliable access to an adequate supply of affordable, nutritious food.",
       "contacts": {
         "email": "email@rivercityfoodbank.org",
         "phone": "916-446-2627"
       },
-      "website": "https://rivercityfoodbank.org/"
+      "website": "https://rivercityfoodbank.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "South Sacramento Interfaith Partnership (SSIP)",
@@ -400,14 +556,20 @@
         "street": "5625 24th Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95822"
+        "zipcode": "95822",
+        "latitude": "38.5241443388712",
+        "longitude": "-121.48240181826182"
       },
       "description": "The primary mission of the SSIP Food Closet is to maintain and operate an emergency food distribution program to help alleviate food insecurity for Sacramento area residents. ",
       "contacts": {
         "email": "info@ssipfoodcloset.org",
         "phone": "916-428-5290"
       },
-      "website": "https://www.ssipfoodcloset.org/"
+      "website": "https://www.ssipfoodcloset.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Daughters of Zion Enterpryz",
@@ -415,14 +577,20 @@
         "street": "6489 47th St.",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95823"
+        "zipcode": "95823",
+        "latitude": "38.50903588955193",
+        "longitude": "-121.44999198757128"
       },
       "description": "The Daughters of Zion (DOZ) Enterpryz hunger relief efforts are comprised of our Food and Clothes closet",
       "contacts": {
         "email": "",
         "phone": "916-422-3875"
       },
-      "website": "https://www.dozenterpryz.org/foodandclothescloset"
+      "website": "https://www.dozenterpryz.org/foodandclothescloset",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     }
   ],
   "medical": [
@@ -432,14 +600,20 @@
         "street": "923 V Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95818"
+        "zipcode": "95818",
+        "latitude": "38.567557875563985",
+        "longitude": "-121.49950401826027"
       },
       "description": "Offers medical services to indigent individuals and families",
       "contacts": {
         "email": "",
         "phone": "(916) 448-6553"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Meadowview Clinic",
@@ -447,14 +621,20 @@
         "street": "2118 Meadowview Road",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95832"
+        "zipcode": "95832",
+        "latitude": "38.480619646678754",
+        "longitude": "-121.49292618757224"
       },
       "description": "Offers medical services to indigent individuals and families",
       "contacts": {
         "email": "",
         "phone": "(916) 427-0368"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Las Palmas Clinic",
@@ -462,14 +642,20 @@
         "street": "577 Las Palmas Avenue",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95815"
+        "zipcode": "95815",
+        "latitude": "38.61931860550343",
+        "longitude": "-121.45289370291275"
       },
       "description": "Offers medical services to indigent individuals and families",
       "contacts": {
         "email": "",
         "phone": "(916) 924-6703"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "White Rock Family Clinic",
@@ -477,14 +663,20 @@
         "street": "10487 White Rock Road, Rancho Cordova",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95670"
+        "zipcode": "95670",
+        "latitude": "38.58688676695569",
+        "longitude": "-121.29984841825942"
       },
       "description": "Free medical clinic center for people who do not have medical insurance. Not a walk in clinic so you must apply and provide proof of income, residency and ID. Two weeks waiting until seen. Please call for more information. Includes medical treatment of acute illnesses and minor injuries. Provides care of chronic illnesses such as diabetes, high blood pressure and asthma",
       "contacts": {
         "email": "",
         "phone": "(916) 364-0724"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Natomas Crossroads FREE Clinic",
@@ -492,14 +684,20 @@
         "street": "1101-A National Drive",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95838"
+        "zipcode": "95838",
+        "latitude": "38.646450738886614",
+        "longitude": "-121.48816521640262"
       },
       "description": "Clinic is open on the 1st Saturday of each month from 1:00-6:00pm. No Fee-No co-pay",
       "contacts": {
         "email": "",
         "phone": "(916) 514-6163"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Del Paso Health Clinic",
@@ -507,14 +705,20 @@
         "street": "3950 Research Drive",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95838"
+        "zipcode": "95838",
+        "latitude": "38.639143876580576",
+        "longitude": "-121.4580380317485"
       },
       "description": "Offers clinic services to age group 21 and over. You must be receiving. CMISP. Provides primary care medical services to individuals and families who do not have medical insurance.",
       "contacts": {
         "email": "",
         "phone": "(916) 648-0970"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "South City Health Clinic",
@@ -522,14 +726,20 @@
         "street": "7171 Bowling Drive Ste. 300",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95823"
+        "zipcode": "95823",
+        "latitude": "38.49770481981415",
+        "longitude": "-121.4552207029171"
       },
       "description": "Offers primary care health services to adults and children that do not have medical insurance. Medical services include immunizations, STD's HIV diagnoses and family planning.",
       "contacts": {
         "email": "",
         "phone": "(916) 875-0802"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Oak Park Multi-Service",
@@ -537,14 +747,20 @@
         "street": "3415 Martin Luther King Blvd",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": ""
+        "zipcode": "",
+        "latitude": "38.54370486514648",
+        "longitude": "-121.4642026317519"
       },
       "description": "Monday - Friday 8-5pm. Public health clinic services, well child exams, childrens checkups and pediatric immunizations. Offers family planning, pregnancy testing and STD diagnoses and treatment along with immunizations. Medical insurance accepted or fees vary according to eligibility for children with no health insurance within zip codes 95816, 95817, 95818, 95820, or Sacramento county.",
       "contacts": {
         "email": "",
         "phone": "(916) 233-4910"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "County of Sacramento Primary Care Clinic",
@@ -552,14 +768,20 @@
         "street": "4600 Broadway",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95820"
+        "zipcode": "95820",
+        "latitude": "38.54644474671005",
+        "longitude": "-121.45297868942461"
       },
       "description": "Monday - Friday 8-5pm. The Primary care clinic provides walk in non-emergency medical services to people with Medi-cal or no insurance",
       "contacts": {
         "email": "",
         "phone": "(916) 874-9670"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Health Care for the Homeless",
@@ -567,14 +789,20 @@
         "street": "4600 Broadway, Suite 2133",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95820"
+        "zipcode": "95820",
+        "latitude": "38.54645784668862",
+        "longitude": "-121.45294793175188"
       },
       "description": "Provides primary and public health care medical service to homeless individuals and families who have no insurance.",
       "contacts": {
         "email": "",
         "phone": "(916) 874-1455"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "County of Sacramento Medically Indigent Services Program - CMISP",
@@ -582,14 +810,20 @@
         "street": "9616 Micron Ave., Suite 850B",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95827"
+        "zipcode": "95827",
+        "latitude": "38.563386300083934",
+        "longitude": "-121.33869091534551"
       },
       "description": "Monday - Friday 8-5pm. Call for medical answering service assistance. Helpful for locating a CMISP clinic nearest you. Provides resources and referrals to Sacramento county residents with no insurance.",
       "contacts": {
         "email": "",
         "phone": "(916) 874-9238"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Mercy Clinic",
@@ -597,14 +831,20 @@
         "street": "Friendship Park, 1321 North C Street at 12th Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95811"
+        "zipcode": "95811",
+        "latitude": "38.59184091519249",
+        "longitude": "-121.48289644524101"
       },
       "description": "Monday - Friday 7.30-4pm. Offers medical services for the homeless and others who may not have medical insurance. Includes TB testing for shelter placement",
       "contacts": {
         "email": "",
         "phone": "(916) 446-3345"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Chest Clinic",
@@ -612,14 +852,20 @@
         "street": "4600 Broadway",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95820"
+        "zipcode": "95820",
+        "latitude": "38.54644474671005",
+        "longitude": "-121.45300014709738"
       },
       "description": "Provides free and low cost chest x-rays and TB testing to Medi-cal insured or to people with no medical insurance",
       "contacts": {
         "email": "",
         "phone": "(916) 874-9823"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Refugee Health Clinic",
@@ -627,14 +873,20 @@
         "street": "4600 Broadway, Suite 2100",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95820"
+        "zipcode": "95820",
+        "latitude": "38.54660559278072",
+        "longitude": "-121.45271580291535"
       },
       "description": "Provides initial health assessment to newly arriving refugees and will assist with locating additional medical services through Medi-cal insurance.",
       "contacts": {
         "email": "",
         "phone": "(916) 874-9750"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "The Effort Medical Health Services",
@@ -642,14 +894,20 @@
         "street": "1820 J Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95820"
+        "zipcode": "95820",
+        "latitude": "38.57708904661089",
+        "longitude": "-121.48188702011443"
       },
       "description": "Monday - Friday 5pm - 8.30pm. General health care services for adults and children. Will accept Medi-cal, Medicare, Blue cross and sliding scale of 30.00 minimum fee.",
       "contacts": {
         "email": "",
         "phone": "(916) 325-5556"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Sutter General Hospital",
@@ -657,14 +915,20 @@
         "street": "2801 L Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95816"
+        "zipcode": "95816",
+        "latitude": "38.572175045012244",
+        "longitude": "-121.46942547407811"
       },
       "description": "Provides emergency medical treatment including long term care services and accepts Medical/Medicare and private health insurance",
       "contacts": {
         "email": "",
         "phone": "(916) 454-2222 or (916) 454-6695"
       },
-      "website": "https://www.sutterhealth.org/smcs"
+      "website": "https://www.sutterhealth.org/smcs",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "Sacramento Community Clinic Consortium",
@@ -672,14 +936,20 @@
         "street": "4826 J Street",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95819"
+        "zipcode": "95819",
+        "latitude": "38.566842856841",
+        "longitude": "-121.44345643360575"
       },
       "description": "Provides a consortium of Sacramento community clinics. Offers valuable information and assistance in locating medical services according to the type of health insurance that you have.",
       "contacts": {
         "email": "",
         "phone": "(916) 649-0653 or (916) 447-7222"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "El Hogar Guest House",
@@ -687,14 +957,20 @@
         "street": "600 Bercut Drive",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95811"
+        "zipcode": "95811",
+        "latitude": "38.60094715058827",
+        "longitude": "-121.49927768756801"
       },
       "description": "Adults. New clients Tue and Wed 8:30 am, Thu 1 pm",
       "contacts": {
         "email": "",
-        "phone": "(916) 440-1500"
+        "phone": "916-440-1500"
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
     },
     {
       "businessName": "One Community Health",
@@ -702,7 +978,9 @@
         "street": "1500 21st St and 1442 Ethan Way, Suite 100",
         "city": "Sacramento",
         "state": "CA",
-        "zipcode": "95825"
+        "zipcode": "95825",
+        "latitude": "38.57346947743441",
+        "longitude": "-121.48037295621033"
       },
       "description": "Health centers open to anyone regardless of age, gender, ethnicity, orientation, or ability to pay.",
       "contacts": {
@@ -712,6 +990,120 @@
       "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/"
     }
   ],
+
+  "daycare": [
+    {
+      "businessName": "Family Matters Child Care Center",
+      "location": {
+        "street": "5452 14th Ave",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820",
+        "latitude": "38.53959064552655",
+        "longitude": "-121.44185154916917"
+
+      },
+      "description": "Helping to build stronger families.",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 457-4067"
+      },
+      "website": "https://www.fmccc.net/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "Shiloh Arms Child Development Center",
+      "location": {
+        "street": "3949 23rd Ave",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820",
+        "latitude": "38.53277621039919",
+        "longitude": "-121.46134181663821"
+
+      },
+      "description": "Shiloh Arms provide childcare services to low income families, working parents, seeking employment or seeking for permanent housing.",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 453-1309"
+      },
+      "website": "https://shiloharmscdc.com/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "Nae's Charter Daycare",
+      "location": {
+        "street": " 3806 25th Ave",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820",
+        "latitude": "38.52999441753871",
+        "longitude": "-121.4665943896509"
+
+      },
+      "description": "Our interactive environment exposes each child to a creative and memorable learning experience, cultivating a healthy balance of emotional and educational growth.",
+      "contacts": {
+        "email": "",
+        "phone": "(510) 421-2397"
+      },
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "Rainbow Day Care Center",
+      "location": {
+        "street": "901 P St #155B",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95814",
+        "latitude": "38.57420744103336",
+        "longitude": "-121.49651181534165"
+
+      },
+      "description": "Quality care and low ratios since 1987. Non-Profit serving Infants to Pre-K.",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 448-5231"
+      },
+      "website": "https://www.rainbowdaycareinc.com/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "Little Bear Daycare",
+      "location": {
+        "street": "2444 39th Ave",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820",
+        "latitude": "38.517360027854856",
+        "longitude": "-121.48076240499299"
+
+      },
+      "description": "",
+      "contacts": {
+        "email": "",
+        "phone": "(916) 422-4136"
+      },
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    }
+  ],
+
   "template": [
     {
       "businessName": "",
@@ -719,14 +1111,20 @@
         "street": "",
         "city": "",
         "state": "",
-        "zipcode": ""
+        "zipcode": "",
+        "latitude": "",
+        "longitude": ""
       },
       "description": "",
       "contacts": {
         "email": "",
         "phone": ""
       },
-      "website": ""
+      "website": "",
+      "attributes": {
+        "veteran" :"No",
+        "sex": " "
+      }
     }
   ]
 }

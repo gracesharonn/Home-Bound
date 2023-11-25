@@ -23,10 +23,10 @@
         <div id="x-button" class="x-button">X</div>
         <nav>
             <ul>
-                <li><a>Food</a></li>
+                <li><a href="./services/Food.html">Food</a></li>
                 <li><a href="./services/Shelters.html">Shelter</a></li>
                 <li><a href="./services/Medical.html">Medical</a></li>
-                <li><a>Daycare</a></li>
+                <li><a href="./services/Daycare.html">Daycare</a></li>
                 <li><a>Bikehub</a></li>
                 <li><a>Employment</a></li>
                 <li><a>See All</a></li>
@@ -44,7 +44,7 @@
     
 <!--     <section class="Service-Container"> -->
         <div id="ServiceForm">
-          <form  id="form" class="Form-Box" action="C++ File" method="POST" enctype="multipart/form-data">
+          <form  id="form" class="Form-Box" method="POST">
     
             <!-- <label for="zip_code">Zipcode: </label>
             <input type="text" id="zip_code" name="zip_code" required onchange="return validateZipCode();">
@@ -61,7 +61,7 @@
             <label for="service">Select a Service&nbsp;</label>
             <select id="service" name="service" onchange="showAdditionalQuestions()">
               <option value="Bikehub">Bikehub</option>
-              <option value="DayCare">Day Care</option>
+              <option value="Daycare">Daycare</option>
               <option value="Employment">Employment</option>
               <option value="Food">Food</option>
               <option value="Medical">Medical</option>
@@ -72,7 +72,7 @@
             <!-- Shelter questions -->
             <div class="shelterForm" id="shelterQuestions" style="display: none;">
               <hr>
-              <label required>Are you a Veteran?</label>
+              <label required id="veteran">Are you a Veteran?</label>
               <input type="radio" name="veteran" value="Yes">Yes
               <input type="radio" name="veteran" value="No">No
               <br>
@@ -140,10 +140,12 @@
     
              
             </div>
-            <button id="submit" type="button" onclick="generateForm()">Submit</button>
+            <button id="submit" type="button" onclick="submitForm()">Submit</button>
           </form>
         </div>
-<!--     </section> -->
+        
+<!-- Div output for testing only-->
+    <div id="output"></div>
 
     <div class="scroll-up">
         <a href="#top"> 
