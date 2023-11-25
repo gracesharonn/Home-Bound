@@ -116,10 +116,11 @@ function fetchAndDisplayDaycare () {
       })
       .catch(error => console.error('Error fetching JSON:', error))
   }
-
-function displayShelters (shelters) {
-  const sheltersContainer = document.getElementById('sheltersContainer')
-  sheltersContainer.innerHTML = '' // Clear previous content
+  
+  //Services Information Displayed
+  function displayShelters(shelters) {
+    const sheltersContainer = document.getElementById('sheltersContainer');
+    sheltersContainer.innerHTML = ''; // Clear previous content
 
   shelters.forEach((shelter, index) => {
     const shelterDiv = document.createElement('div')
