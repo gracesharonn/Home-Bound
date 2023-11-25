@@ -106,8 +106,8 @@ if (serviceSelect.value === "Shelter") {
         .catch(error => console.error('Error fetching JSON:', error));
   }
   
-  //Services Information Displayed
-  function displayShelters(shelters) {
+//Services Information Displayed
+function displayShelters(shelters) {
     const sheltersContainer = document.getElementById('sheltersContainer');
     sheltersContainer.innerHTML = ''; // Clear previous content
 
@@ -120,27 +120,39 @@ if (serviceSelect.value === "Shelter") {
             <h4>${shelter.businessName}</h4>
             <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
             <p>${shelter.contacts.phone}</p>
-            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
-            <br>
-            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+        `;
+
+        // Check if email exists and add email element if true
+        if (shelter.contacts.email) {
+            content += `
+                <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
+                <br>
+            `;
+        }
+
+        // Check if website exists and add website element if true
+        if (shelter.website) {
+            content += `
+                <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+                <br>
+            `;
+        }
+
+        content += `
             <p class="descriptionParagraph">"${shelter.description}"</p>
             <br>
             <hr>
         `;
 
-        // Check if email exists before adding it
-        if (!shelter.contacts.email) {
-            content = content.replace('<p class="emailParagraph">', '').replace('</p>', '');
-        }
-
-        // Check if website exists before adding it
-        if (!shelter.website) {
-            content = content.replace('<p class="websiteParagraph">', '').replace('</p>', '');
-        }
-
         shelterDiv.innerHTML = content;
         sheltersContainer.appendChild(shelterDiv);
     });
+}
+
+function setDivHeight() {
+    var div = document.getElementById('yourDivId');
+    var height = div.scrollHeight;
+    div.style.height = height + 'px';
 }
 
 //Open new tab for website
@@ -148,3 +160,4 @@ function openInNewTab(url) {
     event.preventDefault();
     window.open(url, '_blank');
 }
+
