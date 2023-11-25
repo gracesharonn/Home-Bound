@@ -596,19 +596,78 @@ h2 {
     padding: 100px 0 0 80px;
 }
 
-.OtherServices {
+/* .OtherServices {
     position: fixed;
-    font-size: 45px;
-    line-height: 115px;
+    line-height: 100px;
     right: 0;
     padding: 50px;
     text-align: right;
     list-style: none;
+    cursor: pointer;
 }
 
 .OtherServices ul {
     list-style: none;
+    z-index: 0;
+    font-size: 20px;
 }
+
+#service1 {
+    transform: rotate(35deg);
+    background-color: transparent;
+}
+
+#service2 {
+    transform: rotate(25deg);
+    background-color: transparent;
+}
+
+#service3 {
+    transform: rotate(15deg);
+    background-color: transparent;
+}
+
+#service4 {
+    transform: rotate(-15deg);
+    background-color: transparent;
+}
+
+#service5 {
+    transform: rotate(-25deg);
+    background-color: transparent;
+}
+
+#service6 {
+    transform: rotate(-35deg);
+    background-color: transparent;
+}
+
+#serviceAll {
+    transform: rotate(-45deg);
+    background-color: transparent;
+}
+
+.circle {
+    width: 400px;
+    height: 400px;
+    background-color: #006;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: 150px;
+    margin-left: -20px;
+    z-index: 1;
+}
+
+.circle2 {
+    width: 800px;
+    height: 800px;
+    background-color: red;
+    border-radius: 50%;
+    position: absolute;
+    margin-top: -70px;
+    margin-left: -120px;
+    z-index: 0;
+} */
 
 #sheltersContainer {
     padding: 0 100px 0 100px;
@@ -723,6 +782,9 @@ h2 {
     justify-content: center;
     align-items: center;
     position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
 }
 
 .NavigationBarEventsPage {
