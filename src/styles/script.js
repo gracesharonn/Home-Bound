@@ -173,6 +173,9 @@ function checkPassword(){
         })
         .catch(error => console.error('Error:', error));
    } 
+   function openVolunteerPage(){
+    
+   }
    function findUserbyEmail(email_address){
         console.log(email_address);
         for(var i = 0; i < loginData.Volunteers.length;i++){
