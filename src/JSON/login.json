@@ -23,6 +23,14 @@
       "last_name": "Musk",
       "age": "52",
       "sex": "Male"
+      },
+      {
+      "email_address": "janed201@gmail.com",
+      "password": "passJane",
+      "first_name": "Jane",
+      "last_name": "Doe",
+      "age": "34",
+      "sex": "Female"
       }
 
     ]
