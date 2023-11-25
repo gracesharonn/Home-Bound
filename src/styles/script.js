@@ -175,7 +175,15 @@ function checkPassword(){
         .catch(error => console.error('Error:', error));
    } 
    function openVolunteerPage(){
-    
+    var first_name = document.querySelector('input[name="first_name"]').value
+    var last_name = document.querySelector('input[name="last_name"]').value
+  
+    window.location.href =
+      `./services/VolunteerEvents.html=` +
+      `&sex=` +
+      encodeURIComponent() +
+      `&veteran=` +
+      encodeURIComponent(isVet)
    }
    function findUserbyEmail(email_address){
         console.log(email_address);
@@ -187,6 +195,7 @@ function checkPassword(){
         }
         return null;
    }
+   
    function indexOfEmail(email_address){
         return loginData.Volunteers.findIndex(function(volunteer){
             return volunteer.email_address == email_address;
