@@ -1103,28 +1103,259 @@
       }
     }
   ],
-
-  "template": [
+  "employment": [
     {
-      "businessName": "",
+      "businessName": "Community HealthWorks",
       "location": {
-        "street": "",
-        "city": "",
-        "state": "",
-        "zipcode": "",
+        "street": "1610 Arden Way",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95815",
         "latitude": "",
         "longitude": ""
       },
-      "description": "",
+      "description": "Advancing community, social and economic health one person at a time",
       "contacts": {
         "email": "",
         "phone": ""
       },
-      "website": "",
+      "website": "https://cohewo.org/careers/",
       "attributes": {
         "veteran" :"No",
-        "sex": " "
+        "sex": "n/a"
+      }
+      
+    },
+    {
+      "businessName": "Hope Cooperative",
+      "location":{
+        "street":"650 Howe Ave. Bldg 400-A",
+        "city":"Sacramento",
+        "state":"CA",
+        "zipcode":"95825",
+        "latitude": "",
+        "longitude": ""
+      },
+      "description": "Non Profit that moves people from a life of instability by providing permanent supportive housing, mental health services, substance-use rehabilitation and social skills.",
+      "contacts":{
+        "email":"info@hopecoop.org",
+        "phone":"(916)441-0123"
+      },
+      "website":"https://hopecoop.org/employment/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "Sacramento Loaves & Fishes",
+      "location":{
+        "street":"1351 North C. St.",
+        "city":"Sacramento",
+        "state":"CA",
+        "zipcode":"95811",
+        "latitude": "",
+        "longitude": ""
+      },
+      "description":"",
+      "contacts":{
+        "email":"info@sacloaves.org",
+        "phone":"916-446-0874"
+      },
+      "website":"https://sacloaves.org/join-the-community/#employment",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "Sacramento Steps Forward",
+      "location":{
+        "street":"2150 River Plaza Drive, Suite 385",
+        "city":"Sacramento",
+        "state":"CA",
+        "zipcode":"95833",
+        "latitude": "",
+        "longitude": ""
+      },
+      "description":"We work to end homelessness through leadership, convening partners, data-driven best practices, and improving system performance",
+      "contacts":{
+        "email":"",
+        "phone":""
+      },
+      "website":"https://sacramentostepsforward.org/",
+      "attributes": {
+        "veteran" :"Yes",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "VOLUNTEERS OF AMERICA GREATER SACRAMENTO AND NORTHERN NEVADA - A STREET SHELTER (FOR MEN)",
+      "location": {
+        "street": "1400 North A Street, Building B",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95814",
+        "latitude": "38.58852887843849",
+        "longitude": "-121.48345042890622"
+      },
+      "description": "As many as 90 consecutive days of food, shelter and referral services are provided to homeless men at Volunteers of America's Men's Shelter.",
+      "contacts": {
+        "email": " ",
+        "phone": "916-448-5507"
+      },
+      "website": "https://www.voa-ncnn.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "Male"
+      }
+    },
+    {
+      "businessName": "NEXT MOVE'S FAMILY SHELTER CAMPUS",
+      "location": {
+        "street": "4516 Parker Avenue",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820",
+        "latitude": "38.53507348048744",
+        "longitude": "-121.45357361647265"
+      },
+      "description": "Our 55-bed Family Shelter provides short-term emergency housing and supportive services to 13 homeless families for up to 30 days.",
+      "contacts": {
+        "email": "mccsinglesreferrals@nextmovesacramento.org",
+        "phone": "916-455-2160"
+      },
+      "website": "https://www.nextmovesacramento.org/emergency_family_shelter/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "LEARNING TO LIVE SOBER LIVING",
+      "location": {
+        "street": "2330 Irma Way",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95825",
+        "latitude": "38.58552620189776",
+        "longitude": "-121.4086308741414"
+      },
+      "description": " Learning To Live provides a safe and sober environment for men wishing to pursue a higher quality of life. LTL does not provide residential treatment services. We provide sober living in a comfortable and safe environment.",
+      "contacts": {
+        "email": " ",
+        "phone": "916-662-2784"
+      },
+      "website": "https://www.shelterlistings.org/details/37861/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "CENTRO GUADALUPE Â€“ CATHOLIC SOCIAL SERVICES",
+      "location": {
+        "street": "730 S Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95814",
+        "latitude": "38.57114150008329",
+        "longitude": "-121.50078178948354"
+      },
+      "description": "A multi-service center in the southside area of Sacramento has been providing services in English and Spanish since 1979. Services include emergency rental and utility assistance, information and referral, low-cost immigration assistance, tax preparation assistance for low-income families, and distribution of  toys and food to low-income families at Christmas.",
+      "contacts": {
+        "email": "office@shrinegpe.org ",
+        "phone": "916-443-5367"
+      },
+      "website": "https://guadalupe-sacramento.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "TUBMAN HOUSE TRANSITIONAL HOUSING",
+      "location": {
+        "street": "PO Box 160085",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95816",
+        "latitude": "38.56512854953524",
+        "longitude": "-121.51202180112988"
+      },
+      "description": "Waking the Village operates Tubman House, an 18 month transitional living program serving Sacramento’s homeless, parenting youth and their children.",
+      "contacts": {
+        "email": "admin@wakingthevillage.org",
+        "phone": "916-372-6272"
+      },
+      "website": "https://www.wakingthevillage.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "SACRAMENTO COTTAGE HOUSING SACRAMENTO",
+      "location": {
+        "street": "1726 Professional Drive",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95825",
+        "latitude": "38.59639770601084",
+        "longitude": "-121.38707416064713"
+      },
+      "description": "This is a Non Profit Organization that provides Transitional Housing. Bishop Francis Quinn Cottages offers transitional housing services for up to 24 months.",
+      "contacts": {
+        "email": "dhusid@cottagehousing.org",
+        "phone": "916-971-1566"
+      },
+      "website": "https://www.cottagehousing.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "SACRAMENTO MUTUAL HOUSING ASSOCIATION SACRAMENTO",
+      "location": {
+        "street": "8001 Fruitridge Rd., Suite A",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95820",
+        "latitude": "38.5256272287413",
+        "longitude": "-121.41063981832053"
+      },
+      "description": "Smha's Mission Is To Develop And Operate Permanently Affordable Housing That Builds Strong And Stable Communities Through Resident Participation And Leadership Development. Smha Houses Over 2,650 LowIncome Residents Who Participate In Community Building Activities In Their Mutual Housing Communities And Surrounding Neighborhoods.",
+      "contacts": {
+        "email": " ",
+        "phone": "916-453-8400"
+      },
+      "website": "https://www.mutualhousing.com/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
+      }
+    },
+    {
+      "businessName": "River City Food Bank - Midtown",
+      "location": {
+        "street": "1800 28th Street",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95816",
+        "latitude": "38.56508641634771",
+        "longitude": "-121.47337918756915"
+      },
+      "description": "In Sacramento County, 15% of residents experience food insecurity, meaning that they lack reliable access to an adequate supply of affordable, nutritious food.",
+      "contacts": {
+        "email": "email@rivercityfoodbank.org",
+        "phone": "916-446-2627"
+      },
+      "website": "https://rivercityfoodbank.org/",
+      "attributes": {
+        "veteran" :"No",
+        "sex": "n/a"
       }
     }
-  ]
-}
+    ]
+  }
