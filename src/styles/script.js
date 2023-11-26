@@ -182,7 +182,7 @@ function checkPassword(){
             //data.find(u=>u.email_address === email_address && u.password === password);
             if(JSONpassword === enterPass) {
                 document.getElementById("VerificationMessage").innerText = 'Success';
-                openVolunteerPage();
+                openVolunteerPage(enterEmail);
             } else {
 
                 document.getElementById("VerificationMessage").innerText = 'Invalid email or password.';
@@ -190,9 +190,9 @@ function checkPassword(){
         })
         .catch(error => console.error('Error:', error));
    } 
-   function openVolunteerPage(){
-    var first_name = document.querySelector('input[name="first_name"]').value
-    var last_name = document.querySelector('input[name="last_name"]').value
+   function openVolunteerPage(email_address){
+    var first_name = findFirstbyEmail(email_address);
+    var last_name = findLastbyEmail(email_address);
   
     window.location.href =
       `./services/VolunteerEvents.html?first_name=` +
@@ -200,8 +200,17 @@ function checkPassword(){
       `&last_name=` +
       encodeURIComponent(last_name)
    }
+   function findFirstbyEmail(email_address){
+    var index = indexOfEmail(email_address);
+    var file_first_name = loginData.Volunteers[index].first_name;
+    return file_first_name;
+   }
+   function findLastbyEmail(email_address){
+    var index = indexOfEmail(email_address);
+    var file_last_name = loginData.Volunteers[index].last_name;
+    return file_last_name;
+   }
    function findUserbyEmail(email_address){
-        console.log(email_address);
         for(var i = 0; i < loginData.Volunteers.length;i++){
             var volunteers = loginData.Volunteers[i];
             if(volunteers.email_address === email_address){
