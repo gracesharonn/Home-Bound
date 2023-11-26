@@ -161,3 +161,18 @@ function openInNewTab(url) {
     window.open(url, '_blank');
 }
 
+// Fetch the JSON data asynchronously
+fetch('../JSON/login.json')
+    .then(response => response.json())
+    .then(jsonData => {
+        // Assuming you want to display the first volunteer's name
+        var firstName = jsonData.Volunteers[0].first_name;
+        var lastName = jsonData.Volunteers[0].last_name;
+
+        // Get the h1 element by its ID
+        var welcomeMessageElement = document.getElementById("welcomeMessage");
+
+        // Update the content of the h1 element
+        welcomeMessageElement.textContent = "Welcome, " + firstName + " " + lastName;
+    })
+    .catch(error => console.error('Error fetching JSON:', error)); 
