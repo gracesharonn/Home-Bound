@@ -928,6 +928,21 @@ if (serviceSelect.value === "Shelter") {
         })
         .catch(error => console.error('Error fetching JSON:', error));
   }
+
+    //Bikehub JSON Displayed
+    function fetchAndDisplayBikehub() {
+        // Assuming the JSON file is one level up from the current directory
+        const jsonFilePath = '../../JSON/services.json';
+      
+        fetch(jsonFilePath)
+            .then(response => response.json())
+            .then(data => {
+                // Handle the JSON data and display businesses
+                displayShelters(data.bikehub);
+                
+            })
+            .catch(error => console.error('Error fetching JSON:', error));
+      }
   
   //Services Information Displayed
   function displayShelters(shelters) {

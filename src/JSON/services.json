@@ -1663,5 +1663,28 @@
         "sex": "n/a"
       }
     }
+  ],
+  "bikehub":[
+    {
+      "businessName": "SACRAMENTO BICYCLE KITCHEN",
+      "location": {
+        "street": "1915 I St",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95811",
+        "latitude": "",
+        "longitude": ""
+      },
+      "description": "The Sacramento Bicycle Kitchen (SBK) is a community-centered bicycle shop serving the residents of Sacramento. The organization was formed in order to promote cycling as a low-cost, alternative form of transportation; enable self-sufficiency through knowledge of bicycle maintenance; and promote bicycle safety through education and classes.",
+      "contacts": {
+        "email": "info@sacbikekitchen.org",
+        "phone": "(916) 538-6697"
+      },
+      "website": "https://www.sacbikekitchen.org/",
+      "attributes": {
+        "veteran": "No",
+        "sex": "n/a"
+      }
+    }
   ]
 }
