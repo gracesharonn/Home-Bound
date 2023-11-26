@@ -310,6 +310,27 @@ input[type="radio"]:checked {
     z-index: 1;
 }
 
+.text-container-1,
+.text-container-2,
+.text-container-3
+{
+    background-color: transparent !important;
+}
+
+.text-container-1 p {
+    background-color: transparent;
+}
+
+.text-container-2 p {
+    background-color: transparent;
+    color: #F5F6FA;
+}
+
+.text-container-3 p {
+    background-color: transparent;
+    color: #F5F6FA;
+}
+
 .text-container-1 {
     position: absolute;
     top: 15%;
@@ -377,6 +398,10 @@ input[type="radio"]:checked {
     border-radius: 50px;
     background-color: #FFE475;
     cursor: pointer;
+}
+
+.VolunteerButton a {
+    background-color: transparent;
 }
 
 .ContactTitle {
@@ -723,6 +748,77 @@ h2 {
     font-size: 24px;
 }
 
+#servicesContainer {
+    padding: 0 100px 0 100px;
+}
+
+.servicesContainer {
+    padding: 5px 40px 5px 40px;
+    background-color: #FFE475;
+    border-radius: 35px;
+    box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
+    display: block;
+    width: 780px;
+    height: auto;
+    max-width: 850px;
+}
+
+.servicesContainer h4 {
+    background-color: transparent !important;
+    text-indent: 0;
+}
+
+.servicesContainer p {
+    background-color: transparent !important;
+}
+
+.allServices-info {
+    animation-delay: 0.2s;
+    animation: fade-in-up 0.5s;
+    animation-fill-mode: both;
+    padding-left: 120px;
+    margin: 10px;
+    line-height: 50px;
+    font-size: 50px;
+    width: 850px;
+    text-indent: 40px;
+}
+
+.allServices-info > div {
+    margin-bottom: 65px;
+}
+
+.allServices-info hr {
+    display: none;
+}
+
+.allServices-info p:nth-child(3) { /* address */
+    font-family: BenchNine; 
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.allServices-info p:nth-child(4) { /* phone number */
+    font-family: BenchNine; 
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.allServices-info p:nth-child(5) { /* email */
+    font-family: BenchNine; 
+    font-size: 24px;
+}
+
+.allServices-info p:nth-child(6) { /* website */
+    font-family: BenchNine; 
+    font-size: 24px;
+}
+
+.allServices-info p:nth-child(7) { /* description */
+    font-family: BenchNine; 
+    font-size: 24px;
+}
+
 .emailParagraph, .websiteParagraph {
     font-family: BenchNine; 
     font-size: 24px;
@@ -755,3 +851,15 @@ h2 {
                 opacity: 1;
             }
         }
+
+
+#bikeHubText {
+    padding: 30px;
+    margin-left: 45px;
+    width: 65%;
+}
+
+#bikeHubText p2 {
+    font-size: 35px;
+    margin-left: 40px;
+}
