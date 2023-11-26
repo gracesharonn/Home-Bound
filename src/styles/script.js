@@ -195,11 +195,12 @@ function checkPassword(){
     var last_name = findLastbyEmail(email_address);
   
     window.location.href =
-      `./services/VolunteerEvents.html?first_name=` +
+      `./Services/VolunteerEvents.html?first_name=` +
       encodeURIComponent(first_name) +
       `&last_name=` +
       encodeURIComponent(last_name)
    }
+
    function findFirstbyEmail(email_address){
     var index = indexOfEmail(email_address);
     var file_first_name = loginData.Volunteers[index].first_name;
