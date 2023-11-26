@@ -8,103 +8,6 @@
     <link rel="stylesheet" href="../styles/default.css">
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
-    <script>
-        var loginData;
-        function fetchData(){
-            fetch('../JSON/login.json')
-                .then(response => {
-                    if(!response.ok) {
-                        throw new Error('Network response was not ok');
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    console.log('Data fetched:', data);
-                    loginData = data;
-                    enterData();
-                })
-        }
-
-        function enterData(){
-            if(loginData.Volunteers && loginData.Volunteers.length > 0){
-                for(var i = 0;i < loginData.Volunteers.length;i++)
-                console.log(i+":", loginData.Volunteers[i]);
-            } else {
-                console.log('No volunteers found.');
-            }
-        }
-        fetchData();
-
-/*        function checkPassword(){
-        var enterEmail = document.getElementById("email_address").value;
-        var enterPass = document.getElementById("password").value;
-        
-        //grab email and password from json file
-        fetch('./login.json')
-            .then(response => response.json())
-            .then(data =>{
-                var JSONemail = findUserbyEmail(enterEmail);
-                console.log("Email:", JSONemail);
-                var JSONpassword = findPasswordByEmail(JSONemail);
-                console.log(JSONpassword);
-                //data.find(u=>u.email_address === email_address && u.password === password);
-                if(JSONpassword === enterPass) {
-                    document.getElementById('LoginValue').innerText = 'Success';
-                } else {
-    
-                    document.getElementById('LoginValue').innerText = 'Invalid email or password.';
-                }
-            })
-            .catch(error => console.error('Error:', error));
-       }  */
-       function checkPassword() {
-        var enterEmail = document.getElementById("email_address").value;
-        var enterPass = document.getElementById("password").value;
-
-        // Clear the verification message
-        document.getElementById('VerificationMessage').innerText = '';
-
-        // Grab email and password from the JSON file
-        fetch('../JSON/login.json')
-        .then(response => response.json())
-        .then(data => {
-            var JSONemail = findUserbyEmail(enterEmail);
-            console.log("Email:", JSONemail);
-            var JSONpassword = findPasswordByEmail(JSONemail);
-            console.log(JSONpassword);
-
-            if (JSONpassword === enterPass) {
-                window.location.href = './VolunteerEvents.html';
-            } else {
-                document.getElementById('VerificationMessage').innerText = 'Invalid email or password.';
-            }
-        })
-        .catch(error => console.error('Error:', error));
-    }
-
-       function findUserbyEmail(email_address){
-            console.log(email_address);
-            for(var i = 0; i < loginData.Volunteers.length;i++){
-                var volunteers = loginData.Volunteers[i];
-                if(volunteers.email_address === email_address){
-                    return volunteers.email_address;
-                }
-            }
-            return null;
-       }
-
-       function indexOfEmail(email_address){
-            return loginData.Volunteers.findIndex(function(volunteer){
-                return volunteer.email_address == email_address;
-            });
-       }
-
-       function findPasswordByEmail(email_address){
-            var index = indexOfEmail(email_address);
-            var filePassword = loginData.Volunteers[index].password;
-            return filePassword;
-       }
-    </script>
 </head>
 <body>
     <a id="top"></a>
@@ -120,10 +23,10 @@
         <div id="x-button" class="x-button">X</div>
         <nav>
             <ul>
-                <li><a>Food</a></li>
-                <li><a href="../pages/services/Shelters.html">Shelter</a></li>
-                <li><a>Medical</a></li>
-                <li><a>Daycare</a></li>
+                <li><a href="./services/Food.html">Food</a></li>
+                <li><a href="./services/Shelters.html">Shelter</a></li>
+                <li><a href="./services/Medical.html">Medical</a></li>
+                <li><a href="./services/Daycare.html">Daycare</a></li>
                 <li><a>Bikehub</a></li>
                 <li><a>Employment</a></li>
                 <li><a>See All</a></li>
