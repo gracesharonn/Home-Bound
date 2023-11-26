@@ -17,7 +17,7 @@
       },
       "website": "https://www.thearkofrefuge.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -30,7 +30,6 @@
         "zipcode": "95811",
         "latitude": "38.59143174163012",
         "longitude": "-121.48286960774512"
-        
       },
       "description": "Providing a safe and comfortable living space where families can stay together is an essential part of the Family Promise mission.",
       "contacts": {
@@ -39,7 +38,7 @@
       },
       "website": "https://sacfamilypromise.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -60,7 +59,7 @@
       },
       "website": "https://sacramento.salvationarmy.org/sacramento_metro/",
       "attributes": {
-        "veteran" :"Yes",
+        "veteran": "Yes",
         "sex": "n/a"
       }
     },
@@ -81,7 +80,7 @@
       },
       "website": "http://www.francishousecenter.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -102,7 +101,7 @@
       },
       "website": "https://www.cottagehousing.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -123,7 +122,7 @@
       },
       "website": "https://saintjohnsprogram.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "Female"
       }
     },
@@ -144,7 +143,7 @@
       },
       "website": "https://ugmsac.com/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "Male"
       }
     },
@@ -165,7 +164,7 @@
       },
       "website": "https://www.voa-ncnn.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "Male"
       }
     },
@@ -186,7 +185,7 @@
       },
       "website": "https://www.nextmovesacramento.org/emergency_family_shelter/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -207,7 +206,7 @@
       },
       "website": "https://www.shelterlistings.org/details/37861/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -228,7 +227,7 @@
       },
       "website": "https://guadalupe-sacramento.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -249,7 +248,7 @@
       },
       "website": "https://www.wakingthevillage.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -270,7 +269,7 @@
       },
       "website": "https://www.cottagehousing.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -291,7 +290,7 @@
       },
       "website": "https://www.mutualhousing.com/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -312,7 +311,7 @@
       },
       "website": "https://norcalecs.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -333,7 +332,7 @@
       },
       "website": "https://www.shra.org/ehv/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -354,12 +353,11 @@
       },
       "website": "https://lacooperativa.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     }
   ],
-
   "food": [
     {
       "businessName": "Pilgrimage, Midtown Meals & Services",
@@ -378,7 +376,7 @@
       },
       "website": "https://www.firstumcsac.org/pilgrimage",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -399,7 +397,7 @@
       },
       "website": "https://sacloaves.org/programs-services/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -420,7 +418,7 @@
       },
       "website": "https://www.feedsachomeless.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -441,7 +439,7 @@
       },
       "website": "https://www.neighborprogram.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -462,7 +460,7 @@
       },
       "website": "https://sacramento.salvationarmy.org/sacramento_metro/",
       "attributes": {
-        "veteran" :"Yes",
+        "veteran": "Yes",
         "sex": "n/a"
       }
     },
@@ -483,7 +481,7 @@
       },
       "website": "https://www.shilohbaptistchurch-sacramento.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -504,7 +502,7 @@
       },
       "website": "https://www.yxpunite.com/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -525,7 +523,7 @@
       },
       "website": "http://newstbethel.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -546,7 +544,7 @@
       },
       "website": "https://rivercityfoodbank.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -567,7 +565,7 @@
       },
       "website": "https://www.ssipfoodcloset.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -588,7 +586,7 @@
       },
       "website": "https://www.dozenterpryz.org/foodandclothescloset",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     }
@@ -611,7 +609,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -632,7 +630,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -653,7 +651,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -674,7 +672,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -695,7 +693,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -716,7 +714,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -737,7 +735,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -758,7 +756,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -779,7 +777,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -800,7 +798,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -821,7 +819,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -842,7 +840,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -863,7 +861,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -884,7 +882,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -905,7 +903,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -926,7 +924,7 @@
       },
       "website": "https://www.sutterhealth.org/smcs",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -947,7 +945,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -968,7 +966,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -990,7 +988,6 @@
       "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/"
     }
   ],
-
   "daycare": [
     {
       "businessName": "Family Matters Child Care CenterCommunity HealthWorks",
@@ -1001,7 +998,6 @@
         "zipcode": "95820",
         "latitude": "38.53959064552655",
         "longitude": "-121.44185154916917"
-
       },
       "description": "Helping to build stronger families.",
       "contacts": {
@@ -1010,7 +1006,7 @@
       },
       "website": "https://www.fmccc.net/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1023,7 +1019,6 @@
         "zipcode": "95820",
         "latitude": "38.53277621039919",
         "longitude": "-121.46134181663821"
-
       },
       "description": "Shiloh Arms provide childcare services to low income families, working parents, seeking employment or seeking for permanent housing.",
       "contacts": {
@@ -1032,7 +1027,7 @@
       },
       "website": "https://shiloharmscdc.com/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1045,7 +1040,6 @@
         "zipcode": "95820",
         "latitude": "38.52999441753871",
         "longitude": "-121.4665943896509"
-
       },
       "description": "Our interactive environment exposes each child to a creative and memorable learning experience, cultivating a healthy balance of emotional and educational growth.",
       "contacts": {
@@ -1054,7 +1048,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1067,7 +1061,6 @@
         "zipcode": "95814",
         "latitude": "38.57420744103336",
         "longitude": "-121.49651181534165"
-
       },
       "description": "Quality care and low ratios since 1987. Non-Profit serving Infants to Pre-K.",
       "contacts": {
@@ -1076,7 +1069,7 @@
       },
       "website": "https://www.rainbowdaycareinc.com/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1089,7 +1082,6 @@
         "zipcode": "95820",
         "latitude": "38.517360027854856",
         "longitude": "-121.48076240499299"
-
       },
       "description": "Helping to build stronger families.",
       "contacts": {
@@ -1098,7 +1090,7 @@
       },
       "website": "https://www.fmccc.net/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1111,7 +1103,6 @@
         "zipcode": "95820",
         "latitude": "38.53277621039919",
         "longitude": "-121.46134181663821"
-
       },
       "description": "Shiloh Arms provide childcare services to low income families, working parents, seeking employment or seeking for permanent housing.",
       "contacts": {
@@ -1120,7 +1111,7 @@
       },
       "website": "https://shiloharmscdc.com/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1133,7 +1124,6 @@
         "zipcode": "95820",
         "latitude": "38.52999441753871",
         "longitude": "-121.4665943896509"
-
       },
       "description": "Our interactive environment exposes each child to a creative and memorable learning experience, cultivating a healthy balance of emotional and educational growth.",
       "contacts": {
@@ -1142,7 +1132,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1155,7 +1145,6 @@
         "zipcode": "95814",
         "latitude": "38.57420744103336",
         "longitude": "-121.49651181534165"
-
       },
       "description": "Quality care and low ratios since 1987. Non-Profit serving Infants to Pre-K.",
       "contacts": {
@@ -1164,7 +1153,7 @@
       },
       "website": "https://www.rainbowdaycareinc.com/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1177,7 +1166,6 @@
         "zipcode": "95820",
         "latitude": "38.517360027854856",
         "longitude": "-121.48076240499299"
-
       },
       "description": "Advancing community, social and economic health one person at a time",
       "contacts": {
@@ -1186,7 +1174,7 @@
       },
       "website": "",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     }
@@ -1209,71 +1197,70 @@
       },
       "website": "https://cohewo.org/careers/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
-      
     },
     {
       "businessName": "Hope Cooperative",
-      "location":{
-        "street":"650 Howe Ave. Bldg 400-A",
-        "city":"Sacramento",
-        "state":"CA",
-        "zipcode":"95825",
+      "location": {
+        "street": "650 Howe Ave. Bldg 400-A",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95825",
         "latitude": "",
         "longitude": ""
       },
       "description": "Non Profit that moves people from a life of instability by providing permanent supportive housing, mental health services, substance-use rehabilitation and social skills.",
-      "contacts":{
-        "email":"info@hopecoop.org",
-        "phone":"(916)441-0123"
+      "contacts": {
+        "email": "info@hopecoop.org",
+        "phone": "(916)441-0123"
       },
-      "website":"https://hopecoop.org/employment/",
+      "website": "https://hopecoop.org/employment/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
     {
       "businessName": "Sacramento Loaves & Fishes",
-      "location":{
-        "street":"1351 North C. St.",
-        "city":"Sacramento",
-        "state":"CA",
-        "zipcode":"95811",
+      "location": {
+        "street": "1351 North C. St.",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95811",
         "latitude": "",
         "longitude": ""
       },
-      "description":"",
-      "contacts":{
-        "email":"info@sacloaves.org",
-        "phone":"916-446-0874"
+      "description": "",
+      "contacts": {
+        "email": "info@sacloaves.org",
+        "phone": "916-446-0874"
       },
-      "website":"https://sacloaves.org/join-the-community/#employment",
+      "website": "https://sacloaves.org/join-the-community/#employment",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
     {
       "businessName": "Sacramento Steps Forward",
-      "location":{
-        "street":"2150 River Plaza Drive, Suite 385",
-        "city":"Sacramento",
-        "state":"CA",
-        "zipcode":"95833",
+      "location": {
+        "street": "2150 River Plaza Drive, Suite 385",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95833",
         "latitude": "",
         "longitude": ""
       },
-      "description":"We work to end homelessness through leadership, convening partners, data-driven best practices, and improving system performance",
-      "contacts":{
-        "email":"",
-        "phone":""
+      "description": "We work to end homelessness through leadership, convening partners, data-driven best practices, and improving system performance",
+      "contacts": {
+        "email": "",
+        "phone": ""
       },
-      "website":"https://sacramentostepsforward.org/",
+      "website": "https://sacramentostepsforward.org/",
       "attributes": {
-        "veteran" :"Yes",
+        "veteran": "Yes",
         "sex": "n/a"
       }
     },
@@ -1294,7 +1281,7 @@
       },
       "website": "https://www.voa-ncnn.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "Male"
       }
     },
@@ -1315,7 +1302,7 @@
       },
       "website": "https://www.nextmovesacramento.org/emergency_family_shelter/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1336,7 +1323,7 @@
       },
       "website": "https://www.shelterlistings.org/details/37861/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1357,7 +1344,7 @@
       },
       "website": "https://guadalupe-sacramento.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1378,7 +1365,7 @@
       },
       "website": "https://www.wakingthevillage.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1399,7 +1386,7 @@
       },
       "website": "https://www.cottagehousing.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1420,7 +1407,7 @@
       },
       "website": "https://www.mutualhousing.com/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1441,76 +1428,70 @@
       },
       "website": "https://rivercityfoodbank.org/",
       "attributes": {
-        "veteran" :"No",
-        "sex": "n/a"
-      },
-      "website": "https://cohewo.org/careers/",
-      "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
-      
     },
     {
       "businessName": "Hope Cooperative",
-      "location":{
-        "street":"650 Howe Ave. Bldg 400-A",
-        "city":"Sacramento",
-        "state":"CA",
-        "zipcode":"95825",
+      "location": {
+        "street": "650 Howe Ave. Bldg 400-A",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95825",
         "latitude": "",
         "longitude": ""
       },
       "description": "Non Profit that moves people from a life of instability by providing permanent supportive housing, mental health services, substance-use rehabilitation and social skills.",
-      "contacts":{
-        "email":"info@hopecoop.org",
-        "phone":"(916)441-0123"
+      "contacts": {
+        "email": "info@hopecoop.org",
+        "phone": "(916)441-0123"
       },
-      "website":"https://hopecoop.org/employment/",
+      "website": "https://hopecoop.org/employment/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
     {
       "businessName": "Sacramento Loaves & Fishes",
-      "location":{
-        "street":"1351 North C. St.",
-        "city":"Sacramento",
-        "state":"CA",
-        "zipcode":"95811",
+      "location": {
+        "street": "1351 North C. St.",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95811",
         "latitude": "",
         "longitude": ""
       },
-      "description":"",
-      "contacts":{
-        "email":"info@sacloaves.org",
-        "phone":"916-446-0874"
+      "description": "",
+      "contacts": {
+        "email": "info@sacloaves.org",
+        "phone": "916-446-0874"
       },
-      "website":"https://sacloaves.org/join-the-community/#employment",
+      "website": "https://sacloaves.org/join-the-community/#employment",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
     {
       "businessName": "Sacramento Steps Forward",
-      "location":{
-        "street":"2150 River Plaza Drive, Suite 385",
-        "city":"Sacramento",
-        "state":"CA",
-        "zipcode":"95833",
+      "location": {
+        "street": "2150 River Plaza Drive, Suite 385",
+        "city": "Sacramento",
+        "state": "CA",
+        "zipcode": "95833",
         "latitude": "",
         "longitude": ""
       },
-      "description":"We work to end homelessness through leadership, convening partners, data-driven best practices, and improving system performance",
-      "contacts":{
-        "email":"",
-        "phone":""
+      "description": "We work to end homelessness through leadership, convening partners, data-driven best practices, and improving system performance",
+      "contacts": {
+        "email": "",
+        "phone": ""
       },
-      "website":"https://sacramentostepsforward.org/",
+      "website": "https://sacramentostepsforward.org/",
       "attributes": {
-        "veteran" :"Yes",
+        "veteran": "Yes",
         "sex": "n/a"
       }
     },
@@ -1531,7 +1512,7 @@
       },
       "website": "https://www.voa-ncnn.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "Male"
       }
     },
@@ -1552,7 +1533,7 @@
       },
       "website": "https://www.nextmovesacramento.org/emergency_family_shelter/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1573,7 +1554,7 @@
       },
       "website": "https://www.shelterlistings.org/details/37861/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1594,7 +1575,7 @@
       },
       "website": "https://guadalupe-sacramento.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1615,7 +1596,7 @@
       },
       "website": "https://www.wakingthevillage.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1636,7 +1617,7 @@
       },
       "website": "https://www.cottagehousing.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1657,7 +1638,7 @@
       },
       "website": "https://www.mutualhousing.com/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     },
@@ -1678,9 +1659,9 @@
       },
       "website": "https://rivercityfoodbank.org/",
       "attributes": {
-        "veteran" :"No",
+        "veteran": "No",
         "sex": "n/a"
       }
     }
-    ]
-  }
+  ]
+}
