@@ -966,6 +966,61 @@ if (serviceSelect.value === "Shelter") {
     });
 }
 
+//Display all JSON Displayed
+function fetchAndDisplayAll() {
+    // Assuming the JSON file is one level up from the current directory
+    const jsonFilePath = '../../JSON/services.json';
+  
+    fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+            // Handle the JSON data and display businesses
+            displayData(data);
+            
+        })
+        .catch(error => console.error('Error fetching JSON:', error));
+  }
+
+function displayData(data) {
+    const sheltersContainer = document.getElementById('sheltersContainer');
+    sheltersContainer.innerHTML = ''; // Clear previous content
+
+    Object.keys(data).forEach(dataType => {
+        const dataArray = data[dataType];
+
+        dataArray.forEach((item, index) => {
+            const dataDiv = document.createElement('div');
+            dataDiv.classList.add('dataContainer');
+
+            let content = `
+                <br>
+                <h4>${item.businessName}</h4>
+                <p>${item.location.street} ${item.location.city} ${item.location.state} ${item.location.zipcode}</p>
+                <p>${item.contacts.phone}</p>
+                <a href="mailto:${item.contacts.email}" class="emailParagraph" target="_black">${item.contacts.email}</a>
+                <br>
+                <a href="${item.website}" class="websiteParagraph" onclick="openInNewTab('${item.website}')">${item.website}</a>
+                <p class="descriptionParagraph">"${item.description}"</p>
+                <br>
+                <hr>
+            `;
+
+            // Check if email exists before adding it
+            if (!item.contacts.email) {
+                content = content.replace('<p class="emailParagraph">', '').replace('</p>', '');
+            }
+
+            // Check if website exists before adding it
+            if (!item.website) {
+                content = content.replace('<p class="websiteParagraph">', '').replace('</p>', '');
+            }
+
+            dataDiv.innerHTML = content;
+            sheltersContainer.appendChild(dataDiv);
+        });
+    });
+}
+
 //Open new tab for website
 function openInNewTab(url) {
     event.preventDefault();
