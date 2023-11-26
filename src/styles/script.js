@@ -1,121 +1,118 @@
 /* Navbar effects */
-var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (currentScrollPos === 0) {
-                document.querySelector(".NavigationBar").style.top = "0";
-            } else if (prevScrollpos > currentScrollPos) {
-                document.querySelector(".NavigationBar").style.top = "-100px";
-            } else {
-                document.querySelector(".NavigationBar").style.top = "-100px"; // Adjust this value based on your header height
-            }
-            prevScrollpos = currentScrollPos;
-        }
+var prevScrollpos = window.pageYOffset
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset
+  if (currentScrollPos === 0) {
+    document.querySelector('.NavigationBar').style.top = '0'
+  } else if (prevScrollpos > currentScrollPos) {
+    document.querySelector('.NavigationBar').style.top = '-100px'
+  } else {
+    document.querySelector('.NavigationBar').style.top = '-100px' // Adjust this value based on your header height
+  }
+  prevScrollpos = currentScrollPos
+}
 /* Services Menu Bar */
-document.addEventListener('DOMContentLoaded', function() {
-    const servicesButton = document.getElementById('ServicesButton');
-    const serviceMenu = document.querySelector('.ServiceMenu');
-    const closeButton = document.getElementById('x-button');
+document.addEventListener('DOMContentLoaded', function () {
+  const servicesButton = document.getElementById('ServicesButton')
+  const serviceMenu = document.querySelector('.ServiceMenu')
+  const closeButton = document.getElementById('x-button')
 
-    servicesButton.addEventListener('click', function() {
-        serviceMenu.classList.add('active');
-        event.preventDefault();
-    });
+  servicesButton.addEventListener('click', function () {
+    serviceMenu.classList.add('active')
+    event.preventDefault()
+  })
 
-    closeButton.addEventListener('click', function() {
-        serviceMenu.classList.remove('active');
-    });
-});
+  closeButton.addEventListener('click', function () {
+    serviceMenu.classList.remove('active')
+  })
+})
 
 // Zipcode validation
-function validateZipCode() {
-    var zipCodeInput = document.getElementById("zip_code");
-    var zipCodeValue = zipCodeInput.value;
+function validateZipCode () {
+  var zipCodeInput = document.getElementById('zip_code')
+  var zipCodeValue = zipCodeInput.value
 
-// Regular expression for a 5-digit ZIP code (US format)
-var zipCodePattern = /^\d{5}$/;
+  // Regular expression for a 5-digit ZIP code (US format)
+  var zipCodePattern = /^\d{5}$/
 
-if (!zipCodePattern.test(zipCodeValue)) {
-    alert("Please enter a valid 5-digit ZIP code.");
-    zipCodeInput.focus();
-    return false;
-}
+  if (!zipCodePattern.test(zipCodeValue)) {
+    alert('Please enter a valid 5-digit ZIP code.')
+    zipCodeInput.focus()
+    return false
+  }
 
-return true;
+  return true
 }
 // Shelter service question functions
-function showAdditionalQuestions() {
-    var serviceSelect = document.getElementById("service");
-    var shelterQuestions = document.getElementById("shelterQuestions");
-    var daycareQuestions = document.getElementById("daycareQuestions");
+function showAdditionalQuestions () {
+  var serviceSelect = document.getElementById('service')
+  var shelterQuestions = document.getElementById('shelterQuestions')
+  var daycareQuestions = document.getElementById('daycareQuestions')
 
-if (serviceSelect.value === "Shelter") {
-    shelterQuestions.style.display = "block";
-    daycareQuestions.style.display = "none";
-} else if (serviceSelect.value === "DayCare") {
-    daycareQuestions.style.display = "block";
-    shelterQuestions.style.display = "none";
-} else {
-    shelterQuestions.style.display = "none";
-    daycareQuestions.style.display = "none";
+  if (serviceSelect.value === 'Shelter') {
+    shelterQuestions.style.display = 'block'
+    daycareQuestions.style.display = 'none'
+  } else if (serviceSelect.value === 'DayCare') {
+    daycareQuestions.style.display = 'block'
+    shelterQuestions.style.display = 'none'
+  } else {
+    shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'none'
+  }
 }
+
+//Shelter JSON Displayed
+function fetchAndDisplayShelters () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.shelters)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
 }
 
-  //Shelter JSON Displayed
-  function fetchAndDisplayShelters() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.shelters);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
+//Medical JSON Displayed
+function fetchAndDisplayMedical () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
 
-  //Medical JSON Displayed
-  function fetchAndDisplayMedical() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.medical);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.medical)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
 
-  //Food JSON Displayed
-  function fetchAndDisplayFood() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.food);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-  
-  //Services Information Displayed
-  function displayShelters(shelters) {
-    const sheltersContainer = document.getElementById('sheltersContainer');
-    sheltersContainer.innerHTML = ''; // Clear previous content
+//Food JSON Displayed
+function fetchAndDisplayFood () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
 
-    shelters.forEach((shelter, index) => {
-        const shelterDiv = document.createElement('div');
-        shelterDiv.classList.add('sheltersContainer');
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.food)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
 
-        let content = `
+//Services Information Displayed
+function displayShelters (shelters) {
+  const sheltersContainer = document.getElementById('sheltersContainer')
+  sheltersContainer.innerHTML = '' // Clear previous content
+
+  shelters.forEach((shelter, index) => {
+    const shelterDiv = document.createElement('div')
+    shelterDiv.classList.add('sheltersContainer')
+
+    let content = `
             <br>
             <h4>${shelter.businessName}</h4>
             <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
@@ -126,834 +123,402 @@ if (serviceSelect.value === "Shelter") {
             <p class="descriptionParagraph">"${shelter.description}"</p>
             <br>
             <hr>
-        `;
+        `
 
-        // Check if email exists before adding it
-        if (!shelter.contacts.email) {
-            content = content.replace('<p class="emailParagraph">', '').replace('</p>', '');
-        }
+    // Check if email exists before adding it
+    if (!shelter.contacts.email) {
+      content = content
+        .replace('<p class="emailParagraph">', '')
+        .replace('</p>', '')
+    }
 
-        // Check if website exists before adding it
-        if (!shelter.website) {
-            content = content.replace('<p class="websiteParagraph">', '').replace('</p>', '');
-        }
+    // Check if website exists before adding it
+    if (!shelter.website) {
+      content = content
+        .replace('<p class="websiteParagraph">', '')
+        .replace('</p>', '')
+    }
 
-        shelterDiv.innerHTML = content;
-        sheltersContainer.appendChild(shelterDiv);
-    });
+    shelterDiv.innerHTML = content
+    sheltersContainer.appendChild(shelterDiv)
+  })
 }
 
 //Open new tab for website
-function openInNewTab(url) {
-    event.preventDefault();
-    window.open(url, '_blank');
+function openInNewTab (url) {
+  event.preventDefault()
+  window.open(url, '_blank')
 }
 
 /* Login HTML Page*/
-function checkPassword(){
-    var loginData;
-    fetchData();
-    var enterEmail = document.getElementById("email_address").value;
-    var enterPass = document.getElementById("password").value;
-    
-    //grab email and password from json file
-    fetch('../JSON/login.json')
-        .then(response => response.json())
-        .then(data =>{
-            var JSONemail = findUserbyEmail(enterEmail);
-            console.log("Email:", JSONemail);
-            var JSONpassword = findPasswordByEmail(JSONemail);
-            console.log(JSONpassword);
-            //data.find(u=>u.email_address === email_address && u.password === password);
-            if(JSONpassword === enterPass) {
-                document.getElementById("VerificationMessage").innerText = 'Success';
-                openVolunteerPage();
-            } else {
+function checkPassword () {
+  var loginData
+  fetchData()
+  var enterEmail = document.getElementById('email_address').value
+  var enterPass = document.getElementById('password').value
 
-                document.getElementById("VerificationMessage").innerText = 'Invalid email or password.';
-            }
-        })
-        .catch(error => console.error('Error:', error));
-   } 
-   function openVolunteerPage(){
-    var first_name = document.querySelector('input[name="first_name"]').value
-    var last_name = document.querySelector('input[name="last_name"]').value
-  
-    window.location.href =
-      `./services/VolunteerEvents.html?first_name=` +
-      encodeURIComponent(first_name) +
-      `&last_name=` +
-      encodeURIComponent(last_name)
-   }
-   function findUserbyEmail(email_address){
-        console.log(email_address);
-        for(var i = 0; i < loginData.Volunteers.length;i++){
-            var volunteers = loginData.Volunteers[i];
-            if(volunteers.email_address === email_address){
-                return volunteers.email_address;
-            }
-        }
-        return null;
-   }
-   
-   function indexOfEmail(email_address){
-        return loginData.Volunteers.findIndex(function(volunteer){
-            return volunteer.email_address == email_address;
-        });
-   }
-   function findPasswordByEmail(email_address){
-        var index = indexOfEmail(email_address);
-        var filePassword = loginData.Volunteers[index].password;
-        return filePassword;
-   }
-   function enterData(){
-        if(loginData.Volunteers && loginData.Volunteers.length > 0){
-            for(var i = 0;i < loginData.Volunteers.length;i++)
-            console.log(i+":", loginData.Volunteers[i]);
-        } else {
-            console.log('No volunteers found.');
-        }
-    }
-   function fetchData(){
-        fetch('../JSON/login.json')
-            .then(response => {
-                if(!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Data fetched:', data);
-                loginData = data;
-                enterData();
-            })
-    }
-/* Navbar effects */
-var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (currentScrollPos === 0) {
-                document.querySelector(".NavigationBar").style.top = "0";
-            } else if (prevScrollpos > currentScrollPos) {
-                document.querySelector(".NavigationBar").style.top = "-100px";
-            } else {
-                document.querySelector(".NavigationBar").style.top = "-100px"; // Adjust this value based on your header height
-            }
-            prevScrollpos = currentScrollPos;
-        }
-/* Services Menu Bar */
-document.addEventListener('DOMContentLoaded', function() {
-    const servicesButton = document.getElementById('ServicesButton');
-    const serviceMenu = document.querySelector('.ServiceMenu');
-    const closeButton = document.getElementById('x-button');
-
-    servicesButton.addEventListener('click', function() {
-        serviceMenu.classList.add('active');
-        event.preventDefault();
-    });
-
-    closeButton.addEventListener('click', function() {
-        serviceMenu.classList.remove('active');
-    });
-});
-
-// Zipcode validation
-function validateZipCode() {
-    var zipCodeInput = document.getElementById("zip_code");
-    var zipCodeValue = zipCodeInput.value;
-
-// Regular expression for a 5-digit ZIP code (US format)
-var zipCodePattern = /^\d{5}$/;
-
-if (!zipCodePattern.test(zipCodeValue)) {
-    alert("Please enter a valid 5-digit ZIP code.");
-    zipCodeInput.focus();
-    return false;
-}
-
-return true;
-}
-// Shelter service question functions
-function showAdditionalQuestions() {
-    var serviceSelect = document.getElementById("service");
-    var shelterQuestions = document.getElementById("shelterQuestions");
-    var daycareQuestions = document.getElementById("daycareQuestions");
-
-if (serviceSelect.value === "Shelter") {
-    shelterQuestions.style.display = "block";
-    daycareQuestions.style.display = "none";
-} else if (serviceSelect.value === "DayCare") {
-    daycareQuestions.style.display = "block";
-    shelterQuestions.style.display = "none";
-} else {
-    shelterQuestions.style.display = "none";
-    daycareQuestions.style.display = "none";
-}
-}
-
-  //Shelter JSON Displayed
-  function fetchAndDisplayShelters() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.shelters);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-
-  //Medical JSON Displayed
-  function fetchAndDisplayMedical() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.medical);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-
-  //Food JSON Displayed
-  function fetchAndDisplayFood() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.food);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-  
-//Services Information Displayed
-function displayShelters(shelters) {
-    const sheltersContainer = document.getElementById('sheltersContainer');
-    sheltersContainer.innerHTML = ''; // Clear previous content
-
-    shelters.forEach((shelter, index) => {
-        const shelterDiv = document.createElement('div');
-        shelterDiv.classList.add('sheltersContainer');
-
-        let content = `
-            <br>
-            <h4>${shelter.businessName}</h4>
-            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-            <p>${shelter.contacts.phone}</p>
-        `;
-
-        // Check if email exists and add email element if true
-        if (shelter.contacts.email) {
-            content += `
-                <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
-                <br>
-            `;
-        }
-
-        // Check if website exists and add website element if true
-        if (shelter.website) {
-            content += `
-                <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
-                <br>
-            `;
-        }
-
-        content += `
-            <p class="descriptionParagraph">"${shelter.description}"</p>
-            <br>
-            <hr>
-        `;
-
-        shelterDiv.innerHTML = content;
-        sheltersContainer.appendChild(shelterDiv);
-    });
-}
-
-function setDivHeight() {
-    var div = document.getElementById('yourDivId');
-    var height = div.scrollHeight;
-    div.style.height = height + 'px';
-}
-
-//Open new tab for website
-function openInNewTab(url) {
-    event.preventDefault();
-    window.open(url, '_blank');
-}
-
-// Fetch the JSON data asynchronously
-fetch('../JSON/login.json')
+  //grab email and password from json file
+  fetch('../JSON/login.json')
     .then(response => response.json())
-    .then(jsonData => {
-        // Assuming you want to display the first volunteer's name
-        var firstName = jsonData.Volunteers[0].first_name;
-        var lastName = jsonData.Volunteers[0].last_name;
-
-        // Get the h1 element by its ID
-        var welcomeMessageElement = document.getElementById("welcomeMessage");
-
-        // Update the content of the h1 element
-        welcomeMessageElement.textContent = "Welcome, " + firstName + " " + lastName;
-    })
-    .catch(error => console.error('Error fetching JSON:', error)); 
-/* Navbar effects */
-var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (currentScrollPos === 0) {
-                document.querySelector(".NavigationBar").style.top = "0";
-            } else if (prevScrollpos > currentScrollPos) {
-                document.querySelector(".NavigationBar").style.top = "-100px";
-            } else {
-                document.querySelector(".NavigationBar").style.top = "-100px"; // Adjust this value based on your header height
-            }
-            prevScrollpos = currentScrollPos;
-        }
-/* Services Menu Bar */
-document.addEventListener('DOMContentLoaded', function() {
-    const servicesButton = document.getElementById('ServicesButton');
-    const serviceMenu = document.querySelector('.ServiceMenu');
-    const closeButton = document.getElementById('x-button');
-
-    servicesButton.addEventListener('click', function() {
-        serviceMenu.classList.add('active');
-        event.preventDefault();
-    });
-
-    closeButton.addEventListener('click', function() {
-        serviceMenu.classList.remove('active');
-    });
-});
-
-// Zipcode validation
-function validateZipCode() {
-    var zipCodeInput = document.getElementById("zip_code");
-    var zipCodeValue = zipCodeInput.value;
-
-// Regular expression for a 5-digit ZIP code (US format)
-var zipCodePattern = /^\d{5}$/;
-
-if (!zipCodePattern.test(zipCodeValue)) {
-    alert("Please enter a valid 5-digit ZIP code.");
-    zipCodeInput.focus();
-    return false;
-}
-
-return true;
-}
-// Shelter service question functions
-function showAdditionalQuestions() {
-    var serviceSelect = document.getElementById("service");
-    var shelterQuestions = document.getElementById("shelterQuestions");
-    var daycareQuestions = document.getElementById("daycareQuestions");
-
-if (serviceSelect.value === "Shelter") {
-    shelterQuestions.style.display = "block";
-    daycareQuestions.style.display = "none";
-} else if (serviceSelect.value === "DayCare") {
-    daycareQuestions.style.display = "block";
-    shelterQuestions.style.display = "none";
-} else {
-    shelterQuestions.style.display = "none";
-    daycareQuestions.style.display = "none";
-}
-}
-
-  //Shelter JSON Displayed
-  function fetchAndDisplayShelters() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.shelters);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-
-  //Medical JSON Displayed
-  function fetchAndDisplayMedical() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.medical);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-
-  //Food JSON Displayed
-  function fetchAndDisplayFood() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.food);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-  
-  //Services Information Displayed
-  function displayShelters(shelters) {
-    const sheltersContainer = document.getElementById('sheltersContainer');
-    sheltersContainer.innerHTML = ''; // Clear previous content
-
-    shelters.forEach((shelter, index) => {
-        const shelterDiv = document.createElement('div');
-        shelterDiv.classList.add('sheltersContainer');
-
-        let content = `
-            <br>
-            <h4>${shelter.businessName}</h4>
-            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-            <p>${shelter.contacts.phone}</p>
-            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
-            <br>
-            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
-            <p class="descriptionParagraph">"${shelter.description}"</p>
-            <br>
-            <hr>
-        `;
-
-        // Check if email exists before adding it
-        if (!shelter.contacts.email) {
-            content = content.replace('<p class="emailParagraph">', '').replace('</p>', '');
-        }
-
-        // Check if website exists before adding it
-        if (!shelter.website) {
-            content = content.replace('<p class="websiteParagraph">', '').replace('</p>', '');
-        }
-
-        shelterDiv.innerHTML = content;
-        sheltersContainer.appendChild(shelterDiv);
-    });
-}
-
-//Open new tab for website
-function openInNewTab(url) {
-    event.preventDefault();
-    window.open(url, '_blank');
-}
-
-/* Login HTML Page*/
-function checkPassword(){
-    var loginData;
-    fetchData();
-    var enterEmail = document.getElementById("email_address").value;
-    var enterPass = document.getElementById("password").value;
-    
-    //grab email and password from json file
-    fetch('../JSON/login.json')
-        .then(response => response.json())
-        .then(data =>{
-            var JSONemail = findUserbyEmail(enterEmail);
-            console.log("Email:", JSONemail);
-            var JSONpassword = findPasswordByEmail(JSONemail);
-            console.log(JSONpassword);
-            //data.find(u=>u.email_address === email_address && u.password === password);
-            if(JSONpassword === enterPass) {
-                document.getElementById("VerificationMessage").innerText = 'Success';
-            } else {
-
-                document.getElementById("VerificationMessage").innerText = 'Invalid email or password.';
-            }
-        })
-        .catch(error => console.error('Error:', error));
-   } 
-   function openVolunteerPage(){
-    
-   }
-   function findUserbyEmail(email_address){
-        console.log(email_address);
-        for(var i = 0; i < loginData.Volunteers.length;i++){
-            var volunteers = loginData.Volunteers[i];
-            if(volunteers.email_address === email_address){
-                return volunteers.email_address;
-            }
-        }
-        return null;
-   }
-   
-   function indexOfEmail(email_address){
-        return loginData.Volunteers.findIndex(function(volunteer){
-            return volunteer.email_address == email_address;
-        });
-   }
-   function findPasswordByEmail(email_address){
-        var index = indexOfEmail(email_address);
-        var filePassword = loginData.Volunteers[index].password;
-        return filePassword;
-   }
-   function enterData(){
-        if(loginData.Volunteers && loginData.Volunteers.length > 0){
-            for(var i = 0;i < loginData.Volunteers.length;i++)
-            console.log(i+":", loginData.Volunteers[i]);
-        } else {
-            console.log('No volunteers found.');
-        }
-    }
-   function fetchData(){
-        fetch('../JSON/login.json')
-            .then(response => {
-                if(!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Data fetched:', data);
-                loginData = data;
-                enterData();
-            })
-    }
-/* Navbar effects */
-var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (currentScrollPos === 0) {
-                document.querySelector(".NavigationBar").style.top = "0";
-            } else if (prevScrollpos > currentScrollPos) {
-                document.querySelector(".NavigationBar").style.top = "-100px";
-            } else {
-                document.querySelector(".NavigationBar").style.top = "-100px"; // Adjust this value based on your header height
-            }
-            prevScrollpos = currentScrollPos;
-        }
-/* Services Menu Bar */
-document.addEventListener('DOMContentLoaded', function() {
-    const servicesButton = document.getElementById('ServicesButton');
-    const serviceMenu = document.querySelector('.ServiceMenu');
-    const closeButton = document.getElementById('x-button');
-
-    servicesButton.addEventListener('click', function() {
-        serviceMenu.classList.add('active');
-        event.preventDefault();
-    });
-
-    closeButton.addEventListener('click', function() {
-        serviceMenu.classList.remove('active');
-    });
-});
-
-// Zipcode validation
-function validateZipCode() {
-    var zipCodeInput = document.getElementById("zip_code");
-    var zipCodeValue = zipCodeInput.value;
-
-// Regular expression for a 5-digit ZIP code (US format)
-var zipCodePattern = /^\d{5}$/;
-
-if (!zipCodePattern.test(zipCodeValue)) {
-    alert("Please enter a valid 5-digit ZIP code.");
-    zipCodeInput.focus();
-    return false;
-}
-
-return true;
-}
-// Shelter service question functions
-function showAdditionalQuestions() {
-    var serviceSelect = document.getElementById("service");
-    var shelterQuestions = document.getElementById("shelterQuestions");
-    var daycareQuestions = document.getElementById("daycareQuestions");
-
-if (serviceSelect.value === "Shelter") {
-    shelterQuestions.style.display = "block";
-    daycareQuestions.style.display = "none";
-} else if (serviceSelect.value === "DayCare") {
-    daycareQuestions.style.display = "block";
-    shelterQuestions.style.display = "none";
-} else {
-    shelterQuestions.style.display = "none";
-    daycareQuestions.style.display = "none";
-}
-}
-
-  //Shelter JSON Displayed
-  function fetchAndDisplayShelters() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.shelters);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-
-  //Medical JSON Displayed
-  function fetchAndDisplayMedical() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.medical);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-
-  //Food JSON Displayed
-  function fetchAndDisplayFood() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.food);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-  
-//Services Information Displayed
-function displayShelters(shelters) {
-    const sheltersContainer = document.getElementById('sheltersContainer');
-    sheltersContainer.innerHTML = ''; // Clear previous content
-
-    shelters.forEach((shelter, index) => {
-        const shelterDiv = document.createElement('div');
-        shelterDiv.classList.add('sheltersContainer');
-
-        let content = `
-            <br>
-            <h4>${shelter.businessName}</h4>
-            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-            <p>${shelter.contacts.phone}</p>
-        `;
-
-        // Check if email exists and add email element if true
-        if (shelter.contacts.email) {
-            content += `
-                <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
-                <br>
-            `;
-        }
-
-        // Check if website exists and add website element if true
-        if (shelter.website) {
-            content += `
-                <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
-                <br>
-            `;
-        }
-
-        content += `
-            <p class="descriptionParagraph">"${shelter.description}"</p>
-            <br>
-            <hr>
-        `;
-
-        shelterDiv.innerHTML = content;
-        sheltersContainer.appendChild(shelterDiv);
-    });
-}
-
-function setDivHeight() {
-    var div = document.getElementById('yourDivId');
-    var height = div.scrollHeight;
-    div.style.height = height + 'px';
-}
-
-//Open new tab for website
-function openInNewTab(url) {
-    event.preventDefault();
-    window.open(url, '_blank');
-}
-
-// Fetch the JSON data asynchronously
-fetch('../JSON/login.json')
-    .then(response => response.json())
-    .then(jsonData => {
-        // Assuming you want to display the first volunteer's name
-        var firstName = jsonData.Volunteers[0].first_name;
-        var lastName = jsonData.Volunteers[0].last_name;
-
-        // Get the h1 element by its ID
-        var welcomeMessageElement = document.getElementById("welcomeMessage");
-
-        // Update the content of the h1 element
-        welcomeMessageElement.textContent = "Welcome, " + firstName + " " + lastName;
-    })
-    .catch(error => console.error('Error fetching JSON:', error)); 
-/* Navbar effects */
-var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (currentScrollPos === 0) {
-                document.querySelector(".NavigationBar").style.top = "0";
-            } else if (prevScrollpos > currentScrollPos) {
-                document.querySelector(".NavigationBar").style.top = "-100px";
-            } else {
-                document.querySelector(".NavigationBar").style.top = "-100px"; // Adjust this value based on your header height
-            }
-            prevScrollpos = currentScrollPos;
-        }
-/* Services Menu Bar */
-document.addEventListener('DOMContentLoaded', function() {
-    const servicesButton = document.getElementById('ServicesButton');
-    const serviceMenu = document.querySelector('.ServiceMenu');
-    const closeButton = document.getElementById('x-button');
-
-    servicesButton.addEventListener('click', function() {
-        serviceMenu.classList.add('active');
-        event.preventDefault();
-    });
-
-    closeButton.addEventListener('click', function() {
-        serviceMenu.classList.remove('active');
-    });
-});
-
-// Zipcode validation
-function validateZipCode() {
-    var zipCodeInput = document.getElementById("zip_code");
-    var zipCodeValue = zipCodeInput.value;
-
-// Regular expression for a 5-digit ZIP code (US format)
-var zipCodePattern = /^\d{5}$/;
-
-if (!zipCodePattern.test(zipCodeValue)) {
-    alert("Please enter a valid 5-digit ZIP code.");
-    zipCodeInput.focus();
-    return false;
-}
-
-return true;
-}
-// Shelter service question functions
-function showAdditionalQuestions() {
-    var serviceSelect = document.getElementById("service");
-    var shelterQuestions = document.getElementById("shelterQuestions");
-    var daycareQuestions = document.getElementById("daycareQuestions");
-
-if (serviceSelect.value === "Shelter") {
-    shelterQuestions.style.display = "block";
-    daycareQuestions.style.display = "none";
-} else if (serviceSelect.value === "DayCare") {
-    daycareQuestions.style.display = "block";
-    shelterQuestions.style.display = "none";
-} else {
-    shelterQuestions.style.display = "none";
-    daycareQuestions.style.display = "none";
-}
-}
-
-  //Shelter JSON Displayed
-  function fetchAndDisplayShelters() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.shelters);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-
-  //Medical JSON Displayed
-  function fetchAndDisplayMedical() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.medical);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-
-  //Food JSON Displayed
-  function fetchAndDisplayFood() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.food);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-
-   //Employment JSON Displayed
-   function fetchAndDisplayEmployment() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayShelters(data.employment);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
-
-    //Bikehub JSON Displayed
-    function fetchAndDisplayBikehub() {
-        // Assuming the JSON file is one level up from the current directory
-        const jsonFilePath = '../../JSON/services.json';
-      
-        fetch(jsonFilePath)
-            .then(response => response.json())
-            .then(data => {
-                // Handle the JSON data and display businesses
-                displayShelters(data.bikehub);
-                
-            })
-            .catch(error => console.error('Error fetching JSON:', error));
+    .then(data => {
+      var JSONemail = findUserbyEmail(enterEmail)
+      console.log('Email:', JSONemail)
+      var JSONpassword = findPasswordByEmail(JSONemail)
+      console.log(JSONpassword)
+      //data.find(u=>u.email_address === email_address && u.password === password);
+      if (JSONpassword === enterPass) {
+        document.getElementById('VerificationMessage').innerText = 'Success'
+        openVolunteerPage()
+      } else {
+        document.getElementById('VerificationMessage').innerText =
+          'Invalid email or password.'
       }
-  
-  //Services Information Displayed
-  function displayShelters(shelters) {
-    const sheltersContainer = document.getElementById('sheltersContainer');
-    sheltersContainer.innerHTML = ''; // Clear previous content
+    })
+    .catch(error => console.error('Error:', error))
+}
+function openVolunteerPage () {
+  var first_name = document.querySelector('input[name="first_name"]').value
+  var last_name = document.querySelector('input[name="last_name"]').value
 
-    shelters.forEach((shelter, index) => {
-        const shelterDiv = document.createElement('div');
-        shelterDiv.classList.add('sheltersContainer');
+  window.location.href =
+    `./services/VolunteerEvents.html?first_name=` +
+    encodeURIComponent(first_name) +
+    `&last_name=` +
+    encodeURIComponent(last_name)
+}
+function findUserbyEmail (email_address) {
+  console.log(email_address)
+  for (var i = 0; i < loginData.Volunteers.length; i++) {
+    var volunteers = loginData.Volunteers[i]
+    if (volunteers.email_address === email_address) {
+      return volunteers.email_address
+    }
+  }
+  return null
+}
 
-        let content = `
+function indexOfEmail (email_address) {
+  return loginData.Volunteers.findIndex(function (volunteer) {
+    return volunteer.email_address == email_address
+  })
+}
+function findPasswordByEmail (email_address) {
+  var index = indexOfEmail(email_address)
+  var filePassword = loginData.Volunteers[index].password
+  return filePassword
+}
+function enterData () {
+  if (loginData.Volunteers && loginData.Volunteers.length > 0) {
+    for (var i = 0; i < loginData.Volunteers.length; i++)
+      console.log(i + ':', loginData.Volunteers[i])
+  } else {
+    console.log('No volunteers found.')
+  }
+}
+function fetchData () {
+  fetch('../JSON/login.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
+      }
+      return response.json()
+    })
+    .then(data => {
+      console.log('Data fetched:', data)
+      loginData = data
+      enterData()
+    })
+}
+/* Navbar effects */
+var prevScrollpos = window.pageYOffset
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset
+  if (currentScrollPos === 0) {
+    document.querySelector('.NavigationBar').style.top = '0'
+  } else if (prevScrollpos > currentScrollPos) {
+    document.querySelector('.NavigationBar').style.top = '-100px'
+  } else {
+    document.querySelector('.NavigationBar').style.top = '-100px' // Adjust this value based on your header height
+  }
+  prevScrollpos = currentScrollPos
+}
+/* Services Menu Bar */
+document.addEventListener('DOMContentLoaded', function () {
+  const servicesButton = document.getElementById('ServicesButton')
+  const serviceMenu = document.querySelector('.ServiceMenu')
+  const closeButton = document.getElementById('x-button')
+
+  servicesButton.addEventListener('click', function () {
+    serviceMenu.classList.add('active')
+    event.preventDefault()
+  })
+
+  closeButton.addEventListener('click', function () {
+    serviceMenu.classList.remove('active')
+  })
+})
+
+// Zipcode validation
+function validateZipCode () {
+  var zipCodeInput = document.getElementById('zip_code')
+  var zipCodeValue = zipCodeInput.value
+
+  // Regular expression for a 5-digit ZIP code (US format)
+  var zipCodePattern = /^\d{5}$/
+
+  if (!zipCodePattern.test(zipCodeValue)) {
+    alert('Please enter a valid 5-digit ZIP code.')
+    zipCodeInput.focus()
+    return false
+  }
+
+  return true
+}
+// Shelter service question functions
+function showAdditionalQuestions () {
+  var serviceSelect = document.getElementById('service')
+  var shelterQuestions = document.getElementById('shelterQuestions')
+  var daycareQuestions = document.getElementById('daycareQuestions')
+
+  if (serviceSelect.value === 'Shelter') {
+    shelterQuestions.style.display = 'block'
+    daycareQuestions.style.display = 'none'
+  } else if (serviceSelect.value === 'DayCare') {
+    daycareQuestions.style.display = 'block'
+    shelterQuestions.style.display = 'none'
+  } else {
+    shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'none'
+  }
+}
+
+//Shelter JSON Displayed
+function fetchAndDisplayShelters () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.shelters)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Medical JSON Displayed
+function fetchAndDisplayMedical () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.medical)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Food JSON Displayed
+function fetchAndDisplayFood () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.food)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Services Information Displayed
+function displayShelters (shelters) {
+  const sheltersContainer = document.getElementById('sheltersContainer')
+  sheltersContainer.innerHTML = '' // Clear previous content
+
+  shelters.forEach((shelter, index) => {
+    const shelterDiv = document.createElement('div')
+    shelterDiv.classList.add('sheltersContainer')
+
+    let content = `
+            <br>
+            <h4>${shelter.businessName}</h4>
+            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+            <p>${shelter.contacts.phone}</p>
+        `
+
+    // Check if email exists and add email element if true
+    if (shelter.contacts.email) {
+      content += `
+                <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
+                <br>
+            `
+    }
+
+    // Check if website exists and add website element if true
+    if (shelter.website) {
+      content += `
+                <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+                <br>
+            `
+    }
+
+    content += `
+            <p class="descriptionParagraph">"${shelter.description}"</p>
+            <br>
+            <hr>
+        `
+
+    shelterDiv.innerHTML = content
+    sheltersContainer.appendChild(shelterDiv)
+  })
+}
+
+function setDivHeight () {
+  var div = document.getElementById('yourDivId')
+  var height = div.scrollHeight
+  div.style.height = height + 'px'
+}
+
+//Open new tab for website
+function openInNewTab (url) {
+  event.preventDefault()
+  window.open(url, '_blank')
+}
+
+// Fetch the JSON data asynchronously
+fetch('../JSON/login.json')
+  .then(response => response.json())
+  .then(jsonData => {
+    // Assuming you want to display the first volunteer's name
+    var firstName = jsonData.Volunteers[0].first_name
+    var lastName = jsonData.Volunteers[0].last_name
+
+    // Get the h1 element by its ID
+    var welcomeMessageElement = document.getElementById('welcomeMessage')
+
+    // Update the content of the h1 element
+    welcomeMessageElement.textContent = 'Welcome, ' + firstName + ' ' + lastName
+  })
+  .catch(error => console.error('Error fetching JSON:', error))
+/* Navbar effects */
+var prevScrollpos = window.pageYOffset
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset
+  if (currentScrollPos === 0) {
+    document.querySelector('.NavigationBar').style.top = '0'
+  } else if (prevScrollpos > currentScrollPos) {
+    document.querySelector('.NavigationBar').style.top = '-100px'
+  } else {
+    document.querySelector('.NavigationBar').style.top = '-100px' // Adjust this value based on your header height
+  }
+  prevScrollpos = currentScrollPos
+}
+/* Services Menu Bar */
+document.addEventListener('DOMContentLoaded', function () {
+  const servicesButton = document.getElementById('ServicesButton')
+  const serviceMenu = document.querySelector('.ServiceMenu')
+  const closeButton = document.getElementById('x-button')
+
+  servicesButton.addEventListener('click', function () {
+    serviceMenu.classList.add('active')
+    event.preventDefault()
+  })
+
+  closeButton.addEventListener('click', function () {
+    serviceMenu.classList.remove('active')
+  })
+})
+
+// Zipcode validation
+function validateZipCode () {
+  var zipCodeInput = document.getElementById('zip_code')
+  var zipCodeValue = zipCodeInput.value
+
+  // Regular expression for a 5-digit ZIP code (US format)
+  var zipCodePattern = /^\d{5}$/
+
+  if (!zipCodePattern.test(zipCodeValue)) {
+    alert('Please enter a valid 5-digit ZIP code.')
+    zipCodeInput.focus()
+    return false
+  }
+
+  return true
+}
+// Shelter service question functions
+function showAdditionalQuestions () {
+  var serviceSelect = document.getElementById('service')
+  var shelterQuestions = document.getElementById('shelterQuestions')
+  var daycareQuestions = document.getElementById('daycareQuestions')
+
+  if (serviceSelect.value === 'Shelter') {
+    shelterQuestions.style.display = 'block'
+    daycareQuestions.style.display = 'none'
+  } else if (serviceSelect.value === 'DayCare') {
+    daycareQuestions.style.display = 'block'
+    shelterQuestions.style.display = 'none'
+  } else {
+    shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'none'
+  }
+}
+
+//Shelter JSON Displayed
+function fetchAndDisplayShelters () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.shelters)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Medical JSON Displayed
+function fetchAndDisplayMedical () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.medical)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Food JSON Displayed
+function fetchAndDisplayFood () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.food)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Services Information Displayed
+function displayShelters (shelters) {
+  const sheltersContainer = document.getElementById('sheltersContainer')
+  sheltersContainer.innerHTML = '' // Clear previous content
+
+  shelters.forEach((shelter, index) => {
+    const shelterDiv = document.createElement('div')
+    shelterDiv.classList.add('sheltersContainer')
+
+    let content = `
             <br>
             <h4>${shelter.businessName}</h4>
             <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
@@ -964,50 +529,477 @@ if (serviceSelect.value === "Shelter") {
             <p class="descriptionParagraph">"${shelter.description}"</p>
             <br>
             <hr>
-        `;
+        `
 
-        // Check if email exists before adding it
-        if (!shelter.contacts.email) {
-            content = content.replace('<p class="emailParagraph">', '').replace('</p>', '');
-        }
+    // Check if email exists before adding it
+    if (!shelter.contacts.email) {
+      content = content
+        .replace('<p class="emailParagraph">', '')
+        .replace('</p>', '')
+    }
 
-        // Check if website exists before adding it
-        if (!shelter.website) {
-            content = content.replace('<p class="websiteParagraph">', '').replace('</p>', '');
-        }
+    // Check if website exists before adding it
+    if (!shelter.website) {
+      content = content
+        .replace('<p class="websiteParagraph">', '')
+        .replace('</p>', '')
+    }
 
-        shelterDiv.innerHTML = content;
-        sheltersContainer.appendChild(shelterDiv);
-    });
+    shelterDiv.innerHTML = content
+    sheltersContainer.appendChild(shelterDiv)
+  })
+}
+
+//Open new tab for website
+function openInNewTab (url) {
+  event.preventDefault()
+  window.open(url, '_blank')
+}
+
+/* Login HTML Page*/
+function checkPassword () {
+  var loginData
+  fetchData()
+  var enterEmail = document.getElementById('email_address').value
+  var enterPass = document.getElementById('password').value
+
+  //grab email and password from json file
+  fetch('../JSON/login.json')
+    .then(response => response.json())
+    .then(data => {
+      var JSONemail = findUserbyEmail(enterEmail)
+      console.log('Email:', JSONemail)
+      var JSONpassword = findPasswordByEmail(JSONemail)
+      console.log(JSONpassword)
+      //data.find(u=>u.email_address === email_address && u.password === password);
+      if (JSONpassword === enterPass) {
+        document.getElementById('VerificationMessage').innerText = 'Success'
+      } else {
+        document.getElementById('VerificationMessage').innerText =
+          'Invalid email or password.'
+      }
+    })
+    .catch(error => console.error('Error:', error))
+}
+function openVolunteerPage () {}
+function findUserbyEmail (email_address) {
+  console.log(email_address)
+  for (var i = 0; i < loginData.Volunteers.length; i++) {
+    var volunteers = loginData.Volunteers[i]
+    if (volunteers.email_address === email_address) {
+      return volunteers.email_address
+    }
+  }
+  return null
+}
+
+function indexOfEmail (email_address) {
+  return loginData.Volunteers.findIndex(function (volunteer) {
+    return volunteer.email_address == email_address
+  })
+}
+function findPasswordByEmail (email_address) {
+  var index = indexOfEmail(email_address)
+  var filePassword = loginData.Volunteers[index].password
+  return filePassword
+}
+function enterData () {
+  if (loginData.Volunteers && loginData.Volunteers.length > 0) {
+    for (var i = 0; i < loginData.Volunteers.length; i++)
+      console.log(i + ':', loginData.Volunteers[i])
+  } else {
+    console.log('No volunteers found.')
+  }
+}
+function fetchData () {
+  fetch('../JSON/login.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
+      }
+      return response.json()
+    })
+    .then(data => {
+      console.log('Data fetched:', data)
+      loginData = data
+      enterData()
+    })
+}
+/* Navbar effects */
+var prevScrollpos = window.pageYOffset
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset
+  if (currentScrollPos === 0) {
+    document.querySelector('.NavigationBar').style.top = '0'
+  } else if (prevScrollpos > currentScrollPos) {
+    document.querySelector('.NavigationBar').style.top = '-100px'
+  } else {
+    document.querySelector('.NavigationBar').style.top = '-100px' // Adjust this value based on your header height
+  }
+  prevScrollpos = currentScrollPos
+}
+/* Services Menu Bar */
+document.addEventListener('DOMContentLoaded', function () {
+  const servicesButton = document.getElementById('ServicesButton')
+  const serviceMenu = document.querySelector('.ServiceMenu')
+  const closeButton = document.getElementById('x-button')
+
+  servicesButton.addEventListener('click', function () {
+    serviceMenu.classList.add('active')
+    event.preventDefault()
+  })
+
+  closeButton.addEventListener('click', function () {
+    serviceMenu.classList.remove('active')
+  })
+})
+
+// Zipcode validation
+function validateZipCode () {
+  var zipCodeInput = document.getElementById('zip_code')
+  var zipCodeValue = zipCodeInput.value
+
+  // Regular expression for a 5-digit ZIP code (US format)
+  var zipCodePattern = /^\d{5}$/
+
+  if (!zipCodePattern.test(zipCodeValue)) {
+    alert('Please enter a valid 5-digit ZIP code.')
+    zipCodeInput.focus()
+    return false
+  }
+
+  return true
+}
+// Shelter service question functions
+function showAdditionalQuestions () {
+  var serviceSelect = document.getElementById('service')
+  var shelterQuestions = document.getElementById('shelterQuestions')
+  var daycareQuestions = document.getElementById('daycareQuestions')
+
+  if (serviceSelect.value === 'Shelter') {
+    shelterQuestions.style.display = 'block'
+    daycareQuestions.style.display = 'none'
+  } else if (serviceSelect.value === 'DayCare') {
+    daycareQuestions.style.display = 'block'
+    shelterQuestions.style.display = 'none'
+  } else {
+    shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'none'
+  }
+}
+
+//Shelter JSON Displayed
+function fetchAndDisplayShelters () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.shelters)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Medical JSON Displayed
+function fetchAndDisplayMedical () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.medical)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Food JSON Displayed
+function fetchAndDisplayFood () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.food)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Services Information Displayed
+function displayShelters (shelters) {
+  const sheltersContainer = document.getElementById('sheltersContainer')
+  sheltersContainer.innerHTML = '' // Clear previous content
+
+  shelters.forEach((shelter, index) => {
+    const shelterDiv = document.createElement('div')
+    shelterDiv.classList.add('sheltersContainer')
+
+    let content = `
+            <br>
+            <h4>${shelter.businessName}</h4>
+            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+            <p>${shelter.contacts.phone}</p>
+        `
+
+    // Check if email exists and add email element if true
+    if (shelter.contacts.email) {
+      content += `
+                <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
+                <br>
+            `
+    }
+
+    // Check if website exists and add website element if true
+    if (shelter.website) {
+      content += `
+                <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+                <br>
+            `
+    }
+
+    content += `
+            <p class="descriptionParagraph">"${shelter.description}"</p>
+            <br>
+            <hr>
+        `
+
+    shelterDiv.innerHTML = content
+    sheltersContainer.appendChild(shelterDiv)
+  })
+}
+
+function setDivHeight () {
+  var div = document.getElementById('yourDivId')
+  var height = div.scrollHeight
+  div.style.height = height + 'px'
+}
+
+//Open new tab for website
+function openInNewTab (url) {
+  event.preventDefault()
+  window.open(url, '_blank')
+}
+
+// Fetch the JSON data asynchronously
+fetch('../JSON/login.json')
+  .then(response => response.json())
+  .then(jsonData => {
+    // Assuming you want to display the first volunteer's name
+    var firstName = jsonData.Volunteers[0].first_name
+    var lastName = jsonData.Volunteers[0].last_name
+
+    // Get the h1 element by its ID
+    var welcomeMessageElement = document.getElementById('welcomeMessage')
+
+    // Update the content of the h1 element
+    welcomeMessageElement.textContent = 'Welcome, ' + firstName + ' ' + lastName
+  })
+  .catch(error => console.error('Error fetching JSON:', error))
+/* Navbar effects */
+var prevScrollpos = window.pageYOffset
+window.onscroll = function () {
+  var currentScrollPos = window.pageYOffset
+  if (currentScrollPos === 0) {
+    document.querySelector('.NavigationBar').style.top = '0'
+  } else if (prevScrollpos > currentScrollPos) {
+    document.querySelector('.NavigationBar').style.top = '-100px'
+  } else {
+    document.querySelector('.NavigationBar').style.top = '-100px' // Adjust this value based on your header height
+  }
+  prevScrollpos = currentScrollPos
+}
+/* Services Menu Bar */
+document.addEventListener('DOMContentLoaded', function () {
+  const servicesButton = document.getElementById('ServicesButton')
+  const serviceMenu = document.querySelector('.ServiceMenu')
+  const closeButton = document.getElementById('x-button')
+
+  servicesButton.addEventListener('click', function () {
+    serviceMenu.classList.add('active')
+    event.preventDefault()
+  })
+
+  closeButton.addEventListener('click', function () {
+    serviceMenu.classList.remove('active')
+  })
+})
+
+// Zipcode validation
+function validateZipCode () {
+  var zipCodeInput = document.getElementById('zip_code')
+  var zipCodeValue = zipCodeInput.value
+
+  // Regular expression for a 5-digit ZIP code (US format)
+  var zipCodePattern = /^\d{5}$/
+
+  if (!zipCodePattern.test(zipCodeValue)) {
+    alert('Please enter a valid 5-digit ZIP code.')
+    zipCodeInput.focus()
+    return false
+  }
+
+  return true
+}
+// Shelter service question functions
+function showAdditionalQuestions () {
+  var serviceSelect = document.getElementById('service')
+  var shelterQuestions = document.getElementById('shelterQuestions')
+  var daycareQuestions = document.getElementById('daycareQuestions')
+
+  if (serviceSelect.value === 'Shelter') {
+    shelterQuestions.style.display = 'block'
+    daycareQuestions.style.display = 'none'
+  } else if (serviceSelect.value === 'DayCare') {
+    daycareQuestions.style.display = 'block'
+    shelterQuestions.style.display = 'none'
+  } else {
+    shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'none'
+  }
+}
+
+//Shelter JSON Displayed
+function fetchAndDisplayShelters () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.shelters)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Medical JSON Displayed
+function fetchAndDisplayMedical () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.medical)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Food JSON Displayed
+function fetchAndDisplayFood () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.food)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Employment JSON Displayed
+function fetchAndDisplayEmployment () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.employment)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Bikehub JSON Displayed
+function fetchAndDisplayBikehub () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.bikehub)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Services Information Displayed
+function displayShelters (shelters) {
+  const sheltersContainer = document.getElementById('sheltersContainer')
+  sheltersContainer.innerHTML = '' // Clear previous content
+
+  shelters.forEach((shelter, index) => {
+    const shelterDiv = document.createElement('div')
+    shelterDiv.classList.add('sheltersContainer')
+
+    let content = `
+            <br>
+            <h4>${shelter.businessName}</h4>
+            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+            <p>${shelter.contacts.phone}</p>
+            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
+            <br>
+            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+            <p class="descriptionParagraph">"${shelter.description}"</p>
+            <br>
+            <hr>
+        `
+
+    // Check if email exists before adding it
+    if (!shelter.contacts.email) {
+      content = content
+        .replace('<p class="emailParagraph">', '')
+        .replace('</p>', '')
+    }
+
+    // Check if website exists before adding it
+    if (!shelter.website) {
+      content = content
+        .replace('<p class="websiteParagraph">', '')
+        .replace('</p>', '')
+    }
+
+    shelterDiv.innerHTML = content
+    sheltersContainer.appendChild(shelterDiv)
+  })
 }
 
 //Display all JSON Displayed
-function fetchAndDisplayAll() {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json';
-  
-    fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-            // Handle the JSON data and display businesses
-            displayData(data);
-            
-        })
-        .catch(error => console.error('Error fetching JSON:', error));
-  }
+function fetchAndDisplayAll () {
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
 
-function displayData(data) {
-    const sheltersContainer = document.getElementById('sheltersContainer');
-    sheltersContainer.innerHTML = ''; // Clear previous content
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayData(data)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
 
-    Object.keys(data).forEach(dataType => {
-        const dataArray = data[dataType];
+function displayData (data) {
+  const sheltersContainer = document.getElementById('sheltersContainer')
+  sheltersContainer.innerHTML = '' // Clear previous content
 
-        dataArray.forEach((item, index) => {
-            const dataDiv = document.createElement('div');
-            dataDiv.classList.add('dataContainer');
+  Object.keys(data).forEach(dataType => {
+    const dataArray = data[dataType]
 
-            let content = `
+    dataArray.forEach((item, index) => {
+      const dataDiv = document.createElement('div')
+      dataDiv.classList.add('dataContainer')
+
+      let content = `
                 <br>
                 <h4>${item.businessName}</h4>
                 <p>${item.location.street} ${item.location.city} ${item.location.state} ${item.location.zipcode}</p>
@@ -1018,109 +1010,113 @@ function displayData(data) {
                 <p class="descriptionParagraph">"${item.description}"</p>
                 <br>
                 <hr>
-            `;
+            `
 
-            // Check if email exists before adding it
-            if (!item.contacts.email) {
-                content = content.replace('<p class="emailParagraph">', '').replace('</p>', '');
-            }
+      // Check if email exists before adding it
+      if (!item.contacts.email) {
+        content = content
+          .replace('<p class="emailParagraph">', '')
+          .replace('</p>', '')
+      }
 
-            // Check if website exists before adding it
-            if (!item.website) {
-                content = content.replace('<p class="websiteParagraph">', '').replace('</p>', '');
-            }
+      // Check if website exists before adding it
+      if (!item.website) {
+        content = content
+          .replace('<p class="websiteParagraph">', '')
+          .replace('</p>', '')
+      }
 
-            dataDiv.innerHTML = content;
-            sheltersContainer.appendChild(dataDiv);
-        });
-    });
+      dataDiv.innerHTML = content
+      sheltersContainer.appendChild(dataDiv)
+    })
+  })
 }
 
 //Open new tab for website
-function openInNewTab(url) {
-    event.preventDefault();
-    window.open(url, '_blank');
+function openInNewTab (url) {
+  event.preventDefault()
+  window.open(url, '_blank')
 }
 
 /* Login HTML Page*/
-function checkPassword(){
-    var loginData;
-    fetchData();
-    var enterEmail = document.getElementById("email_address").value;
-    var enterPass = document.getElementById("password").value;
-    
-    //grab email and password from json file
-    fetch('../JSON/login.json')
-        .then(response => response.json())
-        .then(data =>{
-            var JSONemail = findUserbyEmail(enterEmail);
-            console.log("Email:", JSONemail);
-            var JSONpassword = findPasswordByEmail(JSONemail);
-            console.log(JSONpassword);
-            //data.find(u=>u.email_address === email_address && u.password === password);
-            if(JSONpassword === enterPass) {
-                document.getElementById("VerificationMessage").innerText = 'Success';
-            } else {
+function checkPassword () {
+  var loginData
+  fetchData()
+  var enterEmail = document.getElementById('email_address').value
+  var enterPass = document.getElementById('password').value
 
-                document.getElementById("VerificationMessage").innerText = 'Invalid email or password.';
-            }
-        })
-        .catch(error => console.error('Error:', error));
-   } 
-   function openVolunteerPage(){
-    var first_name = document.querySelector('input[name="first_name"]').value
-    var last_name = document.querySelector('input[name="last_name"]').value
-  
-    window.location.href =
-      `./services/VolunteerEvents.html=` +
-      `&sex=` +
-      encodeURIComponent() +
-      `&veteran=` +
-      encodeURIComponent(isVet)
-   }
-   function findUserbyEmail(email_address){
-        console.log(email_address);
-        for(var i = 0; i < loginData.Volunteers.length;i++){
-            var volunteers = loginData.Volunteers[i];
-            if(volunteers.email_address === email_address){
-                return volunteers.email_address;
-            }
-        }
-        return null;
-   }
-   
-   function indexOfEmail(email_address){
-        return loginData.Volunteers.findIndex(function(volunteer){
-            return volunteer.email_address == email_address;
-        });
-   }
-   function findPasswordByEmail(email_address){
-        var index = indexOfEmail(email_address);
-        var filePassword = loginData.Volunteers[index].password;
-        return filePassword;
-   }
-   function enterData(){
-        if(loginData.Volunteers && loginData.Volunteers.length > 0){
-            for(var i = 0;i < loginData.Volunteers.length;i++)
-            console.log(i+":", loginData.Volunteers[i]);
-        } else {
-            console.log('No volunteers found.');
-        }
+  //grab email and password from json file
+  fetch('../JSON/login.json')
+    .then(response => response.json())
+    .then(data => {
+      var JSONemail = findUserbyEmail(enterEmail)
+      console.log('Email:', JSONemail)
+      var JSONpassword = findPasswordByEmail(JSONemail)
+      console.log(JSONpassword)
+      //data.find(u=>u.email_address === email_address && u.password === password);
+      if (JSONpassword === enterPass) {
+        document.getElementById('VerificationMessage').innerText = 'Success'
+      } else {
+        document.getElementById('VerificationMessage').innerText =
+          'Invalid email or password.'
+      }
+    })
+    .catch(error => console.error('Error:', error))
+}
+function openVolunteerPage () {
+  var first_name = document.querySelector('input[name="first_name"]').value
+  var last_name = document.querySelector('input[name="last_name"]').value
+
+  window.location.href =
+    `./services/VolunteerEvents.html=` +
+    `&sex=` +
+    encodeURIComponent() +
+    `&veteran=` +
+    encodeURIComponent(isVet)
+}
+function findUserbyEmail (email_address) {
+  console.log(email_address)
+  for (var i = 0; i < loginData.Volunteers.length; i++) {
+    var volunteers = loginData.Volunteers[i]
+    if (volunteers.email_address === email_address) {
+      return volunteers.email_address
     }
-   function fetchData(){
-        fetch('../JSON/login.json')
-            .then(response => {
-                if(!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Data fetched:', data);
-                loginData = data;
-                enterData();
-            })
-    }
+  }
+  return null
+}
+
+function indexOfEmail (email_address) {
+  return loginData.Volunteers.findIndex(function (volunteer) {
+    return volunteer.email_address == email_address
+  })
+}
+function findPasswordByEmail (email_address) {
+  var index = indexOfEmail(email_address)
+  var filePassword = loginData.Volunteers[index].password
+  return filePassword
+}
+function enterData () {
+  if (loginData.Volunteers && loginData.Volunteers.length > 0) {
+    for (var i = 0; i < loginData.Volunteers.length; i++)
+      console.log(i + ':', loginData.Volunteers[i])
+  } else {
+    console.log('No volunteers found.')
+  }
+}
+function fetchData () {
+  fetch('../JSON/login.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
+      }
+      return response.json()
+    })
+    .then(data => {
+      console.log('Data fetched:', data)
+      loginData = data
+      enterData()
+    })
+}
 /* Navbar effects */
 var prevScrollpos = window.pageYOffset
 window.onscroll = function () {
@@ -1228,22 +1224,22 @@ function fetchAndDisplayFood () {
 
 //Daycare JSON Displayed
 function fetchAndDisplayDaycare () {
-    // Assuming the JSON file is one level up from the current directory
-    const jsonFilePath = '../../JSON/services.json'
-  
-    fetch(jsonFilePath)
-      .then(response => response.json())
-      .then(data => {
-        // Handle the JSON data and display businesses
-        displayShelters(data.daycare)
-      })
-      .catch(error => console.error('Error fetching JSON:', error))
-  }
-  
-  //Services Information Displayed
-  function displayShelters(shelters) {
-    const sheltersContainer = document.getElementById('sheltersContainer');
-    sheltersContainer.innerHTML = ''; // Clear previous content
+  // Assuming the JSON file is one level up from the current directory
+  const jsonFilePath = '../../JSON/services.json'
+
+  fetch(jsonFilePath)
+    .then(response => response.json())
+    .then(data => {
+      // Handle the JSON data and display businesses
+      displayShelters(data.daycare)
+    })
+    .catch(error => console.error('Error fetching JSON:', error))
+}
+
+//Services Information Displayed
+function displayShelters (shelters) {
+  const sheltersContainer = document.getElementById('sheltersContainer')
+  sheltersContainer.innerHTML = '' // Clear previous content
 
   shelters.forEach((shelter, index) => {
     const shelterDiv = document.createElement('div')
@@ -1342,7 +1338,7 @@ function searchResults () {
         .then(data => {
           // Handle the JSON data and display businesses
 
-          displayVeteranFirst(data.shelters);
+          displayVeteranFirst(data.shelters)
         })
         .catch(error => console.error('Error fetching JSON:', error))
       fetch(jsonFilePath)
