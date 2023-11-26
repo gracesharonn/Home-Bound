@@ -179,6 +179,36 @@ nav {
     line-height: 1.9;
 }
 
+#shelterQuestions hr {
+    border: none;
+    height: 2px;
+    background-color: transparent;
+}
+
+#daycareQuestions hr {
+    border: none;
+    height: 2px;
+    background-color: transparent;
+}
+
+#employmentQuestions hr {
+    border: none;
+    height: 2px;
+    background-color: transparent;
+}
+
+#foodServiceQuestions hr {
+    border: none;
+    height: 2px;
+    background-color: transparent;
+}
+
+#medicalServiceQuestions hr {
+    border: none;
+    height: 2px;
+    background-color: transparent;
+}
+
 html {
     scroll-behavior: smooth;
 }
