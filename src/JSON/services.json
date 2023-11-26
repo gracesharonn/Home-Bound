@@ -990,7 +990,6 @@
       "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/"
     }
   ],
-  
   "daycare": [
     {
       "businessName": "Family Matters Child Care Center",
@@ -1089,27 +1088,6 @@
         "zipcode": "95820",
         "latitude": "38.517360027854856",
         "longitude": "-121.48076240499299"
-      },
-  "employment": [
-    {
-      "businessName": "Community HealthWorks",
-      "location": {
-        "street": "1610 Arden Way",
-        "city": "Sacramento",
-        "state": "CA",
-        "zipcode": "95815",
-        "latitude": "",
-        "longitude": ""
-      },
-      "description": "Advancing community, social and economic health one person at a time",
-      "contacts": {
-        "email": "",
-        "phone": "(916) 422-4136"
-      },
-      "website": "",
-      "attributes": {
-        "veteran" :"No",
-        "sex": "n/a"
       }
     }
   ],
@@ -1367,4 +1345,5 @@
         "sex": "n/a"
       }
     }
-    ]
+  ]
+}
