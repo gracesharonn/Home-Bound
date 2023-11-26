@@ -208,6 +208,36 @@ nav {
     line-height: 1.9;
 }
 
+#shelterQuestions hr {
+    border: none;
+    height: 2px;
+    background-color: transparent;
+}
+
+#daycareQuestions hr {
+    border: none;
+    height: 2px;
+    background-color: transparent;
+}
+
+#employmentQuestions hr {
+    border: none;
+    height: 2px;
+    background-color: transparent;
+}
+
+#foodServiceQuestions hr {
+    border: none;
+    height: 2px;
+    background-color: transparent;
+}
+
+#medicalServiceQuestions hr {
+    border: none;
+    height: 2px;
+    background-color: transparent;
+}
+
 html {
     scroll-behavior: smooth;
 }
@@ -632,7 +662,8 @@ h2 {
     border-radius: 35px;
     box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
     display: block;
-    width: 750px;
+    width: 780px;
+    height: auto;
     max-width: 850px;
 }
 
@@ -690,7 +721,6 @@ h2 {
 .shelters-info p:nth-child(7) { /* description */
     font-family: BenchNine; 
     font-size: 24px;
-    text-indent: 0;
 }
 
 .emailParagraph, .websiteParagraph {
@@ -698,7 +728,7 @@ h2 {
     font-size: 24px;
     font-weight: 700;
     background-color: transparent;
-    margin-left: 40px;
+    margin-left: 80px;
 }
 
 .descriptionParagraph {
