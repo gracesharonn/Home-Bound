@@ -404,6 +404,11 @@ function writeJSONfile(){
     //input.Users.push(user)
     saveJSON('../JSON/login.json',input)
 }
+function sendToVolEvents(){
+  var enteredEmail = document.getElementById("email_address").value
+  var trueEmail = findUserbyEmail(enteredEmail)
+  openVolunteerPage(trueEmail)
+}
 /*function writeJsonfile(){
     console.log("Running.");
     var jsfile = require('../JSON/login.json');
