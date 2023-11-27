@@ -253,6 +253,15 @@ function checkPassword(){
                 enterData();
             })
     }
+    //getting params from url
+    function getParams(){
+      var keysValues = window.location.search
+      var urlUserParams = new URLSearchParams(keysValues)
+      var first_name = urlUserParams.get('first_name')
+      var last_name = urlUserParams.get('last_name')
+      document.getElementById("first_name").innerText = first_name
+      document.getElementById("last_name").innerText = last_name;
+    }
 
 //onSubmit of form
 
