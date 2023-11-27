@@ -458,7 +458,7 @@ function openShelterSearch (service) {
     encodeURIComponent(term)
 }
 
-function searchResults () {
+function searchResults () { //TODO: Resolve this function to display JSON Filtered Results
   // Assuming the JSON file is one level up from the current directory
   const jsonFilePath = '../../JSON/services.json'
 
