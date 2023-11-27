@@ -18,7 +18,8 @@
       "website": "https://www.thearkofrefuge.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -39,7 +40,8 @@
       "website": "https://sacfamilypromise.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -60,7 +62,8 @@
       "website": "https://sacramento.salvationarmy.org/sacramento_metro/",
       "attributes": {
         "veteran": "Yes",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -81,7 +84,8 @@
       "website": "http://www.francishousecenter.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -102,7 +106,8 @@
       "website": "https://www.cottagehousing.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -123,7 +128,8 @@
       "website": "https://saintjohnsprogram.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "Female"
+        "sex": "Female",
+        "term": "Short"
       }
     },
     {
@@ -144,7 +150,8 @@
       "website": "https://ugmsac.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "Male"
+        "sex": "Male",
+        "term": "Short"
       }
     },
     {
@@ -165,7 +172,8 @@
       "website": "https://www.voa-ncnn.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "Male"
+        "sex": "Male",
+        "term": "Long"
       }
     },
     {
@@ -186,7 +194,8 @@
       "website": "https://www.nextmovesacramento.org/emergency_family_shelter/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -207,7 +216,8 @@
       "website": "https://www.shelterlistings.org/details/37861/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -228,7 +238,8 @@
       "website": "https://guadalupe-sacramento.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -249,7 +260,8 @@
       "website": "https://www.wakingthevillage.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -270,7 +282,8 @@
       "website": "https://www.cottagehousing.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -291,7 +304,8 @@
       "website": "https://www.mutualhousing.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -312,7 +326,8 @@
       "website": "https://norcalecs.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -333,7 +348,8 @@
       "website": "https://www.shra.org/ehv/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -354,7 +370,8 @@
       "website": "https://lacooperativa.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     }
   ],
@@ -1007,7 +1024,8 @@
       "website": "https://www.fmccc.net/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "lowIncome": "No"
       }
     },
     {
@@ -1028,7 +1046,8 @@
       "website": "https://shiloharmscdc.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "lowIncome": "Yes"
       }
     },
     {
@@ -1049,7 +1068,8 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "lowIncome": "No"
       }
     },
     {
@@ -1070,7 +1090,8 @@
       "website": "https://www.rainbowdaycareinc.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "lowIncome": "Yes"
       }
     },
     {
@@ -1092,7 +1113,8 @@
       "website": "https://www.fmccc.net/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "lowIncome": "No"
       }
     },
     {
@@ -1113,7 +1135,8 @@
       "website": "https://shiloharmscdc.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "lowIncome": "Yes"
       }
     },
     {
@@ -1134,7 +1157,8 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "lowIncome": "No"
       }
     },
     {
@@ -1155,7 +1179,8 @@
       "website": "https://www.rainbowdaycareinc.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "lowIncome": "No"
       }
     },
     {
@@ -1176,7 +1201,8 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "lowIncome": "No"
       }
     }
   ],
