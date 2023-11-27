@@ -947,3 +947,8 @@ h7 {
     color: #006;
     background-color: transparent;
 }
+
+h7 a {
+    background-color: transparent;
+    cursor: pointer;
+}
