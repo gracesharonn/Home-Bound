@@ -30,7 +30,7 @@
     font-size: 32px;
     font-weight: 700;
     background-color: transparent;
-    transition: top 1s ease-in-out;
+    transition: top 1.5s ease-in-out;
 }
   
 .NavigationBar ul {
@@ -665,16 +665,63 @@ h2 {
 
 .OtherServices {
     position: fixed;
-    font-size: 45px;
-    line-height: 115px;
     right: 0;
-    padding: 50px;
     text-align: right;
     list-style: none;
+    height: 100vh;
+    display: flex;
+    margin-top: -70px;
+    margin-right: -30px;
+    transition: right 3s ease-in-out;
 }
 
-.OtherServices ul {
-    list-style: none;
+.OtherServices nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.OtherServices nav ul li {
+    font-size: 30px;
+    font-family: sans-serif;
+    background-color: #FFE475;
+    border-radius: 35px;
+    letter-spacing: 0.1em;
+    width: 6.8em;
+    height: 1.6em;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    margin: 1.2em;
+    cursor: pointer;
+    text-align: center;
+}
+
+.OtherServices a {
+    color: #F5F6FA !important;
+    background-color: transparent !important;
+}
+
+.OtherServices nav ul li span {
+    color: #F5F6FA;
+    background-color: transparent; /* Set background to transparent */
+    mix-blend-mode: difference;
+}
+
+.OtherServices nav ul li::before {
+    content: '';
+    position: absolute;
+    width: 1.5em;
+    height: inherit;
+    border-radius: 50%;
+    top: 0;
+    left: -2em;
+    transition: 1.5s ease-out;
+    background-color: #006;
+}
+
+
+.OtherServices nav ul li:hover::before {
+	transform: scale(11);
 }
 
 #sheltersContainer {

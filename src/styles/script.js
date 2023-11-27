@@ -1,16 +1,35 @@
-/* Navbar effects */
-var prevScrollpos = window.pageYOffset;
-        window.onscroll = function() {
-            var currentScrollPos = window.pageYOffset;
-            if (currentScrollPos === 0) {
-                document.querySelector(".NavigationBar").style.top = "0";
-            } else if (prevScrollpos > currentScrollPos) {
-                document.querySelector(".NavigationBar").style.top = "-100px";
-            } else {
-                document.querySelector(".NavigationBar").style.top = "-100px"; // Adjust this value based on your header height
-            }
-            prevScrollpos = currentScrollPos;
-        }
+var prevScrollposNavbar = window.pageYOffset;
+var prevScrollposOtherServices = window.pageYOffset;
+var otherServicesElement = document.querySelector(".OtherServices");
+var navbarElement = document.querySelector(".NavigationBar");
+
+window.onscroll = function () {
+    var currentScrollPosNavbar = window.pageYOffset;
+    var currentScrollPosOtherServices = window.pageYOffset;
+
+    // Navbar
+    if (prevScrollposNavbar > currentScrollPosNavbar) {
+        navbarElement.style.top = "0";
+    } else {
+        navbarElement.style.top = "-100px";
+    }
+    prevScrollposNavbar = currentScrollPosNavbar;
+
+    // Other Services
+    if (currentScrollPosOtherServices === 0) {
+        otherServicesElement.style.right = "0";
+    } else if (prevScrollposOtherServices < currentScrollPosOtherServices) {
+        // Add a delay before showing the Other Services element
+        setTimeout(function () {
+            otherServicesElement.style.right = "-30%";
+        }, 300);
+    } else {
+        otherServicesElement.style.right = "0";
+    }
+    prevScrollposOtherServices = currentScrollPosOtherServices;
+};
+
+
 /* Services Menu Bar */
 document.addEventListener('DOMContentLoaded', function() {
     const servicesButton = document.getElementById('ServicesButton');
