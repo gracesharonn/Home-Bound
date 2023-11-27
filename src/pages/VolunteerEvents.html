@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
 </head>
-<body>
+<body onload="getParam()">
 <div class="EventsBG">
     <a id="top"></a>
     <div class="NavigationBarEventsPage">
@@ -36,7 +36,7 @@
     </div>
 
     <div class="EventsContainer">
-        <h1>Welcome, First Last Name</h1>
+        <h1>Welcome, <span id="first_name" placeholder ="First Name"> </span><span id="last_name" placeholder ="Last Name"></span></h1>
         <div class="EventBox" id="EventInfo">
             <h5>Event Title</h5>
             <p>Event Description</p>
