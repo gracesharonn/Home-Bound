@@ -910,3 +910,66 @@ h2 {
     font-size: 35px;
     margin-left: 40px;
 }
+
+/* Volunteer Events Page */
+
+.EventsContainer {
+    background-color: #006;
+    position: absolute;
+    width: 48%;
+    height:max-content;
+    text-align: center;
+    padding: 45px;
+    margin-left: 375px;
+}
+
+.EventsContainer h1 {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.575px;
+    background-color: transparent;
+    color: #F5F6FA;
+}
+
+.EventBox {
+    background-color: #FFE475;
+    width: 100%;
+    padding: 30px 30px 10px 35px;
+    border-radius: 48px;
+    margin-top: 50px;
+    height: 170px;
+    text-align: left;
+    line-height: 2.5;
+}
+
+.EventBox p {
+    font-family: BenchNine;
+    font-size: 24px;
+    background-color: transparent;
+}
+
+h5 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    background-color: transparent;
+}
+
+h7 {
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    margin: 25px;
+    padding: 25px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.575px;
+    color: #006;
+    background-color: transparent;
+}
