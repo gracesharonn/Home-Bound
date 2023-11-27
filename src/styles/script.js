@@ -313,6 +313,17 @@ function checkPassword(){
         return null;
    }
    
+   function findFirstbyEmail(email_address){
+    var index = indexOfEmail(email_address);
+    var file_first_name = loginData.Volunteers[index].first_name;
+    return file_first_name;
+   }
+   function findLastbyEmail(email_address){
+    var index = indexOfEmail(email_address);
+    var file_last_name = loginData.Volunteers[index].last_name;
+    return file_last_name;
+   }
+   
    function indexOfEmail(email_address){
         return loginData.Volunteers.findIndex(function(volunteer){
             return volunteer.email_address == email_address;
