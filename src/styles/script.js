@@ -1,34 +1,33 @@
-var prevScrollposNavbar = window.pageYOffset;
-var prevScrollposOtherServices = window.pageYOffset;
-var otherServicesElement = document.querySelector(".OtherServices");
-var navbarElement = document.querySelector(".NavigationBar");
+var prevScrollposNavbar = window.pageYOffset
+var prevScrollposOtherServices = window.pageYOffset
+var otherServicesElement = document.querySelector('.OtherServices')
+var navbarElement = document.querySelector('.NavigationBar')
 
 window.onscroll = function () {
-    var currentScrollPosNavbar = window.pageYOffset;
-    var currentScrollPosOtherServices = window.pageYOffset;
+  var currentScrollPosNavbar = window.pageYOffset
+  var currentScrollPosOtherServices = window.pageYOffset
 
-    // Navbar
-    if (prevScrollposNavbar > currentScrollPosNavbar) {
-        navbarElement.style.top = "0";
-    } else {
-        navbarElement.style.top = "-100px";
-    }
-    prevScrollposNavbar = currentScrollPosNavbar;
+  // Navbar
+  if (prevScrollposNavbar > currentScrollPosNavbar) {
+    navbarElement.style.top = '0'
+  } else {
+    navbarElement.style.top = '-100px'
+  }
+  prevScrollposNavbar = currentScrollPosNavbar
 
-    // Other Services
-    if (currentScrollPosOtherServices === 0) {
-        otherServicesElement.style.right = "0";
-    } else if (prevScrollposOtherServices < currentScrollPosOtherServices) {
-        // Add a delay before showing the Other Services element
-        setTimeout(function () {
-            otherServicesElement.style.right = "-30%";
-        }, 300);
-    } else {
-        otherServicesElement.style.right = "0";
-    }
-    prevScrollposOtherServices = currentScrollPosOtherServices;
-};
-
+  // Other Services
+  if (currentScrollPosOtherServices === 0) {
+    otherServicesElement.style.right = '0'
+  } else if (prevScrollposOtherServices < currentScrollPosOtherServices) {
+    // Add a delay before showing the Other Services element
+    setTimeout(function () {
+      otherServicesElement.style.right = '-30%'
+    }, 300)
+  } else {
+    otherServicesElement.style.right = '0'
+  }
+  prevScrollposOtherServices = currentScrollPosOtherServices
+}
 
 /* Services Menu Bar */
 document.addEventListener('DOMContentLoaded', function () {
@@ -443,8 +442,8 @@ function submitForm () {
   if (service === 'Food') {
     window.location.href = './services/Food.html'
   } else if (service === 'Shelter') {
-    window.location.href = './services/Shelters.html'
-    //openShelterSearch(service)
+    //window.location.href = './services/Shelters.html'
+    openShelterSearch(service)
   } else if (service === 'Medical') {
     window.location.href = './services/Medical.html'
   } else if (service === 'Daycare') {
@@ -477,7 +476,6 @@ function openShelterSearch (service) {
 }
 
 function searchResults () {
-  //TODO: Resolve this function to display JSON Filtered Results
   // Assuming the JSON file is one level up from the current directory
   const jsonFilePath = '../../JSON/services.json'
 
@@ -488,101 +486,110 @@ function searchResults () {
   //check if service
   if (service === 'Food') {
   } else if (service === 'Shelter') {
-    const sex = urlParse.get('sex')
-    const veteran = urlParse.get('veteran')
-    const term = urlParse.get('term')
 
-    fetch('../../JSON/services.json')
+    fetch(jsonFilePath)
       .then(response => response.json())
       .then(data => {
-        const allBusinesses = data.shelters // Assuming "shelters" is the array of businesses in your JSON
+        // Handle the JSON data and display businesses
 
-        // Filter businesses where the "veteran" attribute is set to "Yes"
-        const veteranBusinesses = allBusinesses.filter(
-          business => business.attributes.veteran === 'Yes'
-        )
-
-        const shelterContainer = document.getElementById('shelterContainer')
-
-        shelterContainer.innerHTML = ''
-
-        if (veteranBusinesses.length > 0) {
-          veteranBusinesses.forEach(business => {
-            const businessDiv = document.createElement('div')
-            businessDiv.classList.add('shelterContainer')
-            businessDiv.innerHTML = `
-                    <h2>${business.businessName}</h2>
-                    <p><strong>Description:</strong> ${business.description}</p>
-                    <p><strong>Location:</strong> ${business.location.street}, ${business.location.city}, ${business.location.state} ${business.location.zipcode}</p>
-                    <p><strong>Contact Email:</strong> ${business.contacts.email}</p>
-                    <p><strong>Contact Phone:</strong> ${business.contacts.phone}</p>
-                    <p><strong>Website:</strong> <a href="${business.website}" target="_blank">${business.website}</a></p>
-                    <p><strong>Attributes:</strong> Veteran: ${business.attributes.veteran}, Sex: ${business.attributes.sex}, Term: ${business.attributes.term}</p>
-                `
-            shelterContainer.appendChild(businessDiv)
-          })
-        } else {
-          shelterContainer.textContent =
-            'No businesses found that cater to veterans.'
-        }
+        shelterSearch(data.shelters)
       })
-      .catch(error => console.error('Error fetching data:', error))
+      .catch(error => console.error('Error fetching JSON:', error))
+    fetch(jsonFilePath)
   } else if (service === 'Medical') {
   } else if (service === 'Daycare') {
   } else if (service === 'Bikehub') {
   } else if (service === 'Employment') {
   } else {
   }
-  // Handle other service types if needed
+}
+
+function shelterSearch (businesses) {
+  const urlParse = new URLSearchParams(window.location.search)
+
+  //shelter form varable values
+  var vet = urlParse.get('veteran')
+  var sex = urlParse.get('sex')
+  var term = urlParse.get('term')
+
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business => business.attributes.veteran === 'No'
+  )
+  var nonVeteranShelters = businesses.filter(
+    business => business.attributes.sex !== 'No'
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+
+  // Get the sheltersContainer div
+  var vetContainer = document.getElementById('sheltersContainer')
+
+  // Clear previous content in sheltersContainer
+  vetContainer.innerHTML = ''
+
+  // Display shelter information in sheltersContainer
+  allShelters.forEach(shelter => {
+    vetContainer.innerHTML += `
+              <div class="sheltersContainer">
+              <br>
+              <h4>${shelter.businessName}</h4>
+              <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+              <p>${shelter.contacts.phone}</p>
+              <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
+              <br>
+              <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+              <p class="descriptionParagraph">"${shelter.description}"</p>
+              <br>
+              <hr>
+          `
+  })
 }
 
 /* Registration/ SignUp */
-function loadJSON(filename = ''){
-    return JSON.parse(
-        fs.existsSync(filename)
-            ?fs.readFileSync(filename).toString()
-            :'null'
-    )
+function loadJSON (filename = '') {
+  return JSON.parse(
+    fs.existsSync(filename) ? fs.readFileSync(filename).toString() : 'null'
+  )
 }
 function saveJSON (filename = '', json = '"') {
   return fs.writeFileSync(filename, JSON.stringify(json, null, 2))
 }
-function writeJSONfile(){
-    const input = loadJSON('../JSON/login.json')
-    fetch('../pages/SignUp.html')
-    var login = {'email_address' : "edricksok101@gmail.com",
-    'password' : "password",
-    'first_name': "Edrick",
-    'last_name' : "Sok",
-    'age' : "20",
-    'sex' : "Male"
-    }
-    
-    ;[
-        {login}
-        
-].forEach(string => input.Volunteers.push(string))
-    
-    //input.Users.push(user)
-    saveJSON('../JSON/login.json',input)
+function writeJSONfile () {
+  const input = loadJSON('../JSON/login.json')
+  fetch('../pages/SignUp.html')
+  var login = {
+    email_address: 'edricksok101@gmail.com',
+    password: 'password',
+    first_name: 'Edrick',
+    last_name: 'Sok',
+    age: '20',
+    sex: 'Male'
+  }
+
+  ;[{ login }].forEach(string => input.Volunteers.push(string))
+
+  //input.Users.push(user)
+  saveJSON('../JSON/login.json', input)
 }
-function sendToVolEvents(){
-  var loginData;
-  fetchData();
-  var enteredEmail = document.getElementById("email_address").value
-  var first_password = document.getElementById("password").value
-  var confirm_password = document.getElementById("password2").value
+function sendToVolEvents () {
+  var loginData
+  fetchData()
+  var enteredEmail = document.getElementById('email_address').value
+  var first_password = document.getElementById('password').value
+  var confirm_password = document.getElementById('password2').value
   fetch('../JSON/login.json')
-        .then(response => response.json())
-        .then(data =>{
-            var JSONemail = findUserbyEmail(enteredEmail);
-            console.log("Email:", JSONemail);
-            if(first_password === confirm_password) {
-                openVolunteerPage(JSONemail);
-            } 
-        })
-        .catch(error => console.error('Error:', error));
-   } 
+    .then(response => response.json())
+    .then(data => {
+      var JSONemail = findUserbyEmail(enteredEmail)
+      console.log('Email:', JSONemail)
+      if (first_password === confirm_password) {
+        openVolunteerPage(JSONemail)
+      }
+    })
+    .catch(error => console.error('Error:', error))
+}
 /*function writeJsonfile(){
     console.log("Running.");
     var jsfile = require('../JSON/login.json');
