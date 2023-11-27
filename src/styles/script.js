@@ -340,6 +340,9 @@ function checkPassword(){
    function openVolunteerPage(email_address){
     var first_name = findFirstbyEmail(email_address)
     var last_name = findLastbyEmail(email_address)
+   function openVolunteerPage(email_address){
+    var first_name = findFirstbyEmail(email_address)
+    var last_name = findLastbyEmail(email_address)
   
     window.location.href =
       `../pages/VolunteerEvents.html?first_name=`+
@@ -347,8 +350,18 @@ function checkPassword(){
       '&last_name=' +
       encodeURIComponent(last_name)
    }
+
+   function findFirstbyEmail(email_address){
+    var index = indexOfEmail(email_address);
+    var file_first_name = loginData.Volunteers[index].first_name;
+    return file_first_name;
+   }
+   function findLastbyEmail(email_address){
+    var index = indexOfEmail(email_address);
+    var file_last_name = loginData.Volunteers[index].last_name;
+    return file_last_name;
+   }
    function findUserbyEmail(email_address){
-        console.log(email_address);
         for(var i = 0; i < loginData.Volunteers.length;i++){
             var volunteers = loginData.Volunteers[i];
             if(volunteers.email_address === email_address){
@@ -402,15 +415,6 @@ function checkPassword(){
             })
     }
 
-     //getting params from url
-     function getParams(){
-      var urlUserParams = new URLSearchParams(window.location.search)
-      var first_name = urlUserParams.get('first_name')
-      var last_name = urlUserParams.get('last_name')
-      document.getElementById("first_name").innerText = first_name
-      document.getElementById("last_name").innerText = last_name;
-    }
-    
 //onSubmit of form
 
 function submitForm () {
