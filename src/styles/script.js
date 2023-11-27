@@ -314,7 +314,7 @@ function checkPassword(){
    function openVolunteerPage(email_address){
     var first_name = findFirstbyEmail(email_address)
     var last_name = findLastbyEmail(email_address)
-  
+    
     window.location.href =
       `../pages/VolunteerEvents.html?first_name=`+
       encodeURIComponent(first_name) +
