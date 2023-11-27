@@ -1,3 +1,6 @@
+
+/* Navbar effects */
+var prevScrollpos = window.pageYOffset
 var prevScrollposNavbar = window.pageYOffset;
 var prevScrollposOtherServices = window.pageYOffset;
 var otherServicesElement = document.querySelector(".OtherServices");
@@ -79,7 +82,6 @@ if (serviceSelect.value === "Shelter") {
     shelterQuestions.style.display = "none";
     daycareQuestions.style.display = "none";
 }
-}
 
   //Shelter JSON Displayed
   function fetchAndDisplayShelters() {
@@ -153,8 +155,8 @@ function fetchAndDisplayDaycare () {
       })
       .catch(error => console.error('Error fetching JSON:', error))
   }
-
-    //Bikehub JSON Displayed
+  
+      //Bikehub JSON Displayed
     function fetchAndDisplayBikehub () {
       // Assuming the JSON file is one level up from the current directory
       const jsonFilePath = '../../JSON/services.json'
@@ -277,12 +279,24 @@ function fetchAndDisplayDaycare () {
         shelterDiv.innerHTML = content;
         sheltersContainer.appendChild(shelterDiv);
     });
-}
-
-//Open new tab for website
+    
+    //Open new tab for website
 function openInNewTab(url) {
     event.preventDefault();
     window.open(url, '_blank');
+}
+
+//Function to generate leaflet map
+function createMap(mapId, latitude, longitude, name) {
+  var map = L.map(mapId).setView([latitude, longitude], 15);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  var marker = L.marker([latitude, longitude]).addTo(map);
+  marker.bindPopup(name).openPopup();
+  
 }
 
 /* Login HTML Page*/
@@ -488,7 +502,7 @@ function displayVeteranFirst (businesses) {
         `
   })
 }
-
+    
 /* Registration/ SignUp */
 function loadJSON(filename = ''){
     return JSON.parse(
