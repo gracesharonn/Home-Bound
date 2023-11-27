@@ -621,42 +621,49 @@ h2 {
 .OtherServices ul {
     list-style: none;
 }
-
-.shelterContainer {
-    flex: 1;
-    display: flex;
-    margin-bottom: 20px; /* Adjust as needed */
-  }
   
-  .sheltersContainer {
-
+.shelterContainer {
+    display: flex;
+    max-width: 2000px;
+    width: 1300px;
     padding: 5px 40px 5px 40px;
     background-color: #FFE475;
     border-radius: 35px;
-    box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
-    width: 1300px;
-    max-width: 1500px;
-  }
-  
-  .sheltersContainer h4 {
-    background-color: transparent !important;
-    text-indent: 0;
-  }
-  
-  .sheltersContainer p {
-    background-color: transparent !important;
-    margin: 5px 0; /* Adjust as needed */
-  }
-  
-  .mapContainer {
+    box-shadow: -30px 30px 0px rgba(0, 0, 102, 1);
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+}
+
+.mapContainer {
     width: 500px; /* Adjust the width of the map container */
     height: 400px; /* Adjust the height of the map container */
-    margin-left: 40px; /* Adjust as needed */
-    margin-bottom: 50px;
-  }
+    border-radius: 35px;
+    box-shadow: -10px 10px 0px rgba(0, 0, 102, 1);
+    
+}
+
+
+
+.shelterInfo {
+    flex: 1; /* Take up remaining space */
+    padding: 5px 40px 5px 40px;
+    background-color: #FFE475;
+    display: block;
+    width: 780px;
+    height: auto;
+    max-width: 850px;
+}
+
+.shelterInfo h4 {
+    background-color: transparent !important;
+    text-indent: 0;
+}
+
+.shelterInfo p {
+    background-color: transparent !important;
+}
 
 .shelters-info {
-    
     animation-delay: 0.2s;
     animation: fade-in-up 0.5s;
     animation-fill-mode: both;
@@ -701,7 +708,6 @@ h2 {
 .shelters-info p:nth-child(7) { /* description */
     font-family: BenchNine; 
     font-size: 24px;
-    text-indent: 0;
 }
 
 .emailParagraph, .websiteParagraph {

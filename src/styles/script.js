@@ -129,8 +129,8 @@ function fetchAndDisplayDaycare () {
       container.classList.add('shelterContainer');
   
       // Create a div for shelter information
-      const shelterDiv = document.createElement('div');
-      shelterDiv.classList.add('sheltersContainer');
+      const shelterInfoDiv = document.createElement('div');
+      shelterInfoDiv.classList.add('shelterInfo');
   
       let content = `
         <br>
@@ -155,18 +155,18 @@ function fetchAndDisplayDaycare () {
         content = content.replace('<p class="websiteParagraph">', '').replace('</p>', '');
       }
   
-      shelterDiv.innerHTML = content;
+      shelterInfoDiv.innerHTML = content;
   
       // Append shelter information to the common container
-      container.appendChild(shelterDiv);
+      container.appendChild(shelterInfoDiv);
   
       // Create a div for the map
       const mapContainer = document.createElement('div');
       mapContainer.id = `map${index}`;
       mapContainer.classList.add('mapContainer');
   
-      // Append the map container to the shelter div
-      shelterDiv.appendChild(mapContainer);
+      // Append the map container to the shelter container
+      container.appendChild(mapContainer);
   
       // Append the common container to the sheltersContainer
       sheltersContainer.appendChild(container);
@@ -175,7 +175,6 @@ function fetchAndDisplayDaycare () {
       createMap(`map${index}`, `${shelter.location.latitude}`, `${shelter.location.longitude}`, `${shelter.businessName}`);
     });
   }
-
 
 //Function to generate leaflet map
 function createMap(mapId, latitude, longitude, name) {
