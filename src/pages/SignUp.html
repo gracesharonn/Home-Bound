@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
     <script>
-        const fs = require('fs')
+        const fs = require('fs');
         // JavaScript function to handle form submission
         function login() {
             // Get the input values
@@ -52,17 +52,15 @@
         
         function readWritejsonfile(){
             var login = {"emailAddress" : document.getElementById("contact_info").value,
-            "password" : document.getElementById("password").value}
-            var user = { 
+            "password" : document.getElementById("password").value, 
             "first_name" : document.getElementById("first_name").value,
             "last_name" : document.getElementById("last_name").value,
-            "age" : document.getElementById("age").value,
-            "sex" : document.getElementById("sex").value,
-            login
-            };
-            const input = loadJSON('./login.json')
-            ;[].forEach(string => input.Volunteers.push(user))
-            saveJSON('./login.json',input)
+            "age" : document.getElementById("age").value
+            //"sex" : document.getElementById("sex").value
+        }
+            const input = loadJSON('../JSON/login.json')
+            ;[{login}].forEach(string => input.Volunteers.push(user))
+            saveJSON('../JSON/login.json',input)
         }
 
             // You'll need to make an AJAX request to your C++ server here to check credentials and interact with the database.
@@ -87,9 +85,9 @@
                 <li><a href="./services/Shelters.html">Shelter</a></li>
                 <li><a href="./services/Medical.html">Medical</a></li>
                 <li><a href="./services/Daycare.html">Daycare</a></li>
-                <li><a>Bikehub</a></li>
-                <li><a>Employment</a></li>
-                <li><a>See All</a></li>
+                <li><a href="./services/Bikehub.html">Bikehub</a></li>
+                <li><a href="./services/Employment.html">Employment</a></li>
+                <li><a href="./services/SeeAll.html">See All</a></li>
             </ul>
         </nav>
     </div>
@@ -106,7 +104,7 @@
             <input type="text" id="first_name" name="first_name" placeholder="       First Name" required>
             <input type="text" id="last_name" name="last_name" placeholder="       Last Name" required>
             <input type="number" id="age" name="age" placeholder="       Age" required>
-            <input type="text" id="contact_info" name="contact_info" placeholder="       Contact Information" required>
+            <input type="text" id="contact_info" name="contact_info" placeholder="       Email" required>
             <input type="password" id="password" name="password" placeholder="       Password"required>
             <input type="button" id="submitCreateAcc" value="Register" onclick="readWritejsonfile()">
         </form>
