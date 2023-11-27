@@ -182,7 +182,7 @@ function checkPassword(){
             //data.find(u=>u.email_address === email_address && u.password === password);
             if(JSONpassword === enterPass) {
                 document.getElementById("VerificationMessage").innerText = 'Success';
-                openVolunteerPage(enterEmail);
+                openVolunteerPage(JSONemail);
             } else {
 
                 document.getElementById("VerificationMessage").innerText = 'Invalid email or password.';
@@ -191,13 +191,13 @@ function checkPassword(){
         .catch(error => console.error('Error:', error));
    } 
    function openVolunteerPage(email_address){
-    var first_name = findFirstbyEmail(email_address);
-    var last_name = findLastbyEmail(email_address);
+    var first_name = findFirstbyEmail(email_address)
+    var last_name = findLastbyEmail(email_address)
   
     window.location.href =
-      `./Services/VolunteerEvents.html?first_name=` +
+      `../pages/VolunteerEvents.html?first_name=`+
       encodeURIComponent(first_name) +
-      `&last_name=` +
+      '&last_name=' +
       encodeURIComponent(last_name)
    }
 
