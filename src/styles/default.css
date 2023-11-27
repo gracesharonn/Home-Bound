@@ -698,10 +698,10 @@ h2 {
 	transform: scale(11);
 }
   
-.shelterContainer {
+.sheltersContainer {
     display: flex;
     max-width: 2000px;
-    width: 1300px;
+    width: 1000px;
     padding: 5px 40px 5px 40px;
     background-color: #FFE475;
     border-radius: 35px;
@@ -718,9 +718,7 @@ h2 {
     
 }
 
-
-
-.shelterInfo {
+.sheltersInfo {
     flex: 1; /* Take up remaining space */
     padding: 5px 40px 5px 40px;
     background-color: #FFE475;
@@ -730,12 +728,12 @@ h2 {
     max-width: 850px;
 }
 
-.shelterInfo h4 {
+.sheltersInfo h4 {
     background-color: transparent !important;
     text-indent: 0;
 }
 
-.shelterInfo p {
+.sheltersInfo p {
     background-color: transparent !important;
 }
 

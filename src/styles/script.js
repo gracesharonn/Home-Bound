@@ -1,6 +1,3 @@
-
-/* Navbar effects */
-var prevScrollpos = window.pageYOffset
 var prevScrollposNavbar = window.pageYOffset;
 var prevScrollposOtherServices = window.pageYOffset;
 var otherServicesElement = document.querySelector(".OtherServices");
@@ -119,6 +116,7 @@ function showAdditionalQuestions () {
     medicalQuestions.style.display = 'none'
   }
 }
+
 
 //Shelter JSON Displayed
 function fetchAndDisplayShelters () {
@@ -331,19 +329,6 @@ function openInNewTab (url) {
   window.open(url, '_blank')
 }
 
-//Function to generate leaflet map
-function createMap(mapId, latitude, longitude, name) {
-  var map = L.map(mapId).setView([latitude, longitude], 15);
-
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
-  var marker = L.marker([latitude, longitude]).addTo(map);
-  marker.bindPopup(name).openPopup();
-  
-}
-
 /* Login HTML Page*/
 function checkPassword () {
   var loginData
@@ -551,7 +536,7 @@ function searchResults () {
   }
   // Handle other service types if needed
 }
-    
+
 /* Registration/ SignUp */
 function loadJSON(filename = ''){
     return JSON.parse(
@@ -599,6 +584,19 @@ function sendToVolEvents(){
         })
         .catch(error => console.error('Error:', error));
    } 
+
+   //Function to generate leaflet map
+function createMap(mapId, latitude, longitude, name) {
+  var map = L.map(mapId).setView([latitude, longitude], 15);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  var marker = L.marker([latitude, longitude]).addTo(map);
+  marker.bindPopup(name).openPopup();
+  
+}
 /*function writeJsonfile(){
     console.log("Running.");
     var jsfile = require('../JSON/login.json');
