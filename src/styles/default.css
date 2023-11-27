@@ -30,7 +30,7 @@
     font-size: 32px;
     font-weight: 700;
     background-color: transparent;
-    transition: top 1s ease-in-out;
+    transition: top 1.5s ease-in-out;
 }
   
 .NavigationBar ul {
@@ -665,16 +665,63 @@ h2 {
 
 .OtherServices {
     position: fixed;
-    font-size: 45px;
-    line-height: 115px;
     right: 0;
-    padding: 50px;
     text-align: right;
     list-style: none;
+    height: 100vh;
+    display: flex;
+    margin-top: -70px;
+    margin-right: -30px;
+    transition: right 3s ease-in-out;
 }
 
-.OtherServices ul {
-    list-style: none;
+.OtherServices nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.OtherServices nav ul li {
+    font-size: 30px;
+    font-family: sans-serif;
+    background-color: #FFE475;
+    border-radius: 35px;
+    letter-spacing: 0.1em;
+    width: 6.8em;
+    height: 1.6em;
+    line-height: 1.5em;
+    position: relative;
+    overflow: hidden;
+    margin: 1.2em;
+    cursor: pointer;
+    text-align: center;
+}
+
+.OtherServices a {
+    color: #F5F6FA !important;
+    background-color: transparent !important;
+}
+
+.OtherServices nav ul li span {
+    color: #F5F6FA;
+    background-color: transparent; /* Set background to transparent */
+    mix-blend-mode: difference;
+}
+
+.OtherServices nav ul li::before {
+    content: '';
+    position: absolute;
+    width: 1.5em;
+    height: inherit;
+    border-radius: 50%;
+    top: 0;
+    left: -2em;
+    transition: 1.5s ease-out;
+    background-color: #006;
+}
+
+
+.OtherServices nav ul li:hover::before {
+	transform: scale(11);
 }
 
 #sheltersContainer {
@@ -862,4 +909,67 @@ h2 {
 #bikeHubText p2 {
     font-size: 35px;
     margin-left: 40px;
+}
+
+/* Volunteer Events Page */
+
+.EventsContainer {
+    background-color: #006;
+    position: absolute;
+    width: 48%;
+    height: max-content;
+    text-align: center;
+    padding: 45px;
+    margin-left: 375px;
+}
+
+.EventsContainer h1 {
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.575px;
+    background-color: transparent;
+    color: #F5F6FA;
+}
+
+.EventBox {
+    background-color: #FFE475;
+    width: 100%;
+    padding: 30px 30px 10px 35px;
+    border-radius: 48px;
+    margin-top: 50px;
+    height: 170px;
+    text-align: left;
+    line-height: 2.5;
+}
+
+.EventBox p {
+    font-family: BenchNine;
+    font-size: 24px;
+    background-color: transparent;
+}
+
+h5 {
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.08px;
+    background-color: transparent;
+}
+
+h7 {
+    position: fixed;
+    bottom: 0;
+    right: 50px;
+    margin: 25px;
+    padding: 25px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 1.575px;
+    color: #006;
+    background-color: transparent;
 }
