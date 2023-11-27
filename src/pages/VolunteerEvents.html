@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
 </head>
 <body onload="getParams()">
-<div class="EventsBG">
+<div>
     <a id="top"></a>
-    <div class="NavigationBarEventsPage">
+    <div class="NavigationBar">
         <ul>
             <li><a href="../pages/index.html">Home</a></li>
             <li><a href="../pages/AboutUs.html">About Us</a></li>
@@ -28,15 +28,25 @@
                 <li><a href="./services/Shelters.html">Shelter</a></li>
                 <li><a href="./services/Medical.html">Medical</a></li>
                 <li><a href="./services/Daycare.html">Daycare</a></li>
-                <li><a href="./services/Bikehub.html">Bikehub</a></li>
-                <li><a href="./services/Employment.html">Employment</a></li>
-                <li><a href="./services/SeeAll.html">See All</a></li>
+                <li><a>Bikehub</a></li>
+                <li><a>Employment</a></li>
+                <li><a>See All</a></li>
             </ul>
         </nav>
     </div>
 
     <div class="EventsContainer">
-        <h1>Welcome, <span id="first_name" placeholder ="First Name"> </span><span id="last_name" placeholder ="Last Name"></span></h1>
+        <h1 id="welcomeMessage">Welcome, First Last Name</h1>
+        <div class="EventBox" id="EventInfo">
+            <h5>Event Title</h5>
+            <p>Event Description</p>
+            <h5> Time and Place</h5>
+        </div>
+        <div class="EventBox" id="EventInfo">
+            <h5>Event Title</h5>
+            <p>Event Description</p>
+            <h5> Time and Place</h5>
+        </div>
         <div class="EventBox" id="EventInfo">
             <h5>Event Title</h5>
             <p>Event Description</p>
@@ -60,8 +70,8 @@
     </div>
 
 
-    <h4>Sign Out</h4>
+    <h7>Sign Out</h7>
 </div>
 <script src="../styles/script.js"></script>
 </body>
-</html>
+</html> 
