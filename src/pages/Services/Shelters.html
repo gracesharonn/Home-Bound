@@ -5,35 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Bound</title>
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY" crossorigin="" />
     <link rel="stylesheet" href="../../styles/default.css">
+   
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
+
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo" crossorigin=""></script>
 </head>
+
 <body onload="fetchAndDisplayShelters()">
     <a id="top"></a>
     <div class="NavigationBar">
         <ul>
             <li><a href="../index.html">Home</a></li>
             <li><a href="../AboutUs.html">About Us</a></li>
+            <li><a href="#" id="ServicesButton">Services</a></li>
             <li><a href="../Volunteers.html">Volunteers</a></li> 
         </ul>
     </div>
 
-    <div class="OtherServices">
+    <div class="ServiceMenu">
+        <div id="x-button" class="x-button">X</div>
         <nav>
             <ul>
-              <li><span><a href="./Food.html">Food</a></span></li>
-              <li><span><a href="./Medical.html">Medical</a></span></li>
-              <li><span><a href="./Daycare.html">Daycare</a></span></li>
-              <li><span><a href="./Bikehub.html">Bikehub</a></span></li>
-              <li><span><a href="./Employment.html">Employment</a></span></li>
-              <li><span><a href="./SeeAll.html">All</a></span></li>
+                <li><a href="./Food.html">Food</a></li>
+                <li><a href="./Shelters.html">Shelter</a></li>
+                <li><a href="./Medical.html">Medical</a></li>
+                <li><a>Daycare</a></li>
+                <li><a>Bikehub</a></li>
+                <li><a>Employment</a></li>
+                <li><a>See All</a></li>
             </ul>
-          </nav>
+        </nav>
     </div>
-
+    
     <h2>Shelters</h2>
-    <div id="sheltersContainer" class="shelters-info"></div>
+    <div id="sheltersContainer" class="shelters-info"></div>  
     
 
     <div class="scroll-up">
@@ -44,8 +54,7 @@
           </svg>
         </a>
     </div>
-
     <script src="../../styles/script.js"></script>
-
+    
 </body>
 </html>

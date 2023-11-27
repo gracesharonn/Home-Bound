@@ -1,3 +1,6 @@
+
+/* Navbar effects */
+var prevScrollpos = window.pageYOffset
 var prevScrollposNavbar = window.pageYOffset;
 var prevScrollposOtherServices = window.pageYOffset;
 var otherServicesElement = document.querySelector(".OtherServices");
@@ -328,6 +331,19 @@ function openInNewTab (url) {
   window.open(url, '_blank')
 }
 
+//Function to generate leaflet map
+function createMap(mapId, latitude, longitude, name) {
+  var map = L.map(mapId).setView([latitude, longitude], 15);
+
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 19,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map);
+  var marker = L.marker([latitude, longitude]).addTo(map);
+  marker.bindPopup(name).openPopup();
+  
+}
+
 /* Login HTML Page*/
 function checkPassword () {
   var loginData
@@ -535,38 +551,54 @@ function searchResults () {
   }
   // Handle other service types if needed
 }
-
+    
 /* Registration/ SignUp */
-const fs = require('fs')
-const json = require('../JSON/login.json')
-console.log('hello')
-console.log(json, fs.readFileSync('../JSON/login.json').toString())
-writeJSONfile()
-function loadJSON (filename = '') {
-  return JSON.parse(
-    fs.existsSync(filename) ? fs.readFileSync(filename).toString() : 'null'
-  )
+function loadJSON(filename = ''){
+    return JSON.parse(
+        fs.existsSync(filename)
+            ?fs.readFileSync(filename).toString()
+            :'null'
+    )
 }
 function saveJSON (filename = '', json = '"') {
   return fs.writeFileSync(filename, JSON.stringify(json, null, 2))
 }
-function writeJSONfile () {
-  const input = loadJSON('../JSON/login.json')
-  fetch('../pages/SignUp.html')
-  var login = {
-    email_address: 'edricksok101@gmail.com',
-    password: 'password',
-    first_name: 'Edrick',
-    last_name: 'Sok',
-    age: '20',
-    sex: 'Male'
-  }
-
-  ;[{ login }].forEach(string => input.Volunteers.push(string))
-
-  //input.Users.push(user)
-  saveJSON('../JSON/login.json', input)
+function writeJSONfile(){
+    const input = loadJSON('../JSON/login.json')
+    fetch('../pages/SignUp.html')
+    var login = {'email_address' : "edricksok101@gmail.com",
+    'password' : "password",
+    'first_name': "Edrick",
+    'last_name' : "Sok",
+    'age' : "20",
+    'sex' : "Male"
+    }
+    
+    ;[
+        {login}
+        
+].forEach(string => input.Volunteers.push(string))
+    
+    //input.Users.push(user)
+    saveJSON('../JSON/login.json',input)
 }
+function sendToVolEvents(){
+  var loginData;
+  fetchData();
+  var enteredEmail = document.getElementById("email_address").value
+  var first_password = document.getElementById("password").value
+  var confirm_password = document.getElementById("password2").value
+  fetch('../JSON/login.json')
+        .then(response => response.json())
+        .then(data =>{
+            var JSONemail = findUserbyEmail(enteredEmail);
+            console.log("Email:", JSONemail);
+            if(first_password === confirm_password) {
+                openVolunteerPage(JSONemail);
+            } 
+        })
+        .catch(error => console.error('Error:', error));
+   } 
 /*function writeJsonfile(){
     console.log("Running.");
     var jsfile = require('../JSON/login.json');
