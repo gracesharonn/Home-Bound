@@ -490,14 +490,6 @@ function displayVeteranFirst (businesses) {
 }
 
 /* Registration/ SignUp */
-const fs = require('fs');
-const json = require('../JSON/login.json');
-console.log('hello')
-console.log(
-    json,
-    fs.readFileSync('../JSON/login.json').toString()
-)
-writeJSONfile()
 function loadJSON(filename = ''){
     return JSON.parse(
         fs.existsSync(filename)
@@ -527,6 +519,23 @@ function writeJSONfile(){
     //input.Users.push(user)
     saveJSON('../JSON/login.json',input)
 }
+function sendToVolEvents(){
+  var loginData;
+  fetchData();
+  var enteredEmail = document.getElementById("email_address").value
+  var first_password = document.getElementById("password").value
+  var confirm_password = document.getElementById("password2").value
+  fetch('../JSON/login.json')
+        .then(response => response.json())
+        .then(data =>{
+            var JSONemail = findUserbyEmail(enteredEmail);
+            console.log("Email:", JSONemail);
+            if(first_password === confirm_password) {
+                openVolunteerPage(JSONemail);
+            } 
+        })
+        .catch(error => console.error('Error:', error));
+   } 
 /*function writeJsonfile(){
     console.log("Running.");
     var jsfile = require('../JSON/login.json');
