@@ -312,85 +312,105 @@ function openInNewTab (url) {
 }
 
 /* Login HTML Page*/
-function checkPassword () {
-  var loginData
-  fetchData()
-  var enterEmail = document.getElementById('email_address').value
-  var enterPass = document.getElementById('password').value
+function checkPassword(){
+    var loginData;
+    fetchData();
+    var enterEmail = document.getElementById("email_address").value;
+    var enterPass = document.getElementById("password").value;
+    
+    //grab email and password from json file
+    fetch('../JSON/login.json')
+        .then(response => response.json())
+        .then(data =>{
+            var JSONemail = findUserbyEmail(enterEmail);
+            console.log("Email:", JSONemail);
+            var JSONpassword = findPasswordByEmail(JSONemail);
+            console.log(JSONpassword);
+            //data.find(u=>u.email_address === email_address && u.password === password);
+            if(JSONpassword === enterPass) {
+                document.getElementById("VerificationMessage").innerText = 'Success';
+                openVolunteerPage(JSONemail);
+            } else {
 
-  //grab email and password from json file
-  fetch('../JSON/login.json')
-    .then(response => response.json())
-    .then(data => {
-      var JSONemail = findUserbyEmail(enterEmail)
-      console.log('Email:', JSONemail)
-      var JSONpassword = findPasswordByEmail(JSONemail)
-      console.log(JSONpassword)
-      //data.find(u=>u.email_address === email_address && u.password === password);
-      if (JSONpassword === enterPass) {
-        document.getElementById('VerificationMessage').innerText = 'Success'
-        openVolunteerPage()
-      } else {
-        document.getElementById('VerificationMessage').innerText =
-          'Invalid email or password.'
-      }
-    })
-    .catch(error => console.error('Error:', error))
-}
-function openVolunteerPage () {
-  var first_name = document.querySelector('input[name="first_name"]').value
-  var last_name = document.querySelector('input[name="last_name"]').value
-
-  window.location.href =
-    `./services/VolunteerEvents.html?first_name=` +
-    encodeURIComponent(first_name) +
-    `&last_name=` +
-    encodeURIComponent(last_name)
-}
-function findUserbyEmail (email_address) {
-  console.log(email_address)
-  for (var i = 0; i < loginData.Volunteers.length; i++) {
-    var volunteers = loginData.Volunteers[i]
-    if (volunteers.email_address === email_address) {
-      return volunteers.email_address
+                document.getElementById("VerificationMessage").innerText = 'Invalid email or password.';
+            }
+        })
+        .catch(error => console.error('Error:', error));
+   } 
+   function openVolunteerPage(email_address){
+    var first_name = findFirstbyEmail(email_address)
+    var last_name = findLastbyEmail(email_address)
+  
+    window.location.href =
+      `../pages/VolunteerEvents.html?first_name=`+
+      encodeURIComponent(first_name) +
+      '&last_name=' +
+      encodeURIComponent(last_name)
+   }
+   function findUserbyEmail(email_address){
+        console.log(email_address);
+        for(var i = 0; i < loginData.Volunteers.length;i++){
+            var volunteers = loginData.Volunteers[i];
+            if(volunteers.email_address === email_address){
+                return volunteers.email_address;
+            }
+        }
+        return null;
+   }
+   
+   function findFirstbyEmail(email_address){
+    var index = indexOfEmail(email_address);
+    var file_first_name = loginData.Volunteers[index].first_name;
+    return file_first_name;
+   }
+   function findLastbyEmail(email_address){
+    var index = indexOfEmail(email_address);
+    var file_last_name = loginData.Volunteers[index].last_name;
+    return file_last_name;
+   }
+   
+   function indexOfEmail(email_address){
+        return loginData.Volunteers.findIndex(function(volunteer){
+            return volunteer.email_address == email_address;
+        });
+   }
+   function findPasswordByEmail(email_address){
+        var index = indexOfEmail(email_address);
+        var filePassword = loginData.Volunteers[index].password;
+        return filePassword;
+   }
+   function enterData(){
+        if(loginData.Volunteers && loginData.Volunteers.length > 0){
+            for(var i = 0;i < loginData.Volunteers.length;i++)
+            console.log(i+":", loginData.Volunteers[i]);
+        } else {
+            console.log('No volunteers found.');
+        }
     }
-  }
-  return null
-}
+   function fetchData(){
+        fetch('../JSON/login.json')
+            .then(response => {
+                if(!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                console.log('Data fetched:', data);
+                loginData = data;
+                enterData();
+            })
+    }
 
-function indexOfEmail (email_address) {
-  return loginData.Volunteers.findIndex(function (volunteer) {
-    return volunteer.email_address == email_address
-  })
-}
-function findPasswordByEmail (email_address) {
-  var index = indexOfEmail(email_address)
-  var filePassword = loginData.Volunteers[index].password
-  return filePassword
-}
-function enterData () {
-  if (loginData.Volunteers && loginData.Volunteers.length > 0) {
-    for (var i = 0; i < loginData.Volunteers.length; i++)
-      console.log(i + ':', loginData.Volunteers[i])
-  } else {
-    console.log('No volunteers found.')
-  }
-}
-function fetchData () {
-  fetch('../JSON/login.json')
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok')
-      }
-      return response.json()
-    })
-    .then(data => {
-      console.log('Data fetched:', data)
-      loginData = data
-      enterData()
-    })
-}
-
+     //getting params from url
+     function getParams(){
+      var urlUserParams = new URLSearchParams(window.location.search)
+      var first_name = urlUserParams.get('first_name')
+      var last_name = urlUserParams.get('last_name')
+      document.getElementById("first_name").innerText = first_name
+      document.getElementById("last_name").innerText = last_name;
+    }
+    
 //onSubmit of form
 
 function submitForm () {
