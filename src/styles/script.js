@@ -262,8 +262,6 @@ function displayAllData (data) {
   })
 }
 
-
-
 //Services Information Displayed
 function displayShelters (shelters) {
   const sheltersContainer = document.getElementById('sheltersContainer')
@@ -312,108 +310,109 @@ function openInNewTab (url) {
 }
 
 /* Login HTML Page*/
-function checkPassword(){
-    var loginData;
-    fetchData();
-    var enterEmail = document.getElementById("email_address").value;
-    var enterPass = document.getElementById("password").value;
-    
-    //grab email and password from json file
-    fetch('../JSON/login.json')
-        .then(response => response.json())
-        .then(data =>{
-            var JSONemail = findUserbyEmail(enterEmail);
-            console.log("Email:", JSONemail);
-            var JSONpassword = findPasswordByEmail(JSONemail);
-            console.log(JSONpassword);
-            //data.find(u=>u.email_address === email_address && u.password === password);
-            if(JSONpassword === enterPass) {
-                document.getElementById("VerificationMessage").innerText = 'Success';
-                openVolunteerPage(JSONemail);
-            } else {
+function checkPassword () {
+  var loginData
+  fetchData()
+  var enterEmail = document.getElementById('email_address').value
+  var enterPass = document.getElementById('password').value
 
-                document.getElementById("VerificationMessage").innerText = 'Invalid email or password.';
-            }
-        })
-        .catch(error => console.error('Error:', error));
-   } 
-   function openVolunteerPage(email_address){
+  //grab email and password from json file
+  fetch('../JSON/login.json')
+    .then(response => response.json())
+    .then(data => {
+      var JSONemail = findUserbyEmail(enterEmail)
+      console.log('Email:', JSONemail)
+      var JSONpassword = findPasswordByEmail(JSONemail)
+      console.log(JSONpassword)
+      //data.find(u=>u.email_address === email_address && u.password === password);
+      if (JSONpassword === enterPass) {
+        document.getElementById('VerificationMessage').innerText = 'Success'
+        openVolunteerPage(JSONemail)
+      } else {
+        document.getElementById('VerificationMessage').innerText =
+          'Invalid email or password.'
+      }
+    })
+    .catch(error => console.error('Error:', error))
+}
+function openVolunteerPage (email_address) {
+  var first_name = findFirstbyEmail(email_address)
+  var last_name = findLastbyEmail(email_address)
+  function openVolunteerPage (email_address) {
     var first_name = findFirstbyEmail(email_address)
     var last_name = findLastbyEmail(email_address)
-   function openVolunteerPage(email_address){
-    var first_name = findFirstbyEmail(email_address)
-    var last_name = findLastbyEmail(email_address)
-  
+
     window.location.href =
-      `../pages/VolunteerEvents.html?first_name=`+
+      `../pages/VolunteerEvents.html?first_name=` +
       encodeURIComponent(first_name) +
       '&last_name=' +
       encodeURIComponent(last_name)
-   }
+  }
 
-   function findFirstbyEmail(email_address){
-    var index = indexOfEmail(email_address);
-    var file_first_name = loginData.Volunteers[index].first_name;
-    return file_first_name;
-   }
-   function findLastbyEmail(email_address){
-    var index = indexOfEmail(email_address);
-    var file_last_name = loginData.Volunteers[index].last_name;
-    return file_last_name;
-   }
-   function findUserbyEmail(email_address){
-        for(var i = 0; i < loginData.Volunteers.length;i++){
-            var volunteers = loginData.Volunteers[i];
-            if(volunteers.email_address === email_address){
-                return volunteers.email_address;
-            }
-        }
-        return null;
-   }
-   
-   function findFirstbyEmail(email_address){
-    var index = indexOfEmail(email_address);
-    var file_first_name = loginData.Volunteers[index].first_name;
-    return file_first_name;
-   }
-   function findLastbyEmail(email_address){
-    var index = indexOfEmail(email_address);
-    var file_last_name = loginData.Volunteers[index].last_name;
-    return file_last_name;
-   }
-   
-   function indexOfEmail(email_address){
-        return loginData.Volunteers.findIndex(function(volunteer){
-            return volunteer.email_address == email_address;
-        });
-   }
-   function findPasswordByEmail(email_address){
-        var index = indexOfEmail(email_address);
-        var filePassword = loginData.Volunteers[index].password;
-        return filePassword;
-   }
-   function enterData(){
-        if(loginData.Volunteers && loginData.Volunteers.length > 0){
-            for(var i = 0;i < loginData.Volunteers.length;i++)
-            console.log(i+":", loginData.Volunteers[i]);
-        } else {
-            console.log('No volunteers found.');
-        }
+  function findFirstbyEmail (email_address) {
+    var index = indexOfEmail(email_address)
+    var file_first_name = loginData.Volunteers[index].first_name
+    return file_first_name
+  }
+  function findLastbyEmail (email_address) {
+    var index = indexOfEmail(email_address)
+    var file_last_name = loginData.Volunteers[index].last_name
+    return file_last_name
+  }
+  function findUserbyEmail (email_address) {
+    for (var i = 0; i < loginData.Volunteers.length; i++) {
+      var volunteers = loginData.Volunteers[i]
+      if (volunteers.email_address === email_address) {
+        return volunteers.email_address
+      }
     }
-   function fetchData(){
-        fetch('../JSON/login.json')
-            .then(response => {
-                if(!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                return response.json();
-            })
-            .then(data => {
-                console.log('Data fetched:', data);
-                loginData = data;
-                enterData();
-            })
+    return null
+  }
+
+  function findFirstbyEmail (email_address) {
+    var index = indexOfEmail(email_address)
+    var file_first_name = loginData.Volunteers[index].first_name
+    return file_first_name
+  }
+  function findLastbyEmail (email_address) {
+    var index = indexOfEmail(email_address)
+    var file_last_name = loginData.Volunteers[index].last_name
+    return file_last_name
+  }
+
+  function indexOfEmail (email_address) {
+    return loginData.Volunteers.findIndex(function (volunteer) {
+      return volunteer.email_address == email_address
+    })
+  }
+  function findPasswordByEmail (email_address) {
+    var index = indexOfEmail(email_address)
+    var filePassword = loginData.Volunteers[index].password
+    return filePassword
+  }
+  function enterData () {
+    if (loginData.Volunteers && loginData.Volunteers.length > 0) {
+      for (var i = 0; i < loginData.Volunteers.length; i++)
+        console.log(i + ':', loginData.Volunteers[i])
+    } else {
+      console.log('No volunteers found.')
     }
+  }
+  function fetchData () {
+    fetch('../JSON/login.json')
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok')
+        }
+        return response.json()
+      })
+      .then(data => {
+        console.log('Data fetched:', data)
+        loginData = data
+        enterData()
+      })
+  }
+}
 
 //onSubmit of form
 
@@ -425,8 +424,8 @@ function submitForm () {
   if (service === 'Food') {
     window.location.href = './services/Food.html'
   } else if (service === 'Shelter') {
-    //window.location.href = './services/Shelters.html'
-    openShelterSearch(service)
+    window.location.href = './services/Shelters.html'
+    //openShelterSearch(service)
   } else if (service === 'Medical') {
     window.location.href = './services/Medical.html'
   } else if (service === 'Daycare') {
@@ -437,10 +436,6 @@ function submitForm () {
     window.location.href = './services/Employment.html'
   } else {
   }
-  //gets value from a radio button veteran
-  //var isVet = document.querySelector('input[name="veteran"]:checked').value;
-
-  //window.location.href = `./services/Search.html?service=` + encodeURIComponent(isVet);
 
   return true
 }
@@ -462,7 +457,8 @@ function openShelterSearch (service) {
     encodeURIComponent(term)
 }
 
-function searchResults () { //TODO: Resolve this function to display JSON Filtered Results
+function searchResults () {
+  //TODO: Resolve this function to display JSON Filtered Results
   // Assuming the JSON file is one level up from the current directory
   const jsonFilePath = '../../JSON/services.json'
 
@@ -478,23 +474,24 @@ function searchResults () { //TODO: Resolve this function to display JSON Filter
     const term = urlParse.get('term')
 
     fetch('../../JSON/services.json')
-    .then(response => response.json())
-    .then(data => {
-      
-        const allBusinesses = data.shelters; // Assuming "shelters" is the array of businesses in your JSON
+      .then(response => response.json())
+      .then(data => {
+        const allBusinesses = data.shelters // Assuming "shelters" is the array of businesses in your JSON
 
         // Filter businesses where the "veteran" attribute is set to "Yes"
-        const veteranBusinesses = allBusinesses.filter(business => business.attributes.veteran === 'Yes');
-        
-        const shelterContainer = document.getElementById('shelterContainer');
-        
-        shelterContainer.innerHTML = '';
-        
+        const veteranBusinesses = allBusinesses.filter(
+          business => business.attributes.veteran === 'Yes'
+        )
+
+        const shelterContainer = document.getElementById('shelterContainer')
+
+        shelterContainer.innerHTML = ''
+
         if (veteranBusinesses.length > 0) {
-            veteranBusinesses.forEach(business => {
-                const businessDiv = document.createElement('div');
-                businessDiv.classList.add('shelterContainer')
-                businessDiv.innerHTML = `
+          veteranBusinesses.forEach(business => {
+            const businessDiv = document.createElement('div')
+            businessDiv.classList.add('shelterContainer')
+            businessDiv.innerHTML = `
                     <h2>${business.businessName}</h2>
                     <p><strong>Description:</strong> ${business.description}</p>
                     <p><strong>Location:</strong> ${business.location.street}, ${business.location.city}, ${business.location.state} ${business.location.zipcode}</p>
@@ -502,14 +499,15 @@ function searchResults () { //TODO: Resolve this function to display JSON Filter
                     <p><strong>Contact Phone:</strong> ${business.contacts.phone}</p>
                     <p><strong>Website:</strong> <a href="${business.website}" target="_blank">${business.website}</a></p>
                     <p><strong>Attributes:</strong> Veteran: ${business.attributes.veteran}, Sex: ${business.attributes.sex}, Term: ${business.attributes.term}</p>
-                `;
-                shelterContainer.appendChild(businessDiv);
-            });
+                `
+            shelterContainer.appendChild(businessDiv)
+          })
         } else {
-            shelterContainer.textContent = 'No businesses found that cater to veterans.';
+          shelterContainer.textContent =
+            'No businesses found that cater to veterans.'
         }
-    })
-    .catch(error => console.error('Error fetching data:', error));
+      })
+      .catch(error => console.error('Error fetching data:', error))
   } else if (service === 'Medical') {
   } else if (service === 'Daycare') {
   } else if (service === 'Bikehub') {
