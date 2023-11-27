@@ -49,16 +49,51 @@ function showAdditionalQuestions () {
   var serviceSelect = document.getElementById('service')
   var shelterQuestions = document.getElementById('shelterQuestions')
   var daycareQuestions = document.getElementById('daycareQuestions')
+  var employmentQuestions = document.getElementById('employmentQuestions')
+  var foodServiceQuestions = document.getElementById('foodServiceQuestions')
+  var medicalServiceQuestions = document.getElementById('medicalServiceQuestions')
 
   if (serviceSelect.value === 'Shelter') {
     shelterQuestions.style.display = 'block'
     daycareQuestions.style.display = 'none'
+    employmentQuestions.style.display = 'none'
+    foodServiceQuestions.style.display = 'none'
+    medicalServiceQuestions.style.display= 'none'
+
   } else if (serviceSelect.value === 'Daycare') {
-    daycareQuestions.style.display = 'block'
     shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'block'
+    employmentQuestions.style.display ='none'
+    foodServiceQuestions.style.display = 'none'
+    medicalServiceQuestions.style.display= 'none'
+
+  } else if (serviceSelect.value === 'Employment') {
+    shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'none'
+    employmentQuestions.style.display ='block'
+    foodServiceQuestions.style.display = 'none'
+    medicalServiceQuestions.style.display= 'none'
+
+  } else if (serviceSelect.value === 'Food') {
+    shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'none'
+    employmentQuestions.style.display = 'none'
+    foodServiceQuestions.style.display = 'block'
+    medicalServiceQuestions.style.display= 'none'
+
+  } else if (serviceSelect.value === 'Medical') {
+    shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'none'
+    employmentQuestions.style.display = 'none'
+    foodServiceQuestions.style.display = 'none'
+    medicalServiceQuestions.style.display= 'block'
+
   } else {
     shelterQuestions.style.display = 'none'
     daycareQuestions.style.display = 'none'
+    employmentQuestions.style.display = 'none'
+    foodServiceQuestions.style.display = 'none'
+    medicalServiceQuestions.style.display= 'none'
   }
 }
 
