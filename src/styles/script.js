@@ -1,34 +1,33 @@
-var prevScrollposNavbar = window.pageYOffset;
-var prevScrollposOtherServices = window.pageYOffset;
-var otherServicesElement = document.querySelector(".OtherServices");
-var navbarElement = document.querySelector(".NavigationBar");
+var prevScrollposNavbar = window.pageYOffset
+var prevScrollposOtherServices = window.pageYOffset
+var otherServicesElement = document.querySelector('.OtherServices')
+var navbarElement = document.querySelector('.NavigationBar')
 
 window.onscroll = function () {
-    var currentScrollPosNavbar = window.pageYOffset;
-    var currentScrollPosOtherServices = window.pageYOffset;
+  var currentScrollPosNavbar = window.pageYOffset
+  var currentScrollPosOtherServices = window.pageYOffset
 
-    // Navbar
-    if (prevScrollposNavbar > currentScrollPosNavbar) {
-        navbarElement.style.top = "0";
-    } else {
-        navbarElement.style.top = "-100px";
-    }
-    prevScrollposNavbar = currentScrollPosNavbar;
+  // Navbar
+  if (prevScrollposNavbar > currentScrollPosNavbar) {
+    navbarElement.style.top = '0'
+  } else {
+    navbarElement.style.top = '-100px'
+  }
+  prevScrollposNavbar = currentScrollPosNavbar
 
-    // Other Services
-    if (currentScrollPosOtherServices === 0) {
-        otherServicesElement.style.right = "0";
-    } else if (prevScrollposOtherServices < currentScrollPosOtherServices) {
-        // Add a delay before showing the Other Services element
-        setTimeout(function () {
-            otherServicesElement.style.right = "-30%";
-        }, 300);
-    } else {
-        otherServicesElement.style.right = "0";
-    }
-    prevScrollposOtherServices = currentScrollPosOtherServices;
-};
-
+  // Other Services
+  if (currentScrollPosOtherServices === 0) {
+    otherServicesElement.style.right = '0'
+  } else if (prevScrollposOtherServices < currentScrollPosOtherServices) {
+    // Add a delay before showing the Other Services element
+    setTimeout(function () {
+      otherServicesElement.style.right = '-30%'
+    }, 300)
+  } else {
+    otherServicesElement.style.right = '0'
+  }
+  prevScrollposOtherServices = currentScrollPosOtherServices
+}
 
 /* Services Menu Bar */
 document.addEventListener('DOMContentLoaded', function () {
@@ -68,55 +67,50 @@ function showAdditionalQuestions () {
   var serviceSelect = document.getElementById('service')
   var shelterQuestions = document.getElementById('shelterQuestions')
   var daycareQuestions = document.getElementById('daycareQuestions')
-  var employQuestions = document.getElementById('employmentQuestions')
-  var foodQuestions = document.getElementById('foodServiceQuestions')
-  var medicalQuestions = document.getElementById('medicalServiceQuestions')
+  var employmentQuestions = document.getElementById('employmentQuestions')
+  var foodServiceQuestions = document.getElementById('foodServiceQuestions')
+  var medicalServiceQuestions = document.getElementById(
+    'medicalServiceQuestions'
+  )
 
   if (serviceSelect.value === 'Shelter') {
     shelterQuestions.style.display = 'block'
     daycareQuestions.style.display = 'none'
-    employQuestions.style.display = 'none'
-    foodQuestions.style.display = 'none'
-    medicalQuestions.style.display = 'none'
+    employmentQuestions.style.display = 'none'
+    foodServiceQuestions.style.display = 'none'
+    medicalServiceQuestions.style.display = 'none'
   } else if (serviceSelect.value === 'Daycare') {
     shelterQuestions.style.display = 'none'
     daycareQuestions.style.display = 'block'
-    employQuestions.style.display = 'none'
-    foodQuestions.style.display = 'none'
-    medicalQuestions.style.display = 'none'
-  } else if (serviceSelect.value === 'Food') {
-    shelterQuestions.style.display = 'none'
-    daycareQuestions.style.display = 'none'
-    employQuestions.style.display = 'none'
-    foodQuestions.style.display = 'block'
-    medicalQuestions.style.display = 'none'
-  } else if (serviceSelect.value === 'Medical') {
-    shelterQuestions.style.display = 'none'
-    daycareQuestions.style.display = 'none'
-    employQuestions.style.display = 'none'
-    foodQuestions.style.display = 'none'
-    medicalQuestions.style.display = 'block'
-  } else if (serviceSelect.value === 'Bikehub') {
-    shelterQuestions.style.display = 'none'
-    daycareQuestions.style.display = 'none'
-    employQuestions.style.display = 'none'
-    foodQuestions.style.display = 'none'
-    medicalQuestions.style.display = 'none'
+    employmentQuestions.style.display = 'none'
+    foodServiceQuestions.style.display = 'none'
+    medicalServiceQuestions.style.display = 'none'
   } else if (serviceSelect.value === 'Employment') {
     shelterQuestions.style.display = 'none'
     daycareQuestions.style.display = 'none'
-    employQuestions.style.display = 'block'
-    foodQuestions.style.display = 'none'
-    medicalQuestions.style.display = 'none'
+    employmentQuestions.style.display = 'block'
+    foodServiceQuestions.style.display = 'none'
+    medicalServiceQuestions.style.display = 'none'
+  } else if (serviceSelect.value === 'Food') {
+    shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'none'
+    employmentQuestions.style.display = 'none'
+    foodServiceQuestions.style.display = 'block'
+    medicalServiceQuestions.style.display = 'none'
+  } else if (serviceSelect.value === 'Medical') {
+    shelterQuestions.style.display = 'none'
+    daycareQuestions.style.display = 'none'
+    employmentQuestions.style.display = 'none'
+    foodServiceQuestions.style.display = 'none'
+    medicalServiceQuestions.style.display = 'block'
   } else {
     shelterQuestions.style.display = 'none'
     daycareQuestions.style.display = 'none'
-    employQuestions.style.display = 'none'
-    foodQuestions.style.display = 'none'
-    medicalQuestions.style.display = 'none'
+    employmentQuestions.style.display = 'none'
+    foodServiceQuestions.style.display = 'none'
+    medicalServiceQuestions.style.display = 'none'
   }
 }
-
 
 //Shelter JSON Displayed
 function fetchAndDisplayShelters () {
@@ -282,6 +276,8 @@ function displayAllData (data) {
   })
 }
 
+fetchAndDisplayAll()
+
 //Services Information Displayed
 function displayShelters (shelters) {
   const sheltersContainer = document.getElementById('sheltersContainer')
@@ -358,80 +354,75 @@ function checkPassword () {
 function openVolunteerPage (email_address) {
   var first_name = findFirstbyEmail(email_address)
   var last_name = findLastbyEmail(email_address)
-  function openVolunteerPage (email_address) {
-    var first_name = findFirstbyEmail(email_address)
-    var last_name = findLastbyEmail(email_address)
 
-    window.location.href =
-      `../pages/VolunteerEvents.html?first_name=` +
-      encodeURIComponent(first_name) +
-      '&last_name=' +
-      encodeURIComponent(last_name)
+  window.location.href =
+    `../pages/VolunteerEvents.html?first_name=` +
+    encodeURIComponent(first_name) +
+    '&last_name=' +
+    encodeURIComponent(last_name)
+}
+function findUserbyEmail (email_address) {
+  console.log(email_address)
+  for (var i = 0; i < loginData.Volunteers.length; i++) {
+    var volunteers = loginData.Volunteers[i]
+    if (volunteers.email_address === email_address) {
+      return volunteers.email_address
+    }
   }
+  return null
+}
 
-  function findFirstbyEmail (email_address) {
-    var index = indexOfEmail(email_address)
-    var file_first_name = loginData.Volunteers[index].first_name
-    return file_first_name
+function findFirstbyEmail (email_address) {
+  var index = indexOfEmail(email_address)
+  var file_first_name = loginData.Volunteers[index].first_name
+  return file_first_name
+}
+function findLastbyEmail (email_address) {
+  var index = indexOfEmail(email_address)
+  var file_last_name = loginData.Volunteers[index].last_name
+  return file_last_name
+}
+
+function indexOfEmail (email_address) {
+  return loginData.Volunteers.findIndex(function (volunteer) {
+    return volunteer.email_address == email_address
+  })
+}
+function findPasswordByEmail (email_address) {
+  var index = indexOfEmail(email_address)
+  var filePassword = loginData.Volunteers[index].password
+  return filePassword
+}
+function enterData () {
+  if (loginData.Volunteers && loginData.Volunteers.length > 0) {
+    for (var i = 0; i < loginData.Volunteers.length; i++)
+      console.log(i + ':', loginData.Volunteers[i])
+  } else {
+    console.log('No volunteers found.')
   }
-  function findLastbyEmail (email_address) {
-    var index = indexOfEmail(email_address)
-    var file_last_name = loginData.Volunteers[index].last_name
-    return file_last_name
-  }
-  function findUserbyEmail (email_address) {
-    for (var i = 0; i < loginData.Volunteers.length; i++) {
-      var volunteers = loginData.Volunteers[i]
-      if (volunteers.email_address === email_address) {
-        return volunteers.email_address
+}
+function fetchData () {
+  fetch('../JSON/login.json')
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok')
       }
-    }
-    return null
-  }
-
-  function findFirstbyEmail (email_address) {
-    var index = indexOfEmail(email_address)
-    var file_first_name = loginData.Volunteers[index].first_name
-    return file_first_name
-  }
-  function findLastbyEmail (email_address) {
-    var index = indexOfEmail(email_address)
-    var file_last_name = loginData.Volunteers[index].last_name
-    return file_last_name
-  }
-
-  function indexOfEmail (email_address) {
-    return loginData.Volunteers.findIndex(function (volunteer) {
-      return volunteer.email_address == email_address
+      return response.json()
     })
-  }
-  function findPasswordByEmail (email_address) {
-    var index = indexOfEmail(email_address)
-    var filePassword = loginData.Volunteers[index].password
-    return filePassword
-  }
-  function enterData () {
-    if (loginData.Volunteers && loginData.Volunteers.length > 0) {
-      for (var i = 0; i < loginData.Volunteers.length; i++)
-        console.log(i + ':', loginData.Volunteers[i])
-    } else {
-      console.log('No volunteers found.')
-    }
-  }
-  function fetchData () {
-    fetch('../JSON/login.json')
-      .then(response => {
-        if (!response.ok) {
-          throw new Error('Network response was not ok')
-        }
-        return response.json()
-      })
-      .then(data => {
-        console.log('Data fetched:', data)
-        loginData = data
-        enterData()
-      })
-  }
+    .then(data => {
+      console.log('Data fetched:', data)
+      loginData = data
+      enterData()
+    })
+}
+
+//getting params from url
+function getParams () {
+  var urlUserParams = new URLSearchParams(window.location.search)
+  var first_name = urlUserParams.get('first_name')
+  var last_name = urlUserParams.get('last_name')
+  document.getElementById('first_name').innerText = first_name
+  document.getElementById('last_name').innerText = last_name
 }
 
 //onSubmit of form
@@ -439,46 +430,80 @@ function openVolunteerPage (email_address) {
 function submitForm () {
   var service = document.getElementById('service').value
 
-  //make funtionally workable by redirecting to other pages //TODO------------------------------------------------------------------------------
   //check if service
   if (service === 'Food') {
-    window.location.href = './services/Food.html'
+    window.location.href = './Services/Food.html'
   } else if (service === 'Shelter') {
-    window.location.href = './services/Shelters.html'
-    //openShelterSearch(service)
+    //window.location.href = './Services/Shelters.html'
+    openShelterSearch(service)
   } else if (service === 'Medical') {
-    window.location.href = './services/Medical.html'
+    //window.location.href = './Services/Medical.html'
+    openMedicalSearch(service)
   } else if (service === 'Daycare') {
-    window.location.href = './services/Daycare.html'
+    window.location.href = './Services/Daycare.html'
+    openDaycareSearch(service)
   } else if (service === 'Bikehub') {
-    window.location.href = './services/Bikehub.html'
+    window.location.href = './Services/Bikehub.html'
   } else if (service === 'Employment') {
-    window.location.href = './services/Employment.html'
+    window.location.href = './Services/Employment.html'
   } else {
+    window.location.href = './Services/SeeAll.html'
   }
-
-  return true
 }
 
 function openShelterSearch (service) {
   var sex = document.querySelector('input[name="sex"]:checked').value
   var isVet = document.querySelector('input[name="veteran"]:checked').value
-  var term = document.querySelector(`input[name="term"]:checked`).value
+  var term = document.querySelector('input[name="term"]:checked').value
 
   window.location.href =
-    `./services/Search.html` +
-    `?service=` +
+    `./services/Search.html?service=` +
     encodeURIComponent(service) +
     `&sex=` +
     encodeURIComponent(sex) +
     `&veteran=` +
-    encodeURIComponent(veteran) +
+    encodeURIComponent(isVet) +
     `&term=` +
     encodeURIComponent(term)
 }
 
+function openMedicalSearch (service) {
+  var sex = document.querySelector('input[name="sex"]:checked').value
+  var assist = document.querySelector(
+    'input[name="assistance_type"]:checked'
+  ).value
+  var drugs = document.querySelector('input[name="drugs"]:checked').value
+
+  window.location.href =
+    `./services/Search.html?service=` +
+    encodeURIComponent(service) +
+    `&sex=` +
+    encodeURIComponent(sex) +
+    `&assist=` +
+    encodeURIComponent(assist) +
+    `&drugs=` +
+    encodeURIComponent(drugs)
+}
+
+function openDaycareSearch (service) {
+  var sex = document.querySelector('input[name="sex"]:checked').value
+  var age = document.querySelector('input[name="child_age"]:checked').value
+  var diet = document.querySelector(
+    'input[name="dietary_requirements"]:checked'
+  ).value
+
+  window.location.href =
+    `./services/Search.html?service=` +
+    encodeURIComponent(service) +
+    `&sex=` +
+    encodeURIComponent(sex) +
+    `&age=` +
+    encodeURIComponent(age) +
+    `&diet=` +
+    encodeURIComponent(diet)
+}
+
 function searchResults () {
-  //TODO: Resolve this function to display JSON Filtered Results
   // Assuming the JSON file is one level up from the current directory
   const jsonFilePath = '../../JSON/services.json'
 
@@ -489,113 +514,921 @@ function searchResults () {
   //check if service
   if (service === 'Food') {
   } else if (service === 'Shelter') {
-    const sex = urlParse.get('sex')
-    const veteran = urlParse.get('veteran')
-    const term = urlParse.get('term')
+    // variables to check for
+    var vet = urlParse.get('veteran')
+    var sex = urlParse.get('sex')
+    var term = urlParse.get('term')
 
-    fetch('../../JSON/services.json')
+    //opt 1
+    if (vet === 'Yes' && sex === 'Male' && term === 'Short') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          shelterOpt1(data.shelters)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+      //opt 2
+    } else if (vet === 'Yes' && sex === 'Male' && term === 'Long') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          shelterOpt2(data.shelters)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 3
+    else if (vet === 'Yes' && sex === 'Female' && term === 'Short') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          shelterOpt3(data.shelters)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 4
+    else if (vet === 'Yes' && sex === 'Female' && term === 'Long') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          shelterOpt4(data.shelters)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 5
+    else if (vet === 'No' && sex === 'Male' && term === 'Short') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          shelterOpt5(data.shelters)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 6
+    else if (vet === 'No' && sex === 'Male' && term === 'Long') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          shelterOpt6(data.shelters)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 7
+    else if (vet === 'No' && sex === 'Female' && term === 'Short') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          shelterOpt7(data.shelters)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 8
+    else if (vet === 'No' && sex === 'Female' && term === 'Long') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          shelterOpt8(data.shelters)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 9 catch
+    else {
+      fetchAndDisplayShelters()
+    }
+  } else if (service === 'Medical') {
+    // variables to check for
+    var drugs = urlParse.get(drugs)
+    var sex = urlParse.get(sex)
+    var assist = urlParse.get(assist)
+    //opt 1
+    if (drugs === 'Yes' && sex === 'Male' && assist === 'Mental') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          MedicalOpt1(data.medical)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 2
+    else if (drugs === 'Yes' && sex === 'Male' && assist === 'Physical') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          MedicalOpt2(data.medical)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 3
+    else if (drugs === 'Yes' && sex === 'Female' && assist === 'Mental') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          MedicalOpt3(data.medical)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 4
+    else if (drugs === 'Yes' && sex === 'Female' && assist === 'Physical') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          MedicalOpt4(data.medical)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 5
+    else if (drugs === 'No' && sex === 'Male' && assist === 'Mental') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          MedicalOpt5(data.medical)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 6
+    else if (drugs === 'No' && sex === 'Male' && assist === 'Physical') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          MedicalOpt6(data.medical)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 7
+    else if (drugs === 'No' && sex === 'Female' && assist === 'Mental') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          MedicalOpt7(data.medical)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 8
+    else if (drugs === 'No' && sex === 'Female' && assist === 'Physical') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          MedicalOpt8(data.medical)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 9
+    else {
+      fetchAndDisplayMedical()
+    }
+  } else if (service === 'Daycare') {
+    // variables to check for
+    var age = urlParse.get('age')
+    var sex = urlParse.get('sex')
+    var diet = urlParse.get('diet')
+
+    //opt 1
+    if (diet === 'Yes' && sex === 'Male' && age === 'Yes') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          DaycareOpt1(data.daycare)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 2
+    else if (diet === 'Yes' && sex === 'Male' && age === 'No') {
+      fetch(jsonFilePath)
       .then(response => response.json())
       .then(data => {
-        const allBusinesses = data.shelters // Assuming "shelters" is the array of businesses in your JSON
+        // Handle the JSON data and display businesses
 
-        // Filter businesses where the "veteran" attribute is set to "Yes"
-        const veteranBusinesses = allBusinesses.filter(
-          business => business.attributes.veteran === 'Yes'
-        )
-
-        const shelterContainer = document.getElementById('shelterContainer')
-
-        shelterContainer.innerHTML = ''
-
-        if (veteranBusinesses.length > 0) {
-          veteranBusinesses.forEach(business => {
-            const businessDiv = document.createElement('div')
-            businessDiv.classList.add('shelterContainer')
-            businessDiv.innerHTML = `
-                    <h2>${business.businessName}</h2>
-                    <p><strong>Description:</strong> ${business.description}</p>
-                    <p><strong>Location:</strong> ${business.location.street}, ${business.location.city}, ${business.location.state} ${business.location.zipcode}</p>
-                    <p><strong>Contact Email:</strong> ${business.contacts.email}</p>
-                    <p><strong>Contact Phone:</strong> ${business.contacts.phone}</p>
-                    <p><strong>Website:</strong> <a href="${business.website}" target="_blank">${business.website}</a></p>
-                    <p><strong>Attributes:</strong> Veteran: ${business.attributes.veteran}, Sex: ${business.attributes.sex}, Term: ${business.attributes.term}</p>
-                `
-            shelterContainer.appendChild(businessDiv)
-          })
-        } else {
-          shelterContainer.textContent =
-            'No businesses found that cater to veterans.'
-        }
+        DaycareOpt2(data.daycare)
       })
-      .catch(error => console.error('Error fetching data:', error))
-  } else if (service === 'Medical') {
-  } else if (service === 'Daycare') {
+      .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 3
+    else if (diet === 'Yes' && sex === 'Female' && age === 'Yes') {
+      fetch(jsonFilePath)
+      .then(response => response.json())
+      .then(data => {
+        // Handle the JSON data and display businesses
+
+        DaycareOpt3(data.daycare)
+      })
+      .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 4
+    else if (diet === 'Yes' && sex === 'Female' && age === 'No') {
+      fetch(jsonFilePath)
+      .then(response => response.json())
+      .then(data => {
+        // Handle the JSON data and display businesses
+
+        DaycareOpt4(data.daycare)
+      })
+      .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 5
+    else if (diet === 'No' && sex === 'Male' && age === 'Yes') {
+      fetch(jsonFilePath)
+      .then(response => response.json())
+      .then(data => {
+        // Handle the JSON data and display businesses
+
+        DaycareOpt5(data.daycare)
+      })
+      .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 6
+    else if (diet === 'No' && sex === 'Male' && age === 'No') {
+      fetch(jsonFilePath)
+      .then(response => response.json())
+      .then(data => {
+        // Handle the JSON data and display businesses
+
+        DaycareOpt6(data.daycare)
+      })
+      .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 7
+    else if (diet === 'No' && sex === 'Female' && age === 'Yes') {
+      fetch(jsonFilePath)
+      .then(response => response.json())
+      .then(data => {
+        // Handle the JSON data and display businesses
+
+        DaycareOpt7(data.daycare)
+      })
+      .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 8
+    else if (diet === 'No' && sex === 'Female' && age === 'No') {
+      fetch(jsonFilePath)
+      .then(response => response.json())
+      .then(data => {
+        // Handle the JSON data and display businesses
+
+        DaycareOpt8(data.daycare)
+      })
+      .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 9
+    else {
+      fetchAndDisplayDaycare()
+    }
   } else if (service === 'Bikehub') {
   } else if (service === 'Employment') {
   } else {
   }
-  // Handle other service types if needed
+}
+
+function DaycareOpt1 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet === 'Yes' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age === 'Yes')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet !== 'Yes' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age !== 'Yes')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function DaycareOpt2 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet === 'Yes' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age === 'No')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet !== 'Yes' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age !== 'No')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function DaycareOpt3 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet === 'Yes' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age === 'Yes')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet !== 'Yes' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age !== 'Yes')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function DaycareOpt4 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet === 'Yes' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age === 'No')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet !== 'Yes' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age !== 'No')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function DaycareOpt5 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet === 'No' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age === 'Yes')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet !== 'No' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age !== 'Yes')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function DaycareOpt6 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet === 'No' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age === 'No')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet !== 'No' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age !== 'No')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function DaycareOpt7 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet === 'No' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age === 'Yes')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet !== 'No' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age !== 'Yes')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function DaycareOpt8 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet === 'No' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age === 'No')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.diet !== 'No' ||
+      (business.attributes.diet === 'n/a' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' && 
+      business.attributes.age !== 'No')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function MedicalOpt1 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs === 'Yes' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist === 'Mental')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs !== 'Yes' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist !== 'Mental')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function MedicalOpt2 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs === 'Yes' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist === 'Physical')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs !== 'Yes' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist !== 'Physical')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function MedicalOpt3 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs === 'Yes' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist === 'Mental')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs !== 'Yes' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist !== 'Mental')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function MedicalOpt4 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs === 'Yes' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist === 'Physical')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs !== 'Yes' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist !== 'Physical')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function MedicalOpt5 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs === 'No' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist === 'Mental')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs !== 'No' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist !== 'Mental')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function MedicalOpt6 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs === 'No' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist === 'Physical')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs !== 'No' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist !== 'Physical')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function MedicalOpt7 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs === 'No' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist === 'Mental')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs !== 'No' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist !== 'Mental')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function MedicalOpt8 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs === 'No' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist === 'Physical')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.drugs !== 'No' ||
+      (business.attributes.drugs === 'n/a' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.assist !== 'Physical')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function shelterOpt1 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran === 'Yes' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.term === 'Short')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran !== 'Yes' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.term !== 'Short')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function shelterOpt2 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran === 'Yes' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.term === 'Long')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran !== 'Yes' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.term !== 'Long')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function shelterOpt3 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran === 'Yes' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.term === 'Short')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran !== 'Yes' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.term !== 'Short')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function shelterOpt4 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran === 'Yes' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.term === 'Long')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran !== 'Yes' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.term !== 'Long')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+function shelterOpt5 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran === 'No' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.term === 'Short')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran !== 'No' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.term !== 'Short')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+function shelterOpt6 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran === 'No' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.term === 'Long')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran !== 'No' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.term !== 'Long')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function shelterOpt7 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran === 'No' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.term === 'Short')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran !== 'No' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' &&
+        business.attributes.term !== 'Short')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+function shelterOpt8 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran === 'No' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.term === 'Long')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      (business.attributes.veteran !== 'No' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.term !== 'Long')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  searchResultsOut(allShelters)
+}
+
+// function to ouput the filtered business
+function searchResultsOut (allShelters) {
+  // Get the sheltersContainer div
+  var vetContainer = document.getElementById('sheltersContainer')
+
+  // Clear previous content in sheltersContainer
+  vetContainer.innerHTML = ''
+
+  // Display shelter information in sheltersContainer
+  allShelters.forEach(shelter => {
+    vetContainer.innerHTML += `
+            <div class="sheltersContainer">
+            <br>
+            <h4>${shelter.businessName}</h4>
+            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+            <p>${shelter.contacts.phone}</p>
+            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
+            <br>
+            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+            <p class="descriptionParagraph">"${shelter.description}"</p>
+            <br>
+            <hr>
+        `
+  })
 }
 
 /* Registration/ SignUp */
-function loadJSON(filename = ''){
-    return JSON.parse(
-        fs.existsSync(filename)
-            ?fs.readFileSync(filename).toString()
-            :'null'
-    )
+function loadJSON (filename = '') {
+  return JSON.parse(
+    fs.existsSync(filename) ? fs.readFileSync(filename).toString() : 'null'
+  )
 }
 function saveJSON (filename = '', json = '"') {
   return fs.writeFileSync(filename, JSON.stringify(json, null, 2))
 }
-function writeJSONfile(){
-    const input = loadJSON('../JSON/login.json')
-    fetch('../pages/SignUp.html')
-    var login = {'email_address' : "edricksok101@gmail.com",
-    'password' : "password",
-    'first_name': "Edrick",
-    'last_name' : "Sok",
-    'age' : "20",
-    'sex' : "Male"
-    }
-    
-    ;[
-        {login}
-        
-].forEach(string => input.Volunteers.push(string))
-    
-    //input.Users.push(user)
-    saveJSON('../JSON/login.json',input)
+function writeJSONfile () {
+  const input = loadJSON('../JSON/login.json')
+  fetch('../pages/SignUp.html')
+  var login = {
+    email_address: 'edricksok101@gmail.com',
+    password: 'password',
+    first_name: 'Edrick',
+    last_name: 'Sok',
+    age: '20',
+    sex: 'Male'
+  }
+
+  ;[{ login }].forEach(string => input.Volunteers.push(string))
+
+  //input.Users.push(user)
+  saveJSON('../JSON/login.json', input)
 }
-function sendToVolEvents(){
-  var loginData;
-  fetchData();
-  var enteredEmail = document.getElementById("email_address").value
-  var first_password = document.getElementById("password").value
-  var confirm_password = document.getElementById("password2").value
+function sendToVolEvents () {
+  var loginData
+  fetchData()
+  var enteredEmail = document.getElementById('email_address').value
+  var first_password = document.getElementById('password').value
+  var confirm_password = document.getElementById('password2').value
   fetch('../JSON/login.json')
-        .then(response => response.json())
-        .then(data =>{
-            var JSONemail = findUserbyEmail(enteredEmail);
-            console.log("Email:", JSONemail);
-            if(first_password === confirm_password) {
-                openVolunteerPage(JSONemail);
-            } 
-        })
-        .catch(error => console.error('Error:', error));
-   } 
-
-   //Function to generate leaflet map
-function createMap(mapId, latitude, longitude, name) {
-  var map = L.map(mapId).setView([latitude, longitude], 15);
-
-  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-      maxZoom: 19,
-      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-  }).addTo(map);
-  var marker = L.marker([latitude, longitude]).addTo(map);
-  marker.bindPopup(name).openPopup();
-  
+    .then(response => response.json())
+    .then(data => {
+      var JSONemail = findUserbyEmail(enteredEmail)
+      console.log('Email:', JSONemail)
+      if (first_password === confirm_password) {
+        openVolunteerPage(JSONemail)
+      }
+    })
+    .catch(error => console.error('Error:', error))
 }
 /*function writeJsonfile(){
     console.log("Running.");
