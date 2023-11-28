@@ -18,7 +18,8 @@
       "website": "https://www.thearkofrefuge.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -39,7 +40,8 @@
       "website": "https://sacfamilypromise.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -60,7 +62,8 @@
       "website": "https://sacramento.salvationarmy.org/sacramento_metro/",
       "attributes": {
         "veteran": "Yes",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -81,7 +84,8 @@
       "website": "http://www.francishousecenter.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -102,7 +106,8 @@
       "website": "https://www.cottagehousing.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -123,7 +128,8 @@
       "website": "https://saintjohnsprogram.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "Female"
+        "sex": "Female",
+        "term": "Short"
       }
     },
     {
@@ -144,7 +150,8 @@
       "website": "https://ugmsac.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "Male"
+        "sex": "Male",
+        "term": "Short"
       }
     },
     {
@@ -165,7 +172,8 @@
       "website": "https://www.voa-ncnn.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "Male"
+        "sex": "Male",
+        "term": "Long"
       }
     },
     {
@@ -186,7 +194,8 @@
       "website": "https://www.nextmovesacramento.org/emergency_family_shelter/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -207,7 +216,8 @@
       "website": "https://www.shelterlistings.org/details/37861/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -228,7 +238,8 @@
       "website": "https://guadalupe-sacramento.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -249,7 +260,8 @@
       "website": "https://www.wakingthevillage.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -270,7 +282,8 @@
       "website": "https://www.cottagehousing.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -291,7 +304,8 @@
       "website": "https://www.mutualhousing.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Long"
       }
     },
     {
@@ -312,7 +326,8 @@
       "website": "https://norcalecs.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -333,7 +348,8 @@
       "website": "https://www.shra.org/ehv/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     },
     {
@@ -354,7 +370,8 @@
       "website": "https://lacooperativa.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "term": "Short"
       }
     }
   ],
@@ -377,7 +394,9 @@
       "website": "https://www.firstumcsac.org/pilgrimage",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -398,7 +417,9 @@
       "website": "https://sacloaves.org/programs-services/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "Yes"
       }
     },
     {
@@ -419,7 +440,9 @@
       "website": "https://www.feedsachomeless.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -440,7 +463,9 @@
       "website": "https://www.neighborprogram.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -461,7 +486,9 @@
       "website": "https://sacramento.salvationarmy.org/sacramento_metro/",
       "attributes": {
         "veteran": "Yes",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -482,7 +509,9 @@
       "website": "https://www.shilohbaptistchurch-sacramento.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Family",
+        "allergies": "No"
       }
     },
     {
@@ -503,7 +532,9 @@
       "website": "https://www.yxpunite.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -524,7 +555,9 @@
       "website": "http://newstbethel.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Family",
+        "allergies": "No"
       }
     },
     {
@@ -545,7 +578,9 @@
       "website": "https://rivercityfoodbank.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -566,7 +601,9 @@
       "website": "https://www.ssipfoodcloset.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -587,7 +624,9 @@
       "website": "https://www.dozenterpryz.org/foodandclothescloset",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     }
   ],
@@ -609,8 +648,9 @@
       },
       "website": "",
       "attributes": {
-        "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -631,7 +671,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -652,7 +694,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -673,7 +717,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -694,7 +740,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -715,7 +763,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -736,7 +786,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "",
+        "assistance": "Physical"
       }
     },
     {
@@ -757,7 +809,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -778,7 +832,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -799,7 +855,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Mental"
       }
     },
     {
@@ -820,7 +878,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Mental"
       }
     },
     {
@@ -841,7 +901,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -862,7 +924,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "",
+        "assistance": "Physical"
       }
     },
     {
@@ -883,7 +947,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -904,7 +970,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -925,7 +993,9 @@
       "website": "https://www.sutterhealth.org/smcs",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "Yes",
+        "assistance": "Mental"
       }
     },
     {
@@ -946,7 +1016,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "Yes",
+        "assistance": "Physical"
       }
     },
     {
@@ -967,7 +1039,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -985,7 +1059,13 @@
         "email": "",
         "phone": "916-443-3299"
       },
-      "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/"
+      "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/",
+      "attributes": {
+        "veteran": "No",
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
+      }
     }
   ],
   "daycare": [
@@ -1007,7 +1087,9 @@
       "website": "https://www.fmccc.net/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1028,7 +1110,9 @@
       "website": "https://shiloharmscdc.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1049,7 +1133,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "diet": "n/a",
+        "age": "No"
       }
     },
     {
@@ -1070,7 +1156,9 @@
       "website": "https://www.rainbowdaycareinc.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1092,7 +1180,9 @@
       "website": "https://www.fmccc.net/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1113,7 +1203,9 @@
       "website": "https://shiloharmscdc.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1134,7 +1226,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "diet": "n/a",
+        "age": "No"
       }
     },
     {
@@ -1155,7 +1249,9 @@
       "website": "https://www.rainbowdaycareinc.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1176,7 +1272,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "diet": "n/a",
+        "age": "No"
       }
     }
   ],

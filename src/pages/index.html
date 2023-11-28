@@ -77,6 +77,12 @@
               <input type="radio" name="veteran" value="No">No
               <br>
               <hr>
+
+              <label required id="term">Are you seeking long term or short term Shelters?</label>
+              <input type="radio" name="term" value="Long">Long
+              <input type="radio" name="term" value="Short">Short
+              <br>
+              <hr>
               
             </div>
     
@@ -97,20 +103,18 @@
               <br>
               <hr>
     
-              <!-- Day care Question 6 -->
-              <label for="need_transportation">Are you in need of transportation services to and from the daycare?</label>
-              <input type="radio" name="need_transportation" value="Yes">Yes
-              <input type="radio" name="need_transportation" value="No">No
-              <br>
-              <hr>
-    
             </div>
     
             <!-- Employment Service Questions -->
             <div id="employmentQuestions" style="display: none;">
-              <label for="currently_employed">Are you currently employed?</label>
-              <input type="radio" name="currently_employed" value="Yes">Yes
-              <input type="radio" name="currently_employed" value="No">No
+              <label for="housing">Do you have mailing address?</label>
+              <input type="radio" name="housing" value="Yes">Yes
+              <input type="radio" name="housing" value="No">No
+              <br>
+              <hr>
+              <label for="crime">Have you been convited of any crimes?</label>
+              <input type="radio" name="crime" value="Yes">Yes
+              <input type="radio" name="crime" value="No">No
               <br>
               <hr>
     
@@ -121,20 +125,29 @@
             <div id="foodServiceQuestions" style="display: none;">
     
               <!-- Food Question 1 -->
-              <label for="previously_accessed">Have you previously accessed food services for the homeless?</label>
-              <input type="radio" name="previously_accessed" value="Yes">Yes
-              <input type="radio" name="previously_accessed" value="No">No
+              <label for="fam_status">Meal for Family or Individual</label>
+              <input type="radio" name="fam_status" value="Individual">Individual
+              <input type="radio" name="fam_status" value="Family">Family
               <br>
               <hr>
+              <label for="allergies">Any food allergies</label>
+              <input type="radio" name="allergies" value="Yes">Yes
+              <input type="radio" name="allergies" value="No">No
+              <br>
     
              
             </div>
     
             <!-- Medical Service Questions -->
             <div id="medicalServiceQuestions" style="display: none;">
-              <label for="homelessness">Are you currently experiencing homelessness?</label>
-              <input type="radio" name="homelessness" value="Yes">Yes
-              <input type="radio" name="homelessness" value="No">No
+              <label for="assistance_type">What primary assitance are you looking for?</label>
+              <input type="radio" name="assistance_type" value="Mental">Mental
+              <input type="radio" name="assistance_type" value="Physical">Physical
+              <br>
+              <hr>
+              <label for="drugs">Do you have any dependences on drugs?</label>
+              <input type="radio" name="drugs" value="Yes">Yes
+              <input type="radio" name="drugs" value="No">No
               <br>
               <hr>
     
