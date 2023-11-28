@@ -697,6 +697,15 @@ h2 {
 .OtherServices nav ul li:hover::before {
 	transform: scale(11);
 }
+
+.mapContainer {
+    border-radius: 35px;
+    box-shadow: -10px 10px 0px rgba(0, 0, 102, 1);
+    width: 500px; /* Adjust the width of the map container */
+    height: 400px; /* Adjust the height of the map container */
+}
+
+
   
 .shelterContainer {
     display: flex;
@@ -709,15 +718,6 @@ h2 {
     box-shadow: -30px 30px 0px rgba(0, 0, 102, 1);
     justify-content: center; /* Center content horizontally */
     align-items: center;
-}
-
-.mapContainer {
-    border-radius: 35px;
-    box-shadow: -10px 10px 0px rgba(0, 0, 102, 1);
-    width: 500px; /* Adjust the width of the map container */
-    height: 400px; /* Adjust the height of the map container */
-    
-    
 }
 
 
@@ -788,31 +788,41 @@ h2 {
     font-size: 24px;
 }
 
-#servicesContainer {
-    padding: 0 100px 0 100px;
-}
-
-.servicesContainer {
+.serviceContainer {
+    display: flex;
+    max-width: 2000px;
+    min-height: 450px;
+    width: 1300px;
     padding: 5px 40px 5px 40px;
     background-color: #FFE475;
     border-radius: 35px;
-    box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
+    box-shadow: -30px 30px 0px rgba(0, 0, 102, 1);
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+}
+
+
+
+.serviceInfo {
+    flex: 1; /* Take up remaining space */
+    padding: 5px 40px 5px 40px;
+    background-color: #FFE475;
     display: block;
     width: 780px;
     height: auto;
     max-width: 850px;
 }
 
-.servicesContainer h4 {
+.serviceInfo h4 {
     background-color: transparent !important;
     text-indent: 0;
 }
 
-.servicesContainer p {
+.serviceInfo p {
     background-color: transparent !important;
 }
 
-.allServices-info {
+.services-info {
     animation-delay: 0.2s;
     animation: fade-in-up 0.5s;
     animation-fill-mode: both;
@@ -824,37 +834,37 @@ h2 {
     text-indent: 40px;
 }
 
-.allServices-info > div {
+.services-info > div {
     margin-bottom: 65px;
 }
 
-.allServices-info hr {
+.services-info hr {
     display: none;
 }
 
-.allServices-info p:nth-child(3) { /* address */
+.services-info p:nth-child(3) { /* address */
     font-family: BenchNine; 
     font-size: 30px;
     font-weight: 700;
 }
 
-.allServices-info p:nth-child(4) { /* phone number */
+.services-info p:nth-child(4) { /* phone number */
     font-family: BenchNine; 
     font-size: 24px;
     font-weight: 700;
 }
 
-.allServices-info p:nth-child(5) { /* email */
+.services-info p:nth-child(5) { /* email */
     font-family: BenchNine; 
     font-size: 24px;
 }
 
-.allServices-info p:nth-child(6) { /* website */
+.services-info p:nth-child(6) { /* website */
     font-family: BenchNine; 
     font-size: 24px;
 }
 
-.allServices-info p:nth-child(7) { /* description */
+.services-info p:nth-child(7) { /* description */
     font-family: BenchNine; 
     font-size: 24px;
 }
