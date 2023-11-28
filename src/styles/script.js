@@ -319,7 +319,9 @@ function checkPassword(){
       `../pages/VolunteerEvents.html?first_name=`+
       encodeURIComponent(first_name) +
       '&last_name=' +
-      encodeURIComponent(last_name)
+      encodeURIComponent(last_name)+
+      '&email='+
+      encodeURIComponent(email_address)
    }
    function findUserbyEmail(email_address){
         console.log(email_address);
@@ -381,8 +383,10 @@ function checkPassword(){
       var urlUserParams = new URLSearchParams(window.location.search)
       var first_name = urlUserParams.get('first_name')
       var last_name = urlUserParams.get('last_name')
+      var email = urlUserParams.get('email')
       document.getElementById("first_name").innerText = first_name
-      document.getElementById("last_name").innerText = last_name;
+      document.getElementById("last_name").innerText = last_name
+      document.getElementById("email_address").innerText = email
     }
     
 //onSubmit of form
