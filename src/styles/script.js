@@ -385,16 +385,17 @@ function checkPassword () {
     })
     .catch(error => console.error('Error:', error))
 }
+
 function openVolunteerPage (email_address) {
   var first_name = findFirstbyEmail(email_address)
   var last_name = findLastbyEmail(email_address)
-
   window.location.href =
     `../pages/VolunteerEvents.html?first_name=` +
     encodeURIComponent(first_name) +
     '&last_name=' +
     encodeURIComponent(last_name)
 }
+
 function findUserbyEmail (email_address) {
   console.log(email_address)
   for (var i = 0; i < loginData.Volunteers.length; i++) {
@@ -457,6 +458,22 @@ function getParams () {
   var last_name = urlUserParams.get('last_name')
   document.getElementById('first_name').innerText = first_name
   document.getElementById('last_name').innerText = last_name
+
+  document.getElementById('first_name').style.fontSize = '35px';
+  document.getElementById('first_name').style.fontStyle = 'normal';
+  document.getElementById('first_name').style.fontWeight = '400';
+  document.getElementById('first_name').style.letterSpacing = '1.575px';
+  document.getElementById('first_name').style.backgroundColor = 'transparent';
+  document.getElementById('first_name').style.color = '#F5F6FA';
+  document.getElementById('first_name').style.fontFamily = 'Gochi Hand';
+  
+  document.getElementById('last_name').style.fontSize = '35px';
+  document.getElementById('last_name').style.fontStyle = 'normal';
+  document.getElementById('last_name').style.fontWeight = '400';
+  document.getElementById('last_name').style.letterSpacing = '1.575px';
+  document.getElementById('last_name').style.backgroundColor = 'transparent';
+  document.getElementById('last_name').style.color = '#F5F6FA';
+  document.getElementById('last_name').style.fontFamily = 'Gochi Hand';
 }
 
 //onSubmit of form
