@@ -113,7 +113,7 @@ function showAdditionalQuestions () {
 //Shelter JSON Displayed
 function fetchAndDisplayShelters () {
   // Assuming the JSON file is one level up from the current directory
-  const jsonFilePath = '../../JSON/services.json'
+  const jsonFilePath = '../JSON/services.json'
 
   fetch(jsonFilePath)
     .then(response => response.json())
@@ -127,7 +127,7 @@ function fetchAndDisplayShelters () {
 //Medical JSON Displayed
 function fetchAndDisplayMedical () {
   // Assuming the JSON file is one level up from the current directory
-  const jsonFilePath = '../../JSON/services.json'
+  const jsonFilePath = '../JSON/services.json'
 
   fetch(jsonFilePath)
     .then(response => response.json())
@@ -141,7 +141,7 @@ function fetchAndDisplayMedical () {
 //Food JSON Displayed
 function fetchAndDisplayFood () {
   // Assuming the JSON file is one level up from the current directory
-  const jsonFilePath = '../../JSON/services.json'
+  const jsonFilePath = '../JSON/services.json'
 
   fetch(jsonFilePath)
     .then(response => response.json())
@@ -155,7 +155,7 @@ function fetchAndDisplayFood () {
 //Daycare JSON Displayed
 function fetchAndDisplayDaycare () {
   // Assuming the JSON file is one level up from the current directory
-  const jsonFilePath = '../../JSON/services.json'
+  const jsonFilePath = '../JSON/services.json'
 
   fetch(jsonFilePath)
     .then(response => response.json())
@@ -169,7 +169,7 @@ function fetchAndDisplayDaycare () {
 //Employment JSON Displayed
 function fetchAndDisplayEmployment () {
   // Assuming the JSON file is one level up from the current directory
-  const jsonFilePath = '../../JSON/services.json'
+  const jsonFilePath = '../JSON/services.json'
 
   fetch(jsonFilePath)
     .then(response => response.json())
@@ -183,7 +183,7 @@ function fetchAndDisplayEmployment () {
 //Bikehub JSON Displayed
 function fetchAndDisplayBikehub () {
   // Assuming the JSON file is one level up from the current directory
-  const jsonFilePath = '../../JSON/services.json'
+  const jsonFilePath = '../JSON/services.json'
 
   fetch(jsonFilePath)
     .then(response => response.json())
@@ -196,7 +196,7 @@ function fetchAndDisplayBikehub () {
 
 //All JSON Displayed
 function fetchAndDisplayAll () {
-  const jsonFilePath = '../../JSON/services.json'
+  const jsonFilePath = '../JSON/services.json'
 
   fetch(jsonFilePath)
     .then(response => response.json())
@@ -384,7 +384,7 @@ function openVolunteerPage (email_address) {
   var first_name = findFirstbyEmail(email_address)
   var last_name = findLastbyEmail(email_address)
   window.location.href =
-    `../pages/VolunteerEvents.html?first_name=` +
+    `https://ecs-pw-proj-web.ecs.csus.edu/~afails/VolunteerEvents.html?first_name=` +
     encodeURIComponent(first_name) +
     '&last_name=' +
     encodeURIComponent(last_name)
@@ -588,7 +588,7 @@ function openEmploymentSearch (service) {
 
 function searchResults () {
   // Assuming the JSON file is one level up from the current directory
-  const jsonFilePath = '../../JSON/services.json'
+  const jsonFilePath = '../JSON/services.json'
 
   const urlParse = new URLSearchParams(window.location.search)
 
