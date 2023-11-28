@@ -394,7 +394,9 @@
       "website": "https://www.firstumcsac.org/pilgrimage",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -415,7 +417,9 @@
       "website": "https://sacloaves.org/programs-services/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "Yes"
       }
     },
     {
@@ -436,7 +440,9 @@
       "website": "https://www.feedsachomeless.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -457,7 +463,9 @@
       "website": "https://www.neighborprogram.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -478,7 +486,9 @@
       "website": "https://sacramento.salvationarmy.org/sacramento_metro/",
       "attributes": {
         "veteran": "Yes",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -499,7 +509,9 @@
       "website": "https://www.shilohbaptistchurch-sacramento.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Family",
+        "allergies": "No"
       }
     },
     {
@@ -520,7 +532,9 @@
       "website": "https://www.yxpunite.com/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -541,7 +555,9 @@
       "website": "http://newstbethel.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Family",
+        "allergies": "No"
       }
     },
     {
@@ -562,7 +578,9 @@
       "website": "https://rivercityfoodbank.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -583,7 +601,9 @@
       "website": "https://www.ssipfoodcloset.org/",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     },
     {
@@ -604,7 +624,9 @@
       "website": "https://www.dozenterpryz.org/foodandclothescloset",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "family": "Individual",
+        "allergies": "No"
       }
     }
   ],
