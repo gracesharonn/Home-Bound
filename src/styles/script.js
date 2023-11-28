@@ -69,9 +69,7 @@ function showAdditionalQuestions () {
   var daycareQuestions = document.getElementById('daycareQuestions')
   var employmentQuestions = document.getElementById('employmentQuestions')
   var foodServiceQuestions = document.getElementById('foodServiceQuestions')
-  var medicalServiceQuestions = document.getElementById(
-    'medicalServiceQuestions'
-  )
+  var medicalServiceQuestions = document.getElementById('medicalServiceQuestions')
 
   if (serviceSelect.value === 'Shelter') {
     shelterQuestions.style.display = 'block'
