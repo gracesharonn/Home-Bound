@@ -278,46 +278,75 @@ function displayAllData (data) {
 
 fetchAndDisplayAll()
 
-//Services Information Displayed
-function displayShelters (shelters) {
-  const sheltersContainer = document.getElementById('sheltersContainer')
-  sheltersContainer.innerHTML = '' // Clear previous content
+function displayShelters(shelters) {
+  const sheltersContainer = document.getElementById('sheltersContainer');
+  sheltersContainer.innerHTML = ''; // Clear previous content
 
   shelters.forEach((shelter, index) => {
-    const shelterDiv = document.createElement('div')
-    shelterDiv.classList.add('sheltersContainer')
+    // Create a container for each shelter
+    const container = document.createElement('div');
+    container.classList.add('shelterContainer');
+
+    // Create a div for shelter information
+    const shelterInfoDiv = document.createElement('div');
+    shelterInfoDiv.classList.add('shelterInfo');
 
     let content = `
-            <br>
-            <h4>${shelter.businessName}</h4>
-            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-            <p>${shelter.contacts.phone}</p>
-            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
-            <br>
-            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
-            <p class="descriptionParagraph">"${shelter.description}"</p>
-            <br>
-            <hr>
-        `
+      <br>
+      <h4>${shelter.businessName}</h4>
+      <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+      <p>${shelter.contacts.phone}</p>
+      <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_blank">${shelter.contacts.email}</a>
+      <br>
+      <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+      <p class="descriptionParagraph">"${shelter.description}"</p>
+      <br>
+      <hr>
+    `;
 
     // Check if email exists before adding it
     if (!shelter.contacts.email) {
-      content = content
-        .replace('<p class="emailParagraph">', '')
-        .replace('</p>', '')
+      content = content.replace('<p class="emailParagraph">', '').replace('</p>', '');
     }
 
     // Check if website exists before adding it
     if (!shelter.website) {
-      content = content
-        .replace('<p class="websiteParagraph">', '')
-        .replace('</p>', '')
+      content = content.replace('<p class="websiteParagraph">', '').replace('</p>', '');
     }
 
-    shelterDiv.innerHTML = content
-    sheltersContainer.appendChild(shelterDiv)
-  })
+    shelterInfoDiv.innerHTML = content;
+
+    // Append shelter information to the common container
+    container.appendChild(shelterInfoDiv);
+
+    // Create a div for the map
+    const mapContainer = document.createElement('div');
+    mapContainer.id = `map${index}`;
+    mapContainer.classList.add('mapContainer');
+
+    // Append the map container to the shelter container
+    container.appendChild(mapContainer);
+
+    // Append the common container to the sheltersContainer
+    sheltersContainer.appendChild(container);
+
+    // Create map inside the map container
+    createMap(`map${index}`, `${shelter.location.latitude}`, `${shelter.location.longitude}`, `${shelter.businessName}`);
+  });
 }
+
+//Function to generate leaflet map
+function createMap(mapId, latitude, longitude, name) {
+var map = L.map(mapId).setView([latitude, longitude], 15);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+var marker = L.marker([latitude, longitude]).addTo(map);
+marker.bindPopup(name).openPopup();
+}
+
 
 //Open new tab for website
 function openInNewTab (url) {

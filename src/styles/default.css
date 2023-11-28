@@ -698,10 +698,10 @@ h2 {
 	transform: scale(11);
 }
   
-.sheltersContainer {
+.shelterContainer {
     display: flex;
     max-width: 2000px;
-    width: 1000px;
+    width: 1300px;
     padding: 5px 40px 5px 40px;
     background-color: #FFE475;
     border-radius: 35px;
@@ -711,14 +711,17 @@ h2 {
 }
 
 .mapContainer {
-    width: 500px; /* Adjust the width of the map container */
-    height: 400px; /* Adjust the height of the map container */
     border-radius: 35px;
     box-shadow: -10px 10px 0px rgba(0, 0, 102, 1);
+    width: 500px; /* Adjust the width of the map container */
+    height: 400px; /* Adjust the height of the map container */
+    
     
 }
 
-.sheltersInfo {
+
+
+.shelterInfo {
     flex: 1; /* Take up remaining space */
     padding: 5px 40px 5px 40px;
     background-color: #FFE475;
@@ -728,12 +731,12 @@ h2 {
     max-width: 850px;
 }
 
-.sheltersInfo h4 {
+.shelterInfo h4 {
     background-color: transparent !important;
     text-indent: 0;
 }
 
-.sheltersInfo p {
+.shelterInfo p {
     background-color: transparent !important;
 }
 
