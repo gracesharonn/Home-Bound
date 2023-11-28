@@ -549,6 +549,7 @@ function createMap(mapId, latitude, longitude, name) {
   marker.bindPopup(name).openPopup();
   
 }
+
 /*function writeJsonfile(){
     console.log("Running.");
     var jsfile = require('../JSON/login.json');
