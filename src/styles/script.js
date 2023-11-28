@@ -2046,27 +2046,10 @@ function searchResultsOut (allShelters) {
 
     sheltersContainer.appendChild(container);
 
-    
+     // Create map inside the map container
+     createMap(`map${index}`, `${shelter.location.latitude}`, `${shelter.location.longitude}`, `${shelter.businessName}`);
     
   });
-    /*
-    vetContainer.innerHTML += `
-            <div class="shelterContainer">
-            <div class="shelterInfo">
-            <br>
-            <h4>${shelter.businessName}</h4>
-            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-            <p>${shelter.contacts.phone}</p>
-            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
-            <br>
-            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
-            <p class="descriptionParagraph">"${shelter.description}"</p>
-            <br>
-            <hr>
-            </div>
-            </div>
-        `        
-  })*/
 }
 
 /* Registration/ SignUp */
