@@ -530,15 +530,6 @@ function searchResults () {
 
   //check if service
   if (service === 'Food') {
-
-    var sex = urlParse.get('sex')
-    var fam = urlParse.get('fam')
-    var allergies = urlParse.get('allergies')
-
-    
-
-    
-
   } else if (service === 'Shelter') {
     // variables to check for
     var vet = urlParse.get('veteran')
