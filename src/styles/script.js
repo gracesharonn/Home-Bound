@@ -2081,6 +2081,7 @@ function writeJSONfile () {
   saveJSON('../JSON/login.json', input)
 }
 function sendToVolEvents () {
+  window.location.href = 'https://ecs-pw-proj-web.ecs.csus.edu/~afails/VolunteerEvents.html'
   var loginData
   fetchData()
   var enteredEmail = document.getElementById('email_address').value
