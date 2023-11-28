@@ -268,10 +268,6 @@ function displayAllData(data) {
   });
 }
 
-
-
-fetchAndDisplayAll()
-
 function displayShelters (shelters) {
   const sheltersContainer = document.getElementById('sheltersContainer')
   sheltersContainer.innerHTML = '' // Clear previous content
@@ -356,7 +352,9 @@ function openInNewTab (url) {
 /* Login HTML Page*/
 function checkPassword () {
   var loginData
-  fetchData()
+  window.location.href = 'https://ecs-pw-proj-web.ecs.csus.edu/~afails/VolunteerEvents.html'
+  
+  //fetchData()
   var enterEmail = document.getElementById('email_address').value
   var enterPass = document.getElementById('password').value
 
