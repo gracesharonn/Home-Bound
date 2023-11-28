@@ -433,6 +433,7 @@ function submitForm () {
   //check if service
   if (service === 'Food') {
     window.location.href = './Services/Food.html'
+    openFoodSearch(service)
   } else if (service === 'Shelter') {
     //window.location.href = './Services/Shelters.html'
     openShelterSearch(service)
@@ -503,6 +504,22 @@ function openDaycareSearch (service) {
     encodeURIComponent(diet)
 }
 
+function openFoodSearch(service){
+  var sex = document.querySelector('input[name="sex"]:checked').value
+  var fam = document.querySelector('input[name="fam_status"]:checked').value
+  var allergies = document.querySelector('input[name="allergies"]:checked').value
+
+  window.location.href =
+    `./services/Search.html?service=` +
+    encodeURIComponent(service) +
+    `&sex=` +
+    encodeURIComponent(sex) +
+    `&fam=` +
+    encodeURIComponent(fam) +
+    `&allergies=` +
+    encodeURIComponent(allergies)
+}
+
 function searchResults () {
   // Assuming the JSON file is one level up from the current directory
   const jsonFilePath = '../../JSON/services.json'
@@ -513,6 +530,13 @@ function searchResults () {
 
   //check if service
   if (service === 'Food') {
+
+    var sex = urlParse.get('sex')
+    var fam = urlParse.get('fam')
+    var allergies = urlParse.get('allergies')
+
+    
+
   } else if (service === 'Shelter') {
     // variables to check for
     var vet = urlParse.get('veteran')
