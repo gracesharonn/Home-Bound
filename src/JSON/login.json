@@ -17,6 +17,70 @@
       "sex": "Male"
       },
       {
+      "email_address": "supermario@gmail.com",
+      "password": "MarioNumberOneBabyy",
+      "first_name": "Mario",
+      "last_name": "Mario",
+      "age": "50",
+      "sex": "Male"
+      },
+      {
+      "email_address": "therealluigi@gmail.com",
+      "password": "luigiwillkickyou",
+      "first_name": "Luigi",
+      "last_name": "Luigi",
+      "age": "49",
+      "sex": "Male"
+      }, 
+      {
+      "email_address": "queenelizabeth3@gmail.com",
+      "password": "thequeenNeverdies",
+      "first_name": "Queen",
+      "last_name": "Elizabeth",
+      "age": "99",
+      "sex": "Female"
+      },
+      {
+      "email_address": "xxx_ninja420blazeit_xxx@gmail.com",
+      "password": "MOMGETTHECAMERA",
+      "first_name": "Bob",
+      "last_name": "Wellington",
+      "age": "17",
+      "sex": "Male"
+      },   
+      {
+      "email_address": "scottversustheworld@gmail.com",
+      "password": "theSparksWEREREAL",
+      "first_name": "Scott",
+      "last_name": "Pilgram",
+      "age": "Male",
+      "sex": "23"
+      },
+      {
+      "email_address": "thatoneasianguywithglasses@gmail.com",
+      "password": "theoneasianguywithglasses",
+      "first_name": "Guy",
+      "last_name": "Man",
+      "age": "23",
+      "sex": "Male"
+      }, 
+      {
+      "email_address": "thelastofus2@gmail.com",
+      "password": "GolfingSucks",
+      "first_name": "Joel",
+      "last_name": "Miller",
+      "age": "57",
+      "sex": "Male"
+      },
+      {
+      "email_address": "vsauce_baby@gmail.com",
+      "password": "WHATSTHEPASSWORDAGAIN",
+      "first_name": "Michael",
+      "last_name": "Steven",
+      "age": "37",
+      "sex": "Male"
+      },  
+      {
       "email_address": "teslalover69420@gmail.com",
       "password": "dontbuytwitter",
       "first_name": "Elon",
