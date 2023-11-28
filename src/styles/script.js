@@ -21,7 +21,7 @@ window.onscroll = function () {
   } else if (prevScrollposOtherServices < currentScrollPosOtherServices) {
     // Add a delay before showing the Other Services element
     setTimeout(function () {
-      otherServicesElement.style.right = '-30%'
+      otherServicesElement.style.right = '-20%'
     }, 300)
   } else {
     otherServicesElement.style.right = '0'
@@ -224,52 +224,50 @@ function displayAllData(data) {
       serviceInfoDiv.classList.add('serviceInfo');
 
       let content = `
-        <br>
-        <h4>${service.businessName}</h4>
-        <p>${service.location.street} ${service.location.city} ${service.location.state} ${service.location.zipcode}</p>
-        <p>${service.contacts.phone}</p>
-        <a href="mailto:${service.contacts.email}" class="emailParagraph" target="_blank">${service.contacts.email}</a>
-        <br>
-        <a href="${service.website}" class="websiteParagraph" onclick="openInNewTab('${service.website}')">${service.website}</a>
-        <p class="descriptionParagraph">"${service.description}"</p>
-        <br>
-        <hr>
-      `;
+      <br>
+      <h4>${service.businessName}</h4>
+      <p>${service.location.street} ${service.location.city} ${service.location.state} ${service.location.zipcode}</p>
+      <p>${service.contacts.phone}</p>`;
 
-      // Check if email exists before adding it
-      if (!service.contacts.email) {
-        content = content.replace('<a href="mailto:${service.contacts.email}" class="emailParagraph" target="_black">', '').replace('</a>', '');
-      }
+    // Check if email exists before adding it
+    if (service.contacts.email) {
+      content += `<a href="mailto:${service.contacts.email}" class="emailParagraph" target="_blank">${service.contacts.email}</a><br>`;
+    }
 
-      // Check if website exists before adding it
-      if (!service.website) {
-        content = content.replace('<a href="${service.website}" class="websiteParagraph" onclick="openInNewTab(\'${service.website}\')">', '').replace('</a>', '');
-      }
+    // Check if website exists before adding it
+    if (service.website) {
+      content += `<a href="${service.website}" class="websiteParagraph" onclick="openInNewTab('${service.website}')">${service.website}</a><br>`;
+    }
 
-  
+    content += `
+      <p class="descriptionParagraph">"${service.description}"</p>
+      <br>
+      <hr>
+    `;
+
       //shelters
       serviceInfoDiv.innerHTML = content;
 
       // Append shelter information to the common container
       serviceDiv.appendChild(serviceInfoDiv);
-  
-     // Create a div for the map
-     const mapContainer = document.createElement('div');
-     const uniqueMapId = `map${serviceType}_${index}`; // Use a unique ID for each map
-     mapContainer.id = uniqueMapId;
-     mapContainer.classList.add('mapContainer');
-  
+
+      // Create a div for the map
+      const mapContainer = document.createElement('div');
+      mapContainer.id = `map${serviceType}${index}`; // Ensure unique id
+      mapContainer.classList.add('mapContainer');
+
       // Append the map container to the shelter container
       serviceDiv.appendChild(mapContainer);
-  
+
       // Append the common container to the sheltersContainer
       servicesContainer.appendChild(serviceDiv);
 
       // Create map inside the map container
-      createMap(uniqueMapId, `${service.location.latitude}`, `${service.location.longitude}`, `${service.businessName}`);
+      createMap(`map${serviceType}${index}`, `${service.location.latitude}`, `${service.location.longitude}`, `${service.businessName}`);
     });
   });
 }
+
 
 
 fetchAndDisplayAll()
@@ -292,28 +290,23 @@ function displayShelters (shelters) {
       <br>
       <h4>${shelter.businessName}</h4>
       <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-      <p>${shelter.contacts.phone}</p>
-      <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_blank">${shelter.contacts.email}</a>
-      <br>
-      <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
-      <p class="descriptionParagraph">"${shelter.description}"</p>
-      <br>
-      <hr>
-    `
+      <p>${shelter.contacts.phone}</p>`;
 
     // Check if email exists before adding it
-    if (!shelter.contacts.email) {
-      content = content
-        .replace('<p class="emailParagraph">', '')
-        .replace('</p>', '')
+    if (shelter.contacts.email) {
+      content += `<a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_blank">${shelter.contacts.email}</a><br>`;
     }
 
     // Check if website exists before adding it
-    if (!shelter.website) {
-      content = content
-        .replace('<p class="websiteParagraph">', '')
-        .replace('</p>', '')
+    if (shelter.website) {
+      content += `<a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a><br>`;
     }
+
+    content += `
+      <p class="descriptionParagraph">"${shelter.description}"</p>
+      <br>
+      <hr>
+    `;
 
     shelterInfoDiv.innerHTML = content
 
@@ -577,8 +570,10 @@ function openFoodSearch (service) {
 
 function openEmploymentSearch (service) {
   var sex = document.querySelector('input[name="sex"]:checked').value
-  var disability = document.querySelector('input[name="disability"]:checked').value
-  var crime = document.querySelector('input[name="crime"]:checked').value
+  var disability = document.querySelector(
+    'input[name="disability"]:checked'
+  ).value
+  var crime = document.querySelector('input[name="crime]:checked').value
 
   window.location.href =
     `./services/Search.html?service=` +

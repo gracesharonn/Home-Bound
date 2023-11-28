@@ -677,7 +677,7 @@ h2 {
     display: flex;
     margin-top: -90px;
     margin-right: -90px;
-    transition: right 3s ease-in-out;
+    transition: right 1.5s ease-in-out;
     z-index: 2;
 }
 
@@ -725,7 +725,6 @@ h2 {
     background-color: #006;
 }
 
-
 .OtherServices nav ul li:hover::before {
 	transform: scale(11);
 }
@@ -733,12 +732,10 @@ h2 {
 .mapContainer {
     border-radius: 35px;
     box-shadow: -10px 10px 0px rgba(0, 0, 102, 1);
-    width: 500px; /* Adjust the width of the map container */
-    height: 400px; /* Adjust the height of the map container */
+    width: 400px; /* Adjust the width of the map container */
+    height: 300px; /* Adjust the height of the map container */
 }
 
-
-  
 .shelterContainer {
     margin-left: -50px;
     display: flex;
@@ -752,8 +749,6 @@ h2 {
     justify-content: center; /* Center content horizontally */
     align-items: center;
 }
-
-
 
 .shelterInfo {
     flex: 1; /* Take up remaining space */
