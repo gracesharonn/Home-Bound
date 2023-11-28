@@ -253,10 +253,11 @@ function displayAllData(data) {
       // Append shelter information to the common container
       serviceDiv.appendChild(serviceInfoDiv);
   
-      // Create a div for the map
-      const mapContainer = document.createElement('div');
-      mapContainer.id = `map${index}`;
-      mapContainer.classList.add('mapContainer');
+     // Create a div for the map
+     const mapContainer = document.createElement('div');
+     const uniqueMapId = `map${serviceType}_${index}`; // Use a unique ID for each map
+     mapContainer.id = uniqueMapId;
+     mapContainer.classList.add('mapContainer');
   
       // Append the map container to the shelter container
       serviceDiv.appendChild(mapContainer);
@@ -265,7 +266,7 @@ function displayAllData(data) {
       servicesContainer.appendChild(serviceDiv);
 
       // Create map inside the map container
-      createMap(`map${index}`, `${service.location.latitude}`, `${service.location.longitude}`, `${service.businessName}`);
+      createMap(uniqueMapId, `${service.location.latitude}`, `${service.location.longitude}`, `${service.businessName}`);
     });
   });
 }
