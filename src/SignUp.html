@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Bound</title>
-    <link rel="stylesheet" href="../styles/default.css">
+    <link rel="stylesheet" href="./styles/default.css">
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
     <script>
@@ -58,9 +58,9 @@
             "age" : document.getElementById("age").value
             //"sex" : document.getElementById("sex").value
         }
-            const input = loadJSON('../JSON/login.json')
+            const input = loadJSON('./JSON/login.json')
             ;[{login}].forEach(string => input.Volunteers.push(user))
-            saveJSON('../JSON/login.json',input)
+            saveJSON('./JSON/login.json',input)
         }
 
             // You'll need to make an AJAX request to your C++ server here to check credentials and interact with the database.
@@ -71,8 +71,8 @@
     <a id="top"></a>
     <div class="NavigationBar">
         <ul>
-            <li><a href="../pages/index.html">Home</a></li>
-            <li><a href="../pages/AboutUs.html">About Us</a></li>
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./AboutUs.html">About Us</a></li>
             <li><a href="#" id="ServicesButton">Services</a></li> 
         </ul>
     </div>
@@ -93,9 +93,9 @@
     </div>
 
     <div class="LoginRegisterBG">
-        <img  src="../images/LoginRegisterBG.svg">
-        <img id="bike" src="../images/bike.svg">
-        <img id="houses" src="../images/houses.svg">
+        <img  src="./images/LoginRegisterBG.svg">
+        <img id="bike" src="./images/bike.svg">
+        <img id="houses" src="./images/houses.svg">
     </div>
 
     <div class="SignUpContainer">
@@ -111,7 +111,7 @@
         </form>
     </div>
 
-    <script src="../styles/script.js"></script>
+    <script src="./styles/script.js"></script>
 </body>
 </html>
 
