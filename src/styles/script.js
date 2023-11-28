@@ -2088,36 +2088,3 @@ function sendToVolEvents () {
     })
     .catch(error => console.error('Error:', error))
 }
-
-/*function writeJsonfile(){
-    console.log("Running.");
-    var jsfile = require('../JSON/login.json');
-    var user = { "emailAddress" : document.getElementById("contact_info").value,
-    "password" : document.getElementById("password").value,
-    "first_name" : document.getElementById("first_name").value,
-    "last_name" : document.getElementById("last_name").value,
-    "age" : document.getElementById("age").value,
-    "sex" : document.getElementById("sex").value
-    }
-    var userstring = JSON.stringify(user);
-   
-    jsfile.writeFile("login.json",userstring, function(err, result) {
-        if(err) console.log('error',err);
-    });
-}
-*/
-
-/*     //All JSON Displayed
-    function fetchAndDisplayAll () {
-      // Assuming the JSON file is one level up from the current directory
-      const jsonFilePath = '../../JSON/services.json'
-    
-      fetch(jsonFilePath)
-        .then(response => response.json())
-        .then(data => {
-          // Handle the JSON data and display businesses
-          displayShelters(data.employment)
-        })
-        .catch(error => console.error('Error fetching JSON:', error))
-    }
- */
