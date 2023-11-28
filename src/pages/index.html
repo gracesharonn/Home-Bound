@@ -69,162 +69,93 @@
             </select>
             <br>
     
-            <!-- Shelter Questions ------------------------------------------------------------------------------------------> 
+            <!-- Shelter Questions -->
             <div class="shelterForm" id="shelterQuestions" style="display: none;">
-              
-
-            <!-- Shelter Question 1 -->              
               <hr>
-              <label required id="veteran">Are you a Veteran of the United States Military?</label>
+              <label required id="veteran">Are you a Veteran?</label>
               <input type="radio" name="veteran" value="Yes">Yes
               <input type="radio" name="veteran" value="No">No
               <br>
               <hr>
 
-            <!-- Shelter Question 2 -->  
-              <label required id="pets">Are you bringing any PETs to the shelter?</label>
-              <input type="radio" name="pets" value="Yes">Yes
-              <input type="radio" name="pets" value="No">No
+              <label required id="term">Are you seeking long-term or short-term Shelters?</label>
+              <input type="radio" name="term" value="Long">Long
+              <input type="radio" name="term" value="Short">Short
               <br>
               <hr>
-
-            <!-- Shelter Question 3 -->  
-              <label required id="kids">Are you bringing any CHILDREN to the shelter?</label>
-              <input type="radio" name="kids" value="Yes">Yes
-              <input type="radio" name="kids" value="No">No
-              <br>
-              <hr>
-
+              
             </div>
     
-            <!-- Daycare Questions ----------------------------------------------------------------------------------------->
+            <!-- Day Care questions -->
             <div id="daycareQuestions" style="display: none;">
     
-              <!-- Dayare Question 1 -->
-              <hr>
+              <!-- Day Care Question 3 -->
               <label for="child_age">Is your child's age between 0-3 years?</label>
               <input type="radio" name="child_age" value="Yes">Yes
               <input type="radio" name="child_age" value="No">No
               <br>
               <hr>
     
-              <!-- Daycare Question 2 -->
+              <!-- Day Care Question 4 -->
               <label for="dietary_requirements">Are there any special dietary requirements/allergies?</label>
               <input type="radio" name="dietary_requirements" value="Yes">Yes
               <input type="radio" name="dietary_requirements" value="No">No
               <br>
               <hr>
     
-              <!-- Daycare Question 3 -->
-              <label for="need_transportation">Do you require transportation to and from the daycare?</label>
-              <input type="radio" name="need_transportation" value="Yes">Yes
-              <input type="radio" name="need_transportation" value="No">No
-              <br>
-              <hr>
-
-              <!-- Daycare Question 4 -->
-              <label for="number_kids">Are there more than ONE child?</label>
-              <input type="radio" name="number_kids" value="Yes">Yes
-              <input type="radio" name="number_kids" value="No">No
-              <br>
-              <hr>
-
             </div>
     
-            <!-- Employment Service Questions --------------------------------------------------------------------------->
+            <!-- Employment Service Questions -->
             <div id="employmentQuestions" style="display: none;">
-
-            <!-- Employment Question 1 -->
-              <hr>
-              <label required id="veteran">Are you a Veteran of the United States Military?</label>
-              <input type="radio" name="veteran" value="Yes">Yes
-              <input type="radio" name="veteran" value="No">No
-              <br>
-              <hr>     
-
-            <!-- Employment Question 2 -->
-              <label for="before_employed">Have you been employed before?</label>
-              <input type="radio" name="before_employed" value="Yes">Yes
-              <input type="radio" name="before_employed" value="No">No
+              <label for="disability">Do you have any disabilities?</label>
+              <input type="radio" name="disability" value="Yes">Yes
+              <input type="radio" name="disability" value="No">No
               <br>
               <hr>
-
-            <!-- Employment Question 3 -->
-              <label for="unemployed_pleb">Have you recently been unemployed for the past month?</label>
-              <input type="radio" name="unemployed_pleb" value="Yes">Yes
-              <input type="radio" name="unemployed_pleb" value="No">No
+              <label for="crime">Have you been convicted of any crimes?</label>
+              <input type="radio" name="crime" value="Yes">Yes
+              <input type="radio" name="crime" value="No">No
               <br>
               <hr>
     
               
             </div>
     
-            <!-- Food Service Questions -------------------------------------------------------------------------------->
+            <!-- Food Service Questions -->
             <div id="foodServiceQuestions" style="display: none;">
     
               <!-- Food Question 1 -->
-              <hr>
-              <label for="previously_accessed">Have you previously accessed food services?</label>
-              <input type="radio" name="previously_accessed" value="Yes">Yes
-              <input type="radio" name="previously_accessed" value="No">No
+              <label for="fam_status">Meal for Family or Individual?</label>
+              <input type="radio" name="fam_status" value="Individual">Individual
+              <input type="radio" name="fam_status" value="Family">Family
               <br>
               <hr>
-
-              <!-- Food Question 2 -->
-              <label for="residency">Do you have a proof of residency?</label>
-              <input type="radio" name="residency" value="Yes">Yes
-              <input type="radio" name="residency" value="No">No
+              <label for="allergies">Any food allergies</label>
+              <input type="radio" name="allergies" value="Yes">Yes
+              <input type="radio" name="allergies" value="No">No
               <br>
-              <hr>
-
-              <!-- Food Question 3 -->
-              <label for="person">Are there more than ONE person(s)?</label>
-              <input type="radio" name="person" value="Yes">Yes
-              <input type="radio" name="person" value="No">No
-              <br>
-              <hr>                  
+    
              
             </div>
     
-            <!-- Medical Service Questions ---------------------------------------------------------------------------->
+            <!-- Medical Service Questions -->
             <div id="medicalServiceQuestions" style="display: none;">
-
-              <!-- Medical Question 1 -->
+              <label for="assistance_type">What primary assistance are you looking for?</label>
+              <input type="radio" name="assistance_type" value="Mental">Mental
+              <input type="radio" name="assistance_type" value="Physical">Physical
+              <br>
               <hr>
-              <label required id="veteran">Are you a Veteran of the United States Military?</label>
-              <input type="radio" name="veteran" value="Yes">Yes
-              <input type="radio" name="veteran" value="No">No
+              <label for="drugs">Are you relying on any drugs?</label>
+              <input type="radio" name="drugs" value="Yes">Yes
+              <input type="radio" name="drugs" value="No">No
               <br>
-              <hr>          
-
-              <!-- Medical Question 2 -->
-              <label for="homelessness">Are you currently experiencing Homelessness?</label>
-              <input type="radio" name="homelessness" value="Yes">Yes
-              <input type="radio" name="homelessness" value="No">No
-              <br>
-              <hr>                     
-
-              <!-- Medical Question 3 -->
-              <label required id="insurance">Are you currently on any Medical Insurance Plan?</label>
-              <input type="radio" name="insurance" value="Yes">Yes
-              <input type="radio" name="insurance" value="No">No
-              <br>
-              <hr>    
-
-              <!-- Medical Question 4 -->
-              <label required id="photo_id">Do you have any official ID?</label>
-              <input type="radio" name="photo_id" value="Yes">Yes
-              <input type="radio" name="photo_id" value="No">No
-              <br>
-              <hr>                        
+              <hr>
+    
              
             </div>
             <button id="submit" type="button" onclick="submitForm()">Submit</button>
           </form>
         </div>
-        
-<!-- Div output for testing only-->
-    <div id="output"></div>
 
     <div class="scroll-up">
         <a href="#top"> 
