@@ -2082,8 +2082,8 @@ function writeJSONfile () {
 }
 function sendToVolEvents () {
   window.location.href = 'https://ecs-pw-proj-web.ecs.csus.edu/~afails/VolunteerEvents.html'
-  var loginData
-  fetchData()
+  //var loginData
+  //fetchData()
   var enteredEmail = document.getElementById('email_address').value
   var first_password = document.getElementById('password').value
   var confirm_password = document.getElementById('password2').value
