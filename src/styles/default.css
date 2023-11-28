@@ -454,18 +454,34 @@ input[type="radio"]:checked {
     z-index: 2;
 }
 
-#LoginBox, #SignUpBox {
+#LoginBox {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     border: 10px solid #F5F6FA;
     width: 490px;
-    height: 618px;
+    height: auto;
     padding: 20px;
     background-color: #FFE475;
     font-size: 35px;
     padding-top: 200px;
+    border-radius: 40px;
+}
+
+#SignUpBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 10px solid #F5F6FA;
+    width: 490px;
+    height: 650px;
+    padding: 20px;
+    background-color: #FFE475;
+    font-size: 35px;
+    padding-top: 200px;
+    margin-top: -50px;
     border-radius: 40px;
 }
 
@@ -483,6 +499,7 @@ input[type="radio"]:checked {
 
 .LoginContainer h1 {
     margin-top: -140px;
+    margin-bottom: 80px;
     font-size: 64px;
     background-color: transparent;
     text-align: center;
@@ -500,9 +517,10 @@ input[type="radio"]:checked {
     line-height: normal;
     border-radius: 33px;
     border-color: transparent;
-    margin-bottom: 5px;
-    margin-top: 70px;
+/*     margin-bottom: 5px;
+    margin-top: 70px; */
     width: 380px !important;
+    margin-bottom: 20px;
 }
 
 #password {
@@ -514,8 +532,22 @@ input[type="radio"]:checked {
     line-height: normal;
     border-radius: 33px;
     border-color: transparent;
-    margin-bottom: 5px;
-    margin-top: 70px;
+/*     margin-bottom: 5px;
+    margin-top: 70px; */
+    width: 380px !important;
+}
+
+#password2 {
+    color: rgba(0, 0, 0, 0.50);
+    font-family: BenchNine;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    border-radius: 33px;
+    border-color: transparent;
+/*     margin-bottom: 5px;
+    margin-top: 70px; */
     width: 380px !important;
 }
 
@@ -548,7 +580,7 @@ input[type="radio"]:checked {
     font-weight: 700;
     line-height: normal;
     background-color: transparent;
-    margin-bottom: -340px;
+    margin-bottom: -298px;
 }
 
 #VerificationMessage {
@@ -598,7 +630,7 @@ input[type="radio"]:checked {
     line-height: normal;
 }
 
-#first_name, #last_name, #age, #contact_info, #password {
+#first_name, #last_name, #age, #contact_info, #password, #password2, #email_adress {
     color: rgba(0, 0, 0, 0.50);
     font-family: BenchNine;
     font-size: 20px;
@@ -698,27 +730,47 @@ h2 {
 	transform: scale(11);
 }
 
-#sheltersContainer {
-    padding: 0 100px 0 100px;
+.mapContainer {
+    border-radius: 35px;
+    box-shadow: -10px 10px 0px rgba(0, 0, 102, 1);
+    width: 500px; /* Adjust the width of the map container */
+    height: 400px; /* Adjust the height of the map container */
 }
 
-.sheltersContainer {
+
+  
+.shelterContainer {
+    margin-left: -50px;
+    display: flex;
+    max-width: 2000px;
+    min-height: 450px;
+    width: 1100px;
     padding: 5px 40px 5px 40px;
     background-color: #FFE475;
     border-radius: 35px;
-    box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
+    box-shadow: -30px 30px 0px rgba(0, 0, 102, 1);
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+}
+
+
+
+.shelterInfo {
+    flex: 1; /* Take up remaining space */
+    padding: 5px 40px 5px 40px;
+    background-color: #FFE475;
     display: block;
     width: 780px;
     height: auto;
     max-width: 850px;
 }
 
-.sheltersContainer h4 {
+.shelterInfo h4 {
     background-color: transparent !important;
     text-indent: 0;
 }
 
-.sheltersContainer p {
+.shelterInfo p {
     background-color: transparent !important;
 }
 
@@ -769,31 +821,40 @@ h2 {
     font-size: 24px;
 }
 
-#servicesContainer {
-    padding: 0 100px 0 100px;
-}
-
-.servicesContainer {
+.serviceContainer {
+    margin-left: -50px;
+    display: flex;
+    max-width: 2000px;
+    min-height: 450px;
+    width: 1100px;
     padding: 5px 40px 5px 40px;
     background-color: #FFE475;
     border-radius: 35px;
-    box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
+    box-shadow: -30px 30px 0px rgba(0, 0, 102, 1);
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+}
+
+.serviceInfo {
+    flex: 1; /* Take up remaining space */
+    padding: 5px 40px 5px 40px;
+    background-color: #FFE475;
     display: block;
     width: 780px;
     height: auto;
     max-width: 850px;
 }
 
-.servicesContainer h4 {
+.serviceInfo h4 {
     background-color: transparent !important;
     text-indent: 0;
 }
 
-.servicesContainer p {
+.serviceInfo p {
     background-color: transparent !important;
 }
 
-.allServices-info {
+.services-info {
     animation-delay: 0.2s;
     animation: fade-in-up 0.5s;
     animation-fill-mode: both;
@@ -805,37 +866,37 @@ h2 {
     text-indent: 40px;
 }
 
-.allServices-info > div {
+.services-info > div {
     margin-bottom: 65px;
 }
 
-.allServices-info hr {
+.services-info hr {
     display: none;
 }
 
-.allServices-info p:nth-child(3) { /* address */
+.services-info p:nth-child(3) { /* address */
     font-family: BenchNine; 
     font-size: 30px;
     font-weight: 700;
 }
 
-.allServices-info p:nth-child(4) { /* phone number */
+.services-info p:nth-child(4) { /* phone number */
     font-family: BenchNine; 
     font-size: 24px;
     font-weight: 700;
 }
 
-.allServices-info p:nth-child(5) { /* email */
+.services-info p:nth-child(5) { /* email */
     font-family: BenchNine; 
     font-size: 24px;
 }
 
-.allServices-info p:nth-child(6) { /* website */
+.services-info p:nth-child(6) { /* website */
     font-family: BenchNine; 
     font-size: 24px;
 }
 
-.allServices-info p:nth-child(7) { /* description */
+.services-info p:nth-child(7) { /* description */
     font-family: BenchNine; 
     font-size: 24px;
 }
@@ -854,6 +915,7 @@ h2 {
     font-weight: 700;
     background-color: transparent;
 }
+
 
 .tab1 { 
     tab-size: 4; 
