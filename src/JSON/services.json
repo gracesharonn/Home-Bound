@@ -85,7 +85,7 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "term": "Long"
+        "term": "Short"
       }
     },
     {
@@ -107,7 +107,7 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "term": "Long"
+        "term": "Short"
       }
     },
     {
@@ -195,7 +195,7 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "term": "Short"
+        "term": "Long"
       }
     },
     {
@@ -305,7 +305,7 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "term": "Short"
+        "term": "Long"
       }
     },
     {
@@ -626,8 +626,9 @@
       },
       "website": "",
       "attributes": {
-        "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -648,7 +649,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -669,7 +672,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -690,7 +695,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -711,7 +718,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -732,7 +741,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -753,7 +764,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "",
+        "assistance": "Physical"
       }
     },
     {
@@ -774,7 +787,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -795,7 +810,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -816,7 +833,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Mental"
       }
     },
     {
@@ -837,7 +856,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Mental"
       }
     },
     {
@@ -858,7 +879,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -879,7 +902,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "",
+        "assistance": "Physical"
       }
     },
     {
@@ -900,7 +925,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -921,7 +948,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -942,7 +971,9 @@
       "website": "https://www.sutterhealth.org/smcs",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "Yes",
+        "assistance": "Mental"
       }
     },
     {
@@ -963,7 +994,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "Yes",
+        "assistance": "Physical"
       }
     },
     {
@@ -984,7 +1017,9 @@
       "website": "",
       "attributes": {
         "veteran": "No",
-        "sex": "n/a"
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
       }
     },
     {
@@ -1002,7 +1037,13 @@
         "email": "",
         "phone": "916-443-3299"
       },
-      "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/"
+      "website": "https://onecommunityhealth.com/locations/arden-arcade-campus/",
+      "attributes": {
+        "veteran": "No",
+        "sex": "n/a",
+        "drugs": "n/a",
+        "assistance": "Physical"
+      }
     }
   ],
   "daycare": [
@@ -1025,7 +1066,8 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "lowIncome": "No"
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1047,7 +1089,8 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "lowIncome": "Yes"
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1069,7 +1112,8 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "lowIncome": "No"
+        "diet": "n/a",
+        "age": "No"
       }
     },
     {
@@ -1091,7 +1135,8 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "lowIncome": "Yes"
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1114,7 +1159,8 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "lowIncome": "No"
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1136,7 +1182,8 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "lowIncome": "Yes"
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1158,7 +1205,8 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "lowIncome": "No"
+        "diet": "n/a",
+        "age": "No"
       }
     },
     {
@@ -1180,7 +1228,8 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "lowIncome": "No"
+        "diet": "n/a",
+        "age": "Yes"
       }
     },
     {
@@ -1202,7 +1251,8 @@
       "attributes": {
         "veteran": "No",
         "sex": "n/a",
-        "lowIncome": "No"
+        "diet": "n/a",
+        "age": "No"
       }
     }
   ],
