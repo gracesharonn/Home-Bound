@@ -290,6 +290,7 @@ function displayShelters(shelters) {
     // Create a div for shelter information
     const shelterInfoDiv = document.createElement('div');
     shelterInfoDiv.classList.add('shelterInfo');
+    shelterInfoDiv.id = `shelter${index}`
 
     let content = `
       <br>
@@ -1987,22 +1988,26 @@ function shelterOpt8 (businesses) {
   searchResultsOut(allShelters)
 }
 
+
 // function to ouput the filtered business**************************************************************************************************************************************
 function searchResultsOut (allShelters) {
   // Get the sheltersContainer div
-  var vetContainer = document.getElementById('sheltersContainer')
+  var sheltersContainer = document.getElementById('sheltersContainer')
 
   // Clear previous content in sheltersContainer
-  vetContainer.innerHTML = ''
+  sheltersContainer.innerHTML = ''
 
   // Display shelter information in sheltersContainer
-  allShelters.forEach(shelter => {
+  allShelters.forEach((shelter, index) => {
    
     var container = document.createElement('div');
     container.classList.add('shelterContainer');
 
     var shelterInfoDiv = document.createElement('div');
     shelterInfoDiv.classList.add('shelterInfo');
+    shelterInfoDiv.id = `shelter${index}`;
+
+
 
     let content = `
       <br>
@@ -2031,11 +2036,19 @@ function searchResultsOut (allShelters) {
     shelterInfoDiv.innerHTML = content;
     container.appendChild(shelterInfoDiv);
 
+    // Create a div for the map
+    const mapContainer = document.createElement('div');
+    mapContainer.id = `map${index}`;
+    mapContainer.classList.add('mapContainer');
+
+    // Append the map container to the shelter container
+    container.appendChild(mapContainer);
+
+    sheltersContainer.appendChild(container);
+
     
-
-    vetContainer.appendChild(container);
-
-  })
+    
+  });
     /*
     vetContainer.innerHTML += `
             <div class="shelterContainer">
