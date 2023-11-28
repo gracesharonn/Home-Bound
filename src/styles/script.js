@@ -208,73 +208,70 @@ function fetchAndDisplayAll () {
     .catch(error => console.error('Error fetching JSON:', error))
 }
 
-function displayAllData (data) {
-  const servicesContainer = document.getElementById('servicesContainer')
-  servicesContainer.innerHTML = '' // Clear previous content
+function displayAllData(data) {
+  const servicesContainer = document.getElementById('servicesContainer');
+  servicesContainer.innerHTML = ''; // Clear previous content
 
   // Iterate over all service types in the data
-  Object.keys(data).forEach(serviceType => {
-    const services = data[serviceType]
+  Object.keys(data).forEach((serviceType) => {
+    const services = data[serviceType];
 
     // Displaying business name and location for each service
-    services.forEach(service => {
-      const serviceDiv = document.createElement('div')
-      serviceDiv.classList.add('serviceContainer')
+    services.forEach((service, index) => {
+      const serviceDiv = document.createElement('div');
+      serviceDiv.classList.add('serviceContainer');
 
-      // Add a yellow box background to each service container
-      serviceDiv.style.backgroundColor = '#FFE475'
-      serviceDiv.style.padding = '5px 40px 5px 40px'
-      serviceDiv.style.borderRadius = '35px'
-      serviceDiv.style.boxShadow = '-30px 30px 0px rgb(0, 0, 102, 1)'
-      serviceDiv.style.display = 'block'
-      serviceDiv.style.width = '780px'
-      serviceDiv.style.height = 'auto'
-      serviceDiv.style.maxWidth = '850px'
+       // Create a div for shelter information
+      const serviceInfoDiv = document.createElement('div');
+      serviceInfoDiv.classList.add('serviceInfo');
 
       let content = `
-          <br>
-          <h4 style="background-color: #FFE475;">${service.businessName}</h4>
-        `
-
-      if (service.location) {
-        content += `<p style="background-color: #FFE475;">${service.location.street} ${service.location.city} ${service.location.state} ${service.location.zipcode}</p>`
-      }
-
-      content += `
-          <p style="background-color: #FFE475;">${service.contacts.phone}</p>
-          <a href="mailto:${service.contacts.email}" class="emailParagraph" target="_black">${service.contacts.email}</a>
-          <br>
-          <a href="${service.website}" class="websiteParagraph" onclick="openInNewTab('${service.website}')">${service.website}</a>
-          <p class="descriptionParagraph">"${service.description}"</p>
-          <br>
-          <hr>
-        `
+        <br>
+        <h4>${service.businessName}</h4>
+        <p>${service.location.street} ${service.location.city} ${service.location.state} ${service.location.zipcode}</p>
+        <p>${service.contacts.phone}</p>
+        <a href="mailto:${service.contacts.email}" class="emailParagraph" target="_blank">${service.contacts.email}</a>
+        <br>
+        <a href="${service.website}" class="websiteParagraph" onclick="openInNewTab('${service.website}')">${service.website}</a>
+        <p class="descriptionParagraph">"${service.description}"</p>
+        <br>
+        <hr>
+      `;
 
       // Check if email exists before adding it
       if (!service.contacts.email) {
-        content = content
-          .replace(
-            '<a href="mailto:${service.contacts.email}" class="emailParagraph" target="_black">',
-            ''
-          )
-          .replace('</a>', '')
+        content = content.replace('<a href="mailto:${service.contacts.email}" class="emailParagraph" target="_black">', '').replace('</a>', '');
       }
 
       // Check if website exists before adding it
       if (!service.website) {
-        content = content
-          .replace(
-            '<a href="${service.website}" class="websiteParagraph" onclick="openInNewTab(\'${service.website}\')">',
-            ''
-          )
-          .replace('</a>', '')
+        content = content.replace('<a href="${service.website}" class="websiteParagraph" onclick="openInNewTab(\'${service.website}\')">', '').replace('</a>', '');
       }
 
-      serviceDiv.innerHTML = content
-      servicesContainer.appendChild(serviceDiv)
-    })
-  })
+  
+      //shelters
+      serviceInfoDiv.innerHTML = content;
+
+      // Append shelter information to the common container
+      serviceDiv.appendChild(serviceInfoDiv);
+  
+      // Create a div for the map
+      const mapContainer = document.createElement('div');
+      mapContainer.id = `map${index}`;
+      mapContainer.classList.add('mapContainer');
+  
+      // Append the map container to the shelter container
+      serviceDiv.appendChild(mapContainer);
+  
+      // Append the common container to the sheltersContainer
+      servicesContainer.appendChild(serviceDiv);
+
+      // Create map inside the map container
+      createMap(`map${index}`, `${service.location.latitude}`, `${service.location.longitude}`, `${service.businessName}`);
+    });
+  });
 }
+
 
 fetchAndDisplayAll()
 
