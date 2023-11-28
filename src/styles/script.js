@@ -69,9 +69,7 @@ function showAdditionalQuestions () {
   var daycareQuestions = document.getElementById('daycareQuestions')
   var employmentQuestions = document.getElementById('employmentQuestions')
   var foodServiceQuestions = document.getElementById('foodServiceQuestions')
-  var medicalServiceQuestions = document.getElementById(
-    'medicalServiceQuestions'
-  )
+  var medicalServiceQuestions = document.getElementById('medicalServiceQuestions')
 
   if (serviceSelect.value === 'Shelter') {
     shelterQuestions.style.display = 'block'
@@ -208,88 +206,86 @@ function fetchAndDisplayAll () {
     .catch(error => console.error('Error fetching JSON:', error))
 }
 
-function displayAllData (data) {
-  const servicesContainer = document.getElementById('servicesContainer')
-  servicesContainer.innerHTML = '' // Clear previous content
+function displayAllData(data) {
+  const servicesContainer = document.getElementById('servicesContainer');
+  servicesContainer.innerHTML = ''; // Clear previous content
 
   // Iterate over all service types in the data
-  Object.keys(data).forEach(serviceType => {
-    const services = data[serviceType]
+  Object.keys(data).forEach((serviceType) => {
+    const services = data[serviceType];
 
     // Displaying business name and location for each service
-    services.forEach(service => {
-      const serviceDiv = document.createElement('div')
-      serviceDiv.classList.add('serviceContainer')
+    services.forEach((service, index) => {
+      const serviceDiv = document.createElement('div');
+      serviceDiv.classList.add('serviceContainer');
 
-      // Add a yellow box background to each service container
-      serviceDiv.style.backgroundColor = '#FFE475'
-      serviceDiv.style.padding = '5px 40px 5px 40px'
-      serviceDiv.style.borderRadius = '35px'
-      serviceDiv.style.boxShadow = '-30px 30px 0px rgb(0, 0, 102, 1)'
-      serviceDiv.style.display = 'block'
-      serviceDiv.style.width = '780px'
-      serviceDiv.style.height = 'auto'
-      serviceDiv.style.maxWidth = '850px'
+       // Create a div for shelter information
+      const serviceInfoDiv = document.createElement('div');
+      serviceInfoDiv.classList.add('serviceInfo');
 
       let content = `
-          <br>
-          <h4 style="background-color: #FFE475;">${service.businessName}</h4>
-        `
-
-      if (service.location) {
-        content += `<p style="background-color: #FFE475;">${service.location.street} ${service.location.city} ${service.location.state} ${service.location.zipcode}</p>`
-      }
-
-      content += `
-          <p style="background-color: #FFE475;">${service.contacts.phone}</p>
-          <a href="mailto:${service.contacts.email}" class="emailParagraph" target="_black">${service.contacts.email}</a>
-          <br>
-          <a href="${service.website}" class="websiteParagraph" onclick="openInNewTab('${service.website}')">${service.website}</a>
-          <p class="descriptionParagraph">"${service.description}"</p>
-          <br>
-          <hr>
-        `
+        <br>
+        <h4>${service.businessName}</h4>
+        <p>${service.location.street} ${service.location.city} ${service.location.state} ${service.location.zipcode}</p>
+        <p>${service.contacts.phone}</p>
+        <a href="mailto:${service.contacts.email}" class="emailParagraph" target="_blank">${service.contacts.email}</a>
+        <br>
+        <a href="${service.website}" class="websiteParagraph" onclick="openInNewTab('${service.website}')">${service.website}</a>
+        <p class="descriptionParagraph">"${service.description}"</p>
+        <br>
+        <hr>
+      `;
 
       // Check if email exists before adding it
       if (!service.contacts.email) {
-        content = content
-          .replace(
-            '<a href="mailto:${service.contacts.email}" class="emailParagraph" target="_black">',
-            ''
-          )
-          .replace('</a>', '')
+        content = content.replace('<a href="mailto:${service.contacts.email}" class="emailParagraph" target="_black">', '').replace('</a>', '');
       }
 
       // Check if website exists before adding it
       if (!service.website) {
-        content = content
-          .replace(
-            '<a href="${service.website}" class="websiteParagraph" onclick="openInNewTab(\'${service.website}\')">',
-            ''
-          )
-          .replace('</a>', '')
+        content = content.replace('<a href="${service.website}" class="websiteParagraph" onclick="openInNewTab(\'${service.website}\')">', '').replace('</a>', '');
       }
 
-      serviceDiv.innerHTML = content
-      servicesContainer.appendChild(serviceDiv)
-    })
-  })
+  
+      //shelters
+      serviceInfoDiv.innerHTML = content;
+
+      // Append shelter information to the common container
+      serviceDiv.appendChild(serviceInfoDiv);
+  
+      // Create a div for the map
+      const mapContainer = document.createElement('div');
+      mapContainer.id = `map${index}`;
+      mapContainer.classList.add('mapContainer');
+  
+      // Append the map container to the shelter container
+      serviceDiv.appendChild(mapContainer);
+  
+      // Append the common container to the sheltersContainer
+      servicesContainer.appendChild(serviceDiv);
+
+      // Create map inside the map container
+      createMap(`map${index}`, `${service.location.latitude}`, `${service.location.longitude}`, `${service.businessName}`);
+    });
+  });
 }
+
 
 fetchAndDisplayAll()
 
-function displayShelters(shelters) {
-  const sheltersContainer = document.getElementById('sheltersContainer');
-  sheltersContainer.innerHTML = ''; // Clear previous content
+function displayShelters (shelters) {
+  const sheltersContainer = document.getElementById('sheltersContainer')
+  sheltersContainer.innerHTML = '' // Clear previous content
 
   shelters.forEach((shelter, index) => {
     // Create a container for each shelter
-    const container = document.createElement('div');
-    container.classList.add('shelterContainer');
+    const container = document.createElement('div')
+    container.classList.add('shelterContainer')
 
     // Create a div for shelter information
-    const shelterInfoDiv = document.createElement('div');
-    shelterInfoDiv.classList.add('shelterInfo');
+    const shelterInfoDiv = document.createElement('div')
+    shelterInfoDiv.classList.add('shelterInfo')
+    shelterInfoDiv.id = `shelter${index}`
 
     let content = `
       <br>
@@ -302,51 +298,60 @@ function displayShelters(shelters) {
       <p class="descriptionParagraph">"${shelter.description}"</p>
       <br>
       <hr>
-    `;
+    `
 
     // Check if email exists before adding it
     if (!shelter.contacts.email) {
-      content = content.replace('<p class="emailParagraph">', '').replace('</p>', '');
+      content = content
+        .replace('<p class="emailParagraph">', '')
+        .replace('</p>', '')
     }
 
     // Check if website exists before adding it
     if (!shelter.website) {
-      content = content.replace('<p class="websiteParagraph">', '').replace('</p>', '');
+      content = content
+        .replace('<p class="websiteParagraph">', '')
+        .replace('</p>', '')
     }
 
-    shelterInfoDiv.innerHTML = content;
+    shelterInfoDiv.innerHTML = content
 
     // Append shelter information to the common container
-    container.appendChild(shelterInfoDiv);
+    container.appendChild(shelterInfoDiv)
 
     // Create a div for the map
-    const mapContainer = document.createElement('div');
-    mapContainer.id = `map${index}`;
-    mapContainer.classList.add('mapContainer');
+    const mapContainer = document.createElement('div')
+    mapContainer.id = `map${index}`
+    mapContainer.classList.add('mapContainer')
 
     // Append the map container to the shelter container
-    container.appendChild(mapContainer);
+    container.appendChild(mapContainer)
 
     // Append the common container to the sheltersContainer
-    sheltersContainer.appendChild(container);
+    sheltersContainer.appendChild(container)
 
     // Create map inside the map container
-    createMap(`map${index}`, `${shelter.location.latitude}`, `${shelter.location.longitude}`, `${shelter.businessName}`);
-  });
+    createMap(
+      `map${index}`,
+      `${shelter.location.latitude}`,
+      `${shelter.location.longitude}`,
+      `${shelter.businessName}`
+    )
+  })
 }
 
 //Function to generate leaflet map
-function createMap(mapId, latitude, longitude, name) {
-var map = L.map(mapId).setView([latitude, longitude], 15);
+function createMap (mapId, latitude, longitude, name) {
+  var map = L.map(mapId).setView([latitude, longitude], 15)
 
-L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+  L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
     maxZoom: 19,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-}).addTo(map);
-var marker = L.marker([latitude, longitude]).addTo(map);
-marker.bindPopup(name).openPopup();
+    attribution:
+      '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+  }).addTo(map)
+  var marker = L.marker([latitude, longitude]).addTo(map)
+  marker.bindPopup(name).openPopup()
 }
-
 
 //Open new tab for website
 function openInNewTab (url) {
@@ -461,7 +466,7 @@ function submitForm () {
 
   //check if service
   if (service === 'Food') {
-    window.location.href = './Services/Food.html'
+    //window.location.href = './Services/Food.html'
     openFoodSearch(service)
   } else if (service === 'Shelter') {
     //window.location.href = './Services/Shelters.html'
@@ -470,12 +475,13 @@ function submitForm () {
     //window.location.href = './Services/Medical.html'
     openMedicalSearch(service)
   } else if (service === 'Daycare') {
-    window.location.href = './Services/Daycare.html'
+    //window.location.href = './Services/Daycare.html'
     openDaycareSearch(service)
   } else if (service === 'Bikehub') {
     window.location.href = './Services/Bikehub.html'
   } else if (service === 'Employment') {
-    window.location.href = './Services/Employment.html'
+    //window.location.href = './Services/Employment.html'
+    openEmploymentSearch(service)
   } else {
     window.location.href = './Services/SeeAll.html'
   }
@@ -549,6 +555,24 @@ function openFoodSearch (service) {
     encodeURIComponent(fam) +
     `&allergies=` +
     encodeURIComponent(allergies)
+}
+
+function openEmploymentSearch (service) {
+  var sex = document.querySelector('input[name="sex"]:checked').value
+  var disability = document.querySelector(
+    'input[name="disability"]:checked'
+  ).value
+  var crime = document.querySelector('input[name="crime]:checked').value
+
+  window.location.href =
+    `./services/Search.html?service=` +
+    encodeURIComponent(service) +
+    `&sex=` +
+    encodeURIComponent(sex) +
+    `&disability=` +
+    encodeURIComponent(disability) +
+    `&crime=` +
+    encodeURIComponent(crime)
 }
 
 function searchResults () {
@@ -655,6 +679,7 @@ function searchResults () {
     }
     //opt 9
     else {
+      fetchAndDisplayFood ()
     }
   } else if (service === 'Shelter') {
     // variables to check for
@@ -863,7 +888,7 @@ function searchResults () {
         .then(data => {
           // Handle the JSON data and display businesses
 
-          foodOpt1(data.food)
+          daycareOpt1(data.daycare)
         })
         .catch(error => console.error('Error fetching JSON:', error))
     }
@@ -874,7 +899,7 @@ function searchResults () {
         .then(data => {
           // Handle the JSON data and display businesses
 
-          daycareOpt2(data.food)
+          daycareOpt2(data.daycare)
         })
         .catch(error => console.error('Error fetching JSON:', error))
     }
@@ -885,7 +910,7 @@ function searchResults () {
         .then(data => {
           // Handle the JSON data and display businesses
 
-          daycareOpt3(data.food)
+          daycareOpt3(data.daycare)
         })
         .catch(error => console.error('Error fetching JSON:', error))
     }
@@ -896,7 +921,7 @@ function searchResults () {
         .then(data => {
           // Handle the JSON data and display businesses
 
-          daycareOpt4(data.food)
+          daycareOpt4(data.daycare)
         })
         .catch(error => console.error('Error fetching JSON:', error))
     }
@@ -907,7 +932,7 @@ function searchResults () {
         .then(data => {
           // Handle the JSON data and display businesses
 
-          daycareOpt5(data.food)
+          daycareOpt5(data.daycare)
         })
         .catch(error => console.error('Error fetching JSON:', error))
     }
@@ -918,7 +943,7 @@ function searchResults () {
         .then(data => {
           // Handle the JSON data and display businesses
 
-          daycareOpt6(data.food)
+          daycareOpt6(data.daycare)
         })
         .catch(error => console.error('Error fetching JSON:', error))
     }
@@ -929,7 +954,7 @@ function searchResults () {
         .then(data => {
           // Handle the JSON data and display businesses
 
-          daycareOpt7(data.food)
+          daycareOpt7(data.daycare)
         })
         .catch(error => console.error('Error fetching JSON:', error))
     }
@@ -940,18 +965,291 @@ function searchResults () {
         .then(data => {
           // Handle the JSON data and display businesses
 
-          daycareOpt8(data.food)
+          daycareOpt8(data.daycare)
         })
         .catch(error => console.error('Error fetching JSON:', error))
     }
     //opt 9
     else {
-      fetchAndDisplayFood()
+      fetchAndDisplayDaycare()
     }
   } else if (service === 'Bikehub') {
   } else if (service === 'Employment') {
+    var sex = urlParse.get('sex')
+    var disability = urlParse.get('diability')
+    var crime = urlParse.get('crime')
+
+    //opt 1
+    if (disability === 'Yes' && sex === 'Male' && crime === 'Yes') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          employOpt1(data.employment)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 2
+    else if (disability === 'Yes' && sex === 'Male' && crime === 'No') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          employOpt2(data.employment)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 3
+    else if (disability === 'Yes' && sex === 'Female' && crime === 'Yes') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          employOpt3(data.employment)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 4
+    else if (disability === 'Yes' && sex === 'Female' && crime === 'No') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          employOpt4(data.employment)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 5
+    else if (disability === 'No' && sex === 'Male' && crime === 'Yes') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          employOpt5(data.employment)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 6
+    else if (disability === 'No' && sex === 'Male' && crime === 'No') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          employOpt6(data.employment)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 7
+    else if (disability === 'No' && sex === 'Female' && crime === 'Yes') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          employOpt7(data.employment)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 8
+    else if (disability === 'No' && sex === 'Female' && crime === 'No') {
+      fetch(jsonFilePath)
+        .then(response => response.json())
+        .then(data => {
+          // Handle the JSON data and display businesses
+
+          employOpt8(data.employment)
+        })
+        .catch(error => console.error('Error fetching JSON:', error))
+    }
+    //opt 9
+    else {
+      fetchAndDisplayEmployment()
+    }
   } else {
+    fetchAndDisplayAll ()
   }
+}
+
+function employOpt1 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability === 'Yes' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime === 'Yes')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability !== 'Yes' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime !== 'Yes')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  displayShelters(allShelters)
+}
+
+function employOpt2 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability === 'Yes' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime === 'No')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability !== 'Yes' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime !== 'No')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  displayShelters(allShelters)
+}
+
+function employOpt3 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability === 'Yes' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime === 'Yes')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability !== 'Yes' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime !== 'Yes')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  displayShelters(allShelters)
+}
+
+function employOpt4 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability === 'Yes' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime === 'No')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability !== 'Yes' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime !== 'No')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  displayShelters(allShelters)
+}
+
+function employOpt5 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability === 'No' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime === 'Yes')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability !== 'No' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime !== 'Yes')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  displayShelters(allShelters)
+}
+
+function employOpt6 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability === 'No' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex === 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime === 'No')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability !== 'No' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex !== 'Male') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime !== 'No')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  displayShelters(allShelters)
+}
+
+function employOpt7 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability === 'No' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime === 'Yes')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability !== 'No' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime !== 'Yes')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  displayShelters(allShelters)
+}
+
+function employOpt8 (businesses) {
+  // Filter veteran and non-veteran shelters
+  var veteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability === 'No' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex === 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime === 'No')
+  )
+  var nonVeteranShelters = businesses.filter(
+    business =>
+      business.attributes.disability !== 'No' ||
+      (business.attributes.disability === 'n/a' &&
+        business.attributes.sex !== 'Female') ||
+      (business.attributes.sex === 'n/a' && business.attributes.crime !== 'No')
+  )
+
+  // Combine veteran and non-veteran shelters
+  var allShelters = veteranShelters.concat(nonVeteranShelters)
+  displayShelters(allShelters)
 }
 
 function foodOpt1 (businesses) {
@@ -1683,26 +1981,67 @@ function shelterOpt8 (businesses) {
 // function to ouput the filtered business
 function searchResultsOut (allShelters) {
   // Get the sheltersContainer div
-  var vetContainer = document.getElementById('sheltersContainer')
+  var sheltersContainer = document.getElementById('sheltersContainer')
 
   // Clear previous content in sheltersContainer
-  vetContainer.innerHTML = ''
+  sheltersContainer.innerHTML = ''
 
   // Display shelter information in sheltersContainer
-  allShelters.forEach(shelter => {
-    vetContainer.innerHTML += `
-            <div class="sheltersContainer">
-            <br>
-            <h4>${shelter.businessName}</h4>
-            <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
-            <p>${shelter.contacts.phone}</p>
-            <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_black">${shelter.contacts.email}</a>
-            <br>
-            <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
-            <p class="descriptionParagraph">"${shelter.description}"</p>
-            <br>
-            <hr>
-        `
+  allShelters.forEach((shelter, index) => {
+    var container = document.createElement('div')
+    container.classList.add('shelterContainer')
+
+    var shelterInfoDiv = document.createElement('div')
+    shelterInfoDiv.classList.add('shelterInfo')
+    shelterInfoDiv.id = `shelter${index}`
+
+    let content = `
+      <br>
+      <h4>${shelter.businessName}</h4>
+      <p>${shelter.location.street} ${shelter.location.city} ${shelter.location.state} ${shelter.location.zipcode}</p>
+      <p>${shelter.contacts.phone}</p>
+      <a href="mailto:${shelter.contacts.email}" class="emailParagraph" target="_blank">${shelter.contacts.email}</a>
+      <br>
+      <a href="${shelter.website}" class="websiteParagraph" onclick="openInNewTab('${shelter.website}')">${shelter.website}</a>
+      <p class="descriptionParagraph">"${shelter.description}"</p>
+      <br>
+      <hr>
+    `
+
+    // Check if email exists before adding it
+    if (!shelter.contacts.email) {
+      content = content
+        .replace('<p class="emailParagraph">', '')
+        .replace('</p>', '')
+    }
+
+    // Check if website exists before adding it
+    if (!shelter.website) {
+      content = content
+        .replace('<p class="websiteParagraph">', '')
+        .replace('</p>', '')
+    }
+
+    shelterInfoDiv.innerHTML = content
+    container.appendChild(shelterInfoDiv)
+
+    // Create a div for the map
+    const mapContainer = document.createElement('div')
+    mapContainer.id = `map${index}`
+    mapContainer.classList.add('mapContainer')
+
+    // Append the map container to the shelter container
+    container.appendChild(mapContainer)
+
+    sheltersContainer.appendChild(container)
+
+    // Create map inside the map container
+    createMap(
+      `map${index}`,
+      `${shelter.location.latitude}`,
+      `${shelter.location.longitude}`,
+      `${shelter.businessName}`
+    )
   })
 }
 
