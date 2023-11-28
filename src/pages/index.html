@@ -1,173 +1,174 @@
 <!-- landing page -->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Bound</title>
-  <link rel="stylesheet" href="../styles/default.css">
-  <link href="https://fonts.googleapis.com/css?family=Gochi+Hand:regular" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Bound</title>
+    <link rel="stylesheet" href="../styles/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
 </head>
-
 <body>
-  <a id="top"></a>
-  <div class="NavigationBar">
-    <ul>
-      <li><a href="AboutUs.html">About Us</a></li>
-      <li><a href="#" id="ServicesButton">Services</a></li>
-      <li><a href="Volunteers.html">Volunteers</a></li>
-    </ul>
-  </div>
+    <a id="top"></a>
+    <div class="NavigationBar">
+        <ul>
+            <li><a href="AboutUs.html">About Us</a></li>
+            <li><a href="#" id="ServicesButton">Services</a></li>
+            <li><a href="Volunteers.html">Volunteers</a></li> 
+        </ul>
+    </div>
 
-  <div class="ServiceMenu">
-    <div id="x-button" class="x-button">X</div>
-    <nav>
-      <ul>
-        <li><a href="./services/Food.html">Food</a></li>
-        <li><a href="./services/Shelters.html">Shelter</a></li>
-        <li><a href="./services/Medical.html">Medical</a></li>
-        <li><a href="./services/Daycare.html">Daycare</a></li>
-        <li><a href="./services/Bikehub.html">Bikehub</a></li>
-        <li><a href="./services/Employment.html">Employment</a></li>
-        <li><a href="./services/SeeAll.html">See All</a></li>
-      </ul>
-    </nav>
-  </div>
+    <div class="ServiceMenu">
+        <div id="x-button" class="x-button">X</div>
+        <nav>
+            <ul>
+              <li><a href="./services/Food.html">Food</a></li>
+              <li><a href="./services/Shelters.html">Shelter</a></li>
+              <li><a href="./services/Medical.html">Medical</a></li>
+              <li><a href="./services/Daycare.html">Daycare</a></li>
+              <li><a href="./services/Bikehub.html">Bikehub</a></li>
+              <li><a href="./services/Employment.html">Employment</a></li>
+              <li><a href="./services/SeeAll.html">See All</a></li>
+            </ul>
+        </nav>
+    </div>
 
-  <div class="TitlePage">
-    <img id="title-page" src="../images/Website Title.svg">
-  </div>
+    <div class="TitlePage">
+        <img id="title-page" src="../images/Website Title.svg">
+    </div>
 
-  <div class="BeginHere">
-    <p><a href="#form">PersonaliZed Search Click Here</a></p>
-  </div>
-
-  <!--     <section class="Service-Container"> -->
-  <div id="ServiceForm">
-    <form id="form" class="Form-Box" method="POST">
-
-      <!-- <label for="zip_code">Zipcode: </label>
+    <div class="BeginHere">
+        <p><a href="#form">PersonaliZed Search Click Here</a></p>
+    </div>
+    
+<!--     <section class="Service-Container"> -->
+        <div id="ServiceForm">
+          <form  id="form" class="Form-Box" method="POST">
+    
+            <!-- <label for="zip_code">Zipcode: </label>
             <input type="text" id="zip_code" name="zip_code" required onchange="return validateZipCode();">
             <br> -->
+    
+            <label for="sex">Sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;</label>
+            <input type="radio" name="sex" value="Male">&nbsp;Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="radio" name="sex" value="Female">&nbsp;Female
+            <br>
+    
+            <label for="service">Select a Service&nbsp;</label>
+            <select id="service" name="service" onchange="showAdditionalQuestions()">
+              <option value="Bikehub">Bikehub</option>
+              <option value="Daycare">Daycare</option>
+              <option value="Employment">Employment</option>
+              <option value="Food">Food</option>
+              <option value="Medical">Medical</option>
+              <option value="Shelter">Shelter</option>
+            </select>
+            <br>
+    
+            <!-- Shelter questions -->
+            <div class="shelterForm" id="shelterQuestions" style="display: none;">
+              <hr>
+              <label required id="veteran">Are you a Veteran?</label>
+              <input type="radio" name="veteran" value="Yes">Yes
+              <input type="radio" name="veteran" value="No">No
+              <br>
+              <hr>
 
-      <label for="sex">Sex&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        &nbsp;</label>
-      <input type="radio" name="sex" value="Male">&nbsp;Male&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-      <input type="radio" name="sex" value="Female">&nbsp;Female
-      <br>
+              <label required id="term">Are you seeking long term or short term Shelters?</label>
+              <input type="radio" name="term" value="Long">Long
+              <input type="radio" name="term" value="Short">Short
+              <br>
+              <hr>
+              
+            </div>
+    
+            <!-- Day care questions -->
+            <div id="daycareQuestions" style="display: none;">
+    
+              <!-- Day care Question 3 -->
+              <label for="child_age">Is your child's age between 0-3 years?</label>
+              <input type="radio" name="child_age" value="Yes">Yes
+              <input type="radio" name="child_age" value="No">No
+              <br>
+              <hr>
+    
+              <!-- Day care Question 4 -->
+              <label for="dietary_requirements">Does your child have any special dietary requirements or allergies?</label>
+              <input type="radio" name="dietary_requirements" value="Yes">Yes
+              <input type="radio" name="dietary_requirements" value="No">No
+              <br>
+              <hr>
+    
+            </div>
+    
+            <!-- Employment Service Questions -->
+            <div id="employmentQuestions" style="display: none;">
+              <label for="housing">Do you have mailing address?</label>
+              <input type="radio" name="housing" value="Yes">Yes
+              <input type="radio" name="housing" value="No">No
+              <br>
+              <hr>
+              <label for="crime">Have you been convited of any crimes?</label>
+              <input type="radio" name="crime" value="Yes">Yes
+              <input type="radio" name="crime" value="No">No
+              <br>
+              <hr>
+    
+              
+            </div>
+    
+            <!-- Food Service Questions -->
+            <div id="foodServiceQuestions" style="display: none;">
+    
+              <!-- Food Question 1 -->
+              <label for="fam_status">Meal for Family or Individual</label>
+              <input type="radio" name="fam_status" value="Individual">Individual
+              <input type="radio" name="fam_status" value="Family">Family
+              <br>
+              <hr>
+              <label for="allergies">Any food allergies</label>
+              <input type="radio" name="allergies" value="Yes">Yes
+              <input type="radio" name="allergies" value="No">No
+              <br>
+    
+             
+            </div>
+    
+            <!-- Medical Service Questions -->
+            <div id="medicalServiceQuestions" style="display: none;">
+              <label for="assistance_type">What primary assitance are you looking for?</label>
+              <input type="radio" name="assistance_type" value="Mental">Mental
+              <input type="radio" name="assistance_type" value="Physical">Physical
+              <br>
+              <hr>
+              <label for="drugs">Do you have any dependences on drugs?</label>
+              <input type="radio" name="drugs" value="Yes">Yes
+              <input type="radio" name="drugs" value="No">No
+              <br>
+              <hr>
+    
+             
+            </div>
+            <button id="submit" type="button" onclick="submitForm()">Submit</button>
+          </form>
+        </div>
+        
+<!-- Div output for testing only-->
+    <div id="output"></div>
 
-      <label for="service">Select a Service&nbsp;</label>
-      <select id="service" name="service" onchange="showAdditionalQuestions()">
-        <option value="Bikehub">Bikehub</option>
-        <option value="Daycare">Daycare</option>
-        <option value="Employment">Employment</option>
-        <option value="Food">Food</option>
-        <option value="Medical">Medical</option>
-        <option value="Shelter">Shelter</option>
-      </select>
-      <br>
-
-      <!-- Shelter questions -->
-      <div class="shelterForm" id="shelterQuestions" style="display: none;">
-        <hr>
-        <label id="veteran">Are you a Veteran?</label>
-        <input type="radio" name="veteran" value="Yes">Yes
-        <input type="radio" name="veteran" value="No">No
-        <br>
-        <hr>
-
-        <label id="term">Do you need short term or long term lodging</label>
-        <br>
-        <input type="radio" name="term" value="Short">Short
-        <input type="radio" name="term" value="Long">Long
-        <br>
-        <hr>
-
-      </div>
-
-      <!-- Day care questions -->
-      <div id="daycareQuestions" style="display: none;">
-
-        <!-- Day care Question 3 -->
-        <label for="child_age">Is your child's age between 0-3 years?</label>
-        <input type="radio" name="child_age" value="Yes">Yes
-        <input type="radio" name="child_age" value="No">No
-        <br>
-        <hr>
-
-        <!-- Day care Question 4 -->
-        <label for="dietary_requirements">Does your child have any special dietary requirements or allergies?</label>
-        <input type="radio" name="dietary_requirements" value="Yes">Yes
-        <input type="radio" name="dietary_requirements" value="No">No
-        <br>
-        <hr>
-
-        <!-- Day care Question 6 -->
-        <label for="need_transportation">Are you in need of transportation services to and from the daycare?</label>
-        <input type="radio" name="need_transportation" value="Yes">Yes
-        <input type="radio" name="need_transportation" value="No">No
-        <br>
-        <hr>
-
-      </div>
-
-      <!-- Employment Service Questions -->
-      <div id="employmentQuestions" style="display: none;">
-        <label for="currently_employed">Are you currently employed?</label>
-        <input type="radio" name="currently_employed" value="Yes">Yes
-        <input type="radio" name="currently_employed" value="No">No
-        <br>
-        <hr>
-
-
-      </div>
-
-      <!-- Food Service Questions -->
-      <div id="foodServiceQuestions" style="display: none;">
-
-        <!-- Food Question 1 -->
-        <label for="previously_accessed">Have you previously accessed food services for the homeless?</label>
-        <input type="radio" name="previously_accessed" value="Yes">Yes
-        <input type="radio" name="previously_accessed" value="No">No
-        <br>
-        <hr>
-
-
-      </div>
-
-      <!-- Medical Service Questions -->
-      <div id="medicalServiceQuestions" style="display: none;">
-        <label for="homelessness">Are you currently experiencing homelessness?</label>
-        <input type="radio" name="homelessness" value="Yes">Yes
-        <input type="radio" name="homelessness" value="No">No
-        <br>
-        <hr>
-
-
-      </div>
-      <button id="submit" type="button" onclick="submitForm()">Submit</button>
-    </form>
-  </div>
-
-  <!-- Div output for testing only-->
-  <div id="output"></div>
-
-  <div class="scroll-up">
-    <a href="#top">
-      <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
-        <circle cx="25" cy="25" r="25" fill="#000066" />
-        <path
-          d="M26.4142 8.58588C25.6332 7.80483 24.3668 7.80483 23.5858 8.58588L10.8579 21.3138C10.0768 22.0949 10.0768 23.3612 10.8579 24.1422C11.6389 24.9233 12.9052 24.9233 13.6863 24.1422L25 12.8285L36.3137 24.1422C37.0948 24.9233 38.3611 24.9233 39.1421 24.1422C39.9232 23.3612 39.9232 22.0949 39.1421 21.3138L26.4142 8.58588ZM27 39.0476L27 10.0001H23L23 39.0476H27Z"
-          fill="#F5F6FA" />
-      </svg>
-    </a>
-  </div>
-  <script src="../styles/script.js"></script>
+    <div class="scroll-up">
+        <a href="#top"> 
+            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50" fill="none">
+            <circle cx="25" cy="25" r="25" fill="#000066"/>
+            <path d="M26.4142 8.58588C25.6332 7.80483 24.3668 7.80483 23.5858 8.58588L10.8579 21.3138C10.0768 22.0949 10.0768 23.3612 10.8579 24.1422C11.6389 24.9233 12.9052 24.9233 13.6863 24.1422L25 12.8285L36.3137 24.1422C37.0948 24.9233 38.3611 24.9233 39.1421 24.1422C39.9232 23.3612 39.9232 22.0949 39.1421 21.3138L26.4142 8.58588ZM27 39.0476L27 10.0001H23L23 39.0476H27Z" fill="#F5F6FA"/>
+          </svg>
+        </a>
+    </div>
+    <script src="../styles/script.js"></script>
 
 </body>
-
 </html>

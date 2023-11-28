@@ -697,28 +697,43 @@ h2 {
 .OtherServices nav ul li:hover::before {
 	transform: scale(11);
 }
-
-#sheltersContainer {
-    padding: 0 100px 0 100px;
-}
-
+  
 .sheltersContainer {
+    display: flex;
+    max-width: 2000px;
+    width: 1000px;
     padding: 5px 40px 5px 40px;
     background-color: #FFE475;
     border-radius: 35px;
-    box-shadow: -30px 30px 0px rgb(0, 0, 102, 1);
+    box-shadow: -30px 30px 0px rgba(0, 0, 102, 1);
+    justify-content: center; /* Center content horizontally */
+    align-items: center;
+}
+
+.mapContainer {
+    width: 500px; /* Adjust the width of the map container */
+    height: 400px; /* Adjust the height of the map container */
+    border-radius: 35px;
+    box-shadow: -10px 10px 0px rgba(0, 0, 102, 1);
+    
+}
+
+.sheltersInfo {
+    flex: 1; /* Take up remaining space */
+    padding: 5px 40px 5px 40px;
+    background-color: #FFE475;
     display: block;
     width: 780px;
     height: auto;
     max-width: 850px;
 }
 
-.sheltersContainer h4 {
+.sheltersInfo h4 {
     background-color: transparent !important;
     text-indent: 0;
 }
 
-.sheltersContainer p {
+.sheltersInfo p {
     background-color: transparent !important;
 }
 
@@ -854,6 +869,7 @@ h2 {
     font-weight: 700;
     background-color: transparent;
 }
+
 
 .tab1 { 
     tab-size: 4; 
