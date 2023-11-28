@@ -701,6 +701,7 @@ h2 {
 .shelterContainer {
     display: flex;
     max-width: 2000px;
+    min-height: 450px;
     width: 1300px;
     padding: 5px 40px 5px 40px;
     background-color: #FFE475;
