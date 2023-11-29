@@ -487,12 +487,12 @@ function submitForm () {
     //window.location.href = './Services/Daycare.html'
     openDaycareSearch(service)
   } else if (service === 'Bikehub') {
-    window.location.href = './Services/Bikehub.html'
+    window.location.href = 'https://ecs-pw-proj-web.ecs.csus.edu/~afails/services/Bikehub.html'
   } else if (service === 'Employment') {
     //window.location.href = './Services/Employment.html'
     openEmploymentSearch(service)
   } else {
-    window.location.href = './Services/SeeAll.html'
+    window.location.href = 'https://ecs-pw-proj-web.ecs.csus.edu/~afails/services/SeeAll.html'
   }
 }
 
