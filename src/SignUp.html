@@ -8,64 +8,7 @@
     <link rel="stylesheet" href="./styles/default.css">
     <link href="https://fonts.googleapis.com/css?family=Gochi+Hand:regular" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
-    <script>
-        //const fs = require('fs');
-        // JavaScript function to handle form submission
-        function login() {
-            // Get the input values
-            var first_name = document.getElementById('first_name').value;
-            var last_name = document.getElementById('last_name').value;
-            //var username = document.getElementById('username').value;
-            var password = document.getElementById('password').value;
-            var age = document.getElementById('age').value;
-            var contact_info = document.getElementById('contact_info').value;
-            var sex = document.getElementById('sex').value;
-            // Basic client-side validation
-            if (contact_info == ''|| password === ''/*||first_name == '' ||last_name == ''||age == ''||sex == ''*/) {
-                alert('Please fill in all fields.');
-                return;
-            }
-        }
-        function saveDynamicDataToFile(){
-            var contact_info = document.getElementById('contact_info').value;
-            var password = document.getElementById('password').value;
-            var fso = new ActiveXObject("Scripting.FileSystemObject");
-            var filename = "login.txt";
-
-            fso.CreateTextFile(filename, true);
-            var file = fso.GetFile(filename);
-            var streamWrite = file.OpenAsTextStream(2);
-            streamWrite.WriteLine(contact_info);
-            streamWrite.WriteLine(password);
-            streamWrite.Close();
-        }
-        function loadJSON(filename = ''){
-            return JSON.parse(
-                fs.existsSync(filename)
-                    ?fs.readFileSync(filename).toString()
-                    :'null'
-            )
-        }
-        function saveJSON(filename = '', json = '"'){
-            return fs.writeFileSync(filename,JSON.stringify(json,null,2))
-        }
-        
-        function readWritejsonfile(){
-            var login = {"emailAddress" : document.getElementById("contact_info").value,
-            "password" : document.getElementById("password").value, 
-            "first_name" : document.getElementById("first_name").value,
-            "last_name" : document.getElementById("last_name").value,
-            "age" : document.getElementById("age").value
-            //"sex" : document.getElementById("sex").value
-        }
-            const input = loadJSON('./JSON/login.json')
-            ;[{login}].forEach(string => input.Volunteers.push(user))
-            saveJSON('./JSON/login.json',input)
-        }
-
-            // You'll need to make an AJAX request to your C++ server here to check credentials and interact with the database.
-            // Here's a simple example using the Fetch API (you might need to adapt this to your C++ server's API).
-    </script>
+   
 </head>
 <body>
     <a id="top"></a>
@@ -74,7 +17,6 @@
             <li><a href="https://ecs-pw-proj-web.ecs.csus.edu/~afails/index.html">Home</a></li>
             <li><a href="https://ecs-pw-proj-web.ecs.csus.edu/~afails/AboutUs.html">About Us</a></li>
             <li><a href="#" id="ServicesButton">Services</a></li>
-            <li><a href="https://ecs-pw-proj-web.ecs.csus.edu/~afails/Volunteers.html">Volunteers</a></li> 
         </ul>
     </div>
 
