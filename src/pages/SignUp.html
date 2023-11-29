@@ -1,0 +1,59 @@
+<!-- volunteers page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Bound</title>
+    <link rel="stylesheet" href="../styles/default.css">
+    <link href="https://fonts.googleapis.com/css?family=Gochi+Hand:regular" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=BenchNine:300,regular,700" rel="stylesheet" />
+</head>
+<body>
+    <a id="top"></a>
+    <div class="NavigationBar">
+        <ul>
+            <li><a href="../pages/index.html">Home</a></li>
+            <li><a href="../pages/AboutUs.html">About Us</a></li>
+            <li><a href="#" id="ServicesButton">Services</a></li> 
+        </ul>
+    </div>
+
+    <div class="ServiceMenu">
+        <div id="x-button" class="x-button">X</div>
+        <nav>
+            <ul>
+                <li><a href="./services/Food.html">Food</a></li>
+                <li><a href="./services/Shelters.html">Shelter</a></li>
+                <li><a href="./services/Medical.html">Medical</a></li>
+                <li><a href="./services/Daycare.html">Daycare</a></li>
+                <li><a href="./services/Bikehub.html">Bikehub</a></li>
+                <li><a href="./services/Employment.html">Employment</a></li>
+                <li><a href="./services/SeeAll.html">See All</a></li>
+            </ul>
+        </nav>
+    </div>
+
+    <div class="LoginRegisterBG">
+        <img  src="../images/LoginRegisterBG.svg">
+        <img id="bike" src="../images/bike.svg">
+        <img id="houses" src="../images/houses.svg">
+    </div>
+
+    <div class="SignUpContainer">
+        <form id="SignUpBox">
+            <h1>Sign Up</h1>
+            <input type="text" id="first_name" name="first_name" placeholder="       First Name" required>
+            <input type="text" id="last_name" name="last_name" placeholder="       Last Name" required>
+            <input type="number" id="age" name="age" placeholder="       Age" required>
+            <input type="text" id="email_address" name="email_address" placeholder="       Email" required>
+            <input type="password" id="password" name="password" placeholder="       Password"required>
+            <input type="password" id="password2" name="password2" placeholder="       Confrim Password"required>
+            <input type="button" id="submitCreateAcc" value="Register" onclick="gotoVolunteerPage()">
+        </form>
+    </div>
+
+    <script src="../styles/script.js"></script>
+</body>
+</html>
+
