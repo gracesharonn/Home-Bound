@@ -2099,3 +2099,12 @@ function sendToVolEvents () {
     })
     .catch(error => console.error('Error:', error))
 }
+function gotoVolunteerPage() {
+  var first_name = document.getElementById("first_name")
+  var last_name = document.getElementById("last_name")
+  window.location.href =
+    `../pages/VolunteerEvents.html?first_name=` +
+    encodeURIComponent(first_name) +
+    '&last_name=' +
+    encodeURIComponent(last_name)
+}
