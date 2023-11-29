@@ -568,9 +568,7 @@ function openFoodSearch (service) {
 
 function openEmploymentSearch (service) {
   var sex = document.querySelector('input[name="sex"]:checked').value
-  var disability = document.querySelector(
-    'input[name="disability"]:checked'
-  ).value
+  var disability = document.querySelector('input[name="disability"]:checked').value
   var crime = document.querySelector('input[name="crime]:checked').value
 
   window.location.href =
