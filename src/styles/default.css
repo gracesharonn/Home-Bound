@@ -429,7 +429,7 @@ input[type="radio"]:checked {
     margin: 619px 1440px 470px;
     z-index: 1;
     left: 100vw;
-    animation: moveBike 5s linear infinite;
+    animation: moveBike 10s linear infinite;
     animation-delay: 0.1s;
 }
 
