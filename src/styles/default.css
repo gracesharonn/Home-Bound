@@ -304,11 +304,11 @@ input[type="radio"]:checked {
     color: #F5F6FA;
 }
 
-.text-container-1 {
+.text-container-1 { /* A home bound for those in need of the Sacramento Area  */
     position: absolute;
     top: 15%;
     left: 15%;
-    transform: translate(0%, -50%);
+    transform: translate(-10%, -20%);
     text-align: center;
     font-size: 64px;
     font-style: normal;
@@ -322,7 +322,7 @@ input[type="radio"]:checked {
     z-index: 2;
 }
 
-.text-container-2 {
+.text-container-2 { /* Our goal is to provide the best & most efficient services.*/
     position: absolute;
     top: 50%;
     right: 15%;
@@ -340,7 +340,7 @@ input[type="radio"]:checked {
     z-index: 2;
 }
 
-.text-container-3 {
+.text-container-3 { /* Want to be involved? */
     position: absolute;
     top: 75%;
     left: 5%;
@@ -417,7 +417,7 @@ input[type="radio"]:checked {
         left: -120%;
     }
     100% {
-        left: 130%;
+        left: 19%;
     }
 }
 
@@ -426,14 +426,17 @@ input[type="radio"]:checked {
     width: 96px;
     height: 55px;
     background-color: transparent;
-    margin: 499px 1440px 470px;
+    margin: 619px 1440px 470px;
     z-index: 1;
-    left: 120%;
-    animation: moveBike 20s linear infinite;
+    left: 100vw;
+    animation: moveBike 5s linear infinite;
     animation-delay: 0.1s;
 }
 
+
+
 #houses {
+    transform: translate(74px, 120px);
     position: absolute;
     z-index: 1;
     background-color: transparent;
@@ -442,6 +445,25 @@ input[type="radio"]:checked {
     flex-shrink: 0;
     margin: 259px 877px 439px 57px;
     z-index: 2;
+}
+
+#houses2 {
+    position: absolute;
+    z-index: 1;
+    background-color: transparent;
+    width: 506px;
+    height: 326px;
+    flex-shrink: 0;
+    margin: 259px 0 439px 57px; /* Adjusted margin for better positioning */
+    left: 1426px; /* Adjusted left property */
+    top: 120px; /* Adjusted top property */
+    z-index: 2;
+    transform: scaleX(-1);
+}
+
+/* Bruh, I don't even know, this is to prevent the bike from going past but then the house to not move past as well. */
+body {   
+    overflow-x: hidden;
 }
 
 .LoginContainer, .SignUpContainer {
